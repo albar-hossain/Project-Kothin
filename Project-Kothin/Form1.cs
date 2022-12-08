@@ -15,7 +15,7 @@ namespace Project_Kothin
         public LandingPage()
         {
             InitializeComponent();
-            Registration reg = new Registration();
+            Login reg = new Login();
             reg.Show();
         }
 

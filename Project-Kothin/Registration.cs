@@ -21,30 +21,21 @@ namespace Project_Kothin
         {
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void labelRegister_Click(object sender, EventArgs e)
         {
         }
 
-        private void labelName_Click(object sender, EventArgs e)
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
         }
 
-        private void labelPhonePlaceHolder_Click(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
         }
 
-        private void textBoxPassword_TextChanged(object sender, EventArgs e)
+        private void linkLabelForgotPassword_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-        }
-
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            System.Diagnostics.Process.GetCurrentProcess().Kill();
-            Application.Exit();
+            this.Hide();
         }
     }
 }
