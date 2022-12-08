@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Project_Kothin
 {
@@ -36,6 +30,97 @@ namespace Project_Kothin
         private void linkLabelForgotPassword_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Hide();
+        }
+
+        private void labelWrongEmail_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void textBoxRegEmail_TextChanged(object sender, EventArgs e)
+        {
+            string email = textBoxRegEmail.Text;
+            if (email.Contains("@") && email.Contains("."))
+            {
+                labelRightEmail.Visible = true;
+                labelWrongEmail.Visible = false;
+            }
+            else
+            {
+                labelRightEmail.Visible = false;
+                labelWrongEmail.Visible = true;
+            }
+        }
+
+        private void labelRightEmail_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void textBoxRegPassConfirm_TextChanged(object sender, EventArgs e)
+        {
+            if (textBoxRegPassword.Text == textBoxRegPassConfirm.Text)
+            {
+                labelRightPass.Visible = true;
+                labelWrongPass.Visible = false;
+            }
+            else
+            {
+                labelRightPass.Visible = false;
+                labelWrongPass.Visible = true;
+            }
+        }
+
+        private void textBoxRegPhone_TextChanged(object sender, EventArgs e)
+        {
+            string phone = textBoxRegPhone.Text;
+            if (phone.StartsWith("01") && (phone.Length == 11))
+            {
+                labelRightPhone.Visible = true;
+                labelWrongPhone.Visible = false;
+            }
+            else
+            {
+                labelRightPhone.Visible = false;
+                labelWrongPhone.Visible = true;
+            }
+        }
+
+        private void buttonSignUp_Click(object sender, EventArgs e)
+        {
+            if (textBoxRegFullName.Text != null &&
+                textBoxRegPassword.Text != null &&
+                textBoxRegPassConfirm.Text != null &&
+                textRegPostCode.Text != null &&
+                textBoxRegEmail.Text != null &&
+                textBoxRegPhone.Text != null &&
+                textBoxRegAddress.Text != null)
+            {
+                MessageBox.Show("Registration complete!");
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Please check the form again!");
+            }
+        }
+
+        private void textRegPostCode_TextChanged(object sender, EventArgs e)
+        {
+            string postCode = textRegPostCode.Text;
+            if (postCode.Length == 4)
+            {
+                labelRightZip.Visible = true;
+                labelWrongZip.Visible = false;
+            }
+            else
+            {
+                labelRightZip.Visible = false;
+                labelWrongZip.Visible = true;
+            }
+        }
+
+        private void linkLabelRegBack_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

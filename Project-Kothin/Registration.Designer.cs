@@ -37,18 +37,25 @@
             this.labelRegAddress = new System.Windows.Forms.Label();
             this.labelRegPostCode = new System.Windows.Forms.Label();
             this.labelRegPassConfirm = new System.Windows.Forms.Label();
-            this.labelRegPhoneConfirm = new System.Windows.Forms.Label();
             this.textRegPostCode = new System.Windows.Forms.TextBox();
             this.textBoxRegAddress = new System.Windows.Forms.TextBox();
             this.textBoxRegFullName = new System.Windows.Forms.TextBox();
             this.textBoxRegPhone = new System.Windows.Forms.TextBox();
             this.textBoxRegPassword = new System.Windows.Forms.TextBox();
             this.textBoxRegEmail = new System.Windows.Forms.TextBox();
-            this.textBoxRegPhoneConfirm = new System.Windows.Forms.TextBox();
             this.textBoxRegPassConfirm = new System.Windows.Forms.TextBox();
             this.buttonSignUp = new System.Windows.Forms.Button();
             this.linkLabelAlreadyRegistred = new System.Windows.Forms.LinkLabel();
             this.labelLine = new System.Windows.Forms.Label();
+            this.labelWrongEmail = new System.Windows.Forms.Label();
+            this.labelRightEmail = new System.Windows.Forms.Label();
+            this.labelRightPass = new System.Windows.Forms.Label();
+            this.labelWrongPass = new System.Windows.Forms.Label();
+            this.labelWrongPhone = new System.Windows.Forms.Label();
+            this.labelRightPhone = new System.Windows.Forms.Label();
+            this.labelWrongZip = new System.Windows.Forms.Label();
+            this.labelRightZip = new System.Windows.Forms.Label();
+            this.linkLabelRegBack = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // labelRegister
@@ -92,7 +99,7 @@
             this.labelRegPhone.BackColor = System.Drawing.Color.Transparent;
             this.labelRegPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelRegPhone.ForeColor = System.Drawing.Color.White;
-            this.labelRegPhone.Location = new System.Drawing.Point(135, 220);
+            this.labelRegPhone.Location = new System.Drawing.Point(135, 215);
             this.labelRegPhone.Name = "labelRegPhone";
             this.labelRegPhone.Size = new System.Drawing.Size(89, 29);
             this.labelRegPhone.TabIndex = 5;
@@ -108,7 +115,7 @@
             this.labelRegEmail.BackColor = System.Drawing.Color.Transparent;
             this.labelRegEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelRegEmail.ForeColor = System.Drawing.Color.White;
-            this.labelRegEmail.Location = new System.Drawing.Point(678, 159);
+            this.labelRegEmail.Location = new System.Drawing.Point(677, 161);
             this.labelRegEmail.Name = "labelRegEmail";
             this.labelRegEmail.Size = new System.Drawing.Size(88, 29);
             this.labelRegEmail.TabIndex = 6;
@@ -123,7 +130,7 @@
             this.labelRegPassword.BackColor = System.Drawing.Color.Transparent;
             this.labelRegPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelRegPassword.ForeColor = System.Drawing.Color.White;
-            this.labelRegPassword.Location = new System.Drawing.Point(100, 281);
+            this.labelRegPassword.Location = new System.Drawing.Point(634, 215);
             this.labelRegPassword.Name = "labelRegPassword";
             this.labelRegPassword.Size = new System.Drawing.Size(126, 29);
             this.labelRegPassword.TabIndex = 7;
@@ -138,7 +145,7 @@
             this.labelRegAddress.BackColor = System.Drawing.Color.Transparent;
             this.labelRegAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelRegAddress.ForeColor = System.Drawing.Color.White;
-            this.labelRegAddress.Location = new System.Drawing.Point(116, 396);
+            this.labelRegAddress.Location = new System.Drawing.Point(116, 349);
             this.labelRegAddress.Name = "labelRegAddress";
             this.labelRegAddress.Size = new System.Drawing.Size(108, 29);
             this.labelRegAddress.TabIndex = 8;
@@ -153,7 +160,7 @@
             this.labelRegPostCode.BackColor = System.Drawing.Color.Transparent;
             this.labelRegPostCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelRegPostCode.ForeColor = System.Drawing.Color.White;
-            this.labelRegPostCode.Location = new System.Drawing.Point(92, 338);
+            this.labelRegPostCode.Location = new System.Drawing.Point(92, 275);
             this.labelRegPostCode.Name = "labelRegPostCode";
             this.labelRegPostCode.Size = new System.Drawing.Size(132, 29);
             this.labelRegPostCode.TabIndex = 9;
@@ -168,26 +175,11 @@
             this.labelRegPassConfirm.BackColor = System.Drawing.Color.Transparent;
             this.labelRegPassConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelRegPassConfirm.ForeColor = System.Drawing.Color.White;
-            this.labelRegPassConfirm.Location = new System.Drawing.Point(550, 279);
+            this.labelRegPassConfirm.Location = new System.Drawing.Point(549, 275);
             this.labelRegPassConfirm.Name = "labelRegPassConfirm";
             this.labelRegPassConfirm.Size = new System.Drawing.Size(216, 29);
             this.labelRegPassConfirm.TabIndex = 10;
             this.labelRegPassConfirm.Text = "Confirm Password:";
-            // 
-            // labelRegPhoneConfirm
-            // 
-            this.labelRegPhoneConfirm.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelRegPhoneConfirm.AutoSize = true;
-            this.labelRegPhoneConfirm.BackColor = System.Drawing.Color.Transparent;
-            this.labelRegPhoneConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelRegPhoneConfirm.ForeColor = System.Drawing.Color.White;
-            this.labelRegPhoneConfirm.Location = new System.Drawing.Point(587, 214);
-            this.labelRegPhoneConfirm.Name = "labelRegPhoneConfirm";
-            this.labelRegPhoneConfirm.Size = new System.Drawing.Size(179, 29);
-            this.labelRegPhoneConfirm.TabIndex = 12;
-            this.labelRegPhoneConfirm.Text = "Confirm Phone:";
             // 
             // textRegPostCode
             // 
@@ -195,13 +187,14 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textRegPostCode.BackColor = System.Drawing.Color.Silver;
+            this.textRegPostCode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textRegPostCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textRegPostCode.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.textRegPostCode.Location = new System.Drawing.Point(250, 339);
+            this.textRegPostCode.Location = new System.Drawing.Point(250, 276);
             this.textRegPostCode.Name = "textRegPostCode";
-            this.textRegPostCode.PasswordChar = '*';
             this.textRegPostCode.Size = new System.Drawing.Size(264, 29);
             this.textRegPostCode.TabIndex = 13;
+            this.textRegPostCode.TextChanged += new System.EventHandler(this.textRegPostCode_TextChanged);
             // 
             // textBoxRegAddress
             // 
@@ -209,12 +202,12 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxRegAddress.BackColor = System.Drawing.Color.Silver;
+            this.textBoxRegAddress.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxRegAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxRegAddress.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.textBoxRegAddress.Location = new System.Drawing.Point(250, 396);
+            this.textBoxRegAddress.Location = new System.Drawing.Point(250, 333);
             this.textBoxRegAddress.Multiline = true;
             this.textBoxRegAddress.Name = "textBoxRegAddress";
-            this.textBoxRegAddress.PasswordChar = '*';
             this.textBoxRegAddress.Size = new System.Drawing.Size(264, 66);
             this.textBoxRegAddress.TabIndex = 14;
             // 
@@ -224,11 +217,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxRegFullName.BackColor = System.Drawing.Color.Silver;
+            this.textBoxRegFullName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxRegFullName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxRegFullName.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.textBoxRegFullName.Location = new System.Drawing.Point(250, 159);
             this.textBoxRegFullName.Name = "textBoxRegFullName";
-            this.textBoxRegFullName.PasswordChar = '*';
             this.textBoxRegFullName.Size = new System.Drawing.Size(264, 29);
             this.textBoxRegFullName.TabIndex = 15;
             // 
@@ -238,13 +231,14 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxRegPhone.BackColor = System.Drawing.Color.Silver;
+            this.textBoxRegPhone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxRegPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxRegPhone.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.textBoxRegPhone.Location = new System.Drawing.Point(250, 221);
+            this.textBoxRegPhone.Location = new System.Drawing.Point(250, 216);
             this.textBoxRegPhone.Name = "textBoxRegPhone";
-            this.textBoxRegPhone.PasswordChar = '*';
             this.textBoxRegPhone.Size = new System.Drawing.Size(264, 29);
             this.textBoxRegPhone.TabIndex = 16;
+            this.textBoxRegPhone.TextChanged += new System.EventHandler(this.textBoxRegPhone_TextChanged);
             // 
             // textBoxRegPassword
             // 
@@ -252,9 +246,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxRegPassword.BackColor = System.Drawing.Color.Silver;
+            this.textBoxRegPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxRegPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxRegPassword.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.textBoxRegPassword.Location = new System.Drawing.Point(250, 281);
+            this.textBoxRegPassword.Location = new System.Drawing.Point(784, 215);
             this.textBoxRegPassword.Name = "textBoxRegPassword";
             this.textBoxRegPassword.PasswordChar = '*';
             this.textBoxRegPassword.Size = new System.Drawing.Size(264, 29);
@@ -266,27 +261,14 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxRegEmail.BackColor = System.Drawing.Color.Silver;
+            this.textBoxRegEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxRegEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxRegEmail.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.textBoxRegEmail.Location = new System.Drawing.Point(808, 160);
+            this.textBoxRegEmail.Location = new System.Drawing.Point(784, 161);
             this.textBoxRegEmail.Name = "textBoxRegEmail";
-            this.textBoxRegEmail.PasswordChar = '*';
             this.textBoxRegEmail.Size = new System.Drawing.Size(264, 29);
             this.textBoxRegEmail.TabIndex = 18;
-            // 
-            // textBoxRegPhoneConfirm
-            // 
-            this.textBoxRegPhoneConfirm.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxRegPhoneConfirm.BackColor = System.Drawing.Color.Silver;
-            this.textBoxRegPhoneConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxRegPhoneConfirm.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.textBoxRegPhoneConfirm.Location = new System.Drawing.Point(808, 221);
-            this.textBoxRegPhoneConfirm.Name = "textBoxRegPhoneConfirm";
-            this.textBoxRegPhoneConfirm.PasswordChar = '*';
-            this.textBoxRegPhoneConfirm.Size = new System.Drawing.Size(264, 29);
-            this.textBoxRegPhoneConfirm.TabIndex = 19;
+            this.textBoxRegEmail.TextChanged += new System.EventHandler(this.textBoxRegEmail_TextChanged);
             // 
             // textBoxRegPassConfirm
             // 
@@ -294,13 +276,15 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxRegPassConfirm.BackColor = System.Drawing.Color.Silver;
+            this.textBoxRegPassConfirm.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxRegPassConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxRegPassConfirm.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.textBoxRegPassConfirm.Location = new System.Drawing.Point(808, 279);
+            this.textBoxRegPassConfirm.Location = new System.Drawing.Point(784, 275);
             this.textBoxRegPassConfirm.Name = "textBoxRegPassConfirm";
             this.textBoxRegPassConfirm.PasswordChar = '*';
             this.textBoxRegPassConfirm.Size = new System.Drawing.Size(264, 29);
             this.textBoxRegPassConfirm.TabIndex = 20;
+            this.textBoxRegPassConfirm.TextChanged += new System.EventHandler(this.textBoxRegPassConfirm_TextChanged);
             // 
             // buttonSignUp
             // 
@@ -317,8 +301,9 @@
             this.buttonSignUp.Name = "buttonSignUp";
             this.buttonSignUp.Size = new System.Drawing.Size(265, 50);
             this.buttonSignUp.TabIndex = 21;
-            this.buttonSignUp.Text = "Sign Up";
+            this.buttonSignUp.Text = "SIGN UP";
             this.buttonSignUp.UseVisualStyleBackColor = false;
+            this.buttonSignUp.Click += new System.EventHandler(this.buttonSignUp_Click);
             // 
             // linkLabelAlreadyRegistred
             // 
@@ -329,6 +314,7 @@
             this.linkLabelAlreadyRegistred.AutoSize = true;
             this.linkLabelAlreadyRegistred.BackColor = System.Drawing.Color.Transparent;
             this.linkLabelAlreadyRegistred.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.linkLabelAlreadyRegistred.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linkLabelAlreadyRegistred.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(193)))), ((int)(((byte)(114)))));
             this.linkLabelAlreadyRegistred.Location = new System.Drawing.Point(561, 634);
             this.linkLabelAlreadyRegistred.Name = "linkLabelAlreadyRegistred";
@@ -353,6 +339,152 @@
             this.labelLine.TabIndex = 23;
             this.labelLine.Text = "____________________________________________________________________________";
             // 
+            // labelWrongEmail
+            // 
+            this.labelWrongEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelWrongEmail.AutoSize = true;
+            this.labelWrongEmail.BackColor = System.Drawing.Color.Transparent;
+            this.labelWrongEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelWrongEmail.ForeColor = System.Drawing.Color.Red;
+            this.labelWrongEmail.Location = new System.Drawing.Point(1054, 166);
+            this.labelWrongEmail.Name = "labelWrongEmail";
+            this.labelWrongEmail.Size = new System.Drawing.Size(25, 20);
+            this.labelWrongEmail.TabIndex = 24;
+            this.labelWrongEmail.Text = "❌";
+            this.labelWrongEmail.Visible = false;
+            this.labelWrongEmail.Click += new System.EventHandler(this.labelWrongEmail_Click);
+            // 
+            // labelRightEmail
+            // 
+            this.labelRightEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelRightEmail.AutoSize = true;
+            this.labelRightEmail.BackColor = System.Drawing.Color.Transparent;
+            this.labelRightEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRightEmail.ForeColor = System.Drawing.Color.Lime;
+            this.labelRightEmail.Location = new System.Drawing.Point(1054, 166);
+            this.labelRightEmail.Name = "labelRightEmail";
+            this.labelRightEmail.Size = new System.Drawing.Size(25, 20);
+            this.labelRightEmail.TabIndex = 25;
+            this.labelRightEmail.Text = "✔";
+            this.labelRightEmail.Visible = false;
+            this.labelRightEmail.Click += new System.EventHandler(this.labelRightEmail_Click);
+            // 
+            // labelRightPass
+            // 
+            this.labelRightPass.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelRightPass.AutoSize = true;
+            this.labelRightPass.BackColor = System.Drawing.Color.Transparent;
+            this.labelRightPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRightPass.ForeColor = System.Drawing.Color.Lime;
+            this.labelRightPass.Location = new System.Drawing.Point(1054, 281);
+            this.labelRightPass.Name = "labelRightPass";
+            this.labelRightPass.Size = new System.Drawing.Size(25, 20);
+            this.labelRightPass.TabIndex = 27;
+            this.labelRightPass.Text = "✔";
+            this.labelRightPass.Visible = false;
+            // 
+            // labelWrongPass
+            // 
+            this.labelWrongPass.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelWrongPass.AutoSize = true;
+            this.labelWrongPass.BackColor = System.Drawing.Color.Transparent;
+            this.labelWrongPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelWrongPass.ForeColor = System.Drawing.Color.Red;
+            this.labelWrongPass.Location = new System.Drawing.Point(1054, 280);
+            this.labelWrongPass.Name = "labelWrongPass";
+            this.labelWrongPass.Size = new System.Drawing.Size(25, 20);
+            this.labelWrongPass.TabIndex = 26;
+            this.labelWrongPass.Text = "❌";
+            this.labelWrongPass.Visible = false;
+            // 
+            // labelWrongPhone
+            // 
+            this.labelWrongPhone.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelWrongPhone.AutoSize = true;
+            this.labelWrongPhone.BackColor = System.Drawing.Color.Transparent;
+            this.labelWrongPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelWrongPhone.ForeColor = System.Drawing.Color.Red;
+            this.labelWrongPhone.Location = new System.Drawing.Point(520, 220);
+            this.labelWrongPhone.Name = "labelWrongPhone";
+            this.labelWrongPhone.Size = new System.Drawing.Size(25, 20);
+            this.labelWrongPhone.TabIndex = 28;
+            this.labelWrongPhone.Text = "❌";
+            this.labelWrongPhone.Visible = false;
+            // 
+            // labelRightPhone
+            // 
+            this.labelRightPhone.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelRightPhone.AutoSize = true;
+            this.labelRightPhone.BackColor = System.Drawing.Color.Transparent;
+            this.labelRightPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRightPhone.ForeColor = System.Drawing.Color.Lime;
+            this.labelRightPhone.Location = new System.Drawing.Point(520, 220);
+            this.labelRightPhone.Name = "labelRightPhone";
+            this.labelRightPhone.Size = new System.Drawing.Size(25, 20);
+            this.labelRightPhone.TabIndex = 29;
+            this.labelRightPhone.Text = "✔";
+            this.labelRightPhone.Visible = false;
+            // 
+            // labelWrongZip
+            // 
+            this.labelWrongZip.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelWrongZip.AutoSize = true;
+            this.labelWrongZip.BackColor = System.Drawing.Color.Transparent;
+            this.labelWrongZip.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelWrongZip.ForeColor = System.Drawing.Color.Red;
+            this.labelWrongZip.Location = new System.Drawing.Point(518, 280);
+            this.labelWrongZip.Name = "labelWrongZip";
+            this.labelWrongZip.Size = new System.Drawing.Size(25, 20);
+            this.labelWrongZip.TabIndex = 30;
+            this.labelWrongZip.Text = "❌";
+            this.labelWrongZip.Visible = false;
+            // 
+            // labelRightZip
+            // 
+            this.labelRightZip.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelRightZip.AutoSize = true;
+            this.labelRightZip.BackColor = System.Drawing.Color.Transparent;
+            this.labelRightZip.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRightZip.ForeColor = System.Drawing.Color.Lime;
+            this.labelRightZip.Location = new System.Drawing.Point(518, 280);
+            this.labelRightZip.Name = "labelRightZip";
+            this.labelRightZip.Size = new System.Drawing.Size(25, 20);
+            this.labelRightZip.TabIndex = 31;
+            this.labelRightZip.Text = "✔";
+            this.labelRightZip.Visible = false;
+            // 
+            // linkLabelRegBack
+            // 
+            this.linkLabelRegBack.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(92)))), ((int)(((byte)(66)))));
+            this.linkLabelRegBack.AutoSize = true;
+            this.linkLabelRegBack.BackColor = System.Drawing.Color.Transparent;
+            this.linkLabelRegBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabelRegBack.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.linkLabelRegBack.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(127)))), ((int)(((byte)(99)))));
+            this.linkLabelRegBack.Location = new System.Drawing.Point(12, 9);
+            this.linkLabelRegBack.Name = "linkLabelRegBack";
+            this.linkLabelRegBack.Size = new System.Drawing.Size(43, 37);
+            this.linkLabelRegBack.TabIndex = 32;
+            this.linkLabelRegBack.TabStop = true;
+            this.linkLabelRegBack.Text = "🡰";
+            this.linkLabelRegBack.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelRegBack_LinkClicked);
+            // 
             // Registration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -360,11 +492,19 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1199, 691);
+            this.Controls.Add(this.linkLabelRegBack);
+            this.Controls.Add(this.labelRightZip);
+            this.Controls.Add(this.labelWrongZip);
+            this.Controls.Add(this.labelRightPhone);
+            this.Controls.Add(this.labelWrongPhone);
+            this.Controls.Add(this.labelRightPass);
+            this.Controls.Add(this.labelWrongPass);
+            this.Controls.Add(this.labelRightEmail);
+            this.Controls.Add(this.labelWrongEmail);
             this.Controls.Add(this.labelLine);
             this.Controls.Add(this.linkLabelAlreadyRegistred);
             this.Controls.Add(this.buttonSignUp);
             this.Controls.Add(this.textBoxRegPassConfirm);
-            this.Controls.Add(this.textBoxRegPhoneConfirm);
             this.Controls.Add(this.textBoxRegEmail);
             this.Controls.Add(this.textBoxRegPassword);
             this.Controls.Add(this.textBoxRegPhone);
@@ -372,7 +512,6 @@
             this.Controls.Add(this.textBoxRegAddress);
             this.Controls.Add(this.textRegPostCode);
             this.Controls.Add(this.labelRegAddress);
-            this.Controls.Add(this.labelRegPhoneConfirm);
             this.Controls.Add(this.labelRegPassConfirm);
             this.Controls.Add(this.labelRegPostCode);
             this.Controls.Add(this.labelRegPassword);
@@ -402,17 +541,24 @@
         private System.Windows.Forms.Label labelRegAddress;
         private System.Windows.Forms.Label labelRegPostCode;
         private System.Windows.Forms.Label labelRegPassConfirm;
-        private System.Windows.Forms.Label labelRegPhoneConfirm;
         private System.Windows.Forms.TextBox textRegPostCode;
         private System.Windows.Forms.TextBox textBoxRegAddress;
         private System.Windows.Forms.TextBox textBoxRegFullName;
         private System.Windows.Forms.TextBox textBoxRegPhone;
         private System.Windows.Forms.TextBox textBoxRegPassword;
         private System.Windows.Forms.TextBox textBoxRegEmail;
-        private System.Windows.Forms.TextBox textBoxRegPhoneConfirm;
         private System.Windows.Forms.TextBox textBoxRegPassConfirm;
         private System.Windows.Forms.Button buttonSignUp;
         private System.Windows.Forms.LinkLabel linkLabelAlreadyRegistred;
         private System.Windows.Forms.Label labelLine;
+        private System.Windows.Forms.Label labelWrongEmail;
+        private System.Windows.Forms.Label labelRightEmail;
+        private System.Windows.Forms.Label labelRightPass;
+        private System.Windows.Forms.Label labelWrongPass;
+        private System.Windows.Forms.Label labelWrongPhone;
+        private System.Windows.Forms.Label labelRightPhone;
+        private System.Windows.Forms.Label labelWrongZip;
+        private System.Windows.Forms.Label labelRightZip;
+        private System.Windows.Forms.LinkLabel linkLabelRegBack;
     }
 }

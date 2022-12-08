@@ -15,6 +15,7 @@ namespace Project_Kothin
         public LandingPage()
         {
             InitializeComponent();
+
             Login reg = new Login();
             reg.Show();
         }
@@ -22,6 +23,10 @@ namespace Project_Kothin
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
+        }
+
+        private void LandingPage_Load(object sender, EventArgs e)
+        {
         }
     }
 }

@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Project_Kothin
@@ -39,6 +32,8 @@ namespace Project_Kothin
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            ForgotPassword recovery = new ForgotPassword();
+            recovery.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -51,6 +46,11 @@ namespace Project_Kothin
         {
             Registration reg = new Registration();
             reg.Show();
+        }
+
+        private void linkLabelLoginBack_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
         }
     }
 }
