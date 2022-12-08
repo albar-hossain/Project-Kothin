@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Project_Kothin
 {
-    public partial class LandingPage : Form
+    public partial class Ticket : Form
     {
-        public LandingPage()
+        public Ticket()
         {
             InitializeComponent();
         }

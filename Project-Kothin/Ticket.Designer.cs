@@ -1,6 +1,7 @@
-﻿namespace Project_Kothin
+﻿
+namespace Project_Kothin
 {
-    partial class LandingPage
+    partial class Ticket
     {
         /// <summary>
         /// Required designer variable.
@@ -30,14 +31,13 @@
         {
             this.SuspendLayout();
             // 
-            // LandingPage
+            // Ticket
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "LandingPage";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Name = "Ticket";
+            this.Text = "Ticket";
             this.ResumeLayout(false);
 
         }
@@ -45,4 +45,3 @@
         #endregion
     }
 }
-
