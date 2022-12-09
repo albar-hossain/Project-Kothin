@@ -57,5 +57,10 @@ namespace Project_Kothin
         {
             this.Close();
         }
+
+        private void labelLogin_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

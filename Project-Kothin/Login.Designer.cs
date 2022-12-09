@@ -87,6 +87,7 @@
             this.labelLogin.Size = new System.Drawing.Size(115, 42);
             this.labelLogin.TabIndex = 2;
             this.labelLogin.Text = "Login";
+            this.labelLogin.Click += new System.EventHandler(this.labelLogin_Click);
             // 
             // textBoxPhone
             // 
