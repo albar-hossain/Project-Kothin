@@ -223,6 +223,7 @@
             this.linkLabelLoginClose.TabIndex = 29;
             this.linkLabelLoginClose.TabStop = true;
             this.linkLabelLoginClose.Text = "❌";
+            this.linkLabelLoginClose.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelLoginClose_LinkClicked);
             // 
             // Login
             // 

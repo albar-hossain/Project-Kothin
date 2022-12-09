@@ -52,5 +52,10 @@ namespace Project_Kothin
         {
             this.Hide();
         }
+
+        private void linkLabelLoginClose_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }
