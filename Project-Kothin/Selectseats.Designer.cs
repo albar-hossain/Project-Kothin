@@ -1,7 +1,7 @@
 ﻿
 namespace Project_Kothin
 {
-    partial class SelectTrain
+    partial class Selectseats
     {
         /// <summary>
         /// Required designer variable.
@@ -44,6 +44,7 @@ namespace Project_Kothin
             this.E2 = new System.Windows.Forms.Button();
             this.Seats = new System.Windows.Forms.GroupBox();
             this.BackButton1 = new System.Windows.Forms.Button();
+            this.BookTrain = new System.Windows.Forms.Button();
             this.Seats.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -233,11 +234,22 @@ namespace Project_Kothin
             this.BackButton1.Visible = false;
             this.BackButton1.Click += new System.EventHandler(this.BackButton_Click);
             // 
+            // BookTrain
+            // 
+            this.BookTrain.Location = new System.Drawing.Point(430, 419);
+            this.BookTrain.Name = "BookTrain";
+            this.BookTrain.Size = new System.Drawing.Size(75, 23);
+            this.BookTrain.TabIndex = 7;
+            this.BookTrain.Text = "Book";
+            this.BookTrain.UseVisualStyleBackColor = true;
+            this.BookTrain.Click += new System.EventHandler(this.BookTrain_Click);
+            // 
             // SelectTrain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.BookTrain);
             this.Controls.Add(this.BackButton1);
             this.Controls.Add(this.Seats);
             this.Controls.Add(this.SEARCH);
@@ -268,5 +280,6 @@ namespace Project_Kothin
         private System.Windows.Forms.Button E2;
         private System.Windows.Forms.GroupBox Seats;
         private System.Windows.Forms.Button BackButton1;
+        private System.Windows.Forms.Button BookTrain;
     }
 }

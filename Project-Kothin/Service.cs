@@ -50,9 +50,15 @@ namespace Project_Kothin
         {
             if (comboBox1.Text == "Train")
             {
-                Train it = new Train();
+                Ticket it = new Ticket();
                 it.Show();
             }
+        }
+
+        private void SEARCHTRAIN_Click(object sender, EventArgs e)
+        {
+            Selectseats s1 = new Selectseats();
+            s1.Show();
         }
     }
 }

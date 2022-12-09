@@ -46,11 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="SelectTrain.cs">
+    <Compile Include="Selectseats.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SelectTrain.Designer.cs">
-      <DependentUpon>SelectTrain.cs</DependentUpon>
+    <Compile Include="Selectseats.Designer.cs">
+      <DependentUpon>Selectseats.cs</DependentUpon>
     </Compile>
     <Compile Include="Service.cs">
       <SubType>Form</SubType>
@@ -64,25 +64,16 @@
     <Compile Include="Ticket.Designer.cs">
       <DependentUpon>Ticket.cs</DependentUpon>
     </Compile>
-    <Compile Include="Train.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Train.Designer.cs">
-      <DependentUpon>Train.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="SelectTrain.resx">
-      <DependentUpon>SelectTrain.cs</DependentUpon>
+    <EmbeddedResource Include="Selectseats.resx">
+      <DependentUpon>Selectseats.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Service.resx">
       <DependentUpon>Service.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ticket.resx">
       <DependentUpon>Ticket.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Train.resx">
-      <DependentUpon>Train.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

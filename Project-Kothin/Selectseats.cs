@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace Project_Kothin
 {
-    public partial class SelectTrain : Form
+    public partial class Selectseats : Form
     {
         private bool flag = true;
-        public SelectTrain()
+        public Selectseats()
         {
             InitializeComponent();
         }
@@ -79,7 +79,6 @@ namespace Project_Kothin
             }
             else
             {
-
                 C2.BackColor = Color.FromKnownColor(KnownColor.Control);
                 flag = true;
             }
@@ -137,6 +136,7 @@ namespace Project_Kothin
 
                 B1.BackColor = Color.FromKnownColor(KnownColor.Control);
                 flag = true;
+
             }
         }
 
@@ -152,6 +152,7 @@ namespace Project_Kothin
 
                 B2.BackColor = Color.FromKnownColor(KnownColor.Control);
                 flag = true;
+
             }
         }
 
@@ -182,6 +183,7 @@ namespace Project_Kothin
 
                 D1.BackColor = Color.FromKnownColor(KnownColor.Control);
                 flag = true;
+
             }
         }
 
@@ -227,7 +229,15 @@ namespace Project_Kothin
 
                 E2.BackColor = Color.FromKnownColor(KnownColor.Control);
                 flag = true;
+               
             }
+        }
+
+        private void BookTrain_Click(object sender, EventArgs e)
+        {
+          
+            MessageBox.Show("Successful!"); 
+            
         }
     }
 }
