@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ForgotPassword));
             this.labelResetPhone = new System.Windows.Forms.Label();
             this.textBoxResetRecoveryCode = new System.Windows.Forms.TextBox();
             this.labelResetRecoveryCode = new System.Windows.Forms.Label();
@@ -40,6 +39,10 @@
             this.buttonResetPass = new System.Windows.Forms.Button();
             this.linkLabelResetBack = new System.Windows.Forms.LinkLabel();
             this.linkLabelResetClose = new System.Windows.Forms.LinkLabel();
+            this.labelResetRightPass = new System.Windows.Forms.Label();
+            this.labelResetWrongPass = new System.Windows.Forms.Label();
+            this.labelResetWrongPhone = new System.Windows.Forms.Label();
+            this.labelResetRightPhone = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // labelResetPhone
@@ -99,6 +102,7 @@
             this.textBoxResetPhone.Name = "textBoxResetPhone";
             this.textBoxResetPhone.Size = new System.Drawing.Size(234, 29);
             this.textBoxResetPhone.TabIndex = 19;
+            this.textBoxResetPhone.TextChanged += new System.EventHandler(this.textBoxResetPhone_TextChanged);
             // 
             // labelResetNewPass
             // 
@@ -159,6 +163,7 @@
             this.textBoxResetNewPassConfirm.PasswordChar = '*';
             this.textBoxResetNewPassConfirm.Size = new System.Drawing.Size(234, 29);
             this.textBoxResetNewPassConfirm.TabIndex = 22;
+            this.textBoxResetNewPassConfirm.TextChanged += new System.EventHandler(this.textBoxResetNewPassConfirm_TextChanged);
             // 
             // buttonResetPass
             // 
@@ -210,14 +215,82 @@
             this.linkLabelResetClose.Text = "❌";
             this.linkLabelResetClose.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelResetClose_LinkClicked);
             // 
+            // labelResetRightPass
+            // 
+            this.labelResetRightPass.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelResetRightPass.AutoSize = true;
+            this.labelResetRightPass.BackColor = System.Drawing.Color.Transparent;
+            this.labelResetRightPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelResetRightPass.ForeColor = System.Drawing.Color.Lime;
+            this.labelResetRightPass.Location = new System.Drawing.Point(535, 269);
+            this.labelResetRightPass.Name = "labelResetRightPass";
+            this.labelResetRightPass.Size = new System.Drawing.Size(25, 20);
+            this.labelResetRightPass.TabIndex = 29;
+            this.labelResetRightPass.Text = "✔";
+            this.labelResetRightPass.Visible = false;
+            // 
+            // labelResetWrongPass
+            // 
+            this.labelResetWrongPass.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelResetWrongPass.AutoSize = true;
+            this.labelResetWrongPass.BackColor = System.Drawing.Color.Transparent;
+            this.labelResetWrongPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelResetWrongPass.ForeColor = System.Drawing.Color.Red;
+            this.labelResetWrongPass.Location = new System.Drawing.Point(535, 269);
+            this.labelResetWrongPass.Name = "labelResetWrongPass";
+            this.labelResetWrongPass.Size = new System.Drawing.Size(25, 20);
+            this.labelResetWrongPass.TabIndex = 30;
+            this.labelResetWrongPass.Text = "❌";
+            this.labelResetWrongPass.Visible = false;
+            this.labelResetWrongPass.Click += new System.EventHandler(this.labelResetWrongPass_Click);
+            // 
+            // labelResetWrongPhone
+            // 
+            this.labelResetWrongPhone.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelResetWrongPhone.AutoSize = true;
+            this.labelResetWrongPhone.BackColor = System.Drawing.Color.Transparent;
+            this.labelResetWrongPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelResetWrongPhone.ForeColor = System.Drawing.Color.Red;
+            this.labelResetWrongPhone.Location = new System.Drawing.Point(535, 82);
+            this.labelResetWrongPhone.Name = "labelResetWrongPhone";
+            this.labelResetWrongPhone.Size = new System.Drawing.Size(25, 20);
+            this.labelResetWrongPhone.TabIndex = 31;
+            this.labelResetWrongPhone.Text = "❌";
+            this.labelResetWrongPhone.Visible = false;
+            // 
+            // labelResetRightPhone
+            // 
+            this.labelResetRightPhone.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelResetRightPhone.AutoSize = true;
+            this.labelResetRightPhone.BackColor = System.Drawing.Color.Transparent;
+            this.labelResetRightPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelResetRightPhone.ForeColor = System.Drawing.Color.Lime;
+            this.labelResetRightPhone.Location = new System.Drawing.Point(535, 84);
+            this.labelResetRightPhone.Name = "labelResetRightPhone";
+            this.labelResetRightPhone.Size = new System.Drawing.Size(25, 20);
+            this.labelResetRightPhone.TabIndex = 32;
+            this.labelResetRightPhone.Text = "✔";
+            this.labelResetRightPhone.Visible = false;
+            // 
             // ForgotPassword
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImage = global::Project_Kothin.Properties.Resources.KothinPassResetBG;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(687, 635);
+            this.Controls.Add(this.labelResetWrongPhone);
+            this.Controls.Add(this.labelResetWrongPass);
+            this.Controls.Add(this.labelResetRightPass);
             this.Controls.Add(this.linkLabelResetClose);
             this.Controls.Add(this.linkLabelResetBack);
             this.Controls.Add(this.buttonResetPass);
@@ -229,6 +302,7 @@
             this.Controls.Add(this.labelResetRecoveryCode);
             this.Controls.Add(this.textBoxResetRecoveryCode);
             this.Controls.Add(this.labelResetPhone);
+            this.Controls.Add(this.labelResetRightPhone);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -254,5 +328,9 @@
         private System.Windows.Forms.Button buttonResetPass;
         private System.Windows.Forms.LinkLabel linkLabelResetBack;
         private System.Windows.Forms.LinkLabel linkLabelResetClose;
+        private System.Windows.Forms.Label labelResetRightPass;
+        private System.Windows.Forms.Label labelResetWrongPass;
+        private System.Windows.Forms.Label labelResetWrongPhone;
+        private System.Windows.Forms.Label labelResetRightPhone;
     }
 }

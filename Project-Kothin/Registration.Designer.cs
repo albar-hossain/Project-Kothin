@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Registration));
             this.labelRegister = new System.Windows.Forms.Label();
             this.labelRegFullName = new System.Windows.Forms.Label();
             this.labelRegPhone = new System.Windows.Forms.Label();
@@ -404,6 +403,7 @@
             this.labelWrongPass.TabIndex = 26;
             this.labelWrongPass.Text = "❌";
             this.labelWrongPass.Visible = false;
+            this.labelWrongPass.Click += new System.EventHandler(this.labelWrongPass_Click);
             // 
             // labelWrongPhone
             // 
@@ -414,7 +414,7 @@
             this.labelWrongPhone.BackColor = System.Drawing.Color.Transparent;
             this.labelWrongPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelWrongPhone.ForeColor = System.Drawing.Color.Red;
-            this.labelWrongPhone.Location = new System.Drawing.Point(520, 220);
+            this.labelWrongPhone.Location = new System.Drawing.Point(518, 222);
             this.labelWrongPhone.Name = "labelWrongPhone";
             this.labelWrongPhone.Size = new System.Drawing.Size(25, 20);
             this.labelWrongPhone.TabIndex = 28;
@@ -430,7 +430,7 @@
             this.labelRightPhone.BackColor = System.Drawing.Color.Transparent;
             this.labelRightPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelRightPhone.ForeColor = System.Drawing.Color.Lime;
-            this.labelRightPhone.Location = new System.Drawing.Point(520, 220);
+            this.labelRightPhone.Location = new System.Drawing.Point(518, 222);
             this.labelRightPhone.Name = "labelRightPhone";
             this.labelRightPhone.Size = new System.Drawing.Size(25, 20);
             this.labelRightPhone.TabIndex = 29;
@@ -462,7 +462,7 @@
             this.labelRightZip.BackColor = System.Drawing.Color.Transparent;
             this.labelRightZip.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelRightZip.ForeColor = System.Drawing.Color.Lime;
-            this.labelRightZip.Location = new System.Drawing.Point(518, 280);
+            this.labelRightZip.Location = new System.Drawing.Point(520, 280);
             this.labelRightZip.Name = "labelRightZip";
             this.labelRightZip.Size = new System.Drawing.Size(25, 20);
             this.labelRightZip.TabIndex = 31;
@@ -490,16 +490,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImage = global::Project_Kothin.Properties.Resources.KothinBGM;
             this.ClientSize = new System.Drawing.Size(1199, 691);
             this.Controls.Add(this.linkLabelRegBack);
-            this.Controls.Add(this.labelRightZip);
             this.Controls.Add(this.labelWrongZip);
-            this.Controls.Add(this.labelRightPhone);
             this.Controls.Add(this.labelWrongPhone);
-            this.Controls.Add(this.labelRightPass);
             this.Controls.Add(this.labelWrongPass);
-            this.Controls.Add(this.labelRightEmail);
             this.Controls.Add(this.labelWrongEmail);
             this.Controls.Add(this.labelLine);
             this.Controls.Add(this.linkLabelAlreadyRegistred);
@@ -519,6 +515,10 @@
             this.Controls.Add(this.labelRegPhone);
             this.Controls.Add(this.labelRegFullName);
             this.Controls.Add(this.labelRegister);
+            this.Controls.Add(this.labelRightPhone);
+            this.Controls.Add(this.labelRightZip);
+            this.Controls.Add(this.labelRightEmail);
+            this.Controls.Add(this.labelRightPass);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MinimumSize = new System.Drawing.Size(1215, 730);

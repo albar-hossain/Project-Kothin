@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Project_Kothin
 {
@@ -121,6 +120,10 @@ namespace Project_Kothin
         private void linkLabelRegBack_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Close();
+        }
+
+        private void labelWrongPass_Click(object sender, EventArgs e)
+        {
         }
     }
 }
