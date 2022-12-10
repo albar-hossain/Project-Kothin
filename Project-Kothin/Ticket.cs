@@ -16,7 +16,7 @@ namespace Project_Kothin
         {
             InitializeComponent();
         }
-
+        
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -44,6 +44,11 @@ namespace Project_Kothin
         }
 
         private void Train_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

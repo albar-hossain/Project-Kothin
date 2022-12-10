@@ -13,6 +13,9 @@ namespace Project_Kothin
     public partial class Selectseats : Form
     {
         private bool flag = true;
+        private double balance =0;
+
+
         public Selectseats()
         {
             InitializeComponent();
@@ -44,12 +47,27 @@ namespace Project_Kothin
             if(flag==true)
             {
                 A1.BackColor = Color.Green;
-                flag= false;
+                if (comboBox3.Text == "Snigdha")
+                {
+                    balance += 500;
+                    amount.Text = Convert.ToString(balance);
+                }
+                flag = false;
             }
             else 
             {
                 
                 A1.BackColor = Color.FromKnownColor(KnownColor.Control);
+                if (balance != 0&&comboBox3.Text=="Snigdha")
+                {
+                    balance-=500;
+                    amount.Text = Convert.ToString(balance);
+                }
+                else if(balance==0||balance<0)
+                {
+                    balance = 0;
+                    amount.Text = Convert.ToString(balance);
+                }
                 flag =true;
             }
             
@@ -60,12 +78,27 @@ namespace Project_Kothin
             if (flag == true)
             {
                 A2.BackColor = Color.Green;
+                if(comboBox3.Text=="Snigdha")
+                {
+                    balance += 500;
+                    amount.Text = Convert.ToString(balance);
+                }
                 flag = false;
             }
             else
             {
 
                 A2.BackColor = Color.FromKnownColor(KnownColor.Control);
+                if (balance != 0 && comboBox3.Text == "Snigdha")
+                {
+                    balance -= 500;
+                    amount.Text = Convert.ToString(balance);
+                }
+                else if (balance == 0 || balance < 0)
+                {
+                    balance = 0;
+                    amount.Text = Convert.ToString(balance);
+                }
                 flag = true;
             }
         }
@@ -238,6 +271,21 @@ namespace Project_Kothin
           
             MessageBox.Show("Successful!"); 
             
+        }
+
+        private void Selectseats_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Class_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void amount_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

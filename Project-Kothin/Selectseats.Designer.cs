@@ -45,6 +45,10 @@ namespace Project_Kothin
             this.Seats = new System.Windows.Forms.GroupBox();
             this.BackButton1 = new System.Windows.Forms.Button();
             this.BookTrain = new System.Windows.Forms.Button();
+            this.Totalamount = new System.Windows.Forms.Label();
+            this.amount = new System.Windows.Forms.Label();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.Class = new System.Windows.Forms.Label();
             this.Seats.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,7 +60,7 @@ namespace Project_Kothin
             "UPABAN EXPRESS",
             "SAGARDARI EXPRESS",
             "CHITTRA EXPRESS"});
-            this.Express.Location = new System.Drawing.Point(52, 162);
+            this.Express.Location = new System.Drawing.Point(52, 240);
             this.Express.Name = "Express";
             this.Express.Size = new System.Drawing.Size(143, 21);
             this.Express.TabIndex = 0;
@@ -65,7 +69,7 @@ namespace Project_Kothin
             // 
             this.Selection.AutoSize = true;
             this.Selection.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Selection.Location = new System.Drawing.Point(48, 120);
+            this.Selection.Location = new System.Drawing.Point(48, 213);
             this.Selection.Name = "Selection";
             this.Selection.Size = new System.Drawing.Size(265, 24);
             this.Selection.TabIndex = 1;
@@ -74,7 +78,7 @@ namespace Project_Kothin
             // 
             // SEARCH
             // 
-            this.SEARCH.Location = new System.Drawing.Point(52, 202);
+            this.SEARCH.Location = new System.Drawing.Point(52, 267);
             this.SEARCH.Name = "SEARCH";
             this.SEARCH.Size = new System.Drawing.Size(75, 23);
             this.SEARCH.TabIndex = 2;
@@ -244,19 +248,66 @@ namespace Project_Kothin
             this.BookTrain.UseVisualStyleBackColor = true;
             this.BookTrain.Click += new System.EventHandler(this.BookTrain_Click);
             // 
-            // SelectTrain
+            // Totalamount
+            // 
+            this.Totalamount.AutoSize = true;
+            this.Totalamount.Location = new System.Drawing.Point(49, 343);
+            this.Totalamount.Name = "Totalamount";
+            this.Totalamount.Size = new System.Drawing.Size(72, 13);
+            this.Totalamount.TabIndex = 8;
+            this.Totalamount.Text = "Total amount:";
+            // 
+            // amount
+            // 
+            this.amount.AutoSize = true;
+            this.amount.Location = new System.Drawing.Point(127, 343);
+            this.amount.Name = "amount";
+            this.amount.Size = new System.Drawing.Size(35, 13);
+            this.amount.TabIndex = 9;
+            this.amount.Text = "label1";
+            this.amount.Click += new System.EventHandler(this.amount_Click);
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Items.AddRange(new object[] {
+            "Snigdha",
+            "AC_berth",
+            "Shovon"});
+            this.comboBox3.Location = new System.Drawing.Point(52, 162);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(121, 21);
+            this.comboBox3.TabIndex = 10;
+            // 
+            // Class
+            // 
+            this.Class.AutoSize = true;
+            this.Class.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Class.Location = new System.Drawing.Point(49, 136);
+            this.Class.Name = "Class";
+            this.Class.Size = new System.Drawing.Size(58, 20);
+            this.Class.TabIndex = 11;
+            this.Class.Text = "Class:";
+            this.Class.Click += new System.EventHandler(this.Class_Click);
+            // 
+            // Selectseats
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Class);
+            this.Controls.Add(this.comboBox3);
+            this.Controls.Add(this.amount);
+            this.Controls.Add(this.Totalamount);
             this.Controls.Add(this.BookTrain);
             this.Controls.Add(this.BackButton1);
             this.Controls.Add(this.Seats);
             this.Controls.Add(this.SEARCH);
             this.Controls.Add(this.Selection);
             this.Controls.Add(this.Express);
-            this.Name = "SelectTrain";
+            this.Name = "Selectseats";
             this.Text = "Select";
+            this.Load += new System.EventHandler(this.Selectseats_Load);
             this.Seats.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -281,5 +332,9 @@ namespace Project_Kothin
         private System.Windows.Forms.GroupBox Seats;
         private System.Windows.Forms.Button BackButton1;
         private System.Windows.Forms.Button BookTrain;
+        private System.Windows.Forms.Label Totalamount;
+        private System.Windows.Forms.Label amount;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.Label Class;
     }
 }
