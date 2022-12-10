@@ -262,9 +262,9 @@ namespace Project_Kothin
             this.amount.AutoSize = true;
             this.amount.Location = new System.Drawing.Point(127, 343);
             this.amount.Name = "amount";
-            this.amount.Size = new System.Drawing.Size(35, 13);
+            this.amount.Size = new System.Drawing.Size(13, 13);
             this.amount.TabIndex = 9;
-            this.amount.Text = "label1";
+            this.amount.Text = "0";
             this.amount.Click += new System.EventHandler(this.amount_Click);
             // 
             // comboBox3

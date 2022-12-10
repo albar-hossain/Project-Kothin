@@ -16,6 +16,13 @@ namespace Project_Kothin
         {
             InitializeComponent();
         }
+        public Ticket(string id)
+        {
+            InitializeComponent();
+            label3.Text = id;
+            
+        }
+
         
         private void label1_Click(object sender, EventArgs e)
         {
@@ -42,15 +49,27 @@ namespace Project_Kothin
             Selectseats s1 = new Selectseats();
             s1.Show();
         }
-
         private void Train_Load(object sender, EventArgs e)
         {
-
+            if (label3.Text == "Train")
+            {
+                SEARCHTRAIN.Visible = true;
+            }
+           else if (label3.Text == "Bus")
+            {
+                SEARCHBUS.Visible = true;
+            }
         }
 
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Busseats b1 = new Busseats();
+            b1.Show();
         }
     }
 }

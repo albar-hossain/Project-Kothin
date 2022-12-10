@@ -12,7 +12,16 @@ namespace Project_Kothin
 {
     public partial class Selectseats : Form
     {
-        private bool flag = true;
+        private bool flag1 = true;
+        private bool flag2 = true;
+        private bool flag3 = true;
+        private bool flag4 = true;
+        private bool flag5 = true;
+        private bool flag6 = true;
+        private bool flag7 = true;
+        private bool flag8 = true;
+        private bool flag9 = true;
+        private bool flag10 = true;
         private double balance =0;
 
 
@@ -43,16 +52,26 @@ namespace Project_Kothin
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            
-            if(flag==true)
-            {
+         
+            if (flag1==true)
+            {   
                 A1.BackColor = Color.Green;
                 if (comboBox3.Text == "Snigdha")
                 {
                     balance += 500;
                     amount.Text = Convert.ToString(balance);
                 }
-                flag = false;
+                if (comboBox3.Text == "AC_berth")
+                {
+                    balance += 1500;
+                    amount.Text = Convert.ToString(balance);
+                }
+                if (comboBox3.Text == "Shovon")
+                {
+                    balance += 300;
+                    amount.Text = Convert.ToString(balance);
+                }
+                flag1 = false;
             }
             else 
             {
@@ -68,14 +87,36 @@ namespace Project_Kothin
                     balance = 0;
                     amount.Text = Convert.ToString(balance);
                 }
-                flag =true;
+
+                if (balance != 0 && comboBox3.Text == "AC_berth")
+                {
+                    balance -= 1500;
+                    amount.Text = Convert.ToString(balance);
+                }
+                else if (balance == 0 || balance < 0)
+                {
+                    balance = 0;
+                    amount.Text = Convert.ToString(balance);
+                }
+
+                if (balance != 0 && comboBox3.Text == "Shovon")
+                {
+                    balance -= 300;
+                    amount.Text = Convert.ToString(balance);
+                }
+                else if (balance == 0 || balance < 0)
+                {
+                    balance = 0;
+                    amount.Text = Convert.ToString(balance);
+                }
+                flag1 =true;
             }
             
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (flag == true)
+            if (flag2 == true)
             {
                 A2.BackColor = Color.Green;
                 if(comboBox3.Text=="Snigdha")
@@ -83,7 +124,17 @@ namespace Project_Kothin
                     balance += 500;
                     amount.Text = Convert.ToString(balance);
                 }
-                flag = false;
+                if (comboBox3.Text == "AC_berth")
+                {
+                    balance += 1500;
+                    amount.Text = Convert.ToString(balance);
+                }
+                if (comboBox3.Text == "Shovon")
+                {
+                    balance += 300;
+                    amount.Text = Convert.ToString(balance);
+                }
+                flag2 = false;
             }
             else
             {
@@ -99,21 +150,88 @@ namespace Project_Kothin
                     balance = 0;
                     amount.Text = Convert.ToString(balance);
                 }
-                flag = true;
+                if (balance != 0 && comboBox3.Text == "AC_berth")
+                {
+                    balance -= 1500;
+                    amount.Text = Convert.ToString(balance);
+                }
+                else if (balance == 0 || balance < 0)
+                {
+                    balance = 0;
+                    amount.Text = Convert.ToString(balance);
+                }
+
+                if (balance != 0 && comboBox3.Text == "Shovon")
+                {
+                    balance -= 300;
+                    amount.Text = Convert.ToString(balance);
+                }
+                else if (balance == 0 || balance < 0)
+                {
+                    balance = 0;
+                    amount.Text = Convert.ToString(balance);
+                }
+                flag2 = true;
             }
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-            if (flag == true)
+            if (flag3 == true)
             {
                 C2.BackColor = Color.Green;
-                flag = false;
+                if (comboBox3.Text == "Snigdha")
+                {
+                    balance += 500;
+                    amount.Text = Convert.ToString(balance);
+                }
+                if (comboBox3.Text == "AC_berth")
+                {
+                    balance += 1500;
+                    amount.Text = Convert.ToString(balance);
+                }
+                if (comboBox3.Text == "Shovon")
+                {
+                    balance += 300;
+                    amount.Text = Convert.ToString(balance);
+                }
+                flag3 = false;
             }
             else
             {
                 C2.BackColor = Color.FromKnownColor(KnownColor.Control);
-                flag = true;
+                if (balance != 0 && comboBox3.Text == "Snigdha")
+                {
+                    balance -= 500;
+                    amount.Text = Convert.ToString(balance);
+                }
+                else if (balance == 0 || balance < 0)
+                {
+                    balance = 0;
+                    amount.Text = Convert.ToString(balance);
+                }
+                if (balance != 0 && comboBox3.Text == "AC_berth")
+                {
+                    balance -= 1500;
+                    amount.Text = Convert.ToString(balance);
+                }
+                else if (balance == 0 || balance < 0)
+                {
+                    balance = 0;
+                    amount.Text = Convert.ToString(balance);
+                }
+
+                if (balance != 0 && comboBox3.Text == "Shovon")
+                {
+                    balance -= 300;
+                    amount.Text = Convert.ToString(balance);
+                }
+                else if (balance == 0 || balance < 0)
+                {
+                    balance = 0;
+                    amount.Text = Convert.ToString(balance);
+                }
+                flag3 = true;
             }
         }
 
@@ -155,113 +273,448 @@ namespace Project_Kothin
             Express.Visible = true;
             BackButton1.Visible = false;
             Seats.Visible = false;
+            balance = 0;
+            amount.Text = Convert.ToString(balance);
+            A1.BackColor = Color.FromKnownColor(KnownColor.Control);
+            A2.BackColor = Color.FromKnownColor(KnownColor.Control);
+            B1.BackColor = Color.FromKnownColor(KnownColor.Control);
+            B2.BackColor = Color.FromKnownColor(KnownColor.Control);
+            C1.BackColor = Color.FromKnownColor(KnownColor.Control);
+            C2.BackColor = Color.FromKnownColor(KnownColor.Control);
+            D1.BackColor = Color.FromKnownColor(KnownColor.Control);
+            D2.BackColor = Color.FromKnownColor(KnownColor.Control);
+            E1.BackColor = Color.FromKnownColor(KnownColor.Control);
+            E2.BackColor = Color.FromKnownColor(KnownColor.Control);
+
         }
 
         private void B1_Click(object sender, EventArgs e)
         {
-            if (flag == true)
+            if (flag4 == true)
             {
                 B1.BackColor = Color.Green;
-                flag = false;
+                if (comboBox3.Text == "Snigdha")
+                {
+                    balance += 500;
+                    amount.Text = Convert.ToString(balance);
+                }
+                if (comboBox3.Text == "AC_berth")
+                {
+                    balance += 1500;
+                    amount.Text = Convert.ToString(balance);
+                }
+                if (comboBox3.Text == "Shovon")
+                {
+                    balance += 300;
+                    amount.Text = Convert.ToString(balance);
+                }
+                flag4 = false;
             }
             else
             {
 
                 B1.BackColor = Color.FromKnownColor(KnownColor.Control);
-                flag = true;
+                if (balance != 0 && comboBox3.Text == "Snigdha")
+                {
+                    balance -= 500;
+                    amount.Text = Convert.ToString(balance);
+                }
+                else if (balance == 0 || balance < 0)
+                {
+                    balance = 0;
+                    amount.Text = Convert.ToString(balance);
+                }
+                if (balance != 0 && comboBox3.Text == "AC_berth")
+                {
+                    balance -= 1500;
+                    amount.Text = Convert.ToString(balance);
+                }
+                else if (balance == 0 || balance < 0)
+                {
+                    balance = 0;
+                    amount.Text = Convert.ToString(balance);
+                }
+
+                if (balance != 0 && comboBox3.Text == "Shovon")
+                {
+                    balance -= 300;
+                    amount.Text = Convert.ToString(balance);
+                }
+                else if (balance == 0 || balance < 0)
+                {
+                    balance = 0;
+                    amount.Text = Convert.ToString(balance);
+                }
+                flag4 = true;
 
             }
         }
 
         private void B2_Click(object sender, EventArgs e)
         {
-            if (flag == true)
+            if (flag5 == true)
             {
                 B2.BackColor = Color.Green;
-                flag = false;
+                if (comboBox3.Text == "Snigdha")
+                {
+                    balance += 500;
+                    amount.Text = Convert.ToString(balance);
+                }
+                if (comboBox3.Text == "AC_berth")
+                {
+                    balance += 1500;
+                    amount.Text = Convert.ToString(balance);
+                }
+                if (comboBox3.Text == "Shovon")
+                {
+                    balance += 300;
+                    amount.Text = Convert.ToString(balance);
+                }
+                flag5 = false;
             }
             else
             {
 
                 B2.BackColor = Color.FromKnownColor(KnownColor.Control);
-                flag = true;
+                if (balance != 0 && comboBox3.Text == "Snigdha")
+                {
+                    balance -= 500;
+                    amount.Text = Convert.ToString(balance);
+                }
+                else if (balance == 0 || balance < 0)
+                {
+                    balance = 0;
+                    amount.Text = Convert.ToString(balance);
+                }
+                if (balance != 0 && comboBox3.Text == "AC_berth")
+                {
+                    balance -= 1500;
+                    amount.Text = Convert.ToString(balance);
+                }
+                else if (balance == 0 || balance < 0)
+                {
+                    balance = 0;
+                    amount.Text = Convert.ToString(balance);
+                }
+
+                if (balance != 0 && comboBox3.Text == "Shovon")
+                {
+                    balance -= 300;
+                    amount.Text = Convert.ToString(balance);
+                }
+                else if (balance == 0 || balance < 0)
+                {
+                    balance = 0;
+                    amount.Text = Convert.ToString(balance);
+                }
+                flag5 = true;
 
             }
         }
 
         private void C1_Click(object sender, EventArgs e)
         {
-            if (flag == true)
+            if (flag6 == true)
             {
                 C1.BackColor = Color.Green;
-                flag = false;
+                if (comboBox3.Text == "Snigdha")
+                {
+                    balance += 500;
+                    amount.Text = Convert.ToString(balance);
+                }
+                if (comboBox3.Text == "AC_berth")
+                {
+                    balance += 1500;
+                    amount.Text = Convert.ToString(balance);
+                }
+                if (comboBox3.Text == "Shovon")
+                {
+                    balance += 300;
+                    amount.Text = Convert.ToString(balance);
+                }
+                flag6 = false;
             }
             else
             {
 
                 C1.BackColor = Color.FromKnownColor(KnownColor.Control);
-                flag = true;
+                if (balance != 0 && comboBox3.Text == "Snigdha")
+                {
+                    balance -= 500;
+                    amount.Text = Convert.ToString(balance);
+                }
+                else if (balance == 0 || balance < 0)
+                {
+                    balance = 0;
+                    amount.Text = Convert.ToString(balance);
+                }
+                if (balance != 0 && comboBox3.Text == "AC_berth")
+                {
+                    balance -= 1500;
+                    amount.Text = Convert.ToString(balance);
+                }
+                else if (balance == 0 || balance < 0)
+                {
+                    balance = 0;
+                    amount.Text = Convert.ToString(balance);
+                }
+
+                if (balance != 0 && comboBox3.Text == "Shovon")
+                {
+                    balance -= 300;
+                    amount.Text = Convert.ToString(balance);
+                }
+                else if (balance == 0 || balance < 0)
+                {
+                    balance = 0;
+                    amount.Text = Convert.ToString(balance);
+                }
+                flag6 = true;
             }
         }
 
         private void D1_Click(object sender, EventArgs e)
         {
-            if (flag == true)
+            if (flag7 == true)
             {
                 D1.BackColor = Color.Green;
-                flag = false;
+                if (comboBox3.Text == "Snigdha")
+                {
+                    balance += 500;
+                    amount.Text = Convert.ToString(balance);
+                }
+                if (comboBox3.Text == "AC_berth")
+                {
+                    balance += 1500;
+                    amount.Text = Convert.ToString(balance);
+                }
+                if (comboBox3.Text == "Shovon")
+                {
+                    balance += 300;
+                    amount.Text = Convert.ToString(balance);
+                }
+                flag7 = false;
             }
             else
             {
 
                 D1.BackColor = Color.FromKnownColor(KnownColor.Control);
-                flag = true;
+                if (balance != 0 && comboBox3.Text == "Snigdha")
+                {
+                    balance -= 500;
+                    amount.Text = Convert.ToString(balance);
+                }
+                else if (balance == 0 || balance < 0)
+                {
+                    balance = 0;
+                    amount.Text = Convert.ToString(balance);
+                }
+                if (balance != 0 && comboBox3.Text == "AC_berth")
+                {
+                    balance -= 1500;
+                    amount.Text = Convert.ToString(balance);
+                }
+                else if (balance == 0 || balance < 0)
+                {
+                    balance = 0;
+                    amount.Text = Convert.ToString(balance);
+                }
+
+                if (balance != 0 && comboBox3.Text == "Shovon")
+                {
+                    balance -= 300;
+                    amount.Text = Convert.ToString(balance);
+                }
+                else if (balance == 0 || balance < 0)
+                {
+                    balance = 0;
+                    amount.Text = Convert.ToString(balance);
+                }
+                flag7 = true;
 
             }
         }
 
         private void D2_Click(object sender, EventArgs e)
         {
-            if (flag == true)
+            if (flag8 == true)
             {
                 D2.BackColor = Color.Green;
-                flag = false;
+                if (comboBox3.Text == "Snigdha")
+                {
+                    balance += 500;
+                    amount.Text = Convert.ToString(balance);
+                }
+                if (comboBox3.Text == "AC_berth")
+                {
+                    balance += 1500;
+                    amount.Text = Convert.ToString(balance);
+                }
+                if (comboBox3.Text == "Shovon")
+                {
+                    balance += 300;
+                    amount.Text = Convert.ToString(balance);
+                }
+                flag8 = false;
             }
             else
             {
 
                 D2.BackColor = Color.FromKnownColor(KnownColor.Control);
-                flag = true;
+                if (balance != 0 && comboBox3.Text == "Snigdha")
+                {
+                    balance -= 500;
+                    amount.Text = Convert.ToString(balance);
+                }
+                else if (balance == 0 || balance < 0)
+                {
+                    balance = 0;
+                    amount.Text = Convert.ToString(balance);
+                }
+                if (balance != 0 && comboBox3.Text == "AC_berth")
+                {
+                    balance -= 1500;
+                    amount.Text = Convert.ToString(balance);
+                }
+                else if (balance == 0 || balance < 0)
+                {
+                    balance = 0;
+                    amount.Text = Convert.ToString(balance);
+                }
+
+                if (balance != 0 && comboBox3.Text == "Shovon")
+                {
+                    balance -= 300;
+                    amount.Text = Convert.ToString(balance);
+                }
+                else if (balance == 0 || balance < 0)
+                {
+                    balance = 0;
+                    amount.Text = Convert.ToString(balance);
+                }
+                flag8 = true;
             }
         }
 
         private void E1_Click(object sender, EventArgs e)
         {
-            if (flag == true)
+            if (flag9 == true)
             {
                 E1.BackColor = Color.Green;
-                flag = false;
+                if (comboBox3.Text == "Snigdha")
+                {
+                    balance += 500;
+                    amount.Text = Convert.ToString(balance);
+                }
+                if (comboBox3.Text == "AC_berth")
+                {
+                    balance += 1500;
+                    amount.Text = Convert.ToString(balance);
+                }
+                if (comboBox3.Text == "Shovon")
+                {
+                    balance += 300;
+                    amount.Text = Convert.ToString(balance);
+                }
+                flag9 = false;
             }
             else
             {
 
                 E1.BackColor = Color.FromKnownColor(KnownColor.Control);
-                flag = true;
+                if (balance != 0 && comboBox3.Text == "Snigdha")
+                {
+                    balance -= 500;
+                    amount.Text = Convert.ToString(balance);
+                }
+                else if (balance == 0 || balance < 0)
+                {
+                    balance = 0;
+                    amount.Text = Convert.ToString(balance);
+                }
+                if (balance != 0 && comboBox3.Text == "AC_berth")
+                {
+                    balance -= 1500;
+                    amount.Text = Convert.ToString(balance);
+                }
+                else if (balance == 0 || balance < 0)
+                {
+                    balance = 0;
+                    amount.Text = Convert.ToString(balance);
+                }
+
+                if (balance != 0 && comboBox3.Text == "Shovon")
+                {
+                    balance -= 300;
+                    amount.Text = Convert.ToString(balance);
+                }
+                else if (balance == 0 || balance < 0)
+                {
+                    balance = 0;
+                    amount.Text = Convert.ToString(balance);
+                }
+                flag9 = true;
             }
         }
 
         private void E2_Click(object sender, EventArgs e)
         {
-            if (flag == true)
+            if (flag10 == true)
             {
                 E2.BackColor = Color.Green;
-                flag = false;
+                if (comboBox3.Text == "Snigdha")
+                {
+                    balance += 500;
+                    amount.Text = Convert.ToString(balance);
+                }
+                if (comboBox3.Text == "AC_berth")
+                {
+                    balance += 1500;
+                    amount.Text = Convert.ToString(balance);
+                }
+                if (comboBox3.Text == "Shovon")
+                {
+                    balance += 300;
+                    amount.Text = Convert.ToString(balance);
+                }
+                flag10 = false;
             }
             else
             {
 
                 E2.BackColor = Color.FromKnownColor(KnownColor.Control);
-                flag = true;
+                if (balance != 0 && comboBox3.Text == "Snigdha")
+                {
+                    balance -= 500;
+                    amount.Text = Convert.ToString(balance);
+                }
+                else if (balance == 0 || balance < 0)
+                {
+                    balance = 0;
+                    amount.Text = Convert.ToString(balance);
+                }
+                if (balance != 0 && comboBox3.Text == "AC_berth")
+                {
+                    balance -= 1500;
+                    amount.Text = Convert.ToString(balance);
+                }
+                else if (balance == 0 || balance < 0)
+                {
+                    balance = 0;
+                    amount.Text = Convert.ToString(balance);
+                }
+
+                if (balance != 0 && comboBox3.Text == "Shovon")
+                {
+                    balance -= 300;
+                    amount.Text = Convert.ToString(balance);
+                }
+                else if (balance == 0 || balance < 0)
+                {
+                    balance = 0;
+                    amount.Text = Convert.ToString(balance);
+                }
+                flag10 = true;
                
             }
         }

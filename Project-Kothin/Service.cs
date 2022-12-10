@@ -15,10 +15,9 @@ namespace Project_Kothin
         public Service()
         {
             InitializeComponent();
-            comboBox1.SelectedIndex = 0;
-           
-           
+            Ticketbox.SelectedIndex = 0;  
         }
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -26,7 +25,7 @@ namespace Project_Kothin
             buttonTicket.Visible = false;
             buttonRental.Visible = false;
             labelTicket.Visible = true;
-            comboBox1.Visible = true;
+            Ticketbox.Visible = true;
             SubmitButton.Visible = true;
             BackButton.Visible = true;
 
@@ -43,7 +42,7 @@ namespace Project_Kothin
             buttonTicket.Visible = true;
             buttonRental.Visible = true;
             labelTicket.Visible = false;
-            comboBox1.Visible = false;
+            Ticketbox.Visible = false;
             SubmitButton.Visible = false;
             BackButton.Visible = false;
             
@@ -51,17 +50,33 @@ namespace Project_Kothin
 
         private void SubmitButton_Click(object sender, EventArgs e)
         {
-            if (comboBox1.Text == "Train")
+            if (Ticketbox.Text == "Train")
             {
-                Ticket it = new Ticket();
+                Ticket it = new Ticket(Ticketbox.Text);
                 it.Show();
             }
+            else if(Ticketbox.Text=="Bus")
+            {
+                Ticket it1 = new Ticket(Ticketbox.Text);
+                it1.Show();
+            }
+            
         }
 
         private void SEARCHTRAIN_Click(object sender, EventArgs e)
         {
             Selectseats s1 = new Selectseats();
             s1.Show();
+        }
+
+        private void Service_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

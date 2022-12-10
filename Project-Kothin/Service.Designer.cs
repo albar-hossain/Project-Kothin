@@ -32,7 +32,7 @@
             this.buttonRental = new System.Windows.Forms.Button();
             this.labelService = new System.Windows.Forms.Label();
             this.labelTicket = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.Ticketbox = new System.Windows.Forms.ComboBox();
             this.BackButton = new System.Windows.Forms.Button();
             this.SubmitButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -79,20 +79,20 @@
             this.labelTicket.Text = "Ticket:";
             this.labelTicket.Visible = false;
             // 
-            // comboBox1
+            // Ticketbox
             // 
-            this.comboBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.Ticketbox.BackColor = System.Drawing.SystemColors.Window;
+            this.Ticketbox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Ticketbox.FormattingEnabled = true;
+            this.Ticketbox.Items.AddRange(new object[] {
             "Train",
             "Bus"});
-            this.comboBox1.Location = new System.Drawing.Point(329, 193);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 4;
-            this.comboBox1.Visible = false;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.Ticketbox.Location = new System.Drawing.Point(329, 193);
+            this.Ticketbox.Name = "Ticketbox";
+            this.Ticketbox.Size = new System.Drawing.Size(121, 21);
+            this.Ticketbox.TabIndex = 4;
+            this.Ticketbox.Visible = false;
+            this.Ticketbox.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // BackButton
             // 
@@ -123,7 +123,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.SubmitButton);
             this.Controls.Add(this.BackButton);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.Ticketbox);
             this.Controls.Add(this.labelTicket);
             this.Controls.Add(this.labelService);
             this.Controls.Add(this.buttonRental);
@@ -131,6 +131,7 @@
             this.Name = "Service";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Service";
+            this.Load += new System.EventHandler(this.Service_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -142,7 +143,7 @@
         private System.Windows.Forms.Button buttonRental;
         private System.Windows.Forms.Label labelService;
         private System.Windows.Forms.Label labelTicket;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox Ticketbox;
         private System.Windows.Forms.Button BackButton;
         private System.Windows.Forms.Button SubmitButton;
     }

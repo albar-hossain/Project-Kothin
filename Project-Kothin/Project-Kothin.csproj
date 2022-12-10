@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Busseats.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Busseats.Designer.cs">
+      <DependentUpon>Busseats.cs</DependentUpon>
+    </Compile>
     <Compile Include="Selectseats.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +72,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Busseats.resx">
+      <DependentUpon>Busseats.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Selectseats.resx">
       <DependentUpon>Selectseats.cs</DependentUpon>
     </EmbeddedResource>
