@@ -10,22 +10,11 @@ using System.Windows.Forms;
 
 namespace Project_Kothin
 {
-    public partial class LandingPage : Form
+    public partial class Boat2 : Form
     {
-        public LandingPage()
+        public Boat2()
         {
             InitializeComponent();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Boat1 b1 = new Boat1();
-            b1.Show();
         }
     }
 }
