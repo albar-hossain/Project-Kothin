@@ -119,11 +119,16 @@ namespace Project_Kothin
 
         private void linkLabelRegBack_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            this.Close();
+            this.Hide();
         }
 
         private void labelWrongPass_Click(object sender, EventArgs e)
         {
+        }
+
+        private void linkLabelRegClose_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

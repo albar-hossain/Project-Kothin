@@ -160,9 +160,7 @@
             // 
             // buttonLogin
             // 
-            this.buttonLogin.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonLogin.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonLogin.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.buttonLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(150)))), ((int)(((byte)(105)))));
             this.buttonLogin.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -178,9 +176,7 @@
             // 
             // buttonExit
             // 
-            this.buttonExit.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonExit.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonExit.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.buttonExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(150)))), ((int)(((byte)(105)))));
             this.buttonExit.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -192,6 +188,7 @@
             this.buttonExit.TabIndex = 8;
             this.buttonExit.Text = "Exit";
             this.buttonExit.UseVisualStyleBackColor = false;
+            this.buttonExit.Visible = false;
             this.buttonExit.Click += new System.EventHandler(this.button1_Click);
             // 
             // linkLabelLoginBack
@@ -233,7 +230,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::Project_Kothin.Properties.Resources.KothinBGM;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(1199, 691);
+            this.ClientSize = new System.Drawing.Size(1215, 730);
             this.Controls.Add(this.linkLabelLoginClose);
             this.Controls.Add(this.linkLabelLoginBack);
             this.Controls.Add(this.buttonExit);
@@ -247,6 +244,7 @@
             this.Controls.Add(this.labelLoginPhone);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MinimumSize = new System.Drawing.Size(1215, 730);
             this.Name = "Login";

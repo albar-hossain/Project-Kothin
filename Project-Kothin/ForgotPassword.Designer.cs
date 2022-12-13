@@ -71,7 +71,7 @@
             this.textBoxResetRecoveryCode.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.textBoxResetRecoveryCode.Location = new System.Drawing.Point(295, 140);
             this.textBoxResetRecoveryCode.Name = "textBoxResetRecoveryCode";
-            this.textBoxResetRecoveryCode.Size = new System.Drawing.Size(234, 29);
+            this.textBoxResetRecoveryCode.Size = new System.Drawing.Size(762, 29);
             this.textBoxResetRecoveryCode.TabIndex = 17;
             // 
             // labelResetRecoveryCode
@@ -100,7 +100,7 @@
             this.textBoxResetPhone.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.textBoxResetPhone.Location = new System.Drawing.Point(295, 77);
             this.textBoxResetPhone.Name = "textBoxResetPhone";
-            this.textBoxResetPhone.Size = new System.Drawing.Size(234, 29);
+            this.textBoxResetPhone.Size = new System.Drawing.Size(762, 29);
             this.textBoxResetPhone.TabIndex = 19;
             this.textBoxResetPhone.TextChanged += new System.EventHandler(this.textBoxResetPhone_TextChanged);
             // 
@@ -146,7 +146,7 @@
             this.textBoxResetNewPassword.Location = new System.Drawing.Point(295, 200);
             this.textBoxResetNewPassword.Name = "textBoxResetNewPassword";
             this.textBoxResetNewPassword.PasswordChar = '*';
-            this.textBoxResetNewPassword.Size = new System.Drawing.Size(234, 29);
+            this.textBoxResetNewPassword.Size = new System.Drawing.Size(762, 29);
             this.textBoxResetNewPassword.TabIndex = 23;
             // 
             // textBoxResetNewPassConfirm
@@ -161,7 +161,7 @@
             this.textBoxResetNewPassConfirm.Location = new System.Drawing.Point(295, 264);
             this.textBoxResetNewPassConfirm.Name = "textBoxResetNewPassConfirm";
             this.textBoxResetNewPassConfirm.PasswordChar = '*';
-            this.textBoxResetNewPassConfirm.Size = new System.Drawing.Size(234, 29);
+            this.textBoxResetNewPassConfirm.Size = new System.Drawing.Size(762, 29);
             this.textBoxResetNewPassConfirm.TabIndex = 22;
             this.textBoxResetNewPassConfirm.TextChanged += new System.EventHandler(this.textBoxResetNewPassConfirm_TextChanged);
             // 
@@ -178,7 +178,7 @@
             this.buttonResetPass.ForeColor = System.Drawing.Color.Black;
             this.buttonResetPass.Location = new System.Drawing.Point(295, 330);
             this.buttonResetPass.Name = "buttonResetPass";
-            this.buttonResetPass.Size = new System.Drawing.Size(234, 50);
+            this.buttonResetPass.Size = new System.Drawing.Size(762, 145);
             this.buttonResetPass.TabIndex = 24;
             this.buttonResetPass.Text = "RESET PASSWORD";
             this.buttonResetPass.UseVisualStyleBackColor = false;
@@ -287,7 +287,7 @@
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.BackgroundImage = global::Project_Kothin.Properties.Resources.KothinPassResetBG;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(687, 635);
+            this.ClientSize = new System.Drawing.Size(1215, 730);
             this.Controls.Add(this.labelResetWrongPhone);
             this.Controls.Add(this.labelResetWrongPass);
             this.Controls.Add(this.labelResetRightPass);
@@ -310,6 +310,7 @@
             this.Name = "ForgotPassword";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reset Password";
+            this.Load += new System.EventHandler(this.ForgotPassword_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
