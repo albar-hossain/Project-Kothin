@@ -122,7 +122,7 @@ namespace Project_Kothin
         private void A2_Click(object sender, EventArgs e)
         {
 
-            if (flag1 == true)
+            if (flag2 == true)
             {
                 A2.BackColor = Color.Green;
                 if (comboBox3.Text == "AC")
@@ -136,7 +136,7 @@ namespace Project_Kothin
                     amount.Text = Convert.ToString(balance);
                 }
                 
-                flag1 = false;
+                flag2 = false;
             }
             else
             {
@@ -164,14 +164,14 @@ namespace Project_Kothin
                     amount.Text = Convert.ToString(balance);
                 }
 
-                flag1 = true;
+                flag2 = true;
             }
         }
 
         private void B1_Click(object sender, EventArgs e)
         {
 
-            if (flag1 == true)
+            if (flag3 == true)
             {
                 B1.BackColor = Color.Green;
                 if (comboBox3.Text == "AC")
@@ -185,7 +185,7 @@ namespace Project_Kothin
                     amount.Text = Convert.ToString(balance);
                 }
       
-                flag1 = false;
+                flag3 = false;
             }
             else
             {
@@ -213,14 +213,14 @@ namespace Project_Kothin
                     amount.Text = Convert.ToString(balance);
                 }
 
-                flag1 = true;
+                flag3 = true;
             }
         }
 
         private void B2_Click(object sender, EventArgs e)
         {
 
-            if (flag1 == true)
+            if (flag4 == true)
             {
                 B2.BackColor = Color.Green;
                 if (comboBox3.Text == "AC")
@@ -234,7 +234,7 @@ namespace Project_Kothin
                     amount.Text = Convert.ToString(balance);
                 }
 
-                flag1 = false;
+                flag4 = false;
             }
             else
             {
@@ -263,14 +263,14 @@ namespace Project_Kothin
                 }
 
 
-                flag1 = true;
+                flag4 = true;
             }
         }
 
         private void C1_Click(object sender, EventArgs e)
         {
 
-            if (flag1 == true)
+            if (flag5 == true)
             {
                 C1.BackColor = Color.Green;
                 if (comboBox3.Text == "AC")
@@ -284,7 +284,7 @@ namespace Project_Kothin
                     amount.Text = Convert.ToString(balance);
                 }
 
-                flag1 = false;
+                flag5 = false;
             }
             else
             {
@@ -313,14 +313,14 @@ namespace Project_Kothin
                 }
 
 
-                flag1 = true;
+                flag5 = true;
             }
         }
 
         private void C2_Click(object sender, EventArgs e)
         {
 
-            if (flag1 == true)
+            if (flag6 == true)
             {
                 C2.BackColor = Color.Green;
                 if (comboBox3.Text == "AC")
@@ -334,7 +334,7 @@ namespace Project_Kothin
                     amount.Text = Convert.ToString(balance);
                 }
 
-                flag1 = false;
+                flag6 = false;
             }
             else
             {
@@ -363,14 +363,14 @@ namespace Project_Kothin
                 }
 
 
-                flag1 = true;
+                flag6 = true;
             }
         }
 
         private void D1_Click(object sender, EventArgs e)
         {
 
-            if (flag1 == true)
+            if (flag7 == true)
             {
                 D1.BackColor = Color.Green;
                 if (comboBox3.Text == "AC")
@@ -384,7 +384,7 @@ namespace Project_Kothin
                     amount.Text = Convert.ToString(balance);
                 }
 
-                flag1 = false;
+                flag7 = false;
             }
             else
             {
@@ -413,14 +413,14 @@ namespace Project_Kothin
                 }
 
 
-                flag1 = true;
+                flag7 = true;
             }
         }
 
         private void D2_Click(object sender, EventArgs e)
         {
 
-            if (flag1 == true)
+            if (flag8 == true)
             {
                 D2.BackColor = Color.Green;
                 if (comboBox3.Text == "AC")
@@ -434,7 +434,7 @@ namespace Project_Kothin
                     amount.Text = Convert.ToString(balance);
                 }
 
-                flag1 = false;
+                flag8 = false;
             }
             else
             {
@@ -463,14 +463,14 @@ namespace Project_Kothin
                 }
 
 
-                flag1 = true;
+                flag8 = true;
             }
         }
 
         private void E1_Click(object sender, EventArgs e)
         {
 
-            if (flag1 == true)
+            if (flag9 == true)
             {
                 E1.BackColor = Color.Green;
                 if (comboBox3.Text == "AC")
@@ -484,7 +484,7 @@ namespace Project_Kothin
                     amount.Text = Convert.ToString(balance);
                 }
 
-                flag1 = false;
+                flag9 = false;
             }
             else
             {
@@ -513,14 +513,14 @@ namespace Project_Kothin
                 }
 
 
-                flag1 = true;
+                flag9 = true;
             }
         }
 
         private void E2_Click(object sender, EventArgs e)
         {
 
-            if (flag1 == true)
+            if (flag10 == true)
             {
                 E2.BackColor = Color.Green;
                 if (comboBox3.Text == "AC")
@@ -534,7 +534,7 @@ namespace Project_Kothin
                     amount.Text = Convert.ToString(balance);
                 }
 
-                flag1 = false;
+                flag10= false;
             }
             else
             {
@@ -562,7 +562,7 @@ namespace Project_Kothin
                     amount.Text = Convert.ToString(balance);
                 }
 
-                flag1 = true;
+                flag10 = true;
             }
         }
 

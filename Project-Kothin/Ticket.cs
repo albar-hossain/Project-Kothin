@@ -20,7 +20,15 @@ namespace Project_Kothin
         {
             InitializeComponent();
             label3.Text = id;
-            
+            if (label3.Text == "Train")
+            {
+                SEARCHTRAIN.Visible = true;
+            }
+            else if (label3.Text == "Bus")
+            {
+                SEARCHBUS.Visible = true;
+            }
+
         }
 
         
@@ -51,14 +59,7 @@ namespace Project_Kothin
         }
         private void Train_Load(object sender, EventArgs e)
         {
-            if (label3.Text == "Train")
-            {
-                SEARCHTRAIN.Visible = true;
-            }
-           else if (label3.Text == "Bus")
-            {
-                SEARCHBUS.Visible = true;
-            }
+            
         }
 
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)

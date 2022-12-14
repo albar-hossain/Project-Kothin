@@ -118,13 +118,13 @@ namespace Project_Kothin
             // 
             // SEARCHBUS
             // 
-            this.SEARCHBUS.Location = new System.Drawing.Point(294, 354);
+            this.SEARCHBUS.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.SEARCHBUS.Location = new System.Drawing.Point(294, 325);
             this.SEARCHBUS.Name = "SEARCHBUS";
             this.SEARCHBUS.Size = new System.Drawing.Size(144, 23);
             this.SEARCHBUS.TabIndex = 9;
             this.SEARCHBUS.Text = "SEARCH BUS";
             this.SEARCHBUS.UseVisualStyleBackColor = true;
-            this.SEARCHBUS.UseWaitCursor = true;
             this.SEARCHBUS.Visible = false;
             this.SEARCHBUS.Click += new System.EventHandler(this.button1_Click);
             // 

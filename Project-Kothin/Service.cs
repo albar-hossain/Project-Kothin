@@ -57,8 +57,8 @@ namespace Project_Kothin
             }
             else if(Ticketbox.Text=="Bus")
             {
-                Ticket it1 = new Ticket(Ticketbox.Text);
-                it1.Show();
+                Ticket it = new Ticket(Ticketbox.Text);
+                it.Show();
             }
             
         }
