@@ -95,7 +95,7 @@ namespace Project_Kothin
                 A1.BackColor = Color.FromKnownColor(KnownColor.Control);
                 if (balance != 0 && comboBox3.Text == "AC")
                 {
-                    balance -= 500;
+                    balance -= 2500;
                     amount.Text = Convert.ToString(balance);
                 }
                 else if (balance == 0 || balance < 0)
@@ -106,7 +106,7 @@ namespace Project_Kothin
 
                 if (balance != 0 && comboBox3.Text == "Non-AC")
                 {
-                    balance -= 1500;
+                    balance -= 700;
                     amount.Text = Convert.ToString(balance);
                 }
                 else if (balance == 0 || balance < 0)
@@ -127,12 +127,12 @@ namespace Project_Kothin
                 A2.BackColor = Color.Green;
                 if (comboBox3.Text == "AC")
                 {
-                    balance += 500;
+                    balance += 2500;
                     amount.Text = Convert.ToString(balance);
                 }
                 if (comboBox3.Text == "Non-AC")
                 {
-                    balance += 1500;
+                    balance += 700;
                     amount.Text = Convert.ToString(balance);
                 }
                 
@@ -144,7 +144,7 @@ namespace Project_Kothin
                 A2.BackColor = Color.FromKnownColor(KnownColor.Control);
                 if (balance != 0 && comboBox3.Text == "AC")
                 {
-                    balance -= 500;
+                    balance -= 2500;
                     amount.Text = Convert.ToString(balance);
                 }
                 else if (balance == 0 || balance < 0)
@@ -155,7 +155,7 @@ namespace Project_Kothin
 
                 if (balance != 0 && comboBox3.Text == "Non-AC")
                 {
-                    balance -= 1500;
+                    balance -= 700;
                     amount.Text = Convert.ToString(balance);
                 }
                 else if (balance == 0 || balance < 0)
@@ -176,12 +176,12 @@ namespace Project_Kothin
                 B1.BackColor = Color.Green;
                 if (comboBox3.Text == "AC")
                 {
-                    balance += 500;
+                    balance += 2500;
                     amount.Text = Convert.ToString(balance);
                 }
                 if (comboBox3.Text == "Non-AC")
                 {
-                    balance += 1500;
+                    balance += 700;
                     amount.Text = Convert.ToString(balance);
                 }
       
@@ -193,7 +193,7 @@ namespace Project_Kothin
                 B1.BackColor = Color.FromKnownColor(KnownColor.Control);
                 if (balance != 0 && comboBox3.Text == "AC")
                 {
-                    balance -= 500;
+                    balance -= 2500;
                     amount.Text = Convert.ToString(balance);
                 }
                 else if (balance == 0 || balance < 0)
@@ -204,7 +204,7 @@ namespace Project_Kothin
 
                 if (balance != 0 && comboBox3.Text == "Non-AC")
                 {
-                    balance -= 1500;
+                    balance -= 700;
                     amount.Text = Convert.ToString(balance);
                 }
                 else if (balance == 0 || balance < 0)
@@ -225,12 +225,12 @@ namespace Project_Kothin
                 B2.BackColor = Color.Green;
                 if (comboBox3.Text == "AC")
                 {
-                    balance += 500;
+                    balance += 2500;
                     amount.Text = Convert.ToString(balance);
                 }
                 if (comboBox3.Text == "Non-AC")
                 {
-                    balance += 1500;
+                    balance += 700;
                     amount.Text = Convert.ToString(balance);
                 }
 
@@ -242,7 +242,7 @@ namespace Project_Kothin
                 B2.BackColor = Color.FromKnownColor(KnownColor.Control);
                 if (balance != 0 && comboBox3.Text == "AC")
                 {
-                    balance -= 500;
+                    balance -= 2500;
                     amount.Text = Convert.ToString(balance);
                 }
                 else if (balance == 0 || balance < 0)
@@ -253,7 +253,7 @@ namespace Project_Kothin
 
                 if (balance != 0 && comboBox3.Text == "Non-AC")
                 {
-                    balance -= 1500;
+                    balance -= 700;
                     amount.Text = Convert.ToString(balance);
                 }
                 else if (balance == 0 || balance < 0)
@@ -275,12 +275,12 @@ namespace Project_Kothin
                 C1.BackColor = Color.Green;
                 if (comboBox3.Text == "AC")
                 {
-                    balance += 500;
+                    balance += 2500;
                     amount.Text = Convert.ToString(balance);
                 }
                 if (comboBox3.Text == "Non-AC")
                 {
-                    balance += 1500;
+                    balance += 700;
                     amount.Text = Convert.ToString(balance);
                 }
 
@@ -292,7 +292,7 @@ namespace Project_Kothin
                 C1.BackColor = Color.FromKnownColor(KnownColor.Control);
                 if (balance != 0 && comboBox3.Text == "AC")
                 {
-                    balance -= 500;
+                    balance -= 2500;
                     amount.Text = Convert.ToString(balance);
                 }
                 else if (balance == 0 || balance < 0)
@@ -303,7 +303,7 @@ namespace Project_Kothin
 
                 if (balance != 0 && comboBox3.Text == "Non-AC")
                 {
-                    balance -= 1500;
+                    balance -= 700;
                     amount.Text = Convert.ToString(balance);
                 }
                 else if (balance == 0 || balance < 0)
@@ -325,12 +325,12 @@ namespace Project_Kothin
                 C2.BackColor = Color.Green;
                 if (comboBox3.Text == "AC")
                 {
-                    balance += 500;
+                    balance += 2500;
                     amount.Text = Convert.ToString(balance);
                 }
                 if (comboBox3.Text == "Non-AC")
                 {
-                    balance += 1500;
+                    balance += 700;
                     amount.Text = Convert.ToString(balance);
                 }
 
@@ -342,7 +342,7 @@ namespace Project_Kothin
                 C2.BackColor = Color.FromKnownColor(KnownColor.Control);
                 if (balance != 0 && comboBox3.Text == "AC")
                 {
-                    balance -= 500;
+                    balance -= 2500;
                     amount.Text = Convert.ToString(balance);
                 }
                 else if (balance == 0 || balance < 0)
@@ -353,7 +353,7 @@ namespace Project_Kothin
 
                 if (balance != 0 && comboBox3.Text == "Non-AC")
                 {
-                    balance -= 1500;
+                    balance -= 700;
                     amount.Text = Convert.ToString(balance);
                 }
                 else if (balance == 0 || balance < 0)
@@ -375,12 +375,12 @@ namespace Project_Kothin
                 D1.BackColor = Color.Green;
                 if (comboBox3.Text == "AC")
                 {
-                    balance += 500;
+                    balance += 2500;
                     amount.Text = Convert.ToString(balance);
                 }
                 if (comboBox3.Text == "Non-AC")
                 {
-                    balance += 1500;
+                    balance += 700;
                     amount.Text = Convert.ToString(balance);
                 }
 
@@ -392,7 +392,7 @@ namespace Project_Kothin
                 D1.BackColor = Color.FromKnownColor(KnownColor.Control);
                 if (balance != 0 && comboBox3.Text == "AC")
                 {
-                    balance -= 500;
+                    balance -= 2500;
                     amount.Text = Convert.ToString(balance);
                 }
                 else if (balance == 0 || balance < 0)
@@ -403,7 +403,7 @@ namespace Project_Kothin
 
                 if (balance != 0 && comboBox3.Text == "Non-AC")
                 {
-                    balance -= 1500;
+                    balance -= 700;
                     amount.Text = Convert.ToString(balance);
                 }
                 else if (balance == 0 || balance < 0)
@@ -425,12 +425,12 @@ namespace Project_Kothin
                 D2.BackColor = Color.Green;
                 if (comboBox3.Text == "AC")
                 {
-                    balance += 500;
+                    balance += 2500;
                     amount.Text = Convert.ToString(balance);
                 }
                 if (comboBox3.Text == "Non-AC")
                 {
-                    balance += 1500;
+                    balance += 700;
                     amount.Text = Convert.ToString(balance);
                 }
 
@@ -442,7 +442,7 @@ namespace Project_Kothin
                 D2.BackColor = Color.FromKnownColor(KnownColor.Control);
                 if (balance != 0 && comboBox3.Text == "AC")
                 {
-                    balance -= 500;
+                    balance -= 2500;
                     amount.Text = Convert.ToString(balance);
                 }
                 else if (balance == 0 || balance < 0)
@@ -453,7 +453,7 @@ namespace Project_Kothin
 
                 if (balance != 0 && comboBox3.Text == "Non-AC")
                 {
-                    balance -= 1500;
+                    balance -= 700;
                     amount.Text = Convert.ToString(balance);
                 }
                 else if (balance == 0 || balance < 0)
@@ -475,12 +475,12 @@ namespace Project_Kothin
                 E1.BackColor = Color.Green;
                 if (comboBox3.Text == "AC")
                 {
-                    balance += 500;
+                    balance += 2500;
                     amount.Text = Convert.ToString(balance);
                 }
                 if (comboBox3.Text == "Non-AC")
                 {
-                    balance += 1500;
+                    balance += 700;
                     amount.Text = Convert.ToString(balance);
                 }
 
@@ -492,7 +492,7 @@ namespace Project_Kothin
                 E1.BackColor = Color.FromKnownColor(KnownColor.Control);
                 if (balance != 0 && comboBox3.Text == "AC")
                 {
-                    balance -= 500;
+                    balance -= 2500;
                     amount.Text = Convert.ToString(balance);
                 }
                 else if (balance == 0 || balance < 0)
@@ -503,7 +503,7 @@ namespace Project_Kothin
 
                 if (balance != 0 && comboBox3.Text == "Non-AC")
                 {
-                    balance -= 1500;
+                    balance -= 700;
                     amount.Text = Convert.ToString(balance);
                 }
                 else if (balance == 0 || balance < 0)
@@ -525,12 +525,12 @@ namespace Project_Kothin
                 E2.BackColor = Color.Green;
                 if (comboBox3.Text == "AC")
                 {
-                    balance += 500;
+                    balance += 2500;
                     amount.Text = Convert.ToString(balance);
                 }
                 if (comboBox3.Text == "Non-AC")
                 {
-                    balance += 1500;
+                    balance += 700;
                     amount.Text = Convert.ToString(balance);
                 }
 
@@ -542,7 +542,7 @@ namespace Project_Kothin
                 E2.BackColor = Color.FromKnownColor(KnownColor.Control);
                 if (balance != 0 && comboBox3.Text == "AC")
                 {
-                    balance -= 500;
+                    balance -= 2500;
                     amount.Text = Convert.ToString(balance);
                 }
                 else if (balance == 0 || balance < 0)
@@ -553,7 +553,7 @@ namespace Project_Kothin
 
                 if (balance != 0 && comboBox3.Text == "Non-AC")
                 {
-                    balance -= 1500;
+                    balance -= 700;
                     amount.Text = Convert.ToString(balance);
                 }
                 else if (balance == 0 || balance < 0)

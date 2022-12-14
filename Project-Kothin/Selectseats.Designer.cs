@@ -246,6 +246,7 @@ namespace Project_Kothin
             this.BookTrain.TabIndex = 7;
             this.BookTrain.Text = "Book";
             this.BookTrain.UseVisualStyleBackColor = true;
+            this.BookTrain.Visible = false;
             this.BookTrain.Click += new System.EventHandler(this.BookTrain_Click);
             // 
             // Totalamount

@@ -84,12 +84,13 @@
             this.Ticketbox.BackColor = System.Drawing.SystemColors.Window;
             this.Ticketbox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Ticketbox.FormattingEnabled = true;
+            this.Ticketbox.IntegralHeight = false;
             this.Ticketbox.Items.AddRange(new object[] {
             "Train",
             "Bus"});
             this.Ticketbox.Location = new System.Drawing.Point(329, 193);
             this.Ticketbox.Name = "Ticketbox";
-            this.Ticketbox.Size = new System.Drawing.Size(121, 21);
+            this.Ticketbox.Size = new System.Drawing.Size(141, 21);
             this.Ticketbox.TabIndex = 4;
             this.Ticketbox.Visible = false;
             this.Ticketbox.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);

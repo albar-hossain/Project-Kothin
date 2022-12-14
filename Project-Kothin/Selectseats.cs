@@ -77,7 +77,7 @@ namespace Project_Kothin
             {
                 
                 A1.BackColor = Color.FromKnownColor(KnownColor.Control);
-                if (balance != 0&&comboBox3.Text=="Snigdha")
+                if (balance != 0 &&comboBox3.Text=="Snigdha")
                 {
                     balance-=500;
                     amount.Text = Convert.ToString(balance);
@@ -237,6 +237,7 @@ namespace Project_Kothin
 
         private void button1_Click(object sender, EventArgs e)
         {
+            BookTrain.Visible = true;
             A1.Visible = true;
             A2.Visible = true;
             B1.Visible = true;
@@ -258,6 +259,7 @@ namespace Project_Kothin
 
         private void BackButton_Click(object sender, EventArgs e)
         {
+            BookTrain.Visible = false;
             A1.Visible = false;
             A2.Visible = false;
             B1.Visible = false;

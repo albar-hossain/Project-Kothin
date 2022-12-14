@@ -12,13 +12,23 @@ namespace Project_Kothin
 {
     public partial class Ticket : Form
     {
+        private const int CB_SETCUEBANNER = 0x1703;
+
+        [System.Runtime.InteropServices.DllImport("user32.dll", CharSet = System.Runtime.InteropServices.CharSet.Auto)]
+        private static extern int SendMessage(IntPtr hWnd, int msg, int wParam, [System.Runtime.InteropServices.MarshalAs(System.Runtime.InteropServices.UnmanagedType.LPWStr)] string lParam);
         public Ticket()
         {
             InitializeComponent();
+            
+
+            
         }
         public Ticket(string id)
         {
             InitializeComponent();
+            SendMessage(this.comboBox1.Handle, CB_SETCUEBANNER, 0, "Please select Depurture location...");
+            SendMessage(this.comboBox2.Handle, CB_SETCUEBANNER, 0, "Please select Destination...");
+
             label3.Text = id;
             if (label3.Text == "Train")
             {
@@ -54,8 +64,27 @@ namespace Project_Kothin
 
         private void SEARCHTRAIN_Click(object sender, EventArgs e)
         {
-            Selectseats s1 = new Selectseats();
-            s1.Show();
+            string selected1 = this.comboBox1.GetItemText(this.comboBox1.SelectedItem);
+            string selected2 = this.comboBox2.GetItemText(this.comboBox1.SelectedItem);
+            //MessageBox.Show(selected);
+
+            if (comboBox1.SelectedIndex != comboBox2.SelectedIndex)
+            {
+                Selectseats s1 = new Selectseats();
+                s1.Show();
+                
+            }
+            
+            if (comboBox1.SelectedIndex==comboBox2.SelectedIndex)
+            {
+                MessageBox.Show("Please select different Departure and destination");
+            }
+           
+            else
+            {
+                MessageBox.Show("Please select depurture or destination");
+            }
+            
         }
         private void Train_Load(object sender, EventArgs e)
         {
@@ -67,10 +96,22 @@ namespace Project_Kothin
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void SEARCHBUS_Click(object sender, EventArgs e)
         {
-            Busseats b1 = new Busseats();
-            b1.Show();
+            if (comboBox1.SelectedIndex == comboBox2.SelectedIndex)
+            {
+                MessageBox.Show("Please select different Departure and destination");
+            }
+            else
+            {
+                Busseats b1 = new Busseats();
+                b1.Show();
+            }
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
