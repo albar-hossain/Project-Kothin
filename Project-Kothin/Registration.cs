@@ -85,13 +85,13 @@ namespace Project_Kothin
 
         private void buttonSignUp_Click(object sender, EventArgs e)
         {
-            if (textBoxRegFullName.Text != null &&
-                textBoxRegPassword.Text != null &&
-                textBoxRegPassConfirm.Text != null &&
-                textRegPostCode.Text != null &&
-                textBoxRegEmail.Text != null &&
-                textBoxRegPhone.Text != null &&
-                textBoxRegAddress.Text != null)
+            if ((textBoxRegFullName.Text != null) &&
+                (textBoxRegPassword.Text != null) &&
+                (textBoxRegPassConfirm.Text != null) &&
+                (textRegPostCode.Text != null) &&
+                (textBoxRegEmail.Text != null) &&
+                (textBoxRegPhone.Text != null) &&
+                (textBoxRegAddress.Text != null))
             {
                 MessageBox.Show("Registration complete!");
                 this.Close();
