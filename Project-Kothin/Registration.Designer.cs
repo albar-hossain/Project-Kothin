@@ -175,7 +175,7 @@
             this.textRegPostCode.Location = new System.Drawing.Point(250, 276);
             this.textRegPostCode.Name = "textRegPostCode";
             this.textRegPostCode.Size = new System.Drawing.Size(264, 29);
-            this.textRegPostCode.TabIndex = 13;
+            this.textRegPostCode.TabIndex = 3;
             this.textRegPostCode.TextChanged += new System.EventHandler(this.textRegPostCode_TextChanged);
             // 
             // textBoxRegAddress
@@ -189,7 +189,7 @@
             this.textBoxRegAddress.Multiline = true;
             this.textBoxRegAddress.Name = "textBoxRegAddress";
             this.textBoxRegAddress.Size = new System.Drawing.Size(264, 66);
-            this.textBoxRegAddress.TabIndex = 14;
+            this.textBoxRegAddress.TabIndex = 4;
             // 
             // textBoxRegFullName
             // 
@@ -201,7 +201,7 @@
             this.textBoxRegFullName.Location = new System.Drawing.Point(250, 159);
             this.textBoxRegFullName.Name = "textBoxRegFullName";
             this.textBoxRegFullName.Size = new System.Drawing.Size(264, 29);
-            this.textBoxRegFullName.TabIndex = 15;
+            this.textBoxRegFullName.TabIndex = 1;
             // 
             // textBoxRegPhone
             // 
@@ -213,7 +213,7 @@
             this.textBoxRegPhone.Location = new System.Drawing.Point(250, 216);
             this.textBoxRegPhone.Name = "textBoxRegPhone";
             this.textBoxRegPhone.Size = new System.Drawing.Size(264, 29);
-            this.textBoxRegPhone.TabIndex = 16;
+            this.textBoxRegPhone.TabIndex = 2;
             this.textBoxRegPhone.TextChanged += new System.EventHandler(this.textBoxRegPhone_TextChanged);
             // 
             // textBoxRegPassword
@@ -227,7 +227,7 @@
             this.textBoxRegPassword.Name = "textBoxRegPassword";
             this.textBoxRegPassword.PasswordChar = '*';
             this.textBoxRegPassword.Size = new System.Drawing.Size(264, 29);
-            this.textBoxRegPassword.TabIndex = 17;
+            this.textBoxRegPassword.TabIndex = 6;
             // 
             // textBoxRegEmail
             // 
@@ -239,7 +239,7 @@
             this.textBoxRegEmail.Location = new System.Drawing.Point(784, 161);
             this.textBoxRegEmail.Name = "textBoxRegEmail";
             this.textBoxRegEmail.Size = new System.Drawing.Size(264, 29);
-            this.textBoxRegEmail.TabIndex = 18;
+            this.textBoxRegEmail.TabIndex = 5;
             this.textBoxRegEmail.TextChanged += new System.EventHandler(this.textBoxRegEmail_TextChanged);
             // 
             // textBoxRegPassConfirm
@@ -253,7 +253,7 @@
             this.textBoxRegPassConfirm.Name = "textBoxRegPassConfirm";
             this.textBoxRegPassConfirm.PasswordChar = '*';
             this.textBoxRegPassConfirm.Size = new System.Drawing.Size(264, 29);
-            this.textBoxRegPassConfirm.TabIndex = 20;
+            this.textBoxRegPassConfirm.TabIndex = 7;
             this.textBoxRegPassConfirm.TextChanged += new System.EventHandler(this.textBoxRegPassConfirm_TextChanged);
             // 
             // buttonSignUp

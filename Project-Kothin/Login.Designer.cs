@@ -101,7 +101,7 @@
             this.textBoxPhone.Location = new System.Drawing.Point(484, 214);
             this.textBoxPhone.Name = "textBoxPhone";
             this.textBoxPhone.Size = new System.Drawing.Size(265, 29);
-            this.textBoxPhone.TabIndex = 3;
+            this.textBoxPhone.TabIndex = 1;
             // 
             // textBoxPassword
             // 
@@ -116,7 +116,7 @@
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.PasswordChar = '*';
             this.textBoxPassword.Size = new System.Drawing.Size(265, 29);
-            this.textBoxPassword.TabIndex = 4;
+            this.textBoxPassword.TabIndex = 2;
             this.textBoxPassword.TextChanged += new System.EventHandler(this.textBoxPassword_TextChanged);
             // 
             // linkLabelRegister
