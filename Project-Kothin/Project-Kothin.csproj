@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Busseats.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Busseats.Designer.cs">
+      <DependentUpon>Busseats.cs</DependentUpon>
+    </Compile>
     <Compile Include="ForgotPassword.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +78,27 @@
     <Compile Include="Registration.Designer.cs">
       <DependentUpon>Registration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Selectseats.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Selectseats.Designer.cs">
+      <DependentUpon>Selectseats.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Service.Designer.cs">
+      <DependentUpon>Service.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ticket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ticket.Designer.cs">
+      <DependentUpon>Ticket.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Busseats.resx">
+      <DependentUpon>Busseats.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ForgotPassword.resx">
       <DependentUpon>ForgotPassword.cs</DependentUpon>
     </EmbeddedResource>
@@ -93,6 +120,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Registration.resx">
       <DependentUpon>Registration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Selectseats.resx">
+      <DependentUpon>Selectseats.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Service.resx">
+      <DependentUpon>Service.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ticket.resx">
+      <DependentUpon>Ticket.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
