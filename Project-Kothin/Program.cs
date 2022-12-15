@@ -16,7 +16,7 @@ namespace Project_Kothin
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Service());
+            
         }
     }
 }
