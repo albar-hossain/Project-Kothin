@@ -68,12 +68,12 @@
             // textBoxResetRecoveryCode
             // 
             this.textBoxResetRecoveryCode.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxResetRecoveryCode.BackColor = System.Drawing.Color.White;
+            this.textBoxResetRecoveryCode.BackColor = System.Drawing.Color.Silver;
             this.textBoxResetRecoveryCode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxResetRecoveryCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxResetRecoveryCode.ForeColor = System.Drawing.SystemColors.Desktop;
             this.textBoxResetRecoveryCode.Location = new System.Drawing.Point(208, 65);
-            this.textBoxResetRecoveryCode.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.textBoxResetRecoveryCode.Margin = new System.Windows.Forms.Padding(5);
             this.textBoxResetRecoveryCode.Name = "textBoxResetRecoveryCode";
             this.textBoxResetRecoveryCode.ReadOnly = true;
             this.textBoxResetRecoveryCode.Size = new System.Drawing.Size(164, 29);
@@ -91,7 +91,7 @@
             this.buttonRecoveryCopyClipboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonRecoveryCopyClipboard.ForeColor = System.Drawing.Color.Black;
             this.buttonRecoveryCopyClipboard.Location = new System.Drawing.Point(382, 66);
-            this.buttonRecoveryCopyClipboard.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.buttonRecoveryCopyClipboard.Margin = new System.Windows.Forms.Padding(5);
             this.buttonRecoveryCopyClipboard.Name = "buttonRecoveryCopyClipboard";
             this.buttonRecoveryCopyClipboard.Size = new System.Drawing.Size(147, 29);
             this.buttonRecoveryCopyClipboard.TabIndex = 32;
@@ -103,7 +103,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Silver;
+            this.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.ClientSize = new System.Drawing.Size(600, 170);
             this.Controls.Add(this.buttonRecoveryCopyClipboard);
             this.Controls.Add(this.labelResetRecoveryCode);
@@ -111,9 +111,8 @@
             this.Controls.Add(this.linkLabelRecoveryClose);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "GenerateRecoveryCode";
-            this.Opacity = 0.85D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GenerateRecoveryCode";
             this.ResumeLayout(false);

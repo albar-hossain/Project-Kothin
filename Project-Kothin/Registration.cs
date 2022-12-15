@@ -95,7 +95,6 @@ namespace Project_Kothin
             {
                 MessageBox.Show("Registration complete!");
                 string recoveryCode = Convert.ToBase64String(Guid.NewGuid().ToByteArray()).Substring(0, 5);
-                //MessageBox.Show("Password Recovery Code: " + recoveryCode + "\nPLEASE NOTE IT DOWN.");
                 GenerateRecoveryCode userReg = new GenerateRecoveryCode(recoveryCode);
                 userReg.Show();
                 MessageBox.Show("Please note down the recovery code.");
