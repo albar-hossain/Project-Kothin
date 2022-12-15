@@ -139,6 +139,7 @@ namespace Project_Kothin
             this.label3.Size = new System.Drawing.Size(76, 25);
             this.label3.TabIndex = 10;
             this.label3.Text = "label1";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // Ticket
             // 
