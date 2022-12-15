@@ -73,9 +73,9 @@ namespace Project_Kothin
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(444, 136);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(23, 13);
+            this.label2.Size = new System.Drawing.Size(63, 13);
             this.label2.TabIndex = 4;
-            this.label2.Text = "To:";
+            this.label2.Text = "Destination:";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // comboBox2
@@ -83,13 +83,13 @@ namespace Project_Kothin
             this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Items.AddRange(new object[] {
-            "Dhaka ",
+            "Dhaka",
             "Chittagong",
             "Sylhet",
             "Rajshahi"});
             this.comboBox2.Location = new System.Drawing.Point(447, 152);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(161, 21);
+            this.comboBox2.Size = new System.Drawing.Size(197, 21);
             this.comboBox2.TabIndex = 2;
             this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
@@ -98,9 +98,9 @@ namespace Project_Kothin
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(116, 136);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(33, 13);
+            this.label1.Size = new System.Drawing.Size(57, 13);
             this.label1.TabIndex = 3;
-            this.label1.Text = "From:";
+            this.label1.Text = "Departure:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // comboBox1
@@ -134,7 +134,7 @@ namespace Project_Kothin
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(328, 53);
+            this.label3.Location = new System.Drawing.Point(349, 56);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(76, 25);
             this.label3.TabIndex = 10;

@@ -48,6 +48,7 @@ namespace Project_Kothin
             this.Selection = new System.Windows.Forms.Label();
             this.Express = new System.Windows.Forms.ComboBox();
             this.BackButton1 = new System.Windows.Forms.Button();
+            this.BookBus = new System.Windows.Forms.Button();
             this.Seats.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -279,11 +280,23 @@ namespace Project_Kothin
             this.BackButton1.Visible = false;
             this.BackButton1.Click += new System.EventHandler(this.BackButton1_Click);
             // 
+            // BookBus
+            // 
+            this.BookBus.Location = new System.Drawing.Point(437, 419);
+            this.BookBus.Name = "BookBus";
+            this.BookBus.Size = new System.Drawing.Size(75, 23);
+            this.BookBus.TabIndex = 18;
+            this.BookBus.Text = "Book";
+            this.BookBus.UseVisualStyleBackColor = true;
+            this.BookBus.Visible = false;
+            this.BookBus.Click += new System.EventHandler(this.BookTrain_Click);
+            // 
             // Busseats
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.BookBus);
             this.Controls.Add(this.BackButton1);
             this.Controls.Add(this.amount);
             this.Controls.Add(this.Totalamount);
@@ -323,5 +336,6 @@ namespace Project_Kothin
         private System.Windows.Forms.Label Selection;
         private System.Windows.Forms.ComboBox Express;
         private System.Windows.Forms.Button BackButton1;
+        private System.Windows.Forms.Button BookBus;
     }
 }

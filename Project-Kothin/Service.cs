@@ -55,6 +55,10 @@ namespace Project_Kothin
 
         private void SubmitButton_Click(object sender, EventArgs e)
         {
+            if(Ticketbox.Text=="")
+            {
+                MessageBox.Show("Invalid");
+            }
             if (Ticketbox.Text == "Train")
             {
                 Ticket it = new Ticket(Ticketbox.Text);

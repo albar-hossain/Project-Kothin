@@ -19,9 +19,6 @@ namespace Project_Kothin
         public Ticket()
         {
             InitializeComponent();
-            
-
-            
         }
         public Ticket(string id)
         {
@@ -64,27 +61,18 @@ namespace Project_Kothin
 
         private void SEARCHTRAIN_Click(object sender, EventArgs e)
         {
-            string selected1 = this.comboBox1.GetItemText(this.comboBox1.SelectedItem);
-            string selected2 = this.comboBox2.GetItemText(this.comboBox1.SelectedItem);
-            //MessageBox.Show(selected);
-
-            if (comboBox1.SelectedIndex != comboBox2.SelectedIndex)
+            if (comboBox1.SelectedIndex != comboBox2.SelectedIndex && comboBox1.SelectedIndex != -1 && comboBox2.SelectedIndex != -1)
             {
                 Selectseats s1 = new Selectseats();
                 s1.Show();
-                
             }
-            
-            if (comboBox1.SelectedIndex==comboBox2.SelectedIndex)
+
+            if (comboBox2.Text == "" && comboBox1.Text == "" || comboBox1.Text == comboBox2.Text)
             {
-                MessageBox.Show("Please select different Departure and destination");
+                MessageBox.Show("Invalid");
             }
-           
-            else
-            {
-                MessageBox.Show("Please select depurture or destination");
-            }
-            
+
+
         }
         private void Train_Load(object sender, EventArgs e)
         {
@@ -98,16 +86,19 @@ namespace Project_Kothin
 
         private void SEARCHBUS_Click(object sender, EventArgs e)
         {
-            if (comboBox1.SelectedIndex == comboBox2.SelectedIndex)
-            {
-                MessageBox.Show("Please select different Departure and destination");
-            }
-            else
-            {
+            if (comboBox1.SelectedIndex != comboBox2.SelectedIndex && comboBox1.SelectedIndex != -1 && comboBox2.SelectedIndex != -1)
+            { 
                 Busseats b1 = new Busseats();
                 b1.Show();
             }
+
+            if (comboBox2.Text == ""&& comboBox1.Text =="" || comboBox1.Text == comboBox2.Text)
+            {
+                MessageBox.Show("Invalid");
+            }
+            
         }
+       
 
         private void label5_Click(object sender, EventArgs e)
         {
