@@ -39,6 +39,7 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "First button";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // LandingPage
             // 
@@ -49,6 +50,7 @@
             this.Name = "LandingPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.LandingPage_Load);
             this.ResumeLayout(false);
 
         }
