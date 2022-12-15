@@ -47,9 +47,7 @@
             // 
             // labelResetPhone
             // 
-            this.labelResetPhone.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelResetPhone.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelResetPhone.AutoSize = true;
             this.labelResetPhone.BackColor = System.Drawing.Color.Transparent;
             this.labelResetPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -62,9 +60,7 @@
             // 
             // textBoxResetRecoveryCode
             // 
-            this.textBoxResetRecoveryCode.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxResetRecoveryCode.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxResetRecoveryCode.BackColor = System.Drawing.Color.Silver;
             this.textBoxResetRecoveryCode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxResetRecoveryCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -76,9 +72,7 @@
             // 
             // labelResetRecoveryCode
             // 
-            this.labelResetRecoveryCode.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelResetRecoveryCode.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelResetRecoveryCode.AutoSize = true;
             this.labelResetRecoveryCode.BackColor = System.Drawing.Color.Transparent;
             this.labelResetRecoveryCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -91,9 +85,7 @@
             // 
             // textBoxResetPhone
             // 
-            this.textBoxResetPhone.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxResetPhone.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxResetPhone.BackColor = System.Drawing.Color.Silver;
             this.textBoxResetPhone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxResetPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -106,9 +98,7 @@
             // 
             // labelResetNewPass
             // 
-            this.labelResetNewPass.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelResetNewPass.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelResetNewPass.AutoSize = true;
             this.labelResetNewPass.BackColor = System.Drawing.Color.Transparent;
             this.labelResetNewPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -121,9 +111,7 @@
             // 
             // labelResetConfirmPass
             // 
-            this.labelResetConfirmPass.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelResetConfirmPass.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelResetConfirmPass.AutoSize = true;
             this.labelResetConfirmPass.BackColor = System.Drawing.Color.Transparent;
             this.labelResetConfirmPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -136,9 +124,7 @@
             // 
             // textBoxResetNewPassword
             // 
-            this.textBoxResetNewPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxResetNewPassword.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxResetNewPassword.BackColor = System.Drawing.Color.Silver;
             this.textBoxResetNewPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxResetNewPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -151,9 +137,7 @@
             // 
             // textBoxResetNewPassConfirm
             // 
-            this.textBoxResetNewPassConfirm.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxResetNewPassConfirm.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxResetNewPassConfirm.BackColor = System.Drawing.Color.Silver;
             this.textBoxResetNewPassConfirm.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxResetNewPassConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -167,9 +151,7 @@
             // 
             // buttonResetPass
             // 
-            this.buttonResetPass.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonResetPass.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonResetPass.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.buttonResetPass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(150)))), ((int)(((byte)(105)))));
             this.buttonResetPass.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -217,9 +199,7 @@
             // 
             // labelResetRightPass
             // 
-            this.labelResetRightPass.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelResetRightPass.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelResetRightPass.AutoSize = true;
             this.labelResetRightPass.BackColor = System.Drawing.Color.Transparent;
             this.labelResetRightPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -233,9 +213,7 @@
             // 
             // labelResetWrongPass
             // 
-            this.labelResetWrongPass.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelResetWrongPass.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelResetWrongPass.AutoSize = true;
             this.labelResetWrongPass.BackColor = System.Drawing.Color.Transparent;
             this.labelResetWrongPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -250,9 +228,7 @@
             // 
             // labelResetWrongPhone
             // 
-            this.labelResetWrongPhone.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelResetWrongPhone.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelResetWrongPhone.AutoSize = true;
             this.labelResetWrongPhone.BackColor = System.Drawing.Color.Transparent;
             this.labelResetWrongPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -266,9 +242,7 @@
             // 
             // labelResetRightPhone
             // 
-            this.labelResetRightPhone.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelResetRightPhone.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelResetRightPhone.AutoSize = true;
             this.labelResetRightPhone.BackColor = System.Drawing.Color.Transparent;
             this.labelResetRightPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -310,6 +284,7 @@
             this.Name = "ForgotPassword";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reset Password";
+            this.Load += new System.EventHandler(this.ForgotPassword_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

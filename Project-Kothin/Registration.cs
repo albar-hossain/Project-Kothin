@@ -85,15 +85,19 @@ namespace Project_Kothin
 
         private void buttonSignUp_Click(object sender, EventArgs e)
         {
-            if (textBoxRegFullName.Text != null &&
-                textBoxRegPassword.Text != null &&
-                textBoxRegPassConfirm.Text != null &&
-                textRegPostCode.Text != null &&
-                textBoxRegEmail.Text != null &&
-                textBoxRegPhone.Text != null &&
-                textBoxRegAddress.Text != null)
+            if (textBoxRegFullName.Text != "" &&
+                textBoxRegPassword.Text != "" &&
+                textBoxRegPassConfirm.Text != "" &&
+                textRegPostCode.Text != "" &&
+                textBoxRegEmail.Text != "" &&
+                textBoxRegPhone.Text != "" &&
+                textBoxRegAddress.Text != "")
             {
                 MessageBox.Show("Registration complete!");
+                string recoveryCode = Convert.ToBase64String(Guid.NewGuid().ToByteArray()).Substring(0, 5);
+                GenerateRecoveryCode userReg = new GenerateRecoveryCode(recoveryCode);
+                userReg.Show();
+                MessageBox.Show("Please note down the recovery code.");
                 this.Close();
             }
             else
@@ -119,11 +123,16 @@ namespace Project_Kothin
 
         private void linkLabelRegBack_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            this.Close();
+            this.Hide();
         }
 
         private void labelWrongPass_Click(object sender, EventArgs e)
         {
+        }
+
+        private void linkLabelRegClose_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

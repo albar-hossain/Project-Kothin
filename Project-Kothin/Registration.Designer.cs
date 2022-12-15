@@ -55,13 +55,12 @@
             this.labelWrongZip = new System.Windows.Forms.Label();
             this.labelRightZip = new System.Windows.Forms.Label();
             this.linkLabelRegBack = new System.Windows.Forms.LinkLabel();
+            this.linkLabelRegClose = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // labelRegister
             // 
-            this.labelRegister.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelRegister.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelRegister.AutoSize = true;
             this.labelRegister.BackColor = System.Drawing.Color.Transparent;
             this.labelRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -76,9 +75,7 @@
             // 
             // labelRegFullName
             // 
-            this.labelRegFullName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelRegFullName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelRegFullName.AutoSize = true;
             this.labelRegFullName.BackColor = System.Drawing.Color.Transparent;
             this.labelRegFullName.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -91,9 +88,7 @@
             // 
             // labelRegPhone
             // 
-            this.labelRegPhone.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelRegPhone.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelRegPhone.AutoSize = true;
             this.labelRegPhone.BackColor = System.Drawing.Color.Transparent;
             this.labelRegPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -107,9 +102,7 @@
             // 
             // labelRegEmail
             // 
-            this.labelRegEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelRegEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelRegEmail.AutoSize = true;
             this.labelRegEmail.BackColor = System.Drawing.Color.Transparent;
             this.labelRegEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -122,9 +115,7 @@
             // 
             // labelRegPassword
             // 
-            this.labelRegPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelRegPassword.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelRegPassword.AutoSize = true;
             this.labelRegPassword.BackColor = System.Drawing.Color.Transparent;
             this.labelRegPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -137,9 +128,7 @@
             // 
             // labelRegAddress
             // 
-            this.labelRegAddress.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelRegAddress.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelRegAddress.AutoSize = true;
             this.labelRegAddress.BackColor = System.Drawing.Color.Transparent;
             this.labelRegAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -152,9 +141,7 @@
             // 
             // labelRegPostCode
             // 
-            this.labelRegPostCode.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelRegPostCode.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelRegPostCode.AutoSize = true;
             this.labelRegPostCode.BackColor = System.Drawing.Color.Transparent;
             this.labelRegPostCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -167,9 +154,7 @@
             // 
             // labelRegPassConfirm
             // 
-            this.labelRegPassConfirm.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelRegPassConfirm.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelRegPassConfirm.AutoSize = true;
             this.labelRegPassConfirm.BackColor = System.Drawing.Color.Transparent;
             this.labelRegPassConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -182,9 +167,7 @@
             // 
             // textRegPostCode
             // 
-            this.textRegPostCode.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textRegPostCode.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textRegPostCode.BackColor = System.Drawing.Color.Silver;
             this.textRegPostCode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textRegPostCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -192,14 +175,12 @@
             this.textRegPostCode.Location = new System.Drawing.Point(250, 276);
             this.textRegPostCode.Name = "textRegPostCode";
             this.textRegPostCode.Size = new System.Drawing.Size(264, 29);
-            this.textRegPostCode.TabIndex = 13;
+            this.textRegPostCode.TabIndex = 3;
             this.textRegPostCode.TextChanged += new System.EventHandler(this.textRegPostCode_TextChanged);
             // 
             // textBoxRegAddress
             // 
-            this.textBoxRegAddress.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxRegAddress.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxRegAddress.BackColor = System.Drawing.Color.Silver;
             this.textBoxRegAddress.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxRegAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -208,13 +189,11 @@
             this.textBoxRegAddress.Multiline = true;
             this.textBoxRegAddress.Name = "textBoxRegAddress";
             this.textBoxRegAddress.Size = new System.Drawing.Size(264, 66);
-            this.textBoxRegAddress.TabIndex = 14;
+            this.textBoxRegAddress.TabIndex = 4;
             // 
             // textBoxRegFullName
             // 
-            this.textBoxRegFullName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxRegFullName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxRegFullName.BackColor = System.Drawing.Color.Silver;
             this.textBoxRegFullName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxRegFullName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -222,13 +201,11 @@
             this.textBoxRegFullName.Location = new System.Drawing.Point(250, 159);
             this.textBoxRegFullName.Name = "textBoxRegFullName";
             this.textBoxRegFullName.Size = new System.Drawing.Size(264, 29);
-            this.textBoxRegFullName.TabIndex = 15;
+            this.textBoxRegFullName.TabIndex = 1;
             // 
             // textBoxRegPhone
             // 
-            this.textBoxRegPhone.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxRegPhone.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxRegPhone.BackColor = System.Drawing.Color.Silver;
             this.textBoxRegPhone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxRegPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -236,14 +213,12 @@
             this.textBoxRegPhone.Location = new System.Drawing.Point(250, 216);
             this.textBoxRegPhone.Name = "textBoxRegPhone";
             this.textBoxRegPhone.Size = new System.Drawing.Size(264, 29);
-            this.textBoxRegPhone.TabIndex = 16;
+            this.textBoxRegPhone.TabIndex = 2;
             this.textBoxRegPhone.TextChanged += new System.EventHandler(this.textBoxRegPhone_TextChanged);
             // 
             // textBoxRegPassword
             // 
-            this.textBoxRegPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxRegPassword.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxRegPassword.BackColor = System.Drawing.Color.Silver;
             this.textBoxRegPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxRegPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -252,13 +227,11 @@
             this.textBoxRegPassword.Name = "textBoxRegPassword";
             this.textBoxRegPassword.PasswordChar = '*';
             this.textBoxRegPassword.Size = new System.Drawing.Size(264, 29);
-            this.textBoxRegPassword.TabIndex = 17;
+            this.textBoxRegPassword.TabIndex = 6;
             // 
             // textBoxRegEmail
             // 
-            this.textBoxRegEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxRegEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxRegEmail.BackColor = System.Drawing.Color.Silver;
             this.textBoxRegEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxRegEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -266,14 +239,12 @@
             this.textBoxRegEmail.Location = new System.Drawing.Point(784, 161);
             this.textBoxRegEmail.Name = "textBoxRegEmail";
             this.textBoxRegEmail.Size = new System.Drawing.Size(264, 29);
-            this.textBoxRegEmail.TabIndex = 18;
+            this.textBoxRegEmail.TabIndex = 5;
             this.textBoxRegEmail.TextChanged += new System.EventHandler(this.textBoxRegEmail_TextChanged);
             // 
             // textBoxRegPassConfirm
             // 
-            this.textBoxRegPassConfirm.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxRegPassConfirm.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxRegPassConfirm.BackColor = System.Drawing.Color.Silver;
             this.textBoxRegPassConfirm.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxRegPassConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -282,14 +253,12 @@
             this.textBoxRegPassConfirm.Name = "textBoxRegPassConfirm";
             this.textBoxRegPassConfirm.PasswordChar = '*';
             this.textBoxRegPassConfirm.Size = new System.Drawing.Size(264, 29);
-            this.textBoxRegPassConfirm.TabIndex = 20;
+            this.textBoxRegPassConfirm.TabIndex = 7;
             this.textBoxRegPassConfirm.TextChanged += new System.EventHandler(this.textBoxRegPassConfirm_TextChanged);
             // 
             // buttonSignUp
             // 
-            this.buttonSignUp.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonSignUp.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonSignUp.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.buttonSignUp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(150)))), ((int)(((byte)(105)))));
             this.buttonSignUp.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -307,9 +276,7 @@
             // linkLabelAlreadyRegistred
             // 
             this.linkLabelAlreadyRegistred.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(121)))), ((int)(((byte)(4)))));
-            this.linkLabelAlreadyRegistred.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.linkLabelAlreadyRegistred.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.linkLabelAlreadyRegistred.AutoSize = true;
             this.linkLabelAlreadyRegistred.BackColor = System.Drawing.Color.Transparent;
             this.linkLabelAlreadyRegistred.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -325,9 +292,7 @@
             // 
             // labelLine
             // 
-            this.labelLine.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelLine.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelLine.AutoSize = true;
             this.labelLine.BackColor = System.Drawing.Color.Transparent;
             this.labelLine.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -340,9 +305,7 @@
             // 
             // labelWrongEmail
             // 
-            this.labelWrongEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelWrongEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelWrongEmail.AutoSize = true;
             this.labelWrongEmail.BackColor = System.Drawing.Color.Transparent;
             this.labelWrongEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -357,9 +320,7 @@
             // 
             // labelRightEmail
             // 
-            this.labelRightEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelRightEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelRightEmail.AutoSize = true;
             this.labelRightEmail.BackColor = System.Drawing.Color.Transparent;
             this.labelRightEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -374,9 +335,7 @@
             // 
             // labelRightPass
             // 
-            this.labelRightPass.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelRightPass.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelRightPass.AutoSize = true;
             this.labelRightPass.BackColor = System.Drawing.Color.Transparent;
             this.labelRightPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -390,9 +349,7 @@
             // 
             // labelWrongPass
             // 
-            this.labelWrongPass.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelWrongPass.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelWrongPass.AutoSize = true;
             this.labelWrongPass.BackColor = System.Drawing.Color.Transparent;
             this.labelWrongPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -407,9 +364,7 @@
             // 
             // labelWrongPhone
             // 
-            this.labelWrongPhone.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelWrongPhone.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelWrongPhone.AutoSize = true;
             this.labelWrongPhone.BackColor = System.Drawing.Color.Transparent;
             this.labelWrongPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -423,9 +378,7 @@
             // 
             // labelRightPhone
             // 
-            this.labelRightPhone.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelRightPhone.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelRightPhone.AutoSize = true;
             this.labelRightPhone.BackColor = System.Drawing.Color.Transparent;
             this.labelRightPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -439,9 +392,7 @@
             // 
             // labelWrongZip
             // 
-            this.labelWrongZip.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelWrongZip.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelWrongZip.AutoSize = true;
             this.labelWrongZip.BackColor = System.Drawing.Color.Transparent;
             this.labelWrongZip.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -455,9 +406,7 @@
             // 
             // labelRightZip
             // 
-            this.labelRightZip.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelRightZip.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelRightZip.AutoSize = true;
             this.labelRightZip.BackColor = System.Drawing.Color.Transparent;
             this.labelRightZip.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -485,13 +434,30 @@
             this.linkLabelRegBack.Text = "🡰";
             this.linkLabelRegBack.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelRegBack_LinkClicked);
             // 
+            // linkLabelRegClose
+            // 
+            this.linkLabelRegClose.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.linkLabelRegClose.AutoSize = true;
+            this.linkLabelRegClose.BackColor = System.Drawing.Color.Transparent;
+            this.linkLabelRegClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabelRegClose.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.linkLabelRegClose.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(42)))), ((int)(((byte)(65)))));
+            this.linkLabelRegClose.Location = new System.Drawing.Point(1156, 9);
+            this.linkLabelRegClose.Name = "linkLabelRegClose";
+            this.linkLabelRegClose.Size = new System.Drawing.Size(47, 31);
+            this.linkLabelRegClose.TabIndex = 33;
+            this.linkLabelRegClose.TabStop = true;
+            this.linkLabelRegClose.Text = "❌";
+            this.linkLabelRegClose.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelRegClose_LinkClicked);
+            // 
             // Registration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::Project_Kothin.Properties.Resources.KothinBGM;
-            this.ClientSize = new System.Drawing.Size(1199, 691);
+            this.ClientSize = new System.Drawing.Size(1215, 730);
+            this.Controls.Add(this.linkLabelRegClose);
             this.Controls.Add(this.linkLabelRegBack);
             this.Controls.Add(this.labelWrongZip);
             this.Controls.Add(this.labelWrongPhone);
@@ -520,6 +486,7 @@
             this.Controls.Add(this.labelRightEmail);
             this.Controls.Add(this.labelRightPass);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MinimumSize = new System.Drawing.Size(1215, 730);
             this.Name = "Registration";
@@ -560,5 +527,6 @@
         private System.Windows.Forms.Label labelWrongZip;
         private System.Windows.Forms.Label labelRightZip;
         private System.Windows.Forms.LinkLabel linkLabelRegBack;
+        private System.Windows.Forms.LinkLabel linkLabelRegClose;
     }
 }

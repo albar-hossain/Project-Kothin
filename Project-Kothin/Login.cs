@@ -55,12 +55,13 @@ namespace Project_Kothin
 
         private void linkLabelLoginClose_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            this.Close();
+            System.Diagnostics.Process.GetCurrentProcess().Kill();
+            Application.Exit();
+            //this.Close();
         }
 
         private void labelLogin_Click(object sender, EventArgs e)
         {
-
         }
     }
 }

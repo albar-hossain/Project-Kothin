@@ -57,5 +57,9 @@ namespace Project_Kothin
         private void labelResetWrongPass_Click(object sender, EventArgs e)
         {
         }
+
+        private void ForgotPassword_Load(object sender, EventArgs e)
+        {
+        }
     }
 }
