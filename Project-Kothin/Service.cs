@@ -109,19 +109,24 @@ namespace Project_Kothin
             }
             if (rentalBox.Text == "Car")
             {
-                Rental it = new Rental(rentalBox.Text);
+                Car it = new Car();
                 it.Show();
             }
             else if (rentalBox.Text == "Boat")
             {
-                Ticket it = new Ticket(rentalBox.Text);
+                Boat it = new Boat();
                 it.Show();
             }
             else if (rentalBox.Text == "Bus")
             {
-                Ticket it = new Ticket(rentalBox.Text);
-                it.Show();
+                //Rental it = new Rental();
+                //it.Show();
             }
+
+        }
+
+        private void rentalBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
     }

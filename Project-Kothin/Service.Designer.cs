@@ -125,7 +125,7 @@
             // 
             this.labelRental.AutoSize = true;
             this.labelRental.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelRental.Location = new System.Drawing.Point(482, 150);
+            this.labelRental.Location = new System.Drawing.Point(329, 150);
             this.labelRental.Name = "labelRental";
             this.labelRental.Size = new System.Drawing.Size(75, 24);
             this.labelRental.TabIndex = 7;
@@ -142,15 +142,16 @@
             "Car",
             "Boat",
             "Bus"});
-            this.rentalBox.Location = new System.Drawing.Point(486, 193);
+            this.rentalBox.Location = new System.Drawing.Point(329, 193);
             this.rentalBox.Name = "rentalBox";
             this.rentalBox.Size = new System.Drawing.Size(141, 21);
             this.rentalBox.TabIndex = 8;
             this.rentalBox.Visible = false;
+            this.rentalBox.SelectedIndexChanged += new System.EventHandler(this.rentalBox_SelectedIndexChanged);
             // 
             // rentalSubmit
             // 
-            this.rentalSubmit.Location = new System.Drawing.Point(486, 237);
+            this.rentalSubmit.Location = new System.Drawing.Point(329, 237);
             this.rentalSubmit.Name = "rentalSubmit";
             this.rentalSubmit.Size = new System.Drawing.Size(75, 23);
             this.rentalSubmit.TabIndex = 9;

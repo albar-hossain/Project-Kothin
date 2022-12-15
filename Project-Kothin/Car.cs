@@ -88,31 +88,31 @@ namespace Project_Kothin
                 //balance
                 if (Destination.Text == "Withing Dhaka")
                 {
-                    balance = 2000 * typemultiplier * classmultiplier * durationmultiplier;
+                    balance = 1000 * typemultiplier * classmultiplier * durationmultiplier;
                 }
                 else if (Destination.Text == "Savar")
                 {
-                    balance = 4000 * typemultiplier * classmultiplier * durationmultiplier;
+                    balance = 2000 * typemultiplier * classmultiplier * durationmultiplier;
                 }
                 else if (Destination.Text == "Tongi")
                 {
-                    balance = 4000 * typemultiplier * classmultiplier * durationmultiplier;
+                    balance = 2000 * typemultiplier * classmultiplier * durationmultiplier;
                 }
                 else if (Destination.Text == "Gazipur")
                 {
-                    balance = 6000 * typemultiplier * classmultiplier * durationmultiplier;
+                    balance = 3000 * typemultiplier * classmultiplier * durationmultiplier;
                 }
                 else if (Destination.Text == "Naraynganj")
                 {
-                    balance = 7000 * typemultiplier * classmultiplier * durationmultiplier;
+                    balance = 3500 * typemultiplier * classmultiplier * durationmultiplier;
                 }
                 else if (Destination.Text == "Munshiganj")
                 {
-                    balance = 8000 * typemultiplier * classmultiplier * durationmultiplier;
+                    balance = 3500 * typemultiplier * classmultiplier * durationmultiplier;
                 }
                 else
                 {
-                    balance = 6500 * typemultiplier * classmultiplier * durationmultiplier;
+                    balance = 3000 * typemultiplier * classmultiplier * durationmultiplier;
                 }
                 amount.Text = Convert.ToString(balance);
                 //MessageBox.Show("Boat has been booked!");

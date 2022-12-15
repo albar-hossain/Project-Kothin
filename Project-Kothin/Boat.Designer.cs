@@ -1,6 +1,6 @@
 ﻿namespace Project_Kothin
 {
-    partial class Boat1
+    partial class Boat
     {
         /// <summary>
         /// Required designer variable.
