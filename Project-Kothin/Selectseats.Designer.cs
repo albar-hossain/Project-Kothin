@@ -80,7 +80,7 @@ namespace Project_Kothin
             // 
             this.SEARCH.Location = new System.Drawing.Point(52, 267);
             this.SEARCH.Name = "SEARCH";
-            this.SEARCH.Size = new System.Drawing.Size(75, 23);
+            this.SEARCH.Size = new System.Drawing.Size(88, 23);
             this.SEARCH.TabIndex = 2;
             this.SEARCH.Text = "SEARCH";
             this.SEARCH.UseVisualStyleBackColor = true;
