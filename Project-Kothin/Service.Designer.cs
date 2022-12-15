@@ -35,6 +35,9 @@
             this.Ticketbox = new System.Windows.Forms.ComboBox();
             this.BackButton = new System.Windows.Forms.Button();
             this.SubmitButton = new System.Windows.Forms.Button();
+            this.labelRental = new System.Windows.Forms.Label();
+            this.rentalBox = new System.Windows.Forms.ComboBox();
+            this.rentalSubmit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonTicket
@@ -57,6 +60,7 @@
             this.buttonRental.TabIndex = 1;
             this.buttonRental.Text = "Rental";
             this.buttonRental.UseVisualStyleBackColor = true;
+            this.buttonRental.Click += new System.EventHandler(this.buttonRental_Click);
             // 
             // labelService
             // 
@@ -117,11 +121,52 @@
             this.SubmitButton.Visible = false;
             this.SubmitButton.Click += new System.EventHandler(this.SubmitButton_Click);
             // 
+            // labelRental
+            // 
+            this.labelRental.AutoSize = true;
+            this.labelRental.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRental.Location = new System.Drawing.Point(482, 150);
+            this.labelRental.Name = "labelRental";
+            this.labelRental.Size = new System.Drawing.Size(75, 24);
+            this.labelRental.TabIndex = 7;
+            this.labelRental.Text = "Rental:";
+            this.labelRental.Visible = false;
+            // 
+            // rentalBox
+            // 
+            this.rentalBox.BackColor = System.Drawing.SystemColors.Window;
+            this.rentalBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.rentalBox.FormattingEnabled = true;
+            this.rentalBox.IntegralHeight = false;
+            this.rentalBox.Items.AddRange(new object[] {
+            "Car",
+            "Boat",
+            "Bus"});
+            this.rentalBox.Location = new System.Drawing.Point(486, 193);
+            this.rentalBox.Name = "rentalBox";
+            this.rentalBox.Size = new System.Drawing.Size(141, 21);
+            this.rentalBox.TabIndex = 8;
+            this.rentalBox.Visible = false;
+            // 
+            // rentalSubmit
+            // 
+            this.rentalSubmit.Location = new System.Drawing.Point(486, 237);
+            this.rentalSubmit.Name = "rentalSubmit";
+            this.rentalSubmit.Size = new System.Drawing.Size(75, 23);
+            this.rentalSubmit.TabIndex = 9;
+            this.rentalSubmit.Text = "Submit";
+            this.rentalSubmit.UseVisualStyleBackColor = true;
+            this.rentalSubmit.Visible = false;
+            this.rentalSubmit.Click += new System.EventHandler(this.rentalSubmit_Click);
+            // 
             // Service
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.rentalSubmit);
+            this.Controls.Add(this.rentalBox);
+            this.Controls.Add(this.labelRental);
             this.Controls.Add(this.SubmitButton);
             this.Controls.Add(this.BackButton);
             this.Controls.Add(this.Ticketbox);
@@ -147,6 +192,9 @@
         private System.Windows.Forms.ComboBox Ticketbox;
         private System.Windows.Forms.Button BackButton;
         private System.Windows.Forms.Button SubmitButton;
+        private System.Windows.Forms.Label labelRental;
+        private System.Windows.Forms.ComboBox rentalBox;
+        private System.Windows.Forms.Button rentalSubmit;
     }
 }
 

@@ -50,7 +50,9 @@ namespace Project_Kothin
             Ticketbox.Visible = false;
             SubmitButton.Visible = false;
             BackButton.Visible = false;
-            
+            rentalSubmit.Visible = false;
+
+
         }
 
         private void SubmitButton_Click(object sender, EventArgs e)
@@ -85,6 +87,41 @@ namespace Project_Kothin
 
         private void label1_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void buttonRental_Click(object sender, EventArgs e)
+        {
+            labelService.Visible = false;
+            buttonTicket.Visible = false;
+            buttonRental.Visible = false;
+            labelRental.Visible = true;
+            rentalBox.Visible = true;
+            rentalSubmit.Visible = true;
+            BackButton.Visible = true;
+        }
+
+        private void rentalSubmit_Click(object sender, EventArgs e)
+        {
+            if (rentalBox.Text == "")
+            {
+                MessageBox.Show("Invalid");
+            }
+            if (rentalBox.Text == "Car")
+            {
+                Rental it = new Rental(rentalBox.Text);
+                it.Show();
+            }
+            else if (rentalBox.Text == "Boat")
+            {
+                Ticket it = new Ticket(rentalBox.Text);
+                it.Show();
+            }
+            else if (rentalBox.Text == "Bus")
+            {
+                Ticket it = new Ticket(rentalBox.Text);
+                it.Show();
+            }
 
         }
     }

@@ -13,7 +13,6 @@ namespace Project_Kothin
     public partial class Boat1 : Form
     {
         private double balance = 0;
-        private int dur = 0;
         public Boat1()
         {
             InitializeComponent();

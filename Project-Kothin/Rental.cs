@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Project_Kothin
 {
-    public partial class Boat2 : Form
+    public partial class Rental : Form
     {
-        public Boat2()
+        public Rental()
         {
             InitializeComponent();
+        }
+
+        private void Rental_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
