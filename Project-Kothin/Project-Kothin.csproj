@@ -64,6 +64,12 @@
     <Compile Include="Car.Designer.cs">
       <DependentUpon>Car.cs</DependentUpon>
     </Compile>
+    <Compile Include="RentalBus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RentalBus.Designer.cs">
+      <DependentUpon>RentalBus.cs</DependentUpon>
+    </Compile>
     <Compile Include="GenerateRecoveryCode.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,6 +144,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Registration.resx">
       <DependentUpon>Registration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RentalBus.resx">
+      <DependentUpon>RentalBus.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Selectseats.resx">
       <DependentUpon>Selectseats.cs</DependentUpon>

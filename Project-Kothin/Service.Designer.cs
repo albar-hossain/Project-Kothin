@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Service));
             this.buttonTicket = new System.Windows.Forms.Button();
             this.buttonRental = new System.Windows.Forms.Button();
             this.labelService = new System.Windows.Forms.Label();
@@ -43,7 +44,7 @@
             // buttonTicket
             // 
             this.buttonTicket.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonTicket.Location = new System.Drawing.Point(145, 193);
+            this.buttonTicket.Location = new System.Drawing.Point(425, 342);
             this.buttonTicket.Name = "buttonTicket";
             this.buttonTicket.Size = new System.Drawing.Size(75, 38);
             this.buttonTicket.TabIndex = 0;
@@ -54,7 +55,7 @@
             // buttonRental
             // 
             this.buttonRental.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonRental.Location = new System.Drawing.Point(145, 237);
+            this.buttonRental.Location = new System.Drawing.Point(425, 386);
             this.buttonRental.Name = "buttonRental";
             this.buttonRental.Size = new System.Drawing.Size(75, 40);
             this.buttonRental.TabIndex = 1;
@@ -66,7 +67,7 @@
             // 
             this.labelService.AutoSize = true;
             this.labelService.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelService.Location = new System.Drawing.Point(141, 150);
+            this.labelService.Location = new System.Drawing.Point(421, 299);
             this.labelService.Name = "labelService";
             this.labelService.Size = new System.Drawing.Size(96, 24);
             this.labelService.TabIndex = 2;
@@ -76,7 +77,7 @@
             // 
             this.labelTicket.AutoSize = true;
             this.labelTicket.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTicket.Location = new System.Drawing.Point(325, 150);
+            this.labelTicket.Location = new System.Drawing.Point(605, 299);
             this.labelTicket.Name = "labelTicket";
             this.labelTicket.Size = new System.Drawing.Size(72, 24);
             this.labelTicket.TabIndex = 3;
@@ -92,7 +93,7 @@
             this.Ticketbox.Items.AddRange(new object[] {
             "Train",
             "Bus"});
-            this.Ticketbox.Location = new System.Drawing.Point(329, 193);
+            this.Ticketbox.Location = new System.Drawing.Point(609, 342);
             this.Ticketbox.Name = "Ticketbox";
             this.Ticketbox.Size = new System.Drawing.Size(141, 21);
             this.Ticketbox.TabIndex = 4;
@@ -101,7 +102,7 @@
             // 
             // BackButton
             // 
-            this.BackButton.Location = new System.Drawing.Point(552, 360);
+            this.BackButton.Location = new System.Drawing.Point(1024, 613);
             this.BackButton.Name = "BackButton";
             this.BackButton.Size = new System.Drawing.Size(107, 35);
             this.BackButton.TabIndex = 5;
@@ -112,7 +113,7 @@
             // 
             // SubmitButton
             // 
-            this.SubmitButton.Location = new System.Drawing.Point(329, 237);
+            this.SubmitButton.Location = new System.Drawing.Point(609, 386);
             this.SubmitButton.Name = "SubmitButton";
             this.SubmitButton.Size = new System.Drawing.Size(75, 23);
             this.SubmitButton.TabIndex = 6;
@@ -125,7 +126,7 @@
             // 
             this.labelRental.AutoSize = true;
             this.labelRental.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelRental.Location = new System.Drawing.Point(329, 150);
+            this.labelRental.Location = new System.Drawing.Point(609, 299);
             this.labelRental.Name = "labelRental";
             this.labelRental.Size = new System.Drawing.Size(75, 24);
             this.labelRental.TabIndex = 7;
@@ -142,7 +143,7 @@
             "Car",
             "Boat",
             "Bus"});
-            this.rentalBox.Location = new System.Drawing.Point(329, 193);
+            this.rentalBox.Location = new System.Drawing.Point(609, 342);
             this.rentalBox.Name = "rentalBox";
             this.rentalBox.Size = new System.Drawing.Size(141, 21);
             this.rentalBox.TabIndex = 8;
@@ -151,7 +152,7 @@
             // 
             // rentalSubmit
             // 
-            this.rentalSubmit.Location = new System.Drawing.Point(329, 237);
+            this.rentalSubmit.Location = new System.Drawing.Point(609, 386);
             this.rentalSubmit.Name = "rentalSubmit";
             this.rentalSubmit.Size = new System.Drawing.Size(75, 23);
             this.rentalSubmit.TabIndex = 9;
@@ -164,7 +165,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(1199, 691);
             this.Controls.Add(this.rentalSubmit);
             this.Controls.Add(this.rentalBox);
             this.Controls.Add(this.labelRental);
@@ -175,6 +177,7 @@
             this.Controls.Add(this.labelService);
             this.Controls.Add(this.buttonRental);
             this.Controls.Add(this.buttonTicket);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Service";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Service";

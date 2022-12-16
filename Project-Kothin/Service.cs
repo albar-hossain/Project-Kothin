@@ -47,8 +47,11 @@ namespace Project_Kothin
             buttonTicket.Visible = true;
             buttonRental.Visible = true;
             labelTicket.Visible = false;
+            labelRental.Visible = false;
             Ticketbox.Visible = false;
+            rentalBox.Visible = false;
             SubmitButton.Visible = false;
+            rentalSubmit.Visible = false;
             BackButton.Visible = false;
             rentalSubmit.Visible = false;
 
@@ -119,8 +122,8 @@ namespace Project_Kothin
             }
             else if (rentalBox.Text == "Bus")
             {
-                //Rental it = new Rental();
-                //it.Show();
+                RentalBus it = new RentalBus();
+                it.Show();
             }
 
         }
