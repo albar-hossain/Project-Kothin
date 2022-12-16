@@ -216,7 +216,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Boat";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form2";
+            this.Text = "Boat";
             this.Load += new System.EventHandler(this.Boat1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

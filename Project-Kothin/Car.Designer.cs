@@ -221,7 +221,7 @@
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Car";
-            this.Text = "Form1";
+            this.Text = "Car";
             this.ResumeLayout(false);
             this.PerformLayout();
 
