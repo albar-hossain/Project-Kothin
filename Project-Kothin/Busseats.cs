@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using System.IO;
 
 namespace Project_Kothin
 {
@@ -53,9 +56,15 @@ namespace Project_Kothin
             D2.Visible = true;
             E1.Visible = true;
             E2.Visible = true;
+            BookBus.Visible = true;
             BackButton1.Visible = true;
             Seats.Visible = true;
             SEARCH.Visible = false;
+            prefBus.Visible = false;
+            Busclassbox.Visible = false;
+            Bos.Text = prefBus.Text;
+            closs.Text = Busclassbox.Text;
+            
         }
 
         private void amount_Click(object sender, EventArgs e)
@@ -71,12 +80,12 @@ namespace Project_Kothin
             if (flag1 == true)
             {
                 A1.BackColor = Color.Green;
-                if (comboBox3.Text == "AC")
+                if (Busclassbox.Text == "AC")
                 {
                     balance += 2500;
                     amount.Text = Convert.ToString(balance);
                 }
-                if (comboBox3.Text == "Non-AC")
+                if (Busclassbox.Text == "Non-AC")
                 {
                     balance += 700;
                     amount.Text = Convert.ToString(balance);
@@ -87,7 +96,7 @@ namespace Project_Kothin
             else
             {
                 A1.BackColor = Color.FromKnownColor(KnownColor.Control);
-                if (balance != 0 && comboBox3.Text == "AC")
+                if (balance != 0 && Busclassbox.Text == "AC")
                 {
                     balance -= 2500;
                     amount.Text = Convert.ToString(balance);
@@ -98,7 +107,7 @@ namespace Project_Kothin
                     amount.Text = Convert.ToString(balance);
                 }
 
-                if (balance != 0 && comboBox3.Text == "Non-AC")
+                if (balance != 0 && Busclassbox.Text == "Non-AC")
                 {
                     balance -= 700;
                     amount.Text = Convert.ToString(balance);
@@ -118,12 +127,12 @@ namespace Project_Kothin
             if (flag2 == true)
             {
                 A2.BackColor = Color.Green;
-                if (comboBox3.Text == "AC")
+                if (Busclassbox.Text == "AC")
                 {
                     balance += 2500;
                     amount.Text = Convert.ToString(balance);
                 }
-                if (comboBox3.Text == "Non-AC")
+                if (Busclassbox.Text == "Non-AC")
                 {
                     balance += 700;
                     amount.Text = Convert.ToString(balance);
@@ -134,7 +143,7 @@ namespace Project_Kothin
             else
             {
                 A2.BackColor = Color.FromKnownColor(KnownColor.Control);
-                if (balance != 0 && comboBox3.Text == "AC")
+                if (balance != 0 && Busclassbox.Text == "AC")
                 {
                     balance -= 2500;
                     amount.Text = Convert.ToString(balance);
@@ -145,7 +154,7 @@ namespace Project_Kothin
                     amount.Text = Convert.ToString(balance);
                 }
 
-                if (balance != 0 && comboBox3.Text == "Non-AC")
+                if (balance != 0 && Busclassbox.Text == "Non-AC")
                 {
                     balance -= 700;
                     amount.Text = Convert.ToString(balance);
@@ -165,12 +174,12 @@ namespace Project_Kothin
             if (flag3 == true)
             {
                 B1.BackColor = Color.Green;
-                if (comboBox3.Text == "AC")
+                if (Busclassbox.Text == "AC")
                 {
                     balance += 2500;
                     amount.Text = Convert.ToString(balance);
                 }
-                if (comboBox3.Text == "Non-AC")
+                if (Busclassbox.Text == "Non-AC")
                 {
                     balance += 700;
                     amount.Text = Convert.ToString(balance);
@@ -181,7 +190,7 @@ namespace Project_Kothin
             else
             {
                 B1.BackColor = Color.FromKnownColor(KnownColor.Control);
-                if (balance != 0 && comboBox3.Text == "AC")
+                if (balance != 0 && Busclassbox.Text == "AC")
                 {
                     balance -= 2500;
                     amount.Text = Convert.ToString(balance);
@@ -192,7 +201,7 @@ namespace Project_Kothin
                     amount.Text = Convert.ToString(balance);
                 }
 
-                if (balance != 0 && comboBox3.Text == "Non-AC")
+                if (balance != 0 && Busclassbox.Text == "Non-AC")
                 {
                     balance -= 700;
                     amount.Text = Convert.ToString(balance);
@@ -212,12 +221,12 @@ namespace Project_Kothin
             if (flag4 == true)
             {
                 B2.BackColor = Color.Green;
-                if (comboBox3.Text == "AC")
+                if (Busclassbox.Text == "AC")
                 {
                     balance += 2500;
                     amount.Text = Convert.ToString(balance);
                 }
-                if (comboBox3.Text == "Non-AC")
+                if (Busclassbox.Text == "Non-AC")
                 {
                     balance += 700;
                     amount.Text = Convert.ToString(balance);
@@ -228,7 +237,7 @@ namespace Project_Kothin
             else
             {
                 B2.BackColor = Color.FromKnownColor(KnownColor.Control);
-                if (balance != 0 && comboBox3.Text == "AC")
+                if (balance != 0 && Busclassbox.Text == "AC")
                 {
                     balance -= 2500;
                     amount.Text = Convert.ToString(balance);
@@ -239,7 +248,7 @@ namespace Project_Kothin
                     amount.Text = Convert.ToString(balance);
                 }
 
-                if (balance != 0 && comboBox3.Text == "Non-AC")
+                if (balance != 0 && Busclassbox.Text == "Non-AC")
                 {
                     balance -= 700;
                     amount.Text = Convert.ToString(balance);
@@ -259,12 +268,12 @@ namespace Project_Kothin
             if (flag5 == true)
             {
                 C1.BackColor = Color.Green;
-                if (comboBox3.Text == "AC")
+                if (Busclassbox.Text == "AC")
                 {
                     balance += 2500;
                     amount.Text = Convert.ToString(balance);
                 }
-                if (comboBox3.Text == "Non-AC")
+                if (Busclassbox.Text == "Non-AC")
                 {
                     balance += 700;
                     amount.Text = Convert.ToString(balance);
@@ -275,7 +284,7 @@ namespace Project_Kothin
             else
             {
                 C1.BackColor = Color.FromKnownColor(KnownColor.Control);
-                if (balance != 0 && comboBox3.Text == "AC")
+                if (balance != 0 && Busclassbox.Text == "AC")
                 {
                     balance -= 2500;
                     amount.Text = Convert.ToString(balance);
@@ -286,7 +295,7 @@ namespace Project_Kothin
                     amount.Text = Convert.ToString(balance);
                 }
 
-                if (balance != 0 && comboBox3.Text == "Non-AC")
+                if (balance != 0 && Busclassbox.Text == "Non-AC")
                 {
                     balance -= 700;
                     amount.Text = Convert.ToString(balance);
@@ -306,12 +315,12 @@ namespace Project_Kothin
             if (flag6 == true)
             {
                 C2.BackColor = Color.Green;
-                if (comboBox3.Text == "AC")
+                if (Busclassbox.Text == "AC")
                 {
                     balance += 2500;
                     amount.Text = Convert.ToString(balance);
                 }
-                if (comboBox3.Text == "Non-AC")
+                if (Busclassbox.Text == "Non-AC")
                 {
                     balance += 700;
                     amount.Text = Convert.ToString(balance);
@@ -322,7 +331,7 @@ namespace Project_Kothin
             else
             {
                 C2.BackColor = Color.FromKnownColor(KnownColor.Control);
-                if (balance != 0 && comboBox3.Text == "AC")
+                if (balance != 0 && Busclassbox.Text == "AC")
                 {
                     balance -= 2500;
                     amount.Text = Convert.ToString(balance);
@@ -333,7 +342,7 @@ namespace Project_Kothin
                     amount.Text = Convert.ToString(balance);
                 }
 
-                if (balance != 0 && comboBox3.Text == "Non-AC")
+                if (balance != 0 && Busclassbox.Text == "Non-AC")
                 {
                     balance -= 700;
                     amount.Text = Convert.ToString(balance);
@@ -353,12 +362,12 @@ namespace Project_Kothin
             if (flag7 == true)
             {
                 D1.BackColor = Color.Green;
-                if (comboBox3.Text == "AC")
+                if (Busclassbox.Text == "AC")
                 {
                     balance += 2500;
                     amount.Text = Convert.ToString(balance);
                 }
-                if (comboBox3.Text == "Non-AC")
+                if (Busclassbox.Text == "Non-AC")
                 {
                     balance += 700;
                     amount.Text = Convert.ToString(balance);
@@ -369,7 +378,7 @@ namespace Project_Kothin
             else
             {
                 D1.BackColor = Color.FromKnownColor(KnownColor.Control);
-                if (balance != 0 && comboBox3.Text == "AC")
+                if (balance != 0 && Busclassbox.Text == "AC")
                 {
                     balance -= 2500;
                     amount.Text = Convert.ToString(balance);
@@ -380,7 +389,7 @@ namespace Project_Kothin
                     amount.Text = Convert.ToString(balance);
                 }
 
-                if (balance != 0 && comboBox3.Text == "Non-AC")
+                if (balance != 0 && Busclassbox.Text == "Non-AC")
                 {
                     balance -= 700;
                     amount.Text = Convert.ToString(balance);
@@ -400,12 +409,12 @@ namespace Project_Kothin
             if (flag8 == true)
             {
                 D2.BackColor = Color.Green;
-                if (comboBox3.Text == "AC")
+                if (Busclassbox.Text == "AC")
                 {
                     balance += 2500;
                     amount.Text = Convert.ToString(balance);
                 }
-                if (comboBox3.Text == "Non-AC")
+                if (Busclassbox.Text == "Non-AC")
                 {
                     balance += 700;
                     amount.Text = Convert.ToString(balance);
@@ -416,7 +425,7 @@ namespace Project_Kothin
             else
             {
                 D2.BackColor = Color.FromKnownColor(KnownColor.Control);
-                if (balance != 0 && comboBox3.Text == "AC")
+                if (balance != 0 && Busclassbox.Text == "AC")
                 {
                     balance -= 2500;
                     amount.Text = Convert.ToString(balance);
@@ -427,7 +436,7 @@ namespace Project_Kothin
                     amount.Text = Convert.ToString(balance);
                 }
 
-                if (balance != 0 && comboBox3.Text == "Non-AC")
+                if (balance != 0 && Busclassbox.Text == "Non-AC")
                 {
                     balance -= 700;
                     amount.Text = Convert.ToString(balance);
@@ -447,12 +456,12 @@ namespace Project_Kothin
             if (flag9 == true)
             {
                 E1.BackColor = Color.Green;
-                if (comboBox3.Text == "AC")
+                if (Busclassbox.Text == "AC")
                 {
                     balance += 2500;
                     amount.Text = Convert.ToString(balance);
                 }
-                if (comboBox3.Text == "Non-AC")
+                if (Busclassbox.Text == "Non-AC")
                 {
                     balance += 700;
                     amount.Text = Convert.ToString(balance);
@@ -463,7 +472,7 @@ namespace Project_Kothin
             else
             {
                 E1.BackColor = Color.FromKnownColor(KnownColor.Control);
-                if (balance != 0 && comboBox3.Text == "AC")
+                if (balance != 0 && Busclassbox.Text == "AC")
                 {
                     balance -= 2500;
                     amount.Text = Convert.ToString(balance);
@@ -474,7 +483,7 @@ namespace Project_Kothin
                     amount.Text = Convert.ToString(balance);
                 }
 
-                if (balance != 0 && comboBox3.Text == "Non-AC")
+                if (balance != 0 && Busclassbox.Text == "Non-AC")
                 {
                     balance -= 700;
                     amount.Text = Convert.ToString(balance);
@@ -494,12 +503,12 @@ namespace Project_Kothin
             if (flag10 == true)
             {
                 E2.BackColor = Color.Green;
-                if (comboBox3.Text == "AC")
+                if (Busclassbox.Text == "AC")
                 {
                     balance += 2500;
                     amount.Text = Convert.ToString(balance);
                 }
-                if (comboBox3.Text == "Non-AC")
+                if (Busclassbox.Text == "Non-AC")
                 {
                     balance += 700;
                     amount.Text = Convert.ToString(balance);
@@ -510,7 +519,7 @@ namespace Project_Kothin
             else
             {
                 E2.BackColor = Color.FromKnownColor(KnownColor.Control);
-                if (balance != 0 && comboBox3.Text == "AC")
+                if (balance != 0 && Busclassbox.Text == "AC")
                 {
                     balance -= 2500;
                     amount.Text = Convert.ToString(balance);
@@ -521,7 +530,7 @@ namespace Project_Kothin
                     amount.Text = Convert.ToString(balance);
                 }
 
-                if (balance != 0 && comboBox3.Text == "Non-AC")
+                if (balance != 0 && Busclassbox.Text == "Non-AC")
                 {
                     balance -= 700;
                     amount.Text = Convert.ToString(balance);
@@ -550,9 +559,11 @@ namespace Project_Kothin
             E2.Visible = false;
             SEARCH.Visible = true;
             Selection.Visible = true;
-            Express.Visible = true;
+            Busclassbox.Visible = true;
+            prefBus.Visible = true;
             BackButton1.Visible = false;
             Seats.Visible = false;
+            BookBus.Visible = false;
             balance = 0;
             amount.Text = Convert.ToString(balance);
             A1.BackColor = Color.FromKnownColor(KnownColor.Control);
@@ -573,8 +584,41 @@ namespace Project_Kothin
 
         private void BookTrain_Click(object sender, EventArgs e)
         {
-            Login loginbus = new Login();
-            loginbus.Show();
+            MessageBox.Show("Successful!");
+            //Login loginTrain = new Login();
+            //loginTrain.Show();
+            Document document = new Document();
+            PdfWriter.GetInstance(document, new FileStream("E:/b.pdf", FileMode.Create));
+            document.Open();
+            //Paragraph p = new Paragraph(Name.Text);
+            Paragraph pp = new Paragraph("Reciept");
+            Paragraph p1 = new Paragraph(Bus.Text + " " + Bos.Text);
+            Paragraph p2 = new Paragraph(bus_class.Text + " " + closs.Text);
+            //Paragraph p3 = new Paragraph(PhoneNumber.Text);
+            Paragraph p4 = new Paragraph(Total.Text + " " + amount.Text);
+            //document.Add(p);
+            document.Add(pp);
+            document.Add(p1);
+            document.Add(p2);
+            //document.Add(p3);
+            document.Add(p4);
+            document.Close();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void axAcroPDF1_Enter(object sender, EventArgs e)
+        {
+            string filename = "E:/b.pdf";
+            System.Diagnostics.Process.Start(filename);
         }
     }
 }

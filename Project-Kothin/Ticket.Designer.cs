@@ -30,7 +30,7 @@ namespace Project_Kothin
         private void InitializeComponent()
         {
             this.SEARCHTRAIN = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
+            this.Date = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
@@ -51,14 +51,14 @@ namespace Project_Kothin
             this.SEARCHTRAIN.Visible = false;
             this.SEARCHTRAIN.Click += new System.EventHandler(this.SEARCHTRAIN_Click);
             // 
-            // label4
+            // Date
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(265, 231);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "label4";
+            this.Date.AutoSize = true;
+            this.Date.Location = new System.Drawing.Point(265, 231);
+            this.Date.Name = "Date";
+            this.Date.Size = new System.Drawing.Size(30, 13);
+            this.Date.TabIndex = 8;
+            this.Date.Text = "Date";
             // 
             // dateTimePicker1
             // 
@@ -149,7 +149,7 @@ namespace Project_Kothin
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.SEARCHBUS);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.Date);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -167,7 +167,7 @@ namespace Project_Kothin
         #endregion
 
         private System.Windows.Forms.Button SEARCHTRAIN;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label Date;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboBox2;

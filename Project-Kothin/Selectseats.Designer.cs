@@ -29,6 +29,7 @@ namespace Project_Kothin
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Selectseats));
             this.Express = new System.Windows.Forms.ComboBox();
             this.Selection = new System.Windows.Forms.Label();
             this.SEARCH = new System.Windows.Forms.Button();
@@ -47,9 +48,20 @@ namespace Project_Kothin
             this.BookTrain = new System.Windows.Forms.Button();
             this.Totalamount = new System.Windows.Forms.Label();
             this.amount = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.classBox = new System.Windows.Forms.ComboBox();
             this.Class = new System.Windows.Forms.Label();
+            this.Train = new System.Windows.Forms.Label();
+            this.PhoneNumber = new System.Windows.Forms.Label();
+            this.name = new System.Windows.Forms.Label();
+            this.train_class = new System.Windows.Forms.Label();
+            this.tran = new System.Windows.Forms.Label();
+            this.nam = new System.Windows.Forms.Label();
+            this.number = new System.Windows.Forms.Label();
+            this.closs = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.axAcroPDF1 = new AxAcroPDFLib.AxAcroPDF();
             this.Seats.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.axAcroPDF1)).BeginInit();
             this.SuspendLayout();
             // 
             // Express
@@ -60,7 +72,7 @@ namespace Project_Kothin
             "UPABAN EXPRESS",
             "SAGARDARI EXPRESS",
             "CHITTRA EXPRESS"});
-            this.Express.Location = new System.Drawing.Point(52, 240);
+            this.Express.Location = new System.Drawing.Point(52, 159);
             this.Express.Name = "Express";
             this.Express.Size = new System.Drawing.Size(143, 21);
             this.Express.TabIndex = 0;
@@ -69,7 +81,7 @@ namespace Project_Kothin
             // 
             this.Selection.AutoSize = true;
             this.Selection.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Selection.Location = new System.Drawing.Point(48, 213);
+            this.Selection.Location = new System.Drawing.Point(48, 132);
             this.Selection.Name = "Selection";
             this.Selection.Size = new System.Drawing.Size(265, 24);
             this.Selection.TabIndex = 1;
@@ -78,7 +90,7 @@ namespace Project_Kothin
             // 
             // SEARCH
             // 
-            this.SEARCH.Location = new System.Drawing.Point(52, 267);
+            this.SEARCH.Location = new System.Drawing.Point(52, 190);
             this.SEARCH.Name = "SEARCH";
             this.SEARCH.Size = new System.Drawing.Size(88, 23);
             this.SEARCH.TabIndex = 2;
@@ -218,7 +230,7 @@ namespace Project_Kothin
             this.Seats.Controls.Add(this.B1);
             this.Seats.Controls.Add(this.A2);
             this.Seats.Controls.Add(this.A1);
-            this.Seats.Location = new System.Drawing.Point(338, 12);
+            this.Seats.Location = new System.Drawing.Point(354, 12);
             this.Seats.Name = "Seats";
             this.Seats.Size = new System.Drawing.Size(247, 401);
             this.Seats.TabIndex = 3;
@@ -229,7 +241,7 @@ namespace Project_Kothin
             // 
             // BackButton1
             // 
-            this.BackButton1.Location = new System.Drawing.Point(681, 403);
+            this.BackButton1.Location = new System.Drawing.Point(655, 403);
             this.BackButton1.Name = "BackButton1";
             this.BackButton1.Size = new System.Drawing.Size(107, 35);
             this.BackButton1.TabIndex = 6;
@@ -240,7 +252,7 @@ namespace Project_Kothin
             // 
             // BookTrain
             // 
-            this.BookTrain.Location = new System.Drawing.Point(430, 419);
+            this.BookTrain.Location = new System.Drawing.Point(442, 419);
             this.BookTrain.Name = "BookTrain";
             this.BookTrain.Size = new System.Drawing.Size(75, 23);
             this.BookTrain.TabIndex = 7;
@@ -252,7 +264,7 @@ namespace Project_Kothin
             // Totalamount
             // 
             this.Totalamount.AutoSize = true;
-            this.Totalamount.Location = new System.Drawing.Point(49, 343);
+            this.Totalamount.Location = new System.Drawing.Point(46, 319);
             this.Totalamount.Name = "Totalamount";
             this.Totalamount.Size = new System.Drawing.Size(72, 13);
             this.Totalamount.TabIndex = 8;
@@ -261,43 +273,148 @@ namespace Project_Kothin
             // amount
             // 
             this.amount.AutoSize = true;
-            this.amount.Location = new System.Drawing.Point(127, 343);
+            this.amount.Location = new System.Drawing.Point(124, 319);
             this.amount.Name = "amount";
             this.amount.Size = new System.Drawing.Size(13, 13);
             this.amount.TabIndex = 9;
             this.amount.Text = "0";
             this.amount.Click += new System.EventHandler(this.amount_Click);
             // 
-            // comboBox3
+            // classBox
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
+            this.classBox.FormattingEnabled = true;
+            this.classBox.Items.AddRange(new object[] {
             "Snigdha",
             "AC_berth",
             "Shovon"});
-            this.comboBox3.Location = new System.Drawing.Point(52, 162);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 21);
-            this.comboBox3.TabIndex = 10;
+            this.classBox.Location = new System.Drawing.Point(52, 96);
+            this.classBox.Name = "classBox";
+            this.classBox.Size = new System.Drawing.Size(121, 21);
+            this.classBox.TabIndex = 10;
             // 
             // Class
             // 
             this.Class.AutoSize = true;
             this.Class.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Class.Location = new System.Drawing.Point(49, 136);
+            this.Class.Location = new System.Drawing.Point(48, 73);
             this.Class.Name = "Class";
             this.Class.Size = new System.Drawing.Size(58, 20);
             this.Class.TabIndex = 11;
             this.Class.Text = "Class:";
             this.Class.Click += new System.EventHandler(this.Class_Click);
             // 
+            // Train
+            // 
+            this.Train.AutoSize = true;
+            this.Train.Location = new System.Drawing.Point(46, 287);
+            this.Train.Name = "Train";
+            this.Train.Size = new System.Drawing.Size(34, 13);
+            this.Train.TabIndex = 12;
+            this.Train.Text = "Train:";
+            // 
+            // PhoneNumber
+            // 
+            this.PhoneNumber.AutoSize = true;
+            this.PhoneNumber.Location = new System.Drawing.Point(46, 348);
+            this.PhoneNumber.Name = "PhoneNumber";
+            this.PhoneNumber.Size = new System.Drawing.Size(81, 13);
+            this.PhoneNumber.TabIndex = 13;
+            this.PhoneNumber.Text = "Phone Number:";
+            this.PhoneNumber.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // name
+            // 
+            this.name.AutoSize = true;
+            this.name.Location = new System.Drawing.Point(46, 253);
+            this.name.Name = "name";
+            this.name.Size = new System.Drawing.Size(38, 13);
+            this.name.TabIndex = 14;
+            this.name.Text = "Name:";
+            // 
+            // train_class
+            // 
+            this.train_class.AutoSize = true;
+            this.train_class.Location = new System.Drawing.Point(46, 379);
+            this.train_class.Name = "train_class";
+            this.train_class.Size = new System.Drawing.Size(35, 13);
+            this.train_class.TabIndex = 15;
+            this.train_class.Text = "Class:";
+            // 
+            // tran
+            // 
+            this.tran.AutoSize = true;
+            this.tran.Location = new System.Drawing.Point(86, 287);
+            this.tran.Name = "tran";
+            this.tran.Size = new System.Drawing.Size(13, 13);
+            this.tran.TabIndex = 17;
+            this.tran.Text = "0";
+            this.tran.Click += new System.EventHandler(this.tran_Click);
+            // 
+            // nam
+            // 
+            this.nam.AutoSize = true;
+            this.nam.Location = new System.Drawing.Point(90, 253);
+            this.nam.Name = "nam";
+            this.nam.Size = new System.Drawing.Size(13, 13);
+            this.nam.TabIndex = 18;
+            this.nam.Text = "0";
+            // 
+            // number
+            // 
+            this.number.AutoSize = true;
+            this.number.Location = new System.Drawing.Point(127, 348);
+            this.number.Name = "number";
+            this.number.Size = new System.Drawing.Size(13, 13);
+            this.number.TabIndex = 19;
+            this.number.Text = "0";
+            // 
+            // closs
+            // 
+            this.closs.AutoSize = true;
+            this.closs.Location = new System.Drawing.Point(87, 379);
+            this.closs.Name = "closs";
+            this.closs.Size = new System.Drawing.Size(13, 13);
+            this.closs.TabIndex = 20;
+            this.closs.Text = "0";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Honeydew;
+            this.label1.Location = new System.Drawing.Point(165, 387);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(131, 13);
+            this.label1.TabIndex = 22;
+            this.label1.Text = " Click below download pdf";
+            // 
+            // axAcroPDF1
+            // 
+            this.axAcroPDF1.Enabled = true;
+            this.axAcroPDF1.Location = new System.Drawing.Point(145, 403);
+            this.axAcroPDF1.Name = "axAcroPDF1";
+            this.axAcroPDF1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axAcroPDF1.OcxState")));
+            this.axAcroPDF1.Size = new System.Drawing.Size(50, 55);
+            this.axAcroPDF1.TabIndex = 21;
+            this.axAcroPDF1.Text = "none";
+            this.axAcroPDF1.Enter += new System.EventHandler(this.axAcroPDF1_Enter);
+            // 
             // Selectseats
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.axAcroPDF1);
+            this.Controls.Add(this.closs);
+            this.Controls.Add(this.number);
+            this.Controls.Add(this.nam);
+            this.Controls.Add(this.tran);
+            this.Controls.Add(this.train_class);
+            this.Controls.Add(this.name);
+            this.Controls.Add(this.PhoneNumber);
+            this.Controls.Add(this.Train);
             this.Controls.Add(this.Class);
-            this.Controls.Add(this.comboBox3);
+            this.Controls.Add(this.classBox);
             this.Controls.Add(this.amount);
             this.Controls.Add(this.Totalamount);
             this.Controls.Add(this.BookTrain);
@@ -310,6 +427,7 @@ namespace Project_Kothin
             this.Text = "Select";
             this.Load += new System.EventHandler(this.Selectseats_Load);
             this.Seats.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.axAcroPDF1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -335,7 +453,17 @@ namespace Project_Kothin
         private System.Windows.Forms.Button BookTrain;
         private System.Windows.Forms.Label Totalamount;
         private System.Windows.Forms.Label amount;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox classBox;
         private System.Windows.Forms.Label Class;
+        private System.Windows.Forms.Label Train;
+        private System.Windows.Forms.Label PhoneNumber;
+        private System.Windows.Forms.Label name;
+        private System.Windows.Forms.Label train_class;
+        private System.Windows.Forms.Label tran;
+        private System.Windows.Forms.Label nam;
+        private System.Windows.Forms.Label number;
+        private System.Windows.Forms.Label closs;
+        private AxAcroPDFLib.AxAcroPDF axAcroPDF1;
+        private System.Windows.Forms.Label label1;
     }
 }

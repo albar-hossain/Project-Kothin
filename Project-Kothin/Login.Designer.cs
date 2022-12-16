@@ -173,6 +173,7 @@
             this.buttonLogin.TabIndex = 7;
             this.buttonLogin.Text = "LOGIN";
             this.buttonLogin.UseVisualStyleBackColor = false;
+            this.buttonLogin.Click += new System.EventHandler(this.buttonLogin_Click);
             // 
             // buttonExit
             // 
