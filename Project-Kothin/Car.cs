@@ -60,7 +60,7 @@ namespace Project_Kothin
                     typemultiplier = 0.8;
                 }
 
-                //Car CLASS
+                // Car CLASS
                 if (classChoose.Text == "Class A")
                 {
                     classmultiplier = 2;
