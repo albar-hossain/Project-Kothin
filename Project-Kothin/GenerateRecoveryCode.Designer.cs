@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GenerateRecoveryCode));
             this.linkLabelRecoveryClose = new System.Windows.Forms.LinkLabel();
             this.labelResetRecoveryCode = new System.Windows.Forms.Label();
             this.textBoxResetRecoveryCode = new System.Windows.Forms.TextBox();
@@ -111,6 +112,7 @@
             this.Controls.Add(this.linkLabelRecoveryClose);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "GenerateRecoveryCode";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -29,6 +29,7 @@ namespace Project_Kothin
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Ticket));
             this.SEARCHTRAIN = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -42,7 +43,7 @@ namespace Project_Kothin
             // 
             // SEARCHTRAIN
             // 
-            this.SEARCHTRAIN.Location = new System.Drawing.Point(294, 325);
+            this.SEARCHTRAIN.Location = new System.Drawing.Point(523, 475);
             this.SEARCHTRAIN.Name = "SEARCHTRAIN";
             this.SEARCHTRAIN.Size = new System.Drawing.Size(144, 23);
             this.SEARCHTRAIN.TabIndex = 0;
@@ -54,15 +55,15 @@ namespace Project_Kothin
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(265, 231);
+            this.label4.Location = new System.Drawing.Point(498, 352);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
+            this.label4.Size = new System.Drawing.Size(33, 13);
             this.label4.TabIndex = 8;
-            this.label4.Text = "label4";
+            this.label4.Text = "Date:";
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(268, 247);
+            this.dateTimePicker1.Location = new System.Drawing.Point(501, 368);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 5;
@@ -71,7 +72,7 @@ namespace Project_Kothin
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(444, 136);
+            this.label2.Location = new System.Drawing.Point(690, 267);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(63, 13);
             this.label2.TabIndex = 4;
@@ -87,7 +88,7 @@ namespace Project_Kothin
             "Chittagong",
             "Sylhet",
             "Rajshahi"});
-            this.comboBox2.Location = new System.Drawing.Point(447, 152);
+            this.comboBox2.Location = new System.Drawing.Point(693, 283);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(197, 21);
             this.comboBox2.TabIndex = 2;
@@ -96,7 +97,7 @@ namespace Project_Kothin
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(116, 136);
+            this.label1.Location = new System.Drawing.Point(310, 267);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(57, 13);
             this.label1.TabIndex = 3;
@@ -112,7 +113,7 @@ namespace Project_Kothin
             "Chittagong",
             "Sylhet",
             "Rajshahi"});
-            this.comboBox1.Location = new System.Drawing.Point(119, 152);
+            this.comboBox1.Location = new System.Drawing.Point(313, 283);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(211, 21);
             this.comboBox1.TabIndex = 1;
@@ -121,7 +122,7 @@ namespace Project_Kothin
             // SEARCHBUS
             // 
             this.SEARCHBUS.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.SEARCHBUS.Location = new System.Drawing.Point(294, 325);
+            this.SEARCHBUS.Location = new System.Drawing.Point(523, 475);
             this.SEARCHBUS.Name = "SEARCHBUS";
             this.SEARCHBUS.Size = new System.Drawing.Size(144, 23);
             this.SEARCHBUS.TabIndex = 9;
@@ -134,7 +135,7 @@ namespace Project_Kothin
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(349, 56);
+            this.label3.Location = new System.Drawing.Point(574, 216);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(76, 25);
             this.label3.TabIndex = 10;
@@ -144,8 +145,9 @@ namespace Project_Kothin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1199, 691);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.SEARCHBUS);
             this.Controls.Add(this.label4);
@@ -155,6 +157,7 @@ namespace Project_Kothin
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.SEARCHTRAIN);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Ticket";
             this.Text = "Train";
             this.Load += new System.EventHandler(this.Train_Load);

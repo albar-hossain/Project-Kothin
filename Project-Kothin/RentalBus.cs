@@ -10,11 +10,10 @@ using System.Windows.Forms;
 
 namespace Project_Kothin
 {
-
-    public partial class Car : Form
+    public partial class RentalBus : Form
     {
         private double balance = 0;
-        public Car()
+        public RentalBus()
         {
             InitializeComponent();
         }
@@ -47,11 +46,11 @@ namespace Project_Kothin
                 //Class A
                 //Class B
                 //Car TYPE
-                if (carType.Text == "Sedan")
+                if (carType.Text == "AC")
                 {
                     typemultiplier = 1;
                 }
-                else if (carType.Text == "Micro Bus")
+                else if (carType.Text == "Non-AC")
                 {
                     typemultiplier = 1.5;
                 }
@@ -88,19 +87,19 @@ namespace Project_Kothin
                 //balance
                 if (Destination.Text == "Withing Dhaka")
                 {
-                    balance = 1000 * typemultiplier * classmultiplier * durationmultiplier;
+                    balance = 2000 * typemultiplier * classmultiplier * durationmultiplier;
                 }
                 else if (Destination.Text == "Savar")
                 {
-                    balance = 2000 * typemultiplier * classmultiplier * durationmultiplier;
+                    balance = 3000 * typemultiplier * classmultiplier * durationmultiplier;
                 }
                 else if (Destination.Text == "Tongi")
                 {
-                    balance = 2000 * typemultiplier * classmultiplier * durationmultiplier;
+                    balance = 3000 * typemultiplier * classmultiplier * durationmultiplier;
                 }
                 else if (Destination.Text == "Gazipur")
                 {
-                    balance = 3000 * typemultiplier * classmultiplier * durationmultiplier;
+                    balance = 4000 * typemultiplier * classmultiplier * durationmultiplier;
                 }
                 else if (Destination.Text == "Naraynganj")
                 {
@@ -108,11 +107,11 @@ namespace Project_Kothin
                 }
                 else if (Destination.Text == "Munshiganj")
                 {
-                    balance = 3500 * typemultiplier * classmultiplier * durationmultiplier;
+                    balance = 4500 * typemultiplier * classmultiplier * durationmultiplier;
                 }
                 else
                 {
-                    balance = 3000 * typemultiplier * classmultiplier * durationmultiplier;
+                    balance = 4000 * typemultiplier * classmultiplier * durationmultiplier;
                 }
                 amount.Text = Convert.ToString(balance);
                 //MessageBox.Show("Boat has been booked!");
@@ -123,30 +122,6 @@ namespace Project_Kothin
             {
                 MessageBox.Show("Please check all the options above!");
             }
-        }
-
-        private void Destination_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void boatType_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void classChoose_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void durationChoose_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
         }
     }

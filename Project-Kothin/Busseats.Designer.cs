@@ -29,6 +29,7 @@ namespace Project_Kothin
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Busseats));
             this.Seats = new System.Windows.Forms.GroupBox();
             this.E2 = new System.Windows.Forms.Button();
             this.E1 = new System.Windows.Forms.Button();
@@ -54,6 +55,7 @@ namespace Project_Kothin
             // 
             // Seats
             // 
+            this.Seats.BackColor = System.Drawing.Color.Transparent;
             this.Seats.Controls.Add(this.E2);
             this.Seats.Controls.Add(this.E1);
             this.Seats.Controls.Add(this.D2);
@@ -64,7 +66,7 @@ namespace Project_Kothin
             this.Seats.Controls.Add(this.B1);
             this.Seats.Controls.Add(this.A2);
             this.Seats.Controls.Add(this.A1);
-            this.Seats.Location = new System.Drawing.Point(352, 12);
+            this.Seats.Location = new System.Drawing.Point(490, 212);
             this.Seats.Name = "Seats";
             this.Seats.Size = new System.Drawing.Size(247, 401);
             this.Seats.TabIndex = 4;
@@ -198,7 +200,7 @@ namespace Project_Kothin
             this.comboBox3.Items.AddRange(new object[] {
             "AC",
             "Non-AC"});
-            this.comboBox3.Location = new System.Drawing.Point(51, 150);
+            this.comboBox3.Location = new System.Drawing.Point(219, 258);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(121, 21);
             this.comboBox3.TabIndex = 11;
@@ -208,7 +210,7 @@ namespace Project_Kothin
             // 
             this.Class.AutoSize = true;
             this.Class.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Class.Location = new System.Drawing.Point(47, 127);
+            this.Class.Location = new System.Drawing.Point(215, 235);
             this.Class.Name = "Class";
             this.Class.Size = new System.Drawing.Size(58, 20);
             this.Class.TabIndex = 12;
@@ -217,7 +219,7 @@ namespace Project_Kothin
             // amount
             // 
             this.amount.AutoSize = true;
-            this.amount.Location = new System.Drawing.Point(126, 323);
+            this.amount.Location = new System.Drawing.Point(294, 431);
             this.amount.Name = "amount";
             this.amount.Size = new System.Drawing.Size(13, 13);
             this.amount.TabIndex = 17;
@@ -227,7 +229,7 @@ namespace Project_Kothin
             // Totalamount
             // 
             this.Totalamount.AutoSize = true;
-            this.Totalamount.Location = new System.Drawing.Point(48, 323);
+            this.Totalamount.Location = new System.Drawing.Point(216, 431);
             this.Totalamount.Name = "Totalamount";
             this.Totalamount.Size = new System.Drawing.Size(72, 13);
             this.Totalamount.TabIndex = 16;
@@ -236,7 +238,7 @@ namespace Project_Kothin
             // 
             // SEARCH
             // 
-            this.SEARCH.Location = new System.Drawing.Point(51, 247);
+            this.SEARCH.Location = new System.Drawing.Point(219, 355);
             this.SEARCH.Name = "SEARCH";
             this.SEARCH.Size = new System.Drawing.Size(75, 23);
             this.SEARCH.TabIndex = 15;
@@ -248,7 +250,7 @@ namespace Project_Kothin
             // 
             this.Selection.AutoSize = true;
             this.Selection.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Selection.Location = new System.Drawing.Point(47, 193);
+            this.Selection.Location = new System.Drawing.Point(215, 301);
             this.Selection.Name = "Selection";
             this.Selection.Size = new System.Drawing.Size(252, 24);
             this.Selection.TabIndex = 14;
@@ -263,7 +265,7 @@ namespace Project_Kothin
             "GREEN LINE",
             "HANIF",
             "UNIQUE"});
-            this.Express.Location = new System.Drawing.Point(51, 220);
+            this.Express.Location = new System.Drawing.Point(219, 328);
             this.Express.Name = "Express";
             this.Express.Size = new System.Drawing.Size(143, 21);
             this.Express.TabIndex = 13;
@@ -271,7 +273,7 @@ namespace Project_Kothin
             // 
             // BackButton1
             // 
-            this.BackButton1.Location = new System.Drawing.Point(656, 403);
+            this.BackButton1.Location = new System.Drawing.Point(1036, 618);
             this.BackButton1.Name = "BackButton1";
             this.BackButton1.Size = new System.Drawing.Size(107, 35);
             this.BackButton1.TabIndex = 10;
@@ -282,7 +284,7 @@ namespace Project_Kothin
             // 
             // BookBus
             // 
-            this.BookBus.Location = new System.Drawing.Point(437, 419);
+            this.BookBus.Location = new System.Drawing.Point(575, 619);
             this.BookBus.Name = "BookBus";
             this.BookBus.Size = new System.Drawing.Size(75, 23);
             this.BookBus.TabIndex = 18;
@@ -295,7 +297,8 @@ namespace Project_Kothin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(1199, 691);
             this.Controls.Add(this.BookBus);
             this.Controls.Add(this.BackButton1);
             this.Controls.Add(this.amount);
@@ -306,6 +309,7 @@ namespace Project_Kothin
             this.Controls.Add(this.Class);
             this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.Seats);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Busseats";
             this.Text = "Bus";
             this.Load += new System.EventHandler(this.Busseats_Load);

@@ -10,11 +10,10 @@ using System.Windows.Forms;
 
 namespace Project_Kothin
 {
-    public partial class Boat1 : Form
+    public partial class Boat : Form
     {
         private double balance = 0;
-        private int dur = 0;
-        public Boat1()
+        public Boat()
         {
             InitializeComponent();
         }
