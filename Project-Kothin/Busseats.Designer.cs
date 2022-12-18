@@ -300,7 +300,7 @@ namespace Project_Kothin
             this.axAcroPDF1.Location = new System.Drawing.Point(162, 385);
             this.axAcroPDF1.Name = "axAcroPDF1";
             this.axAcroPDF1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axAcroPDF1.OcxState")));
-            this.axAcroPDF1.Size = new System.Drawing.Size(66, 71);
+            this.axAcroPDF1.Size = new System.Drawing.Size(192, 192);
             this.axAcroPDF1.TabIndex = 31;
             this.axAcroPDF1.Text = "none";
             this.axAcroPDF1.Enter += new System.EventHandler(this.axAcroPDF1_Enter);
