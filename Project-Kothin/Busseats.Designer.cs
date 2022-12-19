@@ -58,6 +58,7 @@ namespace Project_Kothin
             this.bos = new System.Windows.Forms.Label();
             this.closs = new System.Windows.Forms.Label();
             this.axAcroPDF1 = new AxAcroPDFLib.AxAcroPDF();
+            this.pdf = new System.Windows.Forms.Button();
             this.Seats.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.axAcroPDF1)).BeginInit();
             this.SuspendLayout();
@@ -341,11 +342,11 @@ namespace Project_Kothin
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(914, 212);
+            this.label5.Location = new System.Drawing.Point(911, 175);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(13, 13);
+            this.label5.Size = new System.Drawing.Size(113, 13);
             this.label5.TabIndex = 23;
-            this.label5.Text = "0";
+            this.label5.Text = "Download your receipt";
             // 
             // bos
             // 
@@ -376,12 +377,23 @@ namespace Project_Kothin
             this.axAcroPDF1.TabIndex = 26;
             this.axAcroPDF1.Enter += new System.EventHandler(this.axAcroPDF1_Enter);
             // 
+            // pdf
+            // 
+            this.pdf.Location = new System.Drawing.Point(874, 431);
+            this.pdf.Name = "pdf";
+            this.pdf.Size = new System.Drawing.Size(192, 192);
+            this.pdf.TabIndex = 27;
+            this.pdf.Text = "open pdf";
+            this.pdf.UseVisualStyleBackColor = true;
+            this.pdf.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Busseats
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1199, 691);
+            this.Controls.Add(this.pdf);
             this.Controls.Add(this.axAcroPDF1);
             this.Controls.Add(this.closs);
             this.Controls.Add(this.bos);
@@ -441,5 +453,6 @@ namespace Project_Kothin
         private System.Windows.Forms.Label bos;
         private System.Windows.Forms.Label closs;
         private AxAcroPDFLib.AxAcroPDF axAcroPDF1;
+        private System.Windows.Forms.Button pdf;
     }
 }

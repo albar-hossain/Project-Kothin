@@ -66,6 +66,26 @@ namespace Project_Kothin
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
+            if (textBoxPhone.Text == "admin" && textBoxPassword.Text=="kothin")
+            {
+                Admin a1 = new Admin();
+                a1.Show();
+            }
+            else
+            {
+                Service p1 = new Service();
+                p1.Show();
+            }
+           
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxPhone_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }
