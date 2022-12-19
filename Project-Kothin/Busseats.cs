@@ -593,7 +593,7 @@ namespace Project_Kothin
 
             Document document = new Document();
             //PdfWriter.GetInstance(document, new FileStream("E:/b.pdf", FileMode.Create));
-            PdfWriter.GetInstance(document, new FileStream("L:/[AIUB] Assignments/Aiub cse lab/5th Sem Lab/Project-Kothin/Project-Kothin/PDF/Bus_Ticket.pdf", FileMode.Create));
+            PdfWriter.GetInstance(document, new FileStream("C:\\Users\\azwad\\OneDrive - American International University-Bangladesh\\Desktop\\project pdfs/b.pdf", FileMode.Create));
 
             document.Open();
             //Paragraph p = new Paragraph(Name.Text);
@@ -617,7 +617,7 @@ namespace Project_Kothin
 
         private void axAcroPDF1_Enter(object sender, EventArgs e)
         {
-            string filename = "L:/[AIUB] Assignments/Aiub cse lab/5th Sem Lab/Project-Kothin/Project-Kothin/PDF/Bus_Ticket.pdf";
+            string filename = "C:\\Users\\azwad\\OneDrive - American International University-Bangladesh\\Desktop\\project pdfs/b.pdf";
             System.Diagnostics.Process.Start(filename);
         }
     }
