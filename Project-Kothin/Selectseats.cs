@@ -1,8 +1,11 @@
-﻿using System;
+﻿using iTextSharp.text.pdf;
+using iTextSharp.text;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -50,17 +53,17 @@ namespace Project_Kothin
             if (flag1 == true)
             {
                 A1.BackColor = Color.Green;
-                if (comboBox3.Text == "Snigdha")
+                if (classSelection.Text == "Snigdha")
                 {
                     balance += 500;
                     amount.Text = Convert.ToString(balance);
                 }
-                if (comboBox3.Text == "AC_berth")
+                if (classSelection.Text == "AC_berth")
                 {
                     balance += 1500;
                     amount.Text = Convert.ToString(balance);
                 }
-                if (comboBox3.Text == "Shovon")
+                if (classSelection.Text == "Shovon")
                 {
                     balance += 300;
                     amount.Text = Convert.ToString(balance);
@@ -70,7 +73,7 @@ namespace Project_Kothin
             else
             {
                 A1.BackColor = Color.FromKnownColor(KnownColor.Control);
-                if (balance != 0 && comboBox3.Text == "Snigdha")
+                if (balance != 0 && classSelection.Text == "Snigdha")
                 {
                     balance -= 500;
                     amount.Text = Convert.ToString(balance);
@@ -81,7 +84,7 @@ namespace Project_Kothin
                     amount.Text = Convert.ToString(balance);
                 }
 
-                if (balance != 0 && comboBox3.Text == "AC_berth")
+                if (balance != 0 && classSelection.Text == "AC_berth")
                 {
                     balance -= 1500;
                     amount.Text = Convert.ToString(balance);
@@ -92,7 +95,7 @@ namespace Project_Kothin
                     amount.Text = Convert.ToString(balance);
                 }
 
-                if (balance != 0 && comboBox3.Text == "Shovon")
+                if (balance != 0 && classSelection.Text == "Shovon")
                 {
                     balance -= 300;
                     amount.Text = Convert.ToString(balance);
@@ -111,17 +114,17 @@ namespace Project_Kothin
             if (flag2 == true)
             {
                 A2.BackColor = Color.Green;
-                if (comboBox3.Text == "Snigdha")
+                if (classSelection.Text == "Snigdha")
                 {
                     balance += 500;
                     amount.Text = Convert.ToString(balance);
                 }
-                if (comboBox3.Text == "AC_berth")
+                if (classSelection.Text == "AC_berth")
                 {
                     balance += 1500;
                     amount.Text = Convert.ToString(balance);
                 }
-                if (comboBox3.Text == "Shovon")
+                if (classSelection.Text == "Shovon")
                 {
                     balance += 300;
                     amount.Text = Convert.ToString(balance);
@@ -131,7 +134,7 @@ namespace Project_Kothin
             else
             {
                 A2.BackColor = Color.FromKnownColor(KnownColor.Control);
-                if (balance != 0 && comboBox3.Text == "Snigdha")
+                if (balance != 0 && classSelection.Text == "Snigdha")
                 {
                     balance -= 500;
                     amount.Text = Convert.ToString(balance);
@@ -141,7 +144,7 @@ namespace Project_Kothin
                     balance = 0;
                     amount.Text = Convert.ToString(balance);
                 }
-                if (balance != 0 && comboBox3.Text == "AC_berth")
+                if (balance != 0 && classSelection.Text == "AC_berth")
                 {
                     balance -= 1500;
                     amount.Text = Convert.ToString(balance);
@@ -152,7 +155,7 @@ namespace Project_Kothin
                     amount.Text = Convert.ToString(balance);
                 }
 
-                if (balance != 0 && comboBox3.Text == "Shovon")
+                if (balance != 0 && classSelection.Text == "Shovon")
                 {
                     balance -= 300;
                     amount.Text = Convert.ToString(balance);
@@ -171,17 +174,17 @@ namespace Project_Kothin
             if (flag3 == true)
             {
                 C2.BackColor = Color.Green;
-                if (comboBox3.Text == "Snigdha")
+                if (classSelection.Text == "Snigdha")
                 {
                     balance += 500;
                     amount.Text = Convert.ToString(balance);
                 }
-                if (comboBox3.Text == "AC_berth")
+                if (classSelection.Text == "AC_berth")
                 {
                     balance += 1500;
                     amount.Text = Convert.ToString(balance);
                 }
-                if (comboBox3.Text == "Shovon")
+                if (classSelection.Text == "Shovon")
                 {
                     balance += 300;
                     amount.Text = Convert.ToString(balance);
@@ -191,7 +194,7 @@ namespace Project_Kothin
             else
             {
                 C2.BackColor = Color.FromKnownColor(KnownColor.Control);
-                if (balance != 0 && comboBox3.Text == "Snigdha")
+                if (balance != 0 && classSelection.Text == "Snigdha")
                 {
                     balance -= 500;
                     amount.Text = Convert.ToString(balance);
@@ -201,7 +204,7 @@ namespace Project_Kothin
                     balance = 0;
                     amount.Text = Convert.ToString(balance);
                 }
-                if (balance != 0 && comboBox3.Text == "AC_berth")
+                if (balance != 0 && classSelection.Text == "AC_berth")
                 {
                     balance -= 1500;
                     amount.Text = Convert.ToString(balance);
@@ -212,7 +215,7 @@ namespace Project_Kothin
                     amount.Text = Convert.ToString(balance);
                 }
 
-                if (balance != 0 && comboBox3.Text == "Shovon")
+                if (balance != 0 && classSelection.Text == "Shovon")
                 {
                     balance -= 300;
                     amount.Text = Convert.ToString(balance);
@@ -228,6 +231,8 @@ namespace Project_Kothin
 
         private void button1_Click(object sender, EventArgs e)
         {
+            tronName.Text = Express.Name;
+            closs.Text = classSelection.Text;
             BookTrain.Visible = true;
             A1.Visible = true;
             A2.Visible = true;
@@ -284,17 +289,17 @@ namespace Project_Kothin
             if (flag4 == true)
             {
                 B1.BackColor = Color.Green;
-                if (comboBox3.Text == "Snigdha")
+                if (classSelection.Text == "Snigdha")
                 {
                     balance += 500;
                     amount.Text = Convert.ToString(balance);
                 }
-                if (comboBox3.Text == "AC_berth")
+                if (classSelection.Text == "AC_berth")
                 {
                     balance += 1500;
                     amount.Text = Convert.ToString(balance);
                 }
-                if (comboBox3.Text == "Shovon")
+                if (classSelection.Text == "Shovon")
                 {
                     balance += 300;
                     amount.Text = Convert.ToString(balance);
@@ -304,7 +309,7 @@ namespace Project_Kothin
             else
             {
                 B1.BackColor = Color.FromKnownColor(KnownColor.Control);
-                if (balance != 0 && comboBox3.Text == "Snigdha")
+                if (balance != 0 && classSelection.Text == "Snigdha")
                 {
                     balance -= 500;
                     amount.Text = Convert.ToString(balance);
@@ -314,7 +319,7 @@ namespace Project_Kothin
                     balance = 0;
                     amount.Text = Convert.ToString(balance);
                 }
-                if (balance != 0 && comboBox3.Text == "AC_berth")
+                if (balance != 0 && classSelection.Text == "AC_berth")
                 {
                     balance -= 1500;
                     amount.Text = Convert.ToString(balance);
@@ -325,7 +330,7 @@ namespace Project_Kothin
                     amount.Text = Convert.ToString(balance);
                 }
 
-                if (balance != 0 && comboBox3.Text == "Shovon")
+                if (balance != 0 && classSelection.Text == "Shovon")
                 {
                     balance -= 300;
                     amount.Text = Convert.ToString(balance);
@@ -344,17 +349,17 @@ namespace Project_Kothin
             if (flag5 == true)
             {
                 B2.BackColor = Color.Green;
-                if (comboBox3.Text == "Snigdha")
+                if (classSelection.Text == "Snigdha")
                 {
                     balance += 500;
                     amount.Text = Convert.ToString(balance);
                 }
-                if (comboBox3.Text == "AC_berth")
+                if (classSelection.Text == "AC_berth")
                 {
                     balance += 1500;
                     amount.Text = Convert.ToString(balance);
                 }
-                if (comboBox3.Text == "Shovon")
+                if (classSelection.Text == "Shovon")
                 {
                     balance += 300;
                     amount.Text = Convert.ToString(balance);
@@ -364,7 +369,7 @@ namespace Project_Kothin
             else
             {
                 B2.BackColor = Color.FromKnownColor(KnownColor.Control);
-                if (balance != 0 && comboBox3.Text == "Snigdha")
+                if (balance != 0 && classSelection.Text == "Snigdha")
                 {
                     balance -= 500;
                     amount.Text = Convert.ToString(balance);
@@ -374,7 +379,7 @@ namespace Project_Kothin
                     balance = 0;
                     amount.Text = Convert.ToString(balance);
                 }
-                if (balance != 0 && comboBox3.Text == "AC_berth")
+                if (balance != 0 && classSelection.Text == "AC_berth")
                 {
                     balance -= 1500;
                     amount.Text = Convert.ToString(balance);
@@ -385,7 +390,7 @@ namespace Project_Kothin
                     amount.Text = Convert.ToString(balance);
                 }
 
-                if (balance != 0 && comboBox3.Text == "Shovon")
+                if (balance != 0 && classSelection.Text == "Shovon")
                 {
                     balance -= 300;
                     amount.Text = Convert.ToString(balance);
@@ -404,17 +409,17 @@ namespace Project_Kothin
             if (flag6 == true)
             {
                 C1.BackColor = Color.Green;
-                if (comboBox3.Text == "Snigdha")
+                if (classSelection.Text == "Snigdha")
                 {
                     balance += 500;
                     amount.Text = Convert.ToString(balance);
                 }
-                if (comboBox3.Text == "AC_berth")
+                if (classSelection.Text == "AC_berth")
                 {
                     balance += 1500;
                     amount.Text = Convert.ToString(balance);
                 }
-                if (comboBox3.Text == "Shovon")
+                if (classSelection.Text == "Shovon")
                 {
                     balance += 300;
                     amount.Text = Convert.ToString(balance);
@@ -424,7 +429,7 @@ namespace Project_Kothin
             else
             {
                 C1.BackColor = Color.FromKnownColor(KnownColor.Control);
-                if (balance != 0 && comboBox3.Text == "Snigdha")
+                if (balance != 0 && classSelection.Text == "Snigdha")
                 {
                     balance -= 500;
                     amount.Text = Convert.ToString(balance);
@@ -434,7 +439,7 @@ namespace Project_Kothin
                     balance = 0;
                     amount.Text = Convert.ToString(balance);
                 }
-                if (balance != 0 && comboBox3.Text == "AC_berth")
+                if (balance != 0 && classSelection.Text == "AC_berth")
                 {
                     balance -= 1500;
                     amount.Text = Convert.ToString(balance);
@@ -445,7 +450,7 @@ namespace Project_Kothin
                     amount.Text = Convert.ToString(balance);
                 }
 
-                if (balance != 0 && comboBox3.Text == "Shovon")
+                if (balance != 0 && classSelection.Text == "Shovon")
                 {
                     balance -= 300;
                     amount.Text = Convert.ToString(balance);
@@ -464,17 +469,17 @@ namespace Project_Kothin
             if (flag7 == true)
             {
                 D1.BackColor = Color.Green;
-                if (comboBox3.Text == "Snigdha")
+                if (classSelection.Text == "Snigdha")
                 {
                     balance += 500;
                     amount.Text = Convert.ToString(balance);
                 }
-                if (comboBox3.Text == "AC_berth")
+                if (classSelection.Text == "AC_berth")
                 {
                     balance += 1500;
                     amount.Text = Convert.ToString(balance);
                 }
-                if (comboBox3.Text == "Shovon")
+                if (classSelection.Text == "Shovon")
                 {
                     balance += 300;
                     amount.Text = Convert.ToString(balance);
@@ -484,7 +489,7 @@ namespace Project_Kothin
             else
             {
                 D1.BackColor = Color.FromKnownColor(KnownColor.Control);
-                if (balance != 0 && comboBox3.Text == "Snigdha")
+                if (balance != 0 && classSelection.Text == "Snigdha")
                 {
                     balance -= 500;
                     amount.Text = Convert.ToString(balance);
@@ -494,7 +499,7 @@ namespace Project_Kothin
                     balance = 0;
                     amount.Text = Convert.ToString(balance);
                 }
-                if (balance != 0 && comboBox3.Text == "AC_berth")
+                if (balance != 0 && classSelection.Text == "AC_berth")
                 {
                     balance -= 1500;
                     amount.Text = Convert.ToString(balance);
@@ -505,7 +510,7 @@ namespace Project_Kothin
                     amount.Text = Convert.ToString(balance);
                 }
 
-                if (balance != 0 && comboBox3.Text == "Shovon")
+                if (balance != 0 && classSelection.Text == "Shovon")
                 {
                     balance -= 300;
                     amount.Text = Convert.ToString(balance);
@@ -524,17 +529,17 @@ namespace Project_Kothin
             if (flag8 == true)
             {
                 D2.BackColor = Color.Green;
-                if (comboBox3.Text == "Snigdha")
+                if (classSelection.Text == "Snigdha")
                 {
                     balance += 500;
                     amount.Text = Convert.ToString(balance);
                 }
-                if (comboBox3.Text == "AC_berth")
+                if (classSelection.Text == "AC_berth")
                 {
                     balance += 1500;
                     amount.Text = Convert.ToString(balance);
                 }
-                if (comboBox3.Text == "Shovon")
+                if (classSelection.Text == "Shovon")
                 {
                     balance += 300;
                     amount.Text = Convert.ToString(balance);
@@ -544,7 +549,7 @@ namespace Project_Kothin
             else
             {
                 D2.BackColor = Color.FromKnownColor(KnownColor.Control);
-                if (balance != 0 && comboBox3.Text == "Snigdha")
+                if (balance != 0 && classSelection.Text == "Snigdha")
                 {
                     balance -= 500;
                     amount.Text = Convert.ToString(balance);
@@ -554,7 +559,7 @@ namespace Project_Kothin
                     balance = 0;
                     amount.Text = Convert.ToString(balance);
                 }
-                if (balance != 0 && comboBox3.Text == "AC_berth")
+                if (balance != 0 && classSelection.Text == "AC_berth")
                 {
                     balance -= 1500;
                     amount.Text = Convert.ToString(balance);
@@ -565,7 +570,7 @@ namespace Project_Kothin
                     amount.Text = Convert.ToString(balance);
                 }
 
-                if (balance != 0 && comboBox3.Text == "Shovon")
+                if (balance != 0 && classSelection.Text == "Shovon")
                 {
                     balance -= 300;
                     amount.Text = Convert.ToString(balance);
@@ -584,17 +589,17 @@ namespace Project_Kothin
             if (flag9 == true)
             {
                 E1.BackColor = Color.Green;
-                if (comboBox3.Text == "Snigdha")
+                if (classSelection.Text == "Snigdha")
                 {
                     balance += 500;
                     amount.Text = Convert.ToString(balance);
                 }
-                if (comboBox3.Text == "AC_berth")
+                if (classSelection.Text == "AC_berth")
                 {
                     balance += 1500;
                     amount.Text = Convert.ToString(balance);
                 }
-                if (comboBox3.Text == "Shovon")
+                if (classSelection.Text == "Shovon")
                 {
                     balance += 300;
                     amount.Text = Convert.ToString(balance);
@@ -604,7 +609,7 @@ namespace Project_Kothin
             else
             {
                 E1.BackColor = Color.FromKnownColor(KnownColor.Control);
-                if (balance != 0 && comboBox3.Text == "Snigdha")
+                if (balance != 0 && classSelection.Text == "Snigdha")
                 {
                     balance -= 500;
                     amount.Text = Convert.ToString(balance);
@@ -614,7 +619,7 @@ namespace Project_Kothin
                     balance = 0;
                     amount.Text = Convert.ToString(balance);
                 }
-                if (balance != 0 && comboBox3.Text == "AC_berth")
+                if (balance != 0 && classSelection.Text == "AC_berth")
                 {
                     balance -= 1500;
                     amount.Text = Convert.ToString(balance);
@@ -625,7 +630,7 @@ namespace Project_Kothin
                     amount.Text = Convert.ToString(balance);
                 }
 
-                if (balance != 0 && comboBox3.Text == "Shovon")
+                if (balance != 0 && classSelection.Text == "Shovon")
                 {
                     balance -= 300;
                     amount.Text = Convert.ToString(balance);
@@ -644,17 +649,17 @@ namespace Project_Kothin
             if (flag10 == true)
             {
                 E2.BackColor = Color.Green;
-                if (comboBox3.Text == "Snigdha")
+                if (classSelection.Text == "Snigdha")
                 {
                     balance += 500;
                     amount.Text = Convert.ToString(balance);
                 }
-                if (comboBox3.Text == "AC_berth")
+                if (classSelection.Text == "AC_berth")
                 {
                     balance += 1500;
                     amount.Text = Convert.ToString(balance);
                 }
-                if (comboBox3.Text == "Shovon")
+                if (classSelection.Text == "Shovon")
                 {
                     balance += 300;
                     amount.Text = Convert.ToString(balance);
@@ -664,7 +669,7 @@ namespace Project_Kothin
             else
             {
                 E2.BackColor = Color.FromKnownColor(KnownColor.Control);
-                if (balance != 0 && comboBox3.Text == "Snigdha")
+                if (balance != 0 && classSelection.Text == "Snigdha")
                 {
                     balance -= 500;
                     amount.Text = Convert.ToString(balance);
@@ -674,7 +679,7 @@ namespace Project_Kothin
                     balance = 0;
                     amount.Text = Convert.ToString(balance);
                 }
-                if (balance != 0 && comboBox3.Text == "AC_berth")
+                if (balance != 0 && classSelection.Text == "AC_berth")
                 {
                     balance -= 1500;
                     amount.Text = Convert.ToString(balance);
@@ -685,7 +690,7 @@ namespace Project_Kothin
                     amount.Text = Convert.ToString(balance);
                 }
 
-                if (balance != 0 && comboBox3.Text == "Shovon")
+                if (balance != 0 && classSelection.Text == "Shovon")
                 {
                     balance -= 300;
                     amount.Text = Convert.ToString(balance);
@@ -702,8 +707,25 @@ namespace Project_Kothin
         private void BookTrain_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Successful!");
-            Login loginTrain = new Login();
-            loginTrain.Show();
+            //Login loginTrain = new Login();
+            //loginTrain.Show();
+            Document document = new Document();
+            //PdfWriter.GetInstance(document, new FileStream("E:/a.pdf", FileMode.Create));
+            PdfWriter.GetInstance(document, new FileStream("L:/[AIUB] Assignments/Aiub cse lab/5th Sem Lab/Project-Kothin/Project-Kothin/PDF/Train_Ticket.pdf", FileMode.Create));
+            document.Open();
+            //Paragraph p = new Paragraph(Name.Text);
+            Paragraph pp = new Paragraph("Reciept");
+            Paragraph p1 = new Paragraph(nom.Text + " " + tronName.Text);
+            Paragraph p2 = new Paragraph(class_label.Text + " " + closs.Text);
+            //Paragraph p3 = new Paragraph(PhoneNumber.Text);
+            Paragraph p4 = new Paragraph(Totalamount.Text + " " + amount.Text);
+            //document.Add(p);
+            document.Add(pp);
+            document.Add(p1);
+            document.Add(p2);
+            //document.Add(p3);
+            document.Add(p4);
+            document.Close();
         }
 
         private void Selectseats_Load(object sender, EventArgs e)
@@ -716,6 +738,12 @@ namespace Project_Kothin
 
         private void amount_Click(object sender, EventArgs e)
         {
+        }
+
+        private void axAcroPDF1_Enter(object sender, EventArgs e)
+        {
+            string filename = "L:/[AIUB] Assignments/Aiub cse lab/5th Sem Lab/Project-Kothin/Project-Kothin/PDF/Train_Ticket.pdf";
+            System.Diagnostics.Process.Start(filename);
         }
     }
 }

@@ -48,9 +48,17 @@ namespace Project_Kothin
             this.BookTrain = new System.Windows.Forms.Button();
             this.Totalamount = new System.Windows.Forms.Label();
             this.amount = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.classSelection = new System.Windows.Forms.ComboBox();
             this.Class = new System.Windows.Forms.Label();
+            this.closs = new System.Windows.Forms.Label();
+            this.tronName = new System.Windows.Forms.Label();
+            this.nom = new System.Windows.Forms.Label();
+            this.name = new System.Windows.Forms.Label();
+            this.class_label = new System.Windows.Forms.Label();
+            this.trainName = new System.Windows.Forms.Label();
+            this.axAcroPDF1 = new AxAcroPDFLib.AxAcroPDF();
             this.Seats.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.axAcroPDF1)).BeginInit();
             this.SuspendLayout();
             // 
             // Express
@@ -254,7 +262,7 @@ namespace Project_Kothin
             // Totalamount
             // 
             this.Totalamount.AutoSize = true;
-            this.Totalamount.Location = new System.Drawing.Point(209, 457);
+            this.Totalamount.Location = new System.Drawing.Point(209, 524);
             this.Totalamount.Name = "Totalamount";
             this.Totalamount.Size = new System.Drawing.Size(72, 13);
             this.Totalamount.TabIndex = 8;
@@ -263,24 +271,24 @@ namespace Project_Kothin
             // amount
             // 
             this.amount.AutoSize = true;
-            this.amount.Location = new System.Drawing.Point(287, 457);
+            this.amount.Location = new System.Drawing.Point(287, 524);
             this.amount.Name = "amount";
             this.amount.Size = new System.Drawing.Size(13, 13);
             this.amount.TabIndex = 9;
             this.amount.Text = "0";
             this.amount.Click += new System.EventHandler(this.amount_Click);
             // 
-            // comboBox3
+            // classSelection
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
+            this.classSelection.FormattingEnabled = true;
+            this.classSelection.Items.AddRange(new object[] {
             "Snigdha",
             "AC_berth",
             "Shovon"});
-            this.comboBox3.Location = new System.Drawing.Point(212, 276);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 21);
-            this.comboBox3.TabIndex = 10;
+            this.classSelection.Location = new System.Drawing.Point(212, 276);
+            this.classSelection.Name = "classSelection";
+            this.classSelection.Size = new System.Drawing.Size(121, 21);
+            this.classSelection.TabIndex = 10;
             // 
             // Class
             // 
@@ -293,14 +301,85 @@ namespace Project_Kothin
             this.Class.Text = "Class:";
             this.Class.Click += new System.EventHandler(this.Class_Click);
             // 
+            // closs
+            // 
+            this.closs.AutoSize = true;
+            this.closs.Location = new System.Drawing.Point(287, 493);
+            this.closs.Name = "closs";
+            this.closs.Size = new System.Drawing.Size(13, 13);
+            this.closs.TabIndex = 31;
+            this.closs.Text = "0";
+            // 
+            // tronName
+            // 
+            this.tronName.AutoSize = true;
+            this.tronName.Location = new System.Drawing.Point(287, 459);
+            this.tronName.Name = "tronName";
+            this.tronName.Size = new System.Drawing.Size(13, 13);
+            this.tronName.TabIndex = 30;
+            this.tronName.Text = "0";
+            // 
+            // nom
+            // 
+            this.nom.AutoSize = true;
+            this.nom.Location = new System.Drawing.Point(287, 430);
+            this.nom.Name = "nom";
+            this.nom.Size = new System.Drawing.Size(13, 13);
+            this.nom.TabIndex = 29;
+            this.nom.Text = "0";
+            // 
+            // name
+            // 
+            this.name.AutoSize = true;
+            this.name.Location = new System.Drawing.Point(209, 430);
+            this.name.Name = "name";
+            this.name.Size = new System.Drawing.Size(38, 13);
+            this.name.TabIndex = 28;
+            this.name.Text = "Name:";
+            // 
+            // class_label
+            // 
+            this.class_label.AutoSize = true;
+            this.class_label.Location = new System.Drawing.Point(209, 493);
+            this.class_label.Name = "class_label";
+            this.class_label.Size = new System.Drawing.Size(35, 13);
+            this.class_label.TabIndex = 27;
+            this.class_label.Text = "Class:";
+            // 
+            // trainName
+            // 
+            this.trainName.AutoSize = true;
+            this.trainName.Location = new System.Drawing.Point(209, 459);
+            this.trainName.Name = "trainName";
+            this.trainName.Size = new System.Drawing.Size(65, 13);
+            this.trainName.TabIndex = 26;
+            this.trainName.Text = "Train Name:";
+            // 
+            // axAcroPDF1
+            // 
+            this.axAcroPDF1.Enabled = true;
+            this.axAcroPDF1.Location = new System.Drawing.Point(776, 309);
+            this.axAcroPDF1.Name = "axAcroPDF1";
+            this.axAcroPDF1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axAcroPDF1.OcxState")));
+            this.axAcroPDF1.Size = new System.Drawing.Size(192, 192);
+            this.axAcroPDF1.TabIndex = 32;
+            this.axAcroPDF1.Enter += new System.EventHandler(this.axAcroPDF1_Enter);
+            // 
             // Selectseats
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1199, 691);
+            this.Controls.Add(this.axAcroPDF1);
+            this.Controls.Add(this.closs);
+            this.Controls.Add(this.tronName);
+            this.Controls.Add(this.nom);
+            this.Controls.Add(this.name);
+            this.Controls.Add(this.class_label);
+            this.Controls.Add(this.trainName);
             this.Controls.Add(this.Class);
-            this.Controls.Add(this.comboBox3);
+            this.Controls.Add(this.classSelection);
             this.Controls.Add(this.amount);
             this.Controls.Add(this.Totalamount);
             this.Controls.Add(this.BookTrain);
@@ -314,6 +393,7 @@ namespace Project_Kothin
             this.Text = "Select";
             this.Load += new System.EventHandler(this.Selectseats_Load);
             this.Seats.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.axAcroPDF1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -339,7 +419,14 @@ namespace Project_Kothin
         private System.Windows.Forms.Button BookTrain;
         private System.Windows.Forms.Label Totalamount;
         private System.Windows.Forms.Label amount;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox classSelection;
         private System.Windows.Forms.Label Class;
+        private System.Windows.Forms.Label closs;
+        private System.Windows.Forms.Label tronName;
+        private System.Windows.Forms.Label nom;
+        private System.Windows.Forms.Label name;
+        private System.Windows.Forms.Label class_label;
+        private System.Windows.Forms.Label trainName;
+        private AxAcroPDFLib.AxAcroPDF axAcroPDF1;
     }
 }
