@@ -231,25 +231,32 @@ namespace Project_Kothin
 
         private void button1_Click(object sender, EventArgs e)
         {
-            tronName.Text = Express.Name;
-            closs.Text = classSelection.Text;
-            BookTrain.Visible = true;
-            A1.Visible = true;
-            A2.Visible = true;
-            B1.Visible = true;
-            B2.Visible = true;
-            C1.Visible = true;
-            C2.Visible = true;
-            D1.Visible = true;
-            D2.Visible = true;
-            E1.Visible = true;
-            E2.Visible = true;
-            BackButton1.Visible = true;
-            Seats.Visible = true;
-            SEARCH.Visible = false;
+            if (classSelection.Text == "" && Express.Text == "" || classSelection.Text == "" || Express.Text == "")
+            {
+                MessageBox.Show("Invalid");
+            }
+            else
+            {
+                tronName.Text = Express.Name;
+                closs.Text = classSelection.Text;
+                BookTrain.Visible = true;
+                A1.Visible = true;
+                A2.Visible = true;
+                B1.Visible = true;
+                B2.Visible = true;
+                C1.Visible = true;
+                C2.Visible = true;
+                D1.Visible = true;
+                D2.Visible = true;
+                E1.Visible = true;
+                E2.Visible = true;
+                BackButton1.Visible = true;
+                Seats.Visible = true;
+                SEARCH.Visible = false;
 
-            Selection.Visible = false;
-            Express.Visible = false;
+                Selection.Visible = false;
+                Express.Visible = false;
+            }
         }
 
         private void BackButton_Click(object sender, EventArgs e)

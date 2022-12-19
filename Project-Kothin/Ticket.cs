@@ -67,7 +67,7 @@ namespace Project_Kothin
                 s1.Show();
             }
 
-            if (comboBox2.Text == "" && comboBox1.Text == "" || comboBox1.Text == comboBox2.Text)
+            if (comboBox2.Text == "" && comboBox1.Text == "" || comboBox1.Text == comboBox2.Text||comboBox1.Text==""||comboBox2.Text=="")
             {
                 MessageBox.Show("Invalid");
             }
@@ -92,7 +92,7 @@ namespace Project_Kothin
                 b1.Show();
             }
 
-            if (comboBox2.Text == ""&& comboBox1.Text =="" || comboBox1.Text == comboBox2.Text)
+            if (comboBox2.Text == ""&& comboBox1.Text =="" || comboBox1.Text == comboBox2.Text||comboBox1.Text==""||comboBox2.Text=="")
             {
                 MessageBox.Show("Invalid");
             }

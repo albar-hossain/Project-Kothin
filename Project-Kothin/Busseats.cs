@@ -47,22 +47,29 @@ namespace Project_Kothin
 
         private void SEARCH_Click(object sender, EventArgs e)
         {
-            closs.Text = Class_name.Text;
-            bos.Text = Bus_name.Text;
-            BookBus.Visible = true;
-            A1.Visible = true;
-            A2.Visible = true;
-            B1.Visible = true;
-            B2.Visible = true;
-            C1.Visible = true;
-            C2.Visible = true;
-            D1.Visible = true;
-            D2.Visible = true;
-            E1.Visible = true;
-            E2.Visible = true;
-            BackButton1.Visible = true;
-            Seats.Visible = true;
-            SEARCH.Visible = false;
+            if (Class_name.Text == "" && Bus_name.Text == "" || Class_name.Text == "" || Bus_name.Text == "")
+            {
+                MessageBox.Show("Invalid");
+            }
+            else
+            {
+                closs.Text = Class_name.Text;
+                bos.Text = Bus_name.Text;
+                BookBus.Visible = true;
+                A1.Visible = true;
+                A2.Visible = true;
+                B1.Visible = true;
+                B2.Visible = true;
+                C1.Visible = true;
+                C2.Visible = true;
+                D1.Visible = true;
+                D2.Visible = true;
+                E1.Visible = true;
+                E2.Visible = true;
+                BackButton1.Visible = true;
+                Seats.Visible = true;
+                SEARCH.Visible = false;
+            }
         }
 
         private void amount_Click(object sender, EventArgs e)
