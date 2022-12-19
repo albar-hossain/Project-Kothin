@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
 using System.IO;
+using System.Xml.Linq;
 
 namespace Project_Kothin
 {
@@ -62,8 +63,6 @@ namespace Project_Kothin
             BackButton1.Visible = true;
             Seats.Visible = true;
             SEARCH.Visible = false;
-           
-            
         }
 
         private void amount_Click(object sender, EventArgs e)
@@ -581,11 +580,14 @@ namespace Project_Kothin
 
         private void BookTrain_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("Successful!");
             //Login loginbus = new Login();
             //loginbus.Show();
-            
+
             Document document = new Document();
-            PdfWriter.GetInstance(document, new FileStream("E:/b.pdf", FileMode.Create));
+            //PdfWriter.GetInstance(document, new FileStream("E:/b.pdf", FileMode.Create));
+            PdfWriter.GetInstance(document, new FileStream("L:/[AIUB] Assignments/Aiub cse lab/5th Sem Lab/Project-Kothin/Project-Kothin/PDF/Bus_Ticket.pdf", FileMode.Create));
+
             document.Open();
             //Paragraph p = new Paragraph(Name.Text);
             Paragraph pp = new Paragraph("Reciept");
@@ -600,17 +602,15 @@ namespace Project_Kothin
             //document.Add(p3);
             document.Add(p4);
             document.Close();
-
         }
 
         private void closs_Click(object sender, EventArgs e)
         {
-
         }
 
         private void axAcroPDF1_Enter(object sender, EventArgs e)
         {
-            string filename = "E:/b.pdf";
+            string filename = "L:/[AIUB] Assignments/Aiub cse lab/5th Sem Lab/Project-Kothin/Project-Kothin/PDF/Bus_Ticket.pdf";
             System.Diagnostics.Process.Start(filename);
         }
     }
