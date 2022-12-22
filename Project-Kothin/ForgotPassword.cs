@@ -131,6 +131,7 @@ namespace Project_Kothin
                         //string val = dt.Rows[0]["RecoveryCode"].ToString();
                         MessageBox.Show("Password Reset.");
                         IsPasswordValid = false;
+                        this.Hide();
                         //Might add new recovery code after password update
                     }
                     catch (Exception ex)
