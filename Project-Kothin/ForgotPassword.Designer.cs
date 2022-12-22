@@ -53,7 +53,7 @@
             this.labelResetPhone.BackColor = System.Drawing.Color.Transparent;
             this.labelResetPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelResetPhone.ForeColor = System.Drawing.Color.Black;
-            this.labelResetPhone.Location = new System.Drawing.Point(187, 77);
+            this.labelResetPhone.Location = new System.Drawing.Point(189, 85);
             this.labelResetPhone.Name = "labelResetPhone";
             this.labelResetPhone.Size = new System.Drawing.Size(89, 29);
             this.labelResetPhone.TabIndex = 6;
@@ -66,7 +66,7 @@
             this.textBoxResetRecoveryCode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxResetRecoveryCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxResetRecoveryCode.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.textBoxResetRecoveryCode.Location = new System.Drawing.Point(295, 140);
+            this.textBoxResetRecoveryCode.Location = new System.Drawing.Point(297, 148);
             this.textBoxResetRecoveryCode.Name = "textBoxResetRecoveryCode";
             this.textBoxResetRecoveryCode.Size = new System.Drawing.Size(234, 29);
             this.textBoxResetRecoveryCode.TabIndex = 17;
@@ -78,7 +78,7 @@
             this.labelResetRecoveryCode.BackColor = System.Drawing.Color.Transparent;
             this.labelResetRecoveryCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelResetRecoveryCode.ForeColor = System.Drawing.Color.Black;
-            this.labelResetRecoveryCode.Location = new System.Drawing.Point(91, 140);
+            this.labelResetRecoveryCode.Location = new System.Drawing.Point(93, 148);
             this.labelResetRecoveryCode.Name = "labelResetRecoveryCode";
             this.labelResetRecoveryCode.Size = new System.Drawing.Size(185, 29);
             this.labelResetRecoveryCode.TabIndex = 18;
@@ -91,7 +91,7 @@
             this.textBoxResetPhone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxResetPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxResetPhone.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.textBoxResetPhone.Location = new System.Drawing.Point(295, 77);
+            this.textBoxResetPhone.Location = new System.Drawing.Point(297, 85);
             this.textBoxResetPhone.Name = "textBoxResetPhone";
             this.textBoxResetPhone.Size = new System.Drawing.Size(234, 29);
             this.textBoxResetPhone.TabIndex = 19;
@@ -104,7 +104,7 @@
             this.labelResetNewPass.BackColor = System.Drawing.Color.Transparent;
             this.labelResetNewPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelResetNewPass.ForeColor = System.Drawing.Color.Black;
-            this.labelResetNewPass.Location = new System.Drawing.Point(94, 200);
+            this.labelResetNewPass.Location = new System.Drawing.Point(96, 208);
             this.labelResetNewPass.Name = "labelResetNewPass";
             this.labelResetNewPass.Size = new System.Drawing.Size(182, 29);
             this.labelResetNewPass.TabIndex = 20;
@@ -117,7 +117,7 @@
             this.labelResetConfirmPass.BackColor = System.Drawing.Color.Transparent;
             this.labelResetConfirmPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelResetConfirmPass.ForeColor = System.Drawing.Color.Black;
-            this.labelResetConfirmPass.Location = new System.Drawing.Point(60, 262);
+            this.labelResetConfirmPass.Location = new System.Drawing.Point(62, 270);
             this.labelResetConfirmPass.Name = "labelResetConfirmPass";
             this.labelResetConfirmPass.Size = new System.Drawing.Size(216, 29);
             this.labelResetConfirmPass.TabIndex = 21;
@@ -130,7 +130,7 @@
             this.textBoxResetNewPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxResetNewPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxResetNewPassword.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.textBoxResetNewPassword.Location = new System.Drawing.Point(295, 200);
+            this.textBoxResetNewPassword.Location = new System.Drawing.Point(297, 208);
             this.textBoxResetNewPassword.Name = "textBoxResetNewPassword";
             this.textBoxResetNewPassword.PasswordChar = '*';
             this.textBoxResetNewPassword.Size = new System.Drawing.Size(234, 29);
@@ -143,7 +143,7 @@
             this.textBoxResetNewPassConfirm.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxResetNewPassConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxResetNewPassConfirm.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.textBoxResetNewPassConfirm.Location = new System.Drawing.Point(295, 264);
+            this.textBoxResetNewPassConfirm.Location = new System.Drawing.Point(297, 272);
             this.textBoxResetNewPassConfirm.Name = "textBoxResetNewPassConfirm";
             this.textBoxResetNewPassConfirm.PasswordChar = '*';
             this.textBoxResetNewPassConfirm.Size = new System.Drawing.Size(234, 29);
@@ -159,12 +159,13 @@
             this.buttonResetPass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonResetPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonResetPass.ForeColor = System.Drawing.Color.Black;
-            this.buttonResetPass.Location = new System.Drawing.Point(295, 330);
+            this.buttonResetPass.Location = new System.Drawing.Point(297, 338);
             this.buttonResetPass.Name = "buttonResetPass";
             this.buttonResetPass.Size = new System.Drawing.Size(234, 50);
             this.buttonResetPass.TabIndex = 24;
             this.buttonResetPass.Text = "RESET PASSWORD";
             this.buttonResetPass.UseVisualStyleBackColor = false;
+            this.buttonResetPass.Click += new System.EventHandler(this.buttonResetPass_Click);
             // 
             // linkLabelResetBack
             // 
@@ -205,7 +206,7 @@
             this.labelResetRightPass.BackColor = System.Drawing.Color.Transparent;
             this.labelResetRightPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelResetRightPass.ForeColor = System.Drawing.Color.Lime;
-            this.labelResetRightPass.Location = new System.Drawing.Point(535, 269);
+            this.labelResetRightPass.Location = new System.Drawing.Point(537, 277);
             this.labelResetRightPass.Name = "labelResetRightPass";
             this.labelResetRightPass.Size = new System.Drawing.Size(25, 20);
             this.labelResetRightPass.TabIndex = 29;
@@ -219,7 +220,7 @@
             this.labelResetWrongPass.BackColor = System.Drawing.Color.Transparent;
             this.labelResetWrongPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelResetWrongPass.ForeColor = System.Drawing.Color.Red;
-            this.labelResetWrongPass.Location = new System.Drawing.Point(535, 269);
+            this.labelResetWrongPass.Location = new System.Drawing.Point(537, 277);
             this.labelResetWrongPass.Name = "labelResetWrongPass";
             this.labelResetWrongPass.Size = new System.Drawing.Size(25, 20);
             this.labelResetWrongPass.TabIndex = 30;
@@ -234,7 +235,7 @@
             this.labelResetWrongPhone.BackColor = System.Drawing.Color.Transparent;
             this.labelResetWrongPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelResetWrongPhone.ForeColor = System.Drawing.Color.Red;
-            this.labelResetWrongPhone.Location = new System.Drawing.Point(535, 82);
+            this.labelResetWrongPhone.Location = new System.Drawing.Point(537, 90);
             this.labelResetWrongPhone.Name = "labelResetWrongPhone";
             this.labelResetWrongPhone.Size = new System.Drawing.Size(25, 20);
             this.labelResetWrongPhone.TabIndex = 31;
@@ -248,7 +249,7 @@
             this.labelResetRightPhone.BackColor = System.Drawing.Color.Transparent;
             this.labelResetRightPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelResetRightPhone.ForeColor = System.Drawing.Color.Lime;
-            this.labelResetRightPhone.Location = new System.Drawing.Point(535, 84);
+            this.labelResetRightPhone.Location = new System.Drawing.Point(537, 92);
             this.labelResetRightPhone.Name = "labelResetRightPhone";
             this.labelResetRightPhone.Size = new System.Drawing.Size(25, 20);
             this.labelResetRightPhone.TabIndex = 32;
@@ -262,7 +263,7 @@
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(687, 635);
+            this.ClientSize = new System.Drawing.Size(690, 650);
             this.Controls.Add(this.labelResetWrongPhone);
             this.Controls.Add(this.labelResetWrongPass);
             this.Controls.Add(this.labelResetRightPass);

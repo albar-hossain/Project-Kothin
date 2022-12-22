@@ -91,6 +91,7 @@ namespace Project_Kothin
                 {
                     Service p1 = new Service();
                     p1.Show();
+                    tryCount = 0;
                 }
                 else
                 {

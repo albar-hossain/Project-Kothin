@@ -1,10 +1,14 @@
 ﻿using System;
+using System.Data.SqlClient;
+using System.Data;
 using System.Windows.Forms;
 
 namespace Project_Kothin
 {
     public partial class ForgotPassword : Form
     {
+        private bool IsPasswordValid = false;
+
         public ForgotPassword()
         {
             InitializeComponent();
@@ -60,6 +64,87 @@ namespace Project_Kothin
 
         private void ForgotPassword_Load(object sender, EventArgs e)
         {
+        }
+
+        private void buttonResetPass_Click(object sender, EventArgs e)
+        {
+            string Phone = textBoxResetPhone.Text;
+            string RecoveryCode = textBoxResetRecoveryCode.Text;
+            string NewPassword = textBoxResetNewPassword.Text;
+            string NewPasswordCheck = textBoxResetNewPassConfirm.Text;
+
+            if (Phone != "" &&
+                 RecoveryCode != "" &&
+                 NewPassword != "" &&
+                 NewPasswordCheck != "" &&
+                 NewPassword == NewPasswordCheck)
+            {
+                SqlConnection conn = null;
+                try
+                {
+                    conn = new SqlConnection(@"Data Source=SKRILLEXOMG\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");
+                    conn.Open();
+
+                    string query = $"select RecoveryCode from UserInfo where Phone = {Phone}";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    DataSet ds = new DataSet();
+                    SqlDataAdapter adp = new SqlDataAdapter(cmd);
+                    adp.Fill(ds);
+                    DataTable dt = ds.Tables[0];
+                    string val = dt.Rows[0]["RecoveryCode"].ToString();
+
+                    if (val == RecoveryCode)
+                    {
+                        MessageBox.Show("Password Reset.");
+                        IsPasswordValid = true;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Incorrect Recovery Code.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Invalid Phone Number.");
+                }
+                finally
+                {
+                    conn.Close();
+                }
+
+                if (IsPasswordValid)
+                {
+                    string updateValue = NewPassword;
+                    string updateTarget = "Password";
+                    //string updateWhome = textBoxUpdateWhom.Text;
+                    try
+                    {
+                        conn = new SqlConnection(@"Data Source=SKRILLEXOMG\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");
+                        conn.Open();
+
+                        string query = $"update UserInfo set {updateTarget} = '{updateValue}' where Phone = '{Phone}';";
+
+                        SqlCommand cmd = new SqlCommand(query, conn);
+                        DataSet ds = new DataSet();
+                        SqlDataAdapter adp = new SqlDataAdapter(cmd);
+                        adp.Fill(ds);
+                        //DataTable dt = ds.Tables[0];
+                        //string val = dt.Rows[0]["RecoveryCode"].ToString();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Invalid Phone Number.");
+                    }
+                    finally
+                    {
+                        conn.Close();
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please Check the form again!");
+            }
         }
     }
 }
