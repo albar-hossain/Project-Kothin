@@ -1,10 +1,16 @@
 ﻿using System;
+using System.Data.SqlClient;
+using System.Data;
 using System.Windows.Forms;
+using System.Drawing.Text;
+using System.Security.Cryptography.X509Certificates;
 
 namespace Project_Kothin
 {
     public partial class Login : Form
     {
+        private static int tryCount = 0;
+
         public Login()
         {
             InitializeComponent();
@@ -66,27 +72,64 @@ namespace Project_Kothin
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-            if (textBoxPhone.Text == "admin" && textBoxPassword.Text=="kothin")
+            string Phone = textBoxPhone.Text;
+            SqlConnection conn = null;
+            try
+            {
+                conn = new SqlConnection(@"Data Source=SKRILLEXOMG\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");
+                conn.Open();
+
+                string query = $"select Password from UserInfo where Phone = {Phone}";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                DataSet ds = new DataSet();
+                SqlDataAdapter adp = new SqlDataAdapter(cmd);
+                adp.Fill(ds);
+                DataTable dt = ds.Tables[0];
+                string val = dt.Rows[0]["Password"].ToString();
+
+                if (val == textBoxPassword.Text)
+                {
+                    Service p1 = new Service();
+                    p1.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Invalid Password.");
+                    tryCount++;
+                }
+                //Add logic to make user reset password after 3 tries / ban user
+                if (tryCount > 2)
+                {
+                    MessageBox.Show("Please Reset Your Password!");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Invalid Phone Number");
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            if (textBoxPhone.Text == "admin" && textBoxPassword.Text == "kothin")
             {
                 Admin a1 = new Admin();
                 a1.Show();
             }
-            else
-            {
-                Service p1 = new Service();
-                p1.Show();
-            }
-           
+            //else
+            //{
+            //    Service p1 = new Service();
+            //    p1.Show();
+            //}
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-
         }
 
         private void textBoxPhone_TextChanged(object sender, EventArgs e)
         {
-
         }
     }
 }
