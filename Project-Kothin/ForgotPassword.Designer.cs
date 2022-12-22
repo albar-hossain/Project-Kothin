@@ -69,7 +69,7 @@
             this.textBoxResetRecoveryCode.Location = new System.Drawing.Point(297, 148);
             this.textBoxResetRecoveryCode.Name = "textBoxResetRecoveryCode";
             this.textBoxResetRecoveryCode.Size = new System.Drawing.Size(234, 29);
-            this.textBoxResetRecoveryCode.TabIndex = 17;
+            this.textBoxResetRecoveryCode.TabIndex = 2;
             // 
             // labelResetRecoveryCode
             // 
@@ -94,7 +94,7 @@
             this.textBoxResetPhone.Location = new System.Drawing.Point(297, 85);
             this.textBoxResetPhone.Name = "textBoxResetPhone";
             this.textBoxResetPhone.Size = new System.Drawing.Size(234, 29);
-            this.textBoxResetPhone.TabIndex = 19;
+            this.textBoxResetPhone.TabIndex = 1;
             this.textBoxResetPhone.TextChanged += new System.EventHandler(this.textBoxResetPhone_TextChanged);
             // 
             // labelResetNewPass
@@ -134,7 +134,7 @@
             this.textBoxResetNewPassword.Name = "textBoxResetNewPassword";
             this.textBoxResetNewPassword.PasswordChar = '*';
             this.textBoxResetNewPassword.Size = new System.Drawing.Size(234, 29);
-            this.textBoxResetNewPassword.TabIndex = 23;
+            this.textBoxResetNewPassword.TabIndex = 3;
             // 
             // textBoxResetNewPassConfirm
             // 
@@ -147,7 +147,7 @@
             this.textBoxResetNewPassConfirm.Name = "textBoxResetNewPassConfirm";
             this.textBoxResetNewPassConfirm.PasswordChar = '*';
             this.textBoxResetNewPassConfirm.Size = new System.Drawing.Size(234, 29);
-            this.textBoxResetNewPassConfirm.TabIndex = 22;
+            this.textBoxResetNewPassConfirm.TabIndex = 4;
             this.textBoxResetNewPassConfirm.TextChanged += new System.EventHandler(this.textBoxResetNewPassConfirm_TextChanged);
             // 
             // buttonResetPass

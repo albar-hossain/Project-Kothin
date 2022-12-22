@@ -95,7 +95,6 @@ namespace Project_Kothin
 
                     if (val == RecoveryCode)
                     {
-                        MessageBox.Show("Password Reset.");
                         IsPasswordValid = true;
                     }
                     else
@@ -130,6 +129,9 @@ namespace Project_Kothin
                         adp.Fill(ds);
                         //DataTable dt = ds.Tables[0];
                         //string val = dt.Rows[0]["RecoveryCode"].ToString();
+                        MessageBox.Show("Password Reset.");
+                        IsPasswordValid = false;
+                        //Might add new recovery code after password update
                     }
                     catch (Exception ex)
                     {
