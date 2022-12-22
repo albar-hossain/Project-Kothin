@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Data.SqlClient;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace Project_Kothin
 {
@@ -93,8 +95,36 @@ namespace Project_Kothin
                 textBoxRegPhone.Text != "" &&
                 textBoxRegAddress.Text != "")
             {
-                MessageBox.Show("Registration complete!");
+                string FullName = textBoxRegFullName.Text;
+                string Phone = textBoxRegPhone.Text;
+                string PostCode = textRegPostCode.Text;
+                string Address = textBoxRegAddress.Text;
+                string Email = textBoxRegEmail.Text;
+                string Password = textBoxRegPassword.Text;
+                //Recovery Code Generate
                 string recoveryCode = Convert.ToBase64String(Guid.NewGuid().ToByteArray()).Substring(0, 5);
+                string RecoveryCode = recoveryCode;
+
+                SqlConnection conn = null;
+                try
+                {
+                    conn = new SqlConnection(@"Data Source=SKRILLEXOMG\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");
+                    conn.Open();
+                    string query = $"insert into UserInfo (FullName, Phone, Email, Address, PostCode, Password, RecoveryCode) VALUES ('{FullName}','{Phone}','{Email}','{Address}','{PostCode}','{Password}','{RecoveryCode}')";
+
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    conn.Close();
+                }
+
+                MessageBox.Show("Registration complete!");
                 GenerateRecoveryCode userReg = new GenerateRecoveryCode(recoveryCode);
                 userReg.Show();
                 MessageBox.Show("Please note down the recovery code.");
