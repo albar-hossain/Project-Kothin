@@ -92,6 +92,8 @@ namespace Project_Kothin
                     Service p1 = new Service();
                     p1.Show();
                     tryCount = 0;
+                    textBoxPassword.Clear();
+                    textBoxPhone.Clear();
                 }
                 else
                 {
@@ -102,6 +104,8 @@ namespace Project_Kothin
                 if (tryCount > 2)
                 {
                     MessageBox.Show("Please Reset Your Password!");
+                    ForgotPassword resetPassword = new ForgotPassword();
+                    resetPassword.Show();
                 }
             }
             catch (Exception)
@@ -117,7 +121,10 @@ namespace Project_Kothin
             {
                 Admin a1 = new Admin();
                 a1.Show();
+                textBoxPassword.Clear();
+                textBoxPhone.Clear();
             }
+
             //else
             //{
             //    Service p1 = new Service();

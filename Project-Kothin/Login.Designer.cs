@@ -136,7 +136,7 @@
             this.linkLabelRegister.Location = new System.Drawing.Point(470, 524);
             this.linkLabelRegister.Name = "linkLabelRegister";
             this.linkLabelRegister.Size = new System.Drawing.Size(67, 20);
-            this.linkLabelRegister.TabIndex = 5;
+            this.linkLabelRegister.TabIndex = 4;
             this.linkLabelRegister.TabStop = true;
             this.linkLabelRegister.Text = "Sign-Up";
             this.linkLabelRegister.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelRegister_LinkClicked);
@@ -155,7 +155,7 @@
             this.linkLabelForgotPassword.Location = new System.Drawing.Point(602, 524);
             this.linkLabelForgotPassword.Name = "linkLabelForgotPassword";
             this.linkLabelForgotPassword.Size = new System.Drawing.Size(138, 20);
-            this.linkLabelForgotPassword.TabIndex = 6;
+            this.linkLabelForgotPassword.TabIndex = 5;
             this.linkLabelForgotPassword.TabStop = true;
             this.linkLabelForgotPassword.Text = "Forgot Password?";
             this.linkLabelForgotPassword.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
@@ -172,7 +172,7 @@
             this.buttonLogin.Location = new System.Drawing.Point(474, 458);
             this.buttonLogin.Name = "buttonLogin";
             this.buttonLogin.Size = new System.Drawing.Size(266, 34);
-            this.buttonLogin.TabIndex = 7;
+            this.buttonLogin.TabIndex = 3;
             this.buttonLogin.Text = "LOGIN";
             this.buttonLogin.UseVisualStyleBackColor = false;
             this.buttonLogin.Click += new System.EventHandler(this.buttonLogin_Click);
@@ -188,7 +188,7 @@
             this.buttonExit.Location = new System.Drawing.Point(1014, 620);
             this.buttonExit.Name = "buttonExit";
             this.buttonExit.Size = new System.Drawing.Size(164, 44);
-            this.buttonExit.TabIndex = 8;
+            this.buttonExit.TabIndex = 6;
             this.buttonExit.Text = "Exit";
             this.buttonExit.UseVisualStyleBackColor = false;
             this.buttonExit.Visible = false;
@@ -208,6 +208,7 @@
             this.linkLabelLoginBack.TabIndex = 28;
             this.linkLabelLoginBack.TabStop = true;
             this.linkLabelLoginBack.Text = "🡰";
+            this.linkLabelLoginBack.Visible = false;
             this.linkLabelLoginBack.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelLoginBack_LinkClicked);
             // 
             // linkLabelLoginClose

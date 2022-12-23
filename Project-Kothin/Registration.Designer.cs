@@ -268,7 +268,7 @@
             this.buttonSignUp.Location = new System.Drawing.Point(474, 565);
             this.buttonSignUp.Name = "buttonSignUp";
             this.buttonSignUp.Size = new System.Drawing.Size(265, 50);
-            this.buttonSignUp.TabIndex = 21;
+            this.buttonSignUp.TabIndex = 8;
             this.buttonSignUp.Text = "SIGN UP";
             this.buttonSignUp.UseVisualStyleBackColor = false;
             this.buttonSignUp.Click += new System.EventHandler(this.buttonSignUp_Click);
@@ -285,7 +285,7 @@
             this.linkLabelAlreadyRegistred.Location = new System.Drawing.Point(537, 634);
             this.linkLabelAlreadyRegistred.Name = "linkLabelAlreadyRegistred";
             this.linkLabelAlreadyRegistred.Size = new System.Drawing.Size(144, 20);
-            this.linkLabelAlreadyRegistred.TabIndex = 22;
+            this.linkLabelAlreadyRegistred.TabIndex = 9;
             this.linkLabelAlreadyRegistred.TabStop = true;
             this.linkLabelAlreadyRegistred.Text = "Already Registred?";
             this.linkLabelAlreadyRegistred.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelForgotPassword_LinkClicked);

@@ -127,7 +127,7 @@ namespace Project_Kothin
                 MessageBox.Show("Registration complete!");
                 GenerateRecoveryCode userReg = new GenerateRecoveryCode(recoveryCode);
                 userReg.Show();
-                MessageBox.Show("Please note down the recovery code.");
+                //MessageBox.Show("Please note down the recovery code.");
                 this.Close();
             }
             else
