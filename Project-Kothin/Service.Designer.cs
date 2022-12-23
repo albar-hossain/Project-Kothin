@@ -42,12 +42,16 @@
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.linkLabelLoginBack = new System.Windows.Forms.LinkLabel();
             this.linkLabelLoginClose = new System.Windows.Forms.LinkLabel();
+            this.pictureBoxTicket = new System.Windows.Forms.PictureBox();
+            this.pictureBoxRental = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTicket)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRental)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonTicket
             // 
             this.buttonTicket.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonTicket.Location = new System.Drawing.Point(425, 342);
+            this.buttonTicket.Location = new System.Drawing.Point(311, 278);
             this.buttonTicket.Name = "buttonTicket";
             this.buttonTicket.Size = new System.Drawing.Size(75, 38);
             this.buttonTicket.TabIndex = 0;
@@ -58,7 +62,7 @@
             // buttonRental
             // 
             this.buttonRental.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonRental.Location = new System.Drawing.Point(425, 386);
+            this.buttonRental.Location = new System.Drawing.Point(811, 276);
             this.buttonRental.Name = "buttonRental";
             this.buttonRental.Size = new System.Drawing.Size(75, 40);
             this.buttonRental.TabIndex = 1;
@@ -69,8 +73,9 @@
             // labelService
             // 
             this.labelService.AutoSize = true;
+            this.labelService.BackColor = System.Drawing.Color.Transparent;
             this.labelService.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelService.Location = new System.Drawing.Point(421, 299);
+            this.labelService.Location = new System.Drawing.Point(543, 219);
             this.labelService.Name = "labelService";
             this.labelService.Size = new System.Drawing.Size(96, 24);
             this.labelService.TabIndex = 2;
@@ -79,8 +84,9 @@
             // labelTicket
             // 
             this.labelTicket.AutoSize = true;
+            this.labelTicket.BackColor = System.Drawing.Color.Transparent;
             this.labelTicket.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTicket.Location = new System.Drawing.Point(605, 299);
+            this.labelTicket.Location = new System.Drawing.Point(775, 374);
             this.labelTicket.Name = "labelTicket";
             this.labelTicket.Size = new System.Drawing.Size(72, 24);
             this.labelTicket.TabIndex = 3;
@@ -96,7 +102,7 @@
             this.Ticketbox.Items.AddRange(new object[] {
             "Train",
             "Bus"});
-            this.Ticketbox.Location = new System.Drawing.Point(609, 342);
+            this.Ticketbox.Location = new System.Drawing.Point(779, 417);
             this.Ticketbox.Name = "Ticketbox";
             this.Ticketbox.Size = new System.Drawing.Size(141, 21);
             this.Ticketbox.TabIndex = 4;
@@ -116,7 +122,7 @@
             // 
             // SubmitButton
             // 
-            this.SubmitButton.Location = new System.Drawing.Point(609, 386);
+            this.SubmitButton.Location = new System.Drawing.Point(547, 619);
             this.SubmitButton.Name = "SubmitButton";
             this.SubmitButton.Size = new System.Drawing.Size(75, 23);
             this.SubmitButton.TabIndex = 6;
@@ -128,8 +134,9 @@
             // labelRental
             // 
             this.labelRental.AutoSize = true;
+            this.labelRental.BackColor = System.Drawing.Color.Transparent;
             this.labelRental.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelRental.Location = new System.Drawing.Point(609, 299);
+            this.labelRental.Location = new System.Drawing.Point(307, 402);
             this.labelRental.Name = "labelRental";
             this.labelRental.Size = new System.Drawing.Size(75, 24);
             this.labelRental.TabIndex = 7;
@@ -146,7 +153,7 @@
             "Car",
             "Boat",
             "Bus"});
-            this.rentalBox.Location = new System.Drawing.Point(609, 342);
+            this.rentalBox.Location = new System.Drawing.Point(311, 445);
             this.rentalBox.Name = "rentalBox";
             this.rentalBox.Size = new System.Drawing.Size(141, 21);
             this.rentalBox.TabIndex = 8;
@@ -155,7 +162,7 @@
             // 
             // rentalSubmit
             // 
-            this.rentalSubmit.Location = new System.Drawing.Point(609, 386);
+            this.rentalSubmit.Location = new System.Drawing.Point(779, 461);
             this.rentalSubmit.Name = "rentalSubmit";
             this.rentalSubmit.Size = new System.Drawing.Size(75, 23);
             this.rentalSubmit.TabIndex = 9;
@@ -208,18 +215,42 @@
             this.linkLabelLoginClose.Text = "❌";
             this.linkLabelLoginClose.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelLoginClose_LinkClicked);
             // 
+            // pictureBoxTicket
+            // 
+            this.pictureBoxTicket.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxTicket.Image = global::Project_Kothin.Properties.Resources.ticket_er_chobi;
+            this.pictureBoxTicket.Location = new System.Drawing.Point(235, 322);
+            this.pictureBoxTicket.Name = "pictureBoxTicket";
+            this.pictureBoxTicket.Size = new System.Drawing.Size(260, 258);
+            this.pictureBoxTicket.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBoxTicket.TabIndex = 31;
+            this.pictureBoxTicket.TabStop = false;
+            this.pictureBoxTicket.Click += new System.EventHandler(this.pictureBoxTicket_Click);
+            // 
+            // pictureBoxRental
+            // 
+            this.pictureBoxRental.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxRental.Image = global::Project_Kothin.Properties.Resources.ticket_er_chobi;
+            this.pictureBoxRental.Location = new System.Drawing.Point(723, 322);
+            this.pictureBoxRental.Name = "pictureBoxRental";
+            this.pictureBoxRental.Size = new System.Drawing.Size(260, 258);
+            this.pictureBoxRental.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBoxRental.TabIndex = 32;
+            this.pictureBoxRental.TabStop = false;
+            this.pictureBoxRental.Click += new System.EventHandler(this.pictureBoxRental_Click);
+            // 
             // Service
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1215, 730);
+            this.Controls.Add(this.rentalBox);
+            this.Controls.Add(this.labelRental);
             this.Controls.Add(this.linkLabelLoginClose);
             this.Controls.Add(this.linkLabelLoginBack);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.rentalSubmit);
-            this.Controls.Add(this.rentalBox);
-            this.Controls.Add(this.labelRental);
             this.Controls.Add(this.SubmitButton);
             this.Controls.Add(this.BackButton);
             this.Controls.Add(this.Ticketbox);
@@ -227,12 +258,16 @@
             this.Controls.Add(this.labelService);
             this.Controls.Add(this.buttonRental);
             this.Controls.Add(this.buttonTicket);
+            this.Controls.Add(this.pictureBoxTicket);
+            this.Controls.Add(this.pictureBoxRental);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Service";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Service";
             this.Load += new System.EventHandler(this.Service_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTicket)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRental)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -253,6 +288,8 @@
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.LinkLabel linkLabelLoginBack;
         private System.Windows.Forms.LinkLabel linkLabelLoginClose;
+        private System.Windows.Forms.PictureBox pictureBoxTicket;
+        private System.Windows.Forms.PictureBox pictureBoxRental;
     }
 }
 

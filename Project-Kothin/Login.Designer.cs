@@ -40,6 +40,10 @@
             this.buttonExit = new System.Windows.Forms.Button();
             this.linkLabelLoginBack = new System.Windows.Forms.LinkLabel();
             this.linkLabelLoginClose = new System.Windows.Forms.LinkLabel();
+            this.pictureBoxShowPass = new System.Windows.Forms.PictureBox();
+            this.pictureBoxHidePass = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxShowPass)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHidePass)).BeginInit();
             this.SuspendLayout();
             // 
             // labelLoginPhone
@@ -227,6 +231,31 @@
             this.linkLabelLoginClose.Text = "❌";
             this.linkLabelLoginClose.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelLoginClose_LinkClicked);
             // 
+            // pictureBoxShowPass
+            // 
+            this.pictureBoxShowPass.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxShowPass.Image = global::Project_Kothin.Properties.Resources.eyes_flipped;
+            this.pictureBoxShowPass.Location = new System.Drawing.Point(745, 399);
+            this.pictureBoxShowPass.Name = "pictureBoxShowPass";
+            this.pictureBoxShowPass.Size = new System.Drawing.Size(24, 24);
+            this.pictureBoxShowPass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBoxShowPass.TabIndex = 35;
+            this.pictureBoxShowPass.TabStop = false;
+            this.pictureBoxShowPass.Visible = false;
+            this.pictureBoxShowPass.Click += new System.EventHandler(this.pictureBoxShowPass_Click);
+            // 
+            // pictureBoxHidePass
+            // 
+            this.pictureBoxHidePass.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxHidePass.Image = global::Project_Kothin.Properties.Resources.eyes;
+            this.pictureBoxHidePass.Location = new System.Drawing.Point(745, 399);
+            this.pictureBoxHidePass.Name = "pictureBoxHidePass";
+            this.pictureBoxHidePass.Size = new System.Drawing.Size(24, 24);
+            this.pictureBoxHidePass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBoxHidePass.TabIndex = 36;
+            this.pictureBoxHidePass.TabStop = false;
+            this.pictureBoxHidePass.Click += new System.EventHandler(this.pictureBoxHidePass_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -235,6 +264,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1215, 730);
+            this.Controls.Add(this.pictureBoxHidePass);
+            this.Controls.Add(this.pictureBoxShowPass);
             this.Controls.Add(this.linkLabelLoginClose);
             this.Controls.Add(this.linkLabelLoginBack);
             this.Controls.Add(this.buttonExit);
@@ -256,6 +287,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Registration_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxShowPass)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHidePass)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -274,5 +307,7 @@
         private System.Windows.Forms.Button buttonExit;
         private System.Windows.Forms.LinkLabel linkLabelLoginBack;
         private System.Windows.Forms.LinkLabel linkLabelLoginClose;
+        private System.Windows.Forms.PictureBox pictureBoxShowPass;
+        private System.Windows.Forms.PictureBox pictureBoxHidePass;
     }
 }

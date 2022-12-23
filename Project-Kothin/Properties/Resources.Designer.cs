@@ -63,6 +63,36 @@ namespace Project_Kothin.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap eyes {
+            get {
+                object obj = ResourceManager.GetObject("eyes", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap eyes__1_ {
+            get {
+                object obj = ResourceManager.GetObject("eyes (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap eyes_flipped {
+            get {
+                object obj = ResourceManager.GetObject("eyes_flipped", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap KothinBGM {
             get {
                 object obj = ResourceManager.GetObject("KothinBGM", resourceCulture);
@@ -76,6 +106,16 @@ namespace Project_Kothin.Properties {
         internal static System.Drawing.Bitmap KothinPassResetBG {
             get {
                 object obj = ResourceManager.GetObject("KothinPassResetBG", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ticket_er_chobi {
+            get {
+                object obj = ResourceManager.GetObject("ticket_er_chobi", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -44,6 +44,10 @@
             this.labelResetWrongPass = new System.Windows.Forms.Label();
             this.labelResetWrongPhone = new System.Windows.Forms.Label();
             this.labelResetRightPhone = new System.Windows.Forms.Label();
+            this.pictureBoxShowPass = new System.Windows.Forms.PictureBox();
+            this.pictureBoxHidePass = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxShowPass)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHidePass)).BeginInit();
             this.SuspendLayout();
             // 
             // labelResetPhone
@@ -256,6 +260,31 @@
             this.labelResetRightPhone.Text = "✔";
             this.labelResetRightPhone.Visible = false;
             // 
+            // pictureBoxShowPass
+            // 
+            this.pictureBoxShowPass.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxShowPass.Image = global::Project_Kothin.Properties.Resources.eyes_flipped;
+            this.pictureBoxShowPass.Location = new System.Drawing.Point(537, 208);
+            this.pictureBoxShowPass.Name = "pictureBoxShowPass";
+            this.pictureBoxShowPass.Size = new System.Drawing.Size(24, 24);
+            this.pictureBoxShowPass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBoxShowPass.TabIndex = 36;
+            this.pictureBoxShowPass.TabStop = false;
+            this.pictureBoxShowPass.Visible = false;
+            this.pictureBoxShowPass.Click += new System.EventHandler(this.pictureBoxShowPass_Click);
+            // 
+            // pictureBoxHidePass
+            // 
+            this.pictureBoxHidePass.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxHidePass.Image = global::Project_Kothin.Properties.Resources.eyes;
+            this.pictureBoxHidePass.Location = new System.Drawing.Point(537, 208);
+            this.pictureBoxHidePass.Name = "pictureBoxHidePass";
+            this.pictureBoxHidePass.Size = new System.Drawing.Size(24, 24);
+            this.pictureBoxHidePass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBoxHidePass.TabIndex = 37;
+            this.pictureBoxHidePass.TabStop = false;
+            this.pictureBoxHidePass.Click += new System.EventHandler(this.pictureBoxHidePass_Click);
+            // 
             // ForgotPassword
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -264,6 +293,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(690, 650);
+            this.Controls.Add(this.pictureBoxHidePass);
+            this.Controls.Add(this.pictureBoxShowPass);
             this.Controls.Add(this.labelResetWrongPhone);
             this.Controls.Add(this.labelResetWrongPass);
             this.Controls.Add(this.labelResetRightPass);
@@ -288,6 +319,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reset Password";
             this.Load += new System.EventHandler(this.ForgotPassword_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxShowPass)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHidePass)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -310,5 +343,7 @@
         private System.Windows.Forms.Label labelResetWrongPass;
         private System.Windows.Forms.Label labelResetWrongPhone;
         private System.Windows.Forms.Label labelResetRightPhone;
+        private System.Windows.Forms.PictureBox pictureBoxShowPass;
+        private System.Windows.Forms.PictureBox pictureBoxHidePass;
     }
 }

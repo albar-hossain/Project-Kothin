@@ -7,6 +7,8 @@ namespace Project_Kothin
 {
     public partial class Registration : Form
     {
+        private bool flag = true;
+
         public Registration()
         {
             InitializeComponent();
@@ -163,6 +165,21 @@ namespace Project_Kothin
         private void linkLabelRegClose_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Close();
+        }
+
+        //showPass
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            textBoxRegPassword.PasswordChar = '*';
+            pictureBoxShowPass.Visible = false;
+            pictureBoxHidePass.Visible = true;
+        }
+
+        private void pictureBoxHidePass_Click(object sender, EventArgs e)
+        {
+            textBoxRegPassword.PasswordChar = '\0';
+            pictureBoxShowPass.Visible = true;
+            pictureBoxHidePass.Visible = false;
         }
     }
 }

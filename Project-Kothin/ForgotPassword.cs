@@ -187,5 +187,19 @@ namespace Project_Kothin
                 MessageBox.Show("Please Check the form again!");
             }
         }
+
+        private void pictureBoxShowPass_Click(object sender, EventArgs e)
+        {
+            textBoxResetNewPassword.PasswordChar = '*';
+            pictureBoxShowPass.Visible = false;
+            pictureBoxHidePass.Visible = true;
+        }
+
+        private void pictureBoxHidePass_Click(object sender, EventArgs e)
+        {
+            textBoxResetNewPassword.PasswordChar = '\0';
+            pictureBoxShowPass.Visible = true;
+            pictureBoxHidePass.Visible = false;
+        }
     }
 }

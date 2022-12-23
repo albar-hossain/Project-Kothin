@@ -193,6 +193,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\ticket_er_chobi.png" />
+    <None Include="Resources\eyes.png" />
+    <None Include="Resources\eyes %281%29.png" />
+    <None Include="Resources\eyes_flipped.png" />
     <Content Include="Resources\KothinBGM.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

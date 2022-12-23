@@ -16,13 +16,13 @@ namespace Project_Kothin
 
         [System.Runtime.InteropServices.DllImport("user32.dll", CharSet = System.Runtime.InteropServices.CharSet.Auto)]
         private static extern int SendMessage(IntPtr hWnd, int msg, int wParam, [System.Runtime.InteropServices.MarshalAs(System.Runtime.InteropServices.UnmanagedType.LPWStr)] string lParam);
+
         public Service()
         {
             InitializeComponent();
-            
+
             SendMessage(this.Ticketbox.Handle, CB_SETCUEBANNER, 0, "Please select an item...");
         }
-
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -33,14 +33,12 @@ namespace Project_Kothin
             Ticketbox.Visible = true;
             SubmitButton.Visible = true;
             BackButton.Visible = true;
-
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
         }
-        
+
         private void BackButton_Click(object sender, EventArgs e)
         {
             labelService.Visible = true;
@@ -54,13 +52,13 @@ namespace Project_Kothin
             rentalSubmit.Visible = false;
             BackButton.Visible = false;
             rentalSubmit.Visible = false;
-
-
+            pictureBoxTicket.Visible = true;
+            pictureBoxRental.Visible = true;
         }
 
         private void SubmitButton_Click(object sender, EventArgs e)
         {
-            if(Ticketbox.Text=="")
+            if (Ticketbox.Text == "")
             {
                 MessageBox.Show("Invalid");
             }
@@ -69,12 +67,11 @@ namespace Project_Kothin
                 Ticket it = new Ticket(Ticketbox.Text);
                 it.Show();
             }
-            else if(Ticketbox.Text=="Bus")
+            else if (Ticketbox.Text == "Bus")
             {
                 Ticket it = new Ticket(Ticketbox.Text);
                 it.Show();
             }
-            
         }
 
         private void SEARCHTRAIN_Click(object sender, EventArgs e)
@@ -85,12 +82,10 @@ namespace Project_Kothin
 
         private void Service_Load(object sender, EventArgs e)
         {
-
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
-
         }
 
         private void buttonRental_Click(object sender, EventArgs e)
@@ -125,12 +120,10 @@ namespace Project_Kothin
                 RentalBus it = new RentalBus();
                 it.Show();
             }
-
         }
 
         private void rentalBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -147,6 +140,32 @@ namespace Project_Kothin
         private void linkLabelLoginClose_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Close();
+        }
+
+        private void pictureBoxTicket_Click(object sender, EventArgs e)
+        {
+            labelService.Visible = false;
+            buttonTicket.Visible = false;
+            buttonRental.Visible = false;
+            labelTicket.Visible = true;
+            Ticketbox.Visible = true;
+            SubmitButton.Visible = true;
+            BackButton.Visible = true;
+            pictureBoxTicket.Visible = false;
+            pictureBoxRental.Visible = true;
+        }
+
+        private void pictureBoxRental_Click(object sender, EventArgs e)
+        {
+            labelService.Visible = false;
+            buttonTicket.Visible = false;
+            buttonRental.Visible = false;
+            labelRental.Visible = true;
+            rentalBox.Visible = true;
+            rentalSubmit.Visible = true;
+            BackButton.Visible = true;
+            pictureBoxRental.Visible = false;
+            pictureBoxTicket.Visible = true;
         }
     }
 }

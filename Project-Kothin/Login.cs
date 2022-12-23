@@ -132,12 +132,22 @@ namespace Project_Kothin
             //}
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void textBoxPhone_TextChanged(object sender, EventArgs e)
         {
         }
 
-        private void textBoxPhone_TextChanged(object sender, EventArgs e)
+        private void pictureBoxHidePass_Click(object sender, EventArgs e)
         {
+            textBoxPassword.PasswordChar = '\0';
+            pictureBoxShowPass.Visible = true;
+            pictureBoxHidePass.Visible = false;
+        }
+
+        private void pictureBoxShowPass_Click(object sender, EventArgs e)
+        {
+            textBoxPassword.PasswordChar = '*';
+            pictureBoxShowPass.Visible = false;
+            pictureBoxHidePass.Visible = true;
         }
     }
 }
