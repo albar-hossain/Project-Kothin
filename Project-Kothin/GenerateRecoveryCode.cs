@@ -37,5 +37,9 @@ namespace Project_Kothin
             Clipboard.SetText(textBoxResetRecoveryCode.Text);
             MessageBox.Show("Copied To Clipboard.");
         }
+
+        private void GenerateRecoveryCode_Load(object sender, EventArgs e)
+        {
+        }
     }
 }

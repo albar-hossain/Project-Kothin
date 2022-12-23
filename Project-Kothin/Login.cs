@@ -104,9 +104,9 @@ namespace Project_Kothin
                     MessageBox.Show("Please Reset Your Password!");
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show("Invalid Phone Number");
+                MessageBox.Show("Invalid Phone Number.");
             }
             finally
             {

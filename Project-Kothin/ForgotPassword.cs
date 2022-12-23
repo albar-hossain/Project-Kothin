@@ -8,6 +8,7 @@ namespace Project_Kothin
     public partial class ForgotPassword : Form
     {
         private bool IsPasswordValid = false;
+        private bool IsPasswordUpdated = false;
 
         public ForgotPassword()
         {
@@ -85,24 +86,29 @@ namespace Project_Kothin
                     conn = new SqlConnection(@"Data Source=SKRILLEXOMG\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");
                     conn.Open();
 
-                    string query = $"select RecoveryCode from UserInfo where Phone = {Phone}";
+                    string query = $"select RecoveryCode, Password from UserInfo where Phone = {Phone}";
                     SqlCommand cmd = new SqlCommand(query, conn);
                     DataSet ds = new DataSet();
                     SqlDataAdapter adp = new SqlDataAdapter(cmd);
                     adp.Fill(ds);
                     DataTable dt = ds.Tables[0];
                     string val = dt.Rows[0]["RecoveryCode"].ToString();
+                    string val2 = dt.Rows[0]["Password"].ToString();
 
-                    if (val == RecoveryCode)
+                    if (val == RecoveryCode && val2 != NewPassword)
                     {
                         IsPasswordValid = true;
+                    }
+                    else if (val2 == NewPassword)
+                    {
+                        MessageBox.Show("New Password Cannot Be old Password.");
                     }
                     else
                     {
                         MessageBox.Show("Incorrect Recovery Code.");
                     }
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     MessageBox.Show("Invalid Phone Number.");
                 }
@@ -114,14 +120,14 @@ namespace Project_Kothin
                 if (IsPasswordValid)
                 {
                     string updateValue = NewPassword;
-                    string updateTarget = "Password";
+                    //string updateTarget = "Password";
                     //string updateWhome = textBoxUpdateWhom.Text;
                     try
                     {
                         conn = new SqlConnection(@"Data Source=SKRILLEXOMG\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");
                         conn.Open();
 
-                        string query = $"update UserInfo set {updateTarget} = '{updateValue}' where Phone = '{Phone}';";
+                        string query = $"update UserInfo set Password = '{updateValue}' where Phone = '{Phone}';";
 
                         SqlCommand cmd = new SqlCommand(query, conn);
                         DataSet ds = new DataSet();
@@ -129,14 +135,46 @@ namespace Project_Kothin
                         adp.Fill(ds);
                         //DataTable dt = ds.Tables[0];
                         //string val = dt.Rows[0]["RecoveryCode"].ToString();
-                        MessageBox.Show("Password Reset.");
+                        IsPasswordUpdated = true;
                         IsPasswordValid = false;
+                        MessageBox.Show("Password Reset.");
+
                         this.Hide();
-                        //Might add new recovery code after password update
                     }
-                    catch (Exception ex)
+                    catch (Exception)
                     {
                         MessageBox.Show("Invalid Phone Number.");
+                    }
+                    finally
+                    {
+                        conn.Close();
+                    }
+                }
+
+                //Update Recovery code
+                if (IsPasswordUpdated)
+                {
+                    string recoveryCode = Convert.ToBase64String(Guid.NewGuid().ToByteArray()).Substring(0, 5);
+
+                    try
+                    {
+                        conn = new SqlConnection(@"Data Source=SKRILLEXOMG\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");
+                        conn.Open();
+
+                        string query = $"update UserInfo set RecoveryCode = '{recoveryCode}' where Phone = '{Phone}';";
+                        SqlCommand cmd = new SqlCommand(query, conn);
+                        DataSet ds = new DataSet();
+                        SqlDataAdapter adp = new SqlDataAdapter(cmd);
+                        adp.Fill(ds);
+                        GenerateRecoveryCode getNewRecovery = new GenerateRecoveryCode(recoveryCode);
+                        getNewRecovery.Show();
+                        IsPasswordUpdated = false;
+                        //DataTable dt = ds.Tables[0];
+                        //string val = dt.Rows[0]["RecoveryCode"].ToString();
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Could not update recovery code.");
                     }
                     finally
                     {
