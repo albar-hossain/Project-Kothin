@@ -15,6 +15,7 @@ namespace Project_Kothin
         {
             InitializeComponent();
         }
+        
 
         private void Registration_Load(object sender, EventArgs e)
         {
@@ -72,51 +73,6 @@ namespace Project_Kothin
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-            string Phone = textBoxPhone.Text;
-            SqlConnection conn = null;
-            try
-            {
-                conn = new SqlConnection(@"Data Source=SKRILLEXOMG\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");
-                conn.Open();
-
-                string query = $"select Password from UserInfo where Phone = {Phone}";
-                SqlCommand cmd = new SqlCommand(query, conn);
-                DataSet ds = new DataSet();
-                SqlDataAdapter adp = new SqlDataAdapter(cmd);
-                adp.Fill(ds);
-                DataTable dt = ds.Tables[0];
-                string val = dt.Rows[0]["Password"].ToString();
-
-                if (val == textBoxPassword.Text)
-                {
-                    Service p1 = new Service();
-                    p1.Show();
-                    tryCount = 0;
-                    textBoxPassword.Clear();
-                    textBoxPhone.Clear();
-                }
-                else
-                {
-                    MessageBox.Show("Invalid Password.");
-                    tryCount++;
-                }
-                //Add logic to make user reset password after 3 tries / ban user
-                if (tryCount > 2)
-                {
-                    MessageBox.Show("Please Reset Your Password!");
-                    ForgotPassword resetPassword = new ForgotPassword();
-                    resetPassword.Show();
-                }
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Invalid Phone Number.");
-            }
-            finally
-            {
-                conn.Close();
-            }
-
             if (textBoxPhone.Text == "admin" && textBoxPassword.Text == "kothin")
             {
                 Admin a1 = new Admin();
@@ -124,14 +80,63 @@ namespace Project_Kothin
                 textBoxPassword.Clear();
                 textBoxPhone.Clear();
             }
+            else
+            {
+                string Phone = textBoxPhone.Text;
+                SqlConnection conn = null;
+                try
+                {
+                    //conn = new SqlConnection(@"Data Source=SKRILLEXOMG\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");
+                    conn = new SqlConnection(@"Data Source=DESKTOP-9DIP61O\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");
+                    conn.Open();
 
-            //else
-            //{
-            //    Service p1 = new Service();
-            //    p1.Show();
-            //}
+                    string query = $"select Password from UserInfo where Phone = {Phone}";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    DataSet ds = new DataSet();
+                    SqlDataAdapter adp = new SqlDataAdapter(cmd);
+                    adp.Fill(ds);
+                    DataTable dt = ds.Tables[0];
+                    string val = dt.Rows[0]["Password"].ToString();
+
+                    if (val == textBoxPassword.Text)
+                    {
+                        Service p1 = new Service();
+                        p1.Show();
+                        tryCount = 0;
+                        textBoxPassword.Clear();
+                        textBoxPhone.Clear();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Invalid Password.");
+                        tryCount++;
+                    }
+                    //Add logic to make user reset password after 3 tries / ban user
+                    if (tryCount > 2)
+                    {
+                        MessageBox.Show("Please Reset Your Password!");
+                        ForgotPassword resetPassword = new ForgotPassword();
+                        resetPassword.Show();
+                    }
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Invalid Phone Number.");
+                }
+                finally
+                {
+                    conn.Close();
+                }
+
+
+
+                //else
+                //{
+                //    Service p1 = new Service();
+                //    p1.Show();
+                //}
+            }
         }
-
         private void textBoxPhone_TextChanged(object sender, EventArgs e)
         {
         }

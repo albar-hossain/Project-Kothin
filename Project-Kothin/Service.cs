@@ -23,16 +23,15 @@ namespace Project_Kothin
 
             SendMessage(this.Ticketbox.Handle, CB_SETCUEBANNER, 0, "Please select an item...");
         }
+        public Service(string username)
+        {   
 
+            InitializeComponent();
+            SendMessage(this.Ticketbox.Handle, CB_SETCUEBANNER, 0, "Please select an item...");
+        }
+        
         private void button1_Click(object sender, EventArgs e)
         {
-            labelService.Visible = false;
-            buttonTicket.Visible = false;
-            buttonRental.Visible = false;
-            labelTicket.Visible = true;
-            Ticketbox.Visible = true;
-            SubmitButton.Visible = true;
-            BackButton.Visible = true;
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -41,9 +40,9 @@ namespace Project_Kothin
 
         private void BackButton_Click(object sender, EventArgs e)
         {
-            labelService.Visible = true;
-            buttonTicket.Visible = true;
-            buttonRental.Visible = true;
+            
+            
+            
             labelTicket.Visible = false;
             labelRental.Visible = false;
             Ticketbox.Visible = false;
@@ -90,13 +89,7 @@ namespace Project_Kothin
 
         private void buttonRental_Click(object sender, EventArgs e)
         {
-            labelService.Visible = false;
-            buttonTicket.Visible = false;
-            buttonRental.Visible = false;
-            labelRental.Visible = true;
-            rentalBox.Visible = true;
-            rentalSubmit.Visible = true;
-            BackButton.Visible = true;
+            
         }
 
         private void rentalSubmit_Click(object sender, EventArgs e)
@@ -144,28 +137,31 @@ namespace Project_Kothin
 
         private void pictureBoxTicket_Click(object sender, EventArgs e)
         {
-            labelService.Visible = false;
-            buttonTicket.Visible = false;
-            buttonRental.Visible = false;
+
+            labelService.Text = "Ticket Booking Services";
+
             labelTicket.Visible = true;
             Ticketbox.Visible = true;
             SubmitButton.Visible = true;
             BackButton.Visible = true;
-            pictureBoxTicket.Visible = false;
-            pictureBoxRental.Visible = true;
+            pictureBoxTicket.Visible = true;
+            pictureBoxRental.Visible = false;
         }
 
         private void pictureBoxRental_Click(object sender, EventArgs e)
         {
-            labelService.Visible = false;
-            buttonTicket.Visible = false;
-            buttonRental.Visible = false;
+            labelService.Text = "Rental Services";
             labelRental.Visible = true;
             rentalBox.Visible = true;
             rentalSubmit.Visible = true;
             BackButton.Visible = true;
-            pictureBoxRental.Visible = false;
-            pictureBoxTicket.Visible = true;
+            pictureBoxRental.Visible = true;
+            pictureBoxTicket.Visible = false;
+        }
+
+        private void labelRental_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -193,6 +193,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\rental_er_sobi %282%29.png" />
+    <None Include="Resources\rental_er_sobi %281%29.png" />
+    <None Include="Resources\rental_er_sobi.png" />
     <None Include="Resources\ticket_er_chobi.png" />
     <None Include="Resources\eyes.png" />
     <None Include="Resources\eyes %281%29.png" />

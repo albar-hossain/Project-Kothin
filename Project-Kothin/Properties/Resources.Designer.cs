@@ -113,6 +113,36 @@ namespace Project_Kothin.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap rental_er_sobi {
+            get {
+                object obj = ResourceManager.GetObject("rental_er_sobi", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap rental_er_sobi__1_ {
+            get {
+                object obj = ResourceManager.GetObject("rental_er_sobi (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap rental_er_sobi__2_ {
+            get {
+                object obj = ResourceManager.GetObject("rental_er_sobi (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ticket_er_chobi {
             get {
                 object obj = ResourceManager.GetObject("ticket_er_chobi", resourceCulture);
