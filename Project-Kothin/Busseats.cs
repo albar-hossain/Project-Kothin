@@ -34,7 +34,7 @@ namespace Project_Kothin
         {
             InitializeComponent();
         }
-        public Busseats(string username)
+        public Busseats(string username,string departure,string destination,string time)
         {
             InitializeComponent();
             phone = username;
@@ -42,8 +42,8 @@ namespace Project_Kothin
             SqlConnection conn = null;
             try
             {
-                conn = new SqlConnection(@"Data Source=DESKTOP-9DIP61O\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//azwad
-                // conn = new SqlConnection(@"Data Source=DESKTOP-5NMO71P\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True ");
+               //conn = new SqlConnection(@"Data Source=DESKTOP-9DIP61O\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//azwad
+                conn = new SqlConnection(@"Data Source=DESKTOP-5NMO71P\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True ");
                 conn.Open();
 
                 string query = $"select FullName from UserInfo where Phone = {phone}";
@@ -55,6 +55,10 @@ namespace Project_Kothin
                 string val = dt.Rows[0]["FullName"].ToString();
                 linkLabel1.Text = val;
                 nom.Text = phone;
+                dep.Text = departure;
+                des.Text = destination;
+                dateandtime.Text = time;
+                type.Text = "BUS";
             }
             catch (Exception ex)
             {
@@ -620,6 +624,35 @@ namespace Project_Kothin
 
         private void BookTrain_Click(object sender, EventArgs e)
         {
+            string name = linkLabel1.Text;
+            string number = nom.Text;
+            string Type = type.Text;
+            string Bname = bos.Text;
+            string Bclass = closs.Text;
+            string Department = dep.Text;
+            string destination = des.Text;
+            string date = dateandtime.Text;
+            string balance = amount.Text;
+            SqlConnection conn = null;
+            try
+            {
+                //conn = new SqlConnection(@"Data Source=SKRILLEXOMG\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");
+                conn = new SqlConnection(@"Data Source=DESKTOP-5NMO71P\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//arif
+                conn.Open();
+                string query = $"insert into TicketInfo (FullName, PhoneNumber, Vehicle, VehicleName, Class, Departure, Destination, Date, Amount) VALUES ('{name}','{number}','{Type}','{Bname}','{Bclass}','{Department}','{destination}','{date}','{balance}')";
+
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
             MessageBox.Show("Successful!");
         }
 
@@ -628,7 +661,9 @@ namespace Project_Kothin
 
         }
 
-   
+        private void total_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }

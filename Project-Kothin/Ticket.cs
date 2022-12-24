@@ -29,8 +29,8 @@ namespace Project_Kothin
             dateTimePicker1.MinDate = DateTime.Now;
             
 
-            SendMessage(this.comboBox1.Handle, CB_SETCUEBANNER, 0, "Please select Depurture location...");
-            SendMessage(this.comboBox2.Handle, CB_SETCUEBANNER, 0, "Please select Destination...");
+            SendMessage(this.departurebox.Handle, CB_SETCUEBANNER, 0, "Please select Depurture location...");
+            SendMessage(this.destinationbox.Handle, CB_SETCUEBANNER, 0, "Please select Destination...");
 
             label3.Text = id;
             if (label3.Text == "Train")
@@ -48,8 +48,8 @@ namespace Project_Kothin
             SqlConnection conn = null;
             try
             {
-                conn = new SqlConnection(@"Data Source=DESKTOP-9DIP61O\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//azwad
-               // conn = new SqlConnection(@"Data Source=DESKTOP-5NMO71P\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True ");
+                //conn = new SqlConnection(@"Data Source=DESKTOP-9DIP61O\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//azwad
+               conn = new SqlConnection(@"Data Source=DESKTOP-5NMO71P\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True ");//arif
                 conn.Open();
 
                 string query =$"select FullName from UserInfo where Phone = {phone}";
@@ -95,13 +95,14 @@ namespace Project_Kothin
 
         private void SEARCHTRAIN_Click(object sender, EventArgs e)
         {
-            if (comboBox1.SelectedIndex != comboBox2.SelectedIndex && comboBox1.SelectedIndex != -1 && comboBox2.SelectedIndex != -1)
+            if (departurebox.SelectedIndex != destinationbox.SelectedIndex && departurebox.SelectedIndex != -1 && destinationbox.SelectedIndex != -1)
             {
-                Selectseats s1 = new Selectseats(phone);
+                string date = dateTimePicker1.Value.ToString("dd-MM-yyyy");
+                Selectseats s1 = new Selectseats(phone,departurebox.Text,destinationbox.Text,date);
                 s1.Show();
             }
 
-            if (comboBox2.Text == "" && comboBox1.Text == "" || comboBox1.Text == comboBox2.Text||comboBox1.Text==""||comboBox2.Text=="")
+            if (destinationbox.Text == "" && departurebox.Text == "" || departurebox.Text == destinationbox.Text||departurebox.Text==""||destinationbox.Text=="")
             {
                 MessageBox.Show("Invalid");
             }
@@ -120,13 +121,15 @@ namespace Project_Kothin
 
         private void SEARCHBUS_Click(object sender, EventArgs e)
         {
-            if (comboBox1.SelectedIndex != comboBox2.SelectedIndex && comboBox1.SelectedIndex != -1 && comboBox2.SelectedIndex != -1)
-            { 
-                Busseats b1 = new Busseats(phone);
+            if (departurebox.SelectedIndex != destinationbox.SelectedIndex && departurebox.SelectedIndex != -1 && destinationbox.SelectedIndex != -1)
+            {
+                //string date=DateTime.Value.ToString("dd MMM, yyyy hh:mm tt");
+                string date = dateTimePicker1.Value.ToString("dd-MM-yyyy");
+                Busseats b1 = new Busseats(phone,departurebox.Text,destinationbox.Text,date);
                 b1.Show();
             }
 
-            if (comboBox2.Text == ""&& comboBox1.Text =="" || comboBox1.Text == comboBox2.Text||comboBox1.Text==""||comboBox2.Text=="")
+            if (destinationbox.Text == ""&& departurebox.Text =="" || departurebox.Text == destinationbox.Text||departurebox.Text==""||destinationbox.Text=="")
             {
                 MessageBox.Show("Invalid");
             }
