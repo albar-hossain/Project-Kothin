@@ -7,8 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using iTextSharp.text;
-using iTextSharp.text.pdf;
+
 using System.IO;
 using System.Xml.Linq;
 using System.Data.SqlClient;
@@ -34,7 +33,8 @@ namespace Project_Kothin
         {
             InitializeComponent();
         }
-        public Busseats(string username,string departure,string destination,string time)
+
+        public Busseats(string username, string departure, string destination, string time)
         {
             InitializeComponent();
             phone = username;
@@ -42,7 +42,7 @@ namespace Project_Kothin
             SqlConnection conn = null;
             try
             {
-               //conn = new SqlConnection(@"Data Source=DESKTOP-9DIP61O\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//azwad
+                //conn = new SqlConnection(@"Data Source=DESKTOP-9DIP61O\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//azwad
                 conn = new SqlConnection(@"Data Source=DESKTOP-5NMO71P\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True ");
                 conn.Open();
 
@@ -643,7 +643,6 @@ namespace Project_Kothin
 
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.ExecuteNonQuery();
-
             }
             catch (Exception ex)
             {
@@ -658,12 +657,10 @@ namespace Project_Kothin
 
         private void closs_Click(object sender, EventArgs e)
         {
-
         }
 
         private void total_Click(object sender, EventArgs e)
         {
-
         }
     }
 }

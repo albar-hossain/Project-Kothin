@@ -1,6 +1,4 @@
-﻿using iTextSharp.text.pdf;
-using iTextSharp.text;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -35,7 +33,8 @@ namespace Project_Kothin
         {
             InitializeComponent();
         }
-        public Selectseats(string username,string departure, string destination, string time)
+
+        public Selectseats(string username, string departure, string destination, string time)
         {
             InitializeComponent();
             phone = username;
@@ -68,8 +67,6 @@ namespace Project_Kothin
             {
                 conn.Close();
             }
-
-
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -773,7 +770,6 @@ namespace Project_Kothin
 
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.ExecuteNonQuery();
-
             }
             catch (Exception ex)
             {
