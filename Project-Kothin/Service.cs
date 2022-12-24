@@ -32,10 +32,12 @@ namespace Project_Kothin
             SendMessage(this.Ticketbox.Handle, CB_SETCUEBANNER, 0, "Please select an item...");
              linkLabel1.Text=username;
             phone = username;
+            
             SqlConnection conn = null;
             try
             {
-                conn = new SqlConnection(@"Data Source=DESKTOP-5NMO71P\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True ");
+                //conn = new SqlConnection(@"Data Source=DESKTOP-5NMO71P\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True ");
+                conn = new SqlConnection(@"Data Source=DESKTOP-9DIP61O\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//azwad
                 conn.Open();
 
                 string query =$"select FullName from UserInfo where Phone={linkLabel1.Text}";
@@ -146,7 +148,7 @@ namespace Project_Kothin
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            UserInfoPanel u1 = new UserInfoPanel();
+            UserInfoPanel u1 = new UserInfoPanel(phone);
             u1.Show();
             
         }
