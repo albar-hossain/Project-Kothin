@@ -102,6 +102,7 @@ namespace Project_Kothin
                     if (val == textBoxPassword.Text)
                     {
                         Service p1 = new Service(textBoxPhone.Text);
+                        Ticket t1 = new Ticket("", textBoxPhone.Text);
                         p1.Show();
                         tryCount = 0;
                         textBoxPassword.Clear();
