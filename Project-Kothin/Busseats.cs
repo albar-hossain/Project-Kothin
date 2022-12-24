@@ -11,11 +11,13 @@ using iTextSharp.text;
 using iTextSharp.text.pdf;
 using System.IO;
 using System.Xml.Linq;
+using System.Data.SqlClient;
 
 namespace Project_Kothin
 {
     public partial class Busseats : Form
     {
+        private string phone;
         private bool flag1 = true;
         private bool flag2 = true;
         private bool flag3 = true;
@@ -31,6 +33,41 @@ namespace Project_Kothin
         public Busseats()
         {
             InitializeComponent();
+        }
+        public Busseats(string username,string departure,string destination,string time)
+        {
+            InitializeComponent();
+            phone = username;
+            //linkLabel1.Text = username;
+            SqlConnection conn = null;
+            try
+            {
+               //conn = new SqlConnection(@"Data Source=DESKTOP-9DIP61O\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//azwad
+                conn = new SqlConnection(@"Data Source=DESKTOP-5NMO71P\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True ");
+                conn.Open();
+
+                string query = $"select FullName from UserInfo where Phone = {phone}";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                DataSet ds = new DataSet();
+                SqlDataAdapter adp = new SqlDataAdapter(cmd);
+                adp.Fill(ds);
+                DataTable dt = ds.Tables[0];
+                string val = dt.Rows[0]["FullName"].ToString();
+                linkLabel1.Text = val;
+                nom.Text = phone;
+                dep.Text = departure;
+                des.Text = destination;
+                dateandtime.Text = time;
+                type.Text = "BUS";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
         }
 
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
@@ -587,41 +624,44 @@ namespace Project_Kothin
 
         private void BookTrain_Click(object sender, EventArgs e)
         {
+            string name = linkLabel1.Text;
+            string number = nom.Text;
+            string Type = type.Text;
+            string Bname = bos.Text;
+            string Bclass = closs.Text;
+            string Department = dep.Text;
+            string destination = des.Text;
+            string date = dateandtime.Text;
+            string balance = amount.Text;
+            SqlConnection conn = null;
+            try
+            {
+                //conn = new SqlConnection(@"Data Source=SKRILLEXOMG\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");
+                conn = new SqlConnection(@"Data Source=DESKTOP-5NMO71P\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//arif
+                conn.Open();
+                string query = $"insert into TicketInfo (FullName, PhoneNumber, Vehicle, VehicleName, Class, Departure, Destination, Date, Amount) VALUES ('{name}','{number}','{Type}','{Bname}','{Bclass}','{Department}','{destination}','{date}','{balance}')";
+
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
             MessageBox.Show("Successful!");
-            //Login loginbus = new Login();
-            //loginbus.Show();
-
-            Document document = new Document();
-            //PdfWriter.GetInstance(document, new FileStream("E:/b.pdf", FileMode.Create));
-            PdfWriter.GetInstance(document, new FileStream("C:\\Users\\azwad\\OneDrive - American International University-Bangladesh\\Desktop\\project pdfs/b.pdf", FileMode.Create));
-
-            document.Open();
-            //Paragraph p = new Paragraph(Name.Text);
-            Paragraph pp = new Paragraph("Reciept");
-            Paragraph p1 = new Paragraph(bus.Text + " " + bos.Text);
-            Paragraph p2 = new Paragraph(class_label.Text + " " + closs.Text);
-            //Paragraph p3 = new Paragraph(PhoneNumber.Text);
-            Paragraph p4 = new Paragraph(total.Text + " " + amount.Text);
-            //document.Add(p);
-            document.Add(pp);
-            document.Add(p1);
-            document.Add(p2);
-            //document.Add(p3);
-            document.Add(p4);
-            document.Close();
         }
 
         private void closs_Click(object sender, EventArgs e)
         {
+
         }
 
-        private void axAcroPDF1_Enter(object sender, EventArgs e)
-        {
-            string filename = "C:\\Users\\azwad\\OneDrive - American International University-Bangladesh\\Desktop\\project pdfs/b.pdf";
-            System.Diagnostics.Process.Start(filename);
-        }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void total_Click(object sender, EventArgs e)
         {
 
         }

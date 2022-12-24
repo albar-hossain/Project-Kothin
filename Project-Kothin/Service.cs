@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -10,21 +11,18 @@ using System.Windows.Forms;
 
 namespace Project_Kothin
 {
-
     public partial class Service : Form
     {
-        string fullname = "";
-        string phonenum = "";
+        public string phone;
         private const int CB_SETCUEBANNER = 0x1703;
 
         [System.Runtime.InteropServices.DllImport("user32.dll", CharSet = System.Runtime.InteropServices.CharSet.Auto)]
         private static extern int SendMessage(IntPtr hWnd, int msg, int wParam, [System.Runtime.InteropServices.MarshalAs(System.Runtime.InteropServices.UnmanagedType.LPWStr)] string lParam);
 
-        public Service(string fname,string phn)
+        public Service()
         {
             InitializeComponent();
-            fullname = fname;
-            phonenum = phn;
+
             SendMessage(this.Ticketbox.Handle, CB_SETCUEBANNER, 0, "Please select an item...");
         }
         public Service(string username)
@@ -32,6 +30,33 @@ namespace Project_Kothin
 
             InitializeComponent();
             SendMessage(this.Ticketbox.Handle, CB_SETCUEBANNER, 0, "Please select an item...");
+             linkLabel1.Text=username;
+            phone = username;
+            
+            SqlConnection conn = null;
+            try
+            {
+                conn = new SqlConnection(@"Data Source=DESKTOP-5NMO71P\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True ");
+                //conn = new SqlConnection(@"Data Source=DESKTOP-9DIP61O\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//azwad
+                conn.Open();
+
+                string query =$"select FullName from UserInfo where Phone={linkLabel1.Text}";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                DataSet ds = new DataSet();
+                SqlDataAdapter adp = new SqlDataAdapter(cmd);
+                adp.Fill(ds);
+                DataTable dt = ds.Tables[0];
+                string val = dt.Rows[0]["FullName"].ToString();
+                linkLabel1.Text = val;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
         }
         
         private void button1_Click(object sender, EventArgs e)
@@ -44,9 +69,6 @@ namespace Project_Kothin
 
         private void BackButton_Click(object sender, EventArgs e)
         {
-            
-            
-            
             labelTicket.Visible = false;
             labelRental.Visible = false;
             Ticketbox.Visible = false;
@@ -57,6 +79,7 @@ namespace Project_Kothin
             rentalSubmit.Visible = false;
             pictureBoxTicket.Visible = true;
             pictureBoxRental.Visible = true;
+            labelService.Text = "Services:";
         }
 
         private void SubmitButton_Click(object sender, EventArgs e)
@@ -67,12 +90,12 @@ namespace Project_Kothin
             }
             if (Ticketbox.Text == "Train")
             {
-                Ticket it = new Ticket(Ticketbox.Text);
+                Ticket it = new Ticket(Ticketbox.Text,phone);
                 it.Show();
             }
             else if (Ticketbox.Text == "Bus")
             {
-                Ticket it = new Ticket(Ticketbox.Text);
+                Ticket it = new Ticket(Ticketbox.Text,phone);
                 it.Show();
             }
         }
@@ -114,7 +137,7 @@ namespace Project_Kothin
             }
             else if (rentalBox.Text == "Bus")
             {
-                RentalBus it = new RentalBus(fullname,phonenum);
+                RentalBus it = new RentalBus();
                 it.Show();
             }
         }
@@ -125,8 +148,9 @@ namespace Project_Kothin
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            UserInfoPanel u1 = new UserInfoPanel();
+            UserInfoPanel u1 = new UserInfoPanel(phone);
             u1.Show();
+            
         }
 
         private void linkLabelLoginBack_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

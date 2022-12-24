@@ -10,11 +10,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Project_Kothin
 {
     public partial class Selectseats : Form
     {
+        public string phone;
         private bool flag1 = true;
         private bool flag2 = true;
         private bool flag3 = true;
@@ -30,6 +32,42 @@ namespace Project_Kothin
         public Selectseats()
         {
             InitializeComponent();
+        }
+        public Selectseats(string username,string departure, string destination, string time)
+        {
+            InitializeComponent();
+            phone = username;
+            linkLabel1.Text = username;
+            SqlConnection conn = null;
+            try
+            {
+                conn = new SqlConnection(@"Data Source=DESKTOP-5NMO71P\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//arif
+                conn.Open();
+
+                string query = $"select FullName from UserInfo where Phone = {linkLabel1.Text}";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                DataSet ds = new DataSet();
+                SqlDataAdapter adp = new SqlDataAdapter(cmd);
+                adp.Fill(ds);
+                DataTable dt = ds.Tables[0];
+                string val = dt.Rows[0]["FullName"].ToString();
+                linkLabel1.Text = val;
+                nom.Text = phone;
+                dest.Text = destination;
+                depa.Text = departure;
+                dot.Text = time;
+                label4.Text = "TRAIN";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -237,7 +275,7 @@ namespace Project_Kothin
             }
             else
             {
-                tronName.Text = Express.Name;
+                tronName.Text = Express.Text;
                 closs.Text = classSelection.Text;
                 BookTrain.Visible = true;
                 A1.Visible = true;
@@ -714,25 +752,35 @@ namespace Project_Kothin
         private void BookTrain_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Successful!");
-            //Login loginTrain = new Login();
-            //loginTrain.Show();
-            Document document = new Document();
-            //PdfWriter.GetInstance(document, new FileStream("E:/a.pdf", FileMode.Create));
-            PdfWriter.GetInstance(document, new FileStream("C:\\Users\\azwad\\OneDrive - American International University-Bangladesh\\Desktop\\project pdfs/b.pdf", FileMode.Create));
-            document.Open();
-            //Paragraph p = new Paragraph(Name.Text);
-            Paragraph pp = new Paragraph("Reciept");
-            Paragraph p1 = new Paragraph(nom.Text + " " + tronName.Text);
-            Paragraph p2 = new Paragraph(class_label.Text + " " + closs.Text);
-            //Paragraph p3 = new Paragraph(PhoneNumber.Text);
-            Paragraph p4 = new Paragraph(Totalamount.Text + " " + amount.Text);
-            //document.Add(p);
-            document.Add(pp);
-            document.Add(p1);
-            document.Add(p2);
-            //document.Add(p3);
-            document.Add(p4);
-            document.Close();
+            string name = linkLabel1.Text;
+            string number = nom.Text;
+            string type = label4.Text;
+            string Tname = tronName.Text;
+            string Tclass = closs.Text;
+            string Department = depa.Text;
+            string destination = dest.Text;
+            string date = dot.Text;
+            string balance = amount.Text;
+            SqlConnection conn = null;
+            try
+            {
+                //conn = new SqlConnection(@"Data Source=SKRILLEXOMG\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");
+                conn = new SqlConnection(@"Data Source=DESKTOP-5NMO71P\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//arif
+                conn.Open();
+                string query = $"insert into TicketInfo (FullName, PhoneNumber, Vehicle, VehicleName, Class, Departure, Destination, Date, Amount) VALUES ('{name}','{number}','{type}','{Tname}','{Tclass}','{Department}','{destination}','{date}','{balance}')";
+
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
         }
 
         private void Selectseats_Load(object sender, EventArgs e)
@@ -747,10 +795,6 @@ namespace Project_Kothin
         {
         }
 
-        private void axAcroPDF1_Enter(object sender, EventArgs e)
-        {
-            string filename = "C:\\Users\\azwad\\OneDrive - American International University-Bangladesh\\Desktop\\project pdfs/b.pdf";
-            System.Diagnostics.Process.Start(filename);
-        }
+       
     }
 }
