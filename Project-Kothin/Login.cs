@@ -88,20 +88,25 @@ namespace Project_Kothin
                 {
                     //conn = new SqlConnection(@"Data Source=SKRILLEXOMG\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");
                    //conn = new SqlConnection(@"Data Source=DESKTOP-9DIP61O\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//azwad
-                    conn = new SqlConnection(@"Data Source=DESKTOP-5NMO71P\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True"); //arif
+                    //conn = new SqlConnection(@"Data Source=DESKTOP-5NMO71P\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True"); //arif
+                    conn = new SqlConnection(@"Data Source=DESKTOP-BMD47A3\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True"); //risan
+
                     conn.Open();
 
-                    string query = $"select Password from UserInfo where Phone = {Phone}";
+                    string query = $"select Password, FullName, Phone from UserInfo where Phone = {Phone}";
+                    //string query = $"select Password from UserInfo where Phone = {Phone}";
                     SqlCommand cmd = new SqlCommand(query, conn);
                     DataSet ds = new DataSet();
                     SqlDataAdapter adp = new SqlDataAdapter(cmd);
                     adp.Fill(ds);
                     DataTable dt = ds.Tables[0];
                     string val = dt.Rows[0]["Password"].ToString();
+                    string phn = dt.Rows[0]["Phone"].ToString();
+                    string fname = dt.Rows[0]["FullName"].ToString();
 
                     if (val == textBoxPassword.Text)
                     {
-                        Service p1 = new Service(textBoxPhone.Text);
+                        Service p1 = new Service(phn,fname);
                         Ticket t1 = new Ticket("", textBoxPhone.Text);
                         p1.Show();
                         tryCount = 0;
