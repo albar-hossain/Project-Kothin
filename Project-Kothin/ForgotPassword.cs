@@ -83,7 +83,8 @@ namespace Project_Kothin
                 SqlConnection conn = null;
                 try
                 {
-                    conn = new SqlConnection(@"Data Source=SKRILLEXOMG\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");
+                    conn = new SqlConnection(@"Data Source=DESKTOP-9DIP61O\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//azwad
+                    //conn = new SqlConnection(@"Data Source=SKRILLEXOMG\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");
                     conn.Open();
 
                     string query = $"select RecoveryCode, Password from UserInfo where Phone = {Phone}";
@@ -124,7 +125,8 @@ namespace Project_Kothin
                     //string updateWhome = textBoxUpdateWhom.Text;
                     try
                     {
-                        conn = new SqlConnection(@"Data Source=SKRILLEXOMG\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");
+                        conn = new SqlConnection(@"Data Source=DESKTOP-9DIP61O\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//azwad
+                        //conn = new SqlConnection(@"Data Source=SKRILLEXOMG\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");
                         conn.Open();
 
                         string query = $"update UserInfo set Password = '{updateValue}' where Phone = '{Phone}';";
@@ -158,7 +160,8 @@ namespace Project_Kothin
 
                     try
                     {
-                        conn = new SqlConnection(@"Data Source=SKRILLEXOMG\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");
+                        conn = new SqlConnection(@"Data Source=DESKTOP-9DIP61O\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//azwad
+                        //conn = new SqlConnection(@"Data Source=SKRILLEXOMG\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");
                         conn.Open();
 
                         string query = $"update UserInfo set RecoveryCode = '{recoveryCode}' where Phone = '{Phone}';";
@@ -200,6 +203,11 @@ namespace Project_Kothin
             textBoxResetNewPassword.PasswordChar = '\0';
             pictureBoxShowPass.Visible = true;
             pictureBoxHidePass.Visible = false;
+        }
+
+        private void textBoxResetNewPassword_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

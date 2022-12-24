@@ -91,7 +91,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 5;
-            this.button2.Text = "Ban";
+            this.button2.Text = "Delete";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // Admin

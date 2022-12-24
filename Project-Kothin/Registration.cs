@@ -116,6 +116,7 @@ namespace Project_Kothin
 
                     SqlCommand cmd = new SqlCommand(query, conn);
                     cmd.ExecuteNonQuery();
+    
                 }
                 catch (Exception ex)
                 {
@@ -180,6 +181,51 @@ namespace Project_Kothin
             textBoxRegPassword.PasswordChar = '\0';
             pictureBoxShowPass.Visible = true;
             pictureBoxHidePass.Visible = false;
+        }
+
+        private void labelRegFullName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxRegFullName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelRegPostCode_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelRegAddress_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxRegAddress_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelRegEmail_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelRegPassword_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxRegPassword_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelRegPassConfirm_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

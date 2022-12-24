@@ -89,6 +89,7 @@
             this.labelRegFullName.Size = new System.Drawing.Size(130, 29);
             this.labelRegFullName.TabIndex = 4;
             this.labelRegFullName.Text = "Full Name:";
+            this.labelRegFullName.Click += new System.EventHandler(this.labelRegFullName_Click);
             // 
             // labelRegPhone
             // 
@@ -116,6 +117,7 @@
             this.labelRegEmail.Size = new System.Drawing.Size(88, 29);
             this.labelRegEmail.TabIndex = 6;
             this.labelRegEmail.Text = "E-mail:";
+            this.labelRegEmail.Click += new System.EventHandler(this.labelRegEmail_Click);
             // 
             // labelRegPassword
             // 
@@ -129,6 +131,7 @@
             this.labelRegPassword.Size = new System.Drawing.Size(126, 29);
             this.labelRegPassword.TabIndex = 7;
             this.labelRegPassword.Text = "Password:";
+            this.labelRegPassword.Click += new System.EventHandler(this.labelRegPassword_Click);
             // 
             // labelRegAddress
             // 
@@ -142,6 +145,7 @@
             this.labelRegAddress.Size = new System.Drawing.Size(108, 29);
             this.labelRegAddress.TabIndex = 8;
             this.labelRegAddress.Text = "Address:";
+            this.labelRegAddress.Click += new System.EventHandler(this.labelRegAddress_Click);
             // 
             // labelRegPostCode
             // 
@@ -155,6 +159,7 @@
             this.labelRegPostCode.Size = new System.Drawing.Size(132, 29);
             this.labelRegPostCode.TabIndex = 9;
             this.labelRegPostCode.Text = "Post Code:";
+            this.labelRegPostCode.Click += new System.EventHandler(this.labelRegPostCode_Click);
             // 
             // labelRegPassConfirm
             // 
@@ -168,6 +173,7 @@
             this.labelRegPassConfirm.Size = new System.Drawing.Size(216, 29);
             this.labelRegPassConfirm.TabIndex = 10;
             this.labelRegPassConfirm.Text = "Confirm Password:";
+            this.labelRegPassConfirm.Click += new System.EventHandler(this.labelRegPassConfirm_Click);
             // 
             // textRegPostCode
             // 
@@ -194,6 +200,7 @@
             this.textBoxRegAddress.Name = "textBoxRegAddress";
             this.textBoxRegAddress.Size = new System.Drawing.Size(264, 66);
             this.textBoxRegAddress.TabIndex = 4;
+            this.textBoxRegAddress.TextChanged += new System.EventHandler(this.textBoxRegAddress_TextChanged);
             // 
             // textBoxRegFullName
             // 
@@ -206,6 +213,7 @@
             this.textBoxRegFullName.Name = "textBoxRegFullName";
             this.textBoxRegFullName.Size = new System.Drawing.Size(264, 29);
             this.textBoxRegFullName.TabIndex = 1;
+            this.textBoxRegFullName.TextChanged += new System.EventHandler(this.textBoxRegFullName_TextChanged);
             // 
             // textBoxRegPhone
             // 
@@ -232,6 +240,7 @@
             this.textBoxRegPassword.PasswordChar = '*';
             this.textBoxRegPassword.Size = new System.Drawing.Size(264, 29);
             this.textBoxRegPassword.TabIndex = 6;
+            this.textBoxRegPassword.TextChanged += new System.EventHandler(this.textBoxRegPassword_TextChanged);
             // 
             // textBoxRegEmail
             // 

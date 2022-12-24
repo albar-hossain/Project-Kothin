@@ -139,6 +139,7 @@
             this.textBoxResetNewPassword.PasswordChar = '*';
             this.textBoxResetNewPassword.Size = new System.Drawing.Size(234, 29);
             this.textBoxResetNewPassword.TabIndex = 3;
+            this.textBoxResetNewPassword.TextChanged += new System.EventHandler(this.textBoxResetNewPassword_TextChanged);
             // 
             // textBoxResetNewPassConfirm
             // 
