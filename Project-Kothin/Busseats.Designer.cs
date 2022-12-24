@@ -57,6 +57,14 @@ namespace Project_Kothin
             this.bos = new System.Windows.Forms.Label();
             this.closs = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.departurelabel = new System.Windows.Forms.Label();
+            this.destinationlabel = new System.Windows.Forms.Label();
+            this.dep = new System.Windows.Forms.Label();
+            this.des = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dateandtime = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.type = new System.Windows.Forms.Label();
             this.Seats.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -226,7 +234,7 @@ namespace Project_Kothin
             // amount
             // 
             this.amount.AutoSize = true;
-            this.amount.Location = new System.Drawing.Point(995, 361);
+            this.amount.Location = new System.Drawing.Point(995, 427);
             this.amount.Name = "amount";
             this.amount.Size = new System.Drawing.Size(13, 13);
             this.amount.TabIndex = 17;
@@ -236,7 +244,7 @@ namespace Project_Kothin
             // bus
             // 
             this.bus.AutoSize = true;
-            this.bus.Location = new System.Drawing.Point(893, 295);
+            this.bus.Location = new System.Drawing.Point(893, 301);
             this.bus.Name = "bus";
             this.bus.Size = new System.Drawing.Size(59, 13);
             this.bus.TabIndex = 16;
@@ -303,7 +311,7 @@ namespace Project_Kothin
             // class_label
             // 
             this.class_label.AutoSize = true;
-            this.class_label.Location = new System.Drawing.Point(893, 329);
+            this.class_label.Location = new System.Drawing.Point(893, 328);
             this.class_label.Name = "class_label";
             this.class_label.Size = new System.Drawing.Size(35, 13);
             this.class_label.TabIndex = 19;
@@ -312,16 +320,17 @@ namespace Project_Kothin
             // total
             // 
             this.total.AutoSize = true;
-            this.total.Location = new System.Drawing.Point(893, 361);
+            this.total.Location = new System.Drawing.Point(893, 427);
             this.total.Name = "total";
             this.total.Size = new System.Drawing.Size(72, 13);
             this.total.TabIndex = 20;
             this.total.Text = "Total amount:";
+            this.total.Click += new System.EventHandler(this.total_Click);
             // 
             // name
             // 
             this.name.AutoSize = true;
-            this.name.Location = new System.Drawing.Point(893, 266);
+            this.name.Location = new System.Drawing.Point(893, 242);
             this.name.Name = "name";
             this.name.Size = new System.Drawing.Size(81, 13);
             this.name.TabIndex = 21;
@@ -330,7 +339,7 @@ namespace Project_Kothin
             // nom
             // 
             this.nom.AutoSize = true;
-            this.nom.Location = new System.Drawing.Point(995, 266);
+            this.nom.Location = new System.Drawing.Point(995, 242);
             this.nom.Name = "nom";
             this.nom.Size = new System.Drawing.Size(13, 13);
             this.nom.TabIndex = 22;
@@ -339,7 +348,7 @@ namespace Project_Kothin
             // bos
             // 
             this.bos.AutoSize = true;
-            this.bos.Location = new System.Drawing.Point(995, 295);
+            this.bos.Location = new System.Drawing.Point(995, 301);
             this.bos.Name = "bos";
             this.bos.Size = new System.Drawing.Size(13, 13);
             this.bos.TabIndex = 24;
@@ -366,12 +375,92 @@ namespace Project_Kothin
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Welcome,";
             // 
+            // departurelabel
+            // 
+            this.departurelabel.AutoSize = true;
+            this.departurelabel.Location = new System.Drawing.Point(893, 355);
+            this.departurelabel.Name = "departurelabel";
+            this.departurelabel.Size = new System.Drawing.Size(57, 13);
+            this.departurelabel.TabIndex = 27;
+            this.departurelabel.Text = "Departure:";
+            // 
+            // destinationlabel
+            // 
+            this.destinationlabel.AutoSize = true;
+            this.destinationlabel.Location = new System.Drawing.Point(893, 381);
+            this.destinationlabel.Name = "destinationlabel";
+            this.destinationlabel.Size = new System.Drawing.Size(63, 13);
+            this.destinationlabel.TabIndex = 28;
+            this.destinationlabel.Text = "Destination:";
+            // 
+            // dep
+            // 
+            this.dep.AutoSize = true;
+            this.dep.Location = new System.Drawing.Point(995, 355);
+            this.dep.Name = "dep";
+            this.dep.Size = new System.Drawing.Size(57, 13);
+            this.dep.TabIndex = 29;
+            this.dep.Text = "Departure:";
+            // 
+            // des
+            // 
+            this.des.AutoSize = true;
+            this.des.Location = new System.Drawing.Point(995, 381);
+            this.des.Name = "des";
+            this.des.Size = new System.Drawing.Size(57, 13);
+            this.des.TabIndex = 30;
+            this.des.Text = "Departure:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(893, 404);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(33, 13);
+            this.label1.TabIndex = 31;
+            this.label1.Text = "Date:";
+            // 
+            // dateandtime
+            // 
+            this.dateandtime.AutoSize = true;
+            this.dateandtime.Location = new System.Drawing.Point(995, 404);
+            this.dateandtime.Name = "dateandtime";
+            this.dateandtime.Size = new System.Drawing.Size(69, 13);
+            this.dateandtime.TabIndex = 32;
+            this.dateandtime.Text = "Total amoun:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(893, 275);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(72, 13);
+            this.label2.TabIndex = 33;
+            this.label2.Text = "Vehicle Type:";
+            // 
+            // type
+            // 
+            this.type.AutoSize = true;
+            this.type.Location = new System.Drawing.Point(995, 275);
+            this.type.Name = "type";
+            this.type.Size = new System.Drawing.Size(13, 13);
+            this.type.TabIndex = 34;
+            this.type.Text = "0";
+            // 
             // Busseats
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1199, 691);
+            this.Controls.Add(this.type);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.dateandtime);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.des);
+            this.Controls.Add(this.dep);
+            this.Controls.Add(this.destinationlabel);
+            this.Controls.Add(this.departurelabel);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.closs);
             this.Controls.Add(this.bos);
@@ -428,5 +517,13 @@ namespace Project_Kothin
         private System.Windows.Forms.Label bos;
         private System.Windows.Forms.Label closs;
         private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Label departurelabel;
+        private System.Windows.Forms.Label destinationlabel;
+        private System.Windows.Forms.Label dep;
+        private System.Windows.Forms.Label des;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label dateandtime;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label type;
     }
 }

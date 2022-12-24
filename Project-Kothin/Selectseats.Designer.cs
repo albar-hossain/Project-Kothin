@@ -57,6 +57,14 @@ namespace Project_Kothin
             this.amount = new System.Windows.Forms.Label();
             this.Totalamount = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.depa = new System.Windows.Forms.Label();
+            this.dest = new System.Windows.Forms.Label();
+            this.datentime = new System.Windows.Forms.Label();
+            this.dot = new System.Windows.Forms.Label();
             this.Seats.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -238,7 +246,7 @@ namespace Project_Kothin
             // 
             // BackButton1
             // 
-            this.BackButton1.Location = new System.Drawing.Point(1034, 614);
+            this.BackButton1.Location = new System.Drawing.Point(1045, 591);
             this.BackButton1.Name = "BackButton1";
             this.BackButton1.Size = new System.Drawing.Size(107, 35);
             this.BackButton1.TabIndex = 6;
@@ -284,7 +292,7 @@ namespace Project_Kothin
             // closs
             // 
             this.closs.AutoSize = true;
-            this.closs.Location = new System.Drawing.Point(1004, 338);
+            this.closs.Location = new System.Drawing.Point(1109, 312);
             this.closs.Name = "closs";
             this.closs.Size = new System.Drawing.Size(13, 13);
             this.closs.TabIndex = 39;
@@ -293,7 +301,7 @@ namespace Project_Kothin
             // tronName
             // 
             this.tronName.AutoSize = true;
-            this.tronName.Location = new System.Drawing.Point(1004, 305);
+            this.tronName.Location = new System.Drawing.Point(1109, 278);
             this.tronName.Name = "tronName";
             this.tronName.Size = new System.Drawing.Size(13, 13);
             this.tronName.TabIndex = 38;
@@ -302,7 +310,7 @@ namespace Project_Kothin
             // nom
             // 
             this.nom.AutoSize = true;
-            this.nom.Location = new System.Drawing.Point(1004, 276);
+            this.nom.Location = new System.Drawing.Point(1109, 216);
             this.nom.Name = "nom";
             this.nom.Size = new System.Drawing.Size(13, 13);
             this.nom.TabIndex = 37;
@@ -311,7 +319,7 @@ namespace Project_Kothin
             // name
             // 
             this.name.AutoSize = true;
-            this.name.Location = new System.Drawing.Point(879, 276);
+            this.name.Location = new System.Drawing.Point(984, 216);
             this.name.Name = "name";
             this.name.Size = new System.Drawing.Size(81, 13);
             this.name.TabIndex = 36;
@@ -320,7 +328,7 @@ namespace Project_Kothin
             // class_label
             // 
             this.class_label.AutoSize = true;
-            this.class_label.Location = new System.Drawing.Point(879, 339);
+            this.class_label.Location = new System.Drawing.Point(987, 312);
             this.class_label.Name = "class_label";
             this.class_label.Size = new System.Drawing.Size(35, 13);
             this.class_label.TabIndex = 35;
@@ -329,7 +337,7 @@ namespace Project_Kothin
             // trainName
             // 
             this.trainName.AutoSize = true;
-            this.trainName.Location = new System.Drawing.Point(879, 305);
+            this.trainName.Location = new System.Drawing.Point(984, 278);
             this.trainName.Name = "trainName";
             this.trainName.Size = new System.Drawing.Size(65, 13);
             this.trainName.TabIndex = 34;
@@ -338,7 +346,7 @@ namespace Project_Kothin
             // amount
             // 
             this.amount.AutoSize = true;
-            this.amount.Location = new System.Drawing.Point(1004, 370);
+            this.amount.Location = new System.Drawing.Point(1109, 430);
             this.amount.Name = "amount";
             this.amount.Size = new System.Drawing.Size(13, 13);
             this.amount.TabIndex = 33;
@@ -347,7 +355,7 @@ namespace Project_Kothin
             // Totalamount
             // 
             this.Totalamount.AutoSize = true;
-            this.Totalamount.Location = new System.Drawing.Point(879, 370);
+            this.Totalamount.Location = new System.Drawing.Point(987, 430);
             this.Totalamount.Name = "Totalamount";
             this.Totalamount.Size = new System.Drawing.Size(72, 13);
             this.Totalamount.TabIndex = 32;
@@ -364,12 +372,92 @@ namespace Project_Kothin
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Welcome,";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(987, 249);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(72, 13);
+            this.label1.TabIndex = 41;
+            this.label1.Text = "Vehicle Type:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(987, 341);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(57, 13);
+            this.label2.TabIndex = 42;
+            this.label2.Text = "Departure:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(987, 370);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(63, 13);
+            this.label3.TabIndex = 43;
+            this.label3.Text = "Destination:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(1109, 249);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(13, 13);
+            this.label4.TabIndex = 44;
+            this.label4.Text = "0";
+            // 
+            // depa
+            // 
+            this.depa.AutoSize = true;
+            this.depa.Location = new System.Drawing.Point(1109, 341);
+            this.depa.Name = "depa";
+            this.depa.Size = new System.Drawing.Size(13, 13);
+            this.depa.TabIndex = 45;
+            this.depa.Text = "0";
+            // 
+            // dest
+            // 
+            this.dest.AutoSize = true;
+            this.dest.Location = new System.Drawing.Point(1109, 370);
+            this.dest.Name = "dest";
+            this.dest.Size = new System.Drawing.Size(13, 13);
+            this.dest.TabIndex = 46;
+            this.dest.Text = "0";
+            // 
+            // datentime
+            // 
+            this.datentime.AutoSize = true;
+            this.datentime.Location = new System.Drawing.Point(987, 400);
+            this.datentime.Name = "datentime";
+            this.datentime.Size = new System.Drawing.Size(33, 13);
+            this.datentime.TabIndex = 47;
+            this.datentime.Text = "Date:";
+            // 
+            // dot
+            // 
+            this.dot.AutoSize = true;
+            this.dot.Location = new System.Drawing.Point(1109, 400);
+            this.dot.Name = "dot";
+            this.dot.Size = new System.Drawing.Size(13, 13);
+            this.dot.TabIndex = 48;
+            this.dot.Text = "0";
+            // 
             // Selectseats
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1199, 691);
+            this.Controls.Add(this.dot);
+            this.Controls.Add(this.datentime);
+            this.Controls.Add(this.dest);
+            this.Controls.Add(this.depa);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.closs);
             this.Controls.Add(this.tronName);
@@ -426,5 +514,13 @@ namespace Project_Kothin
         private System.Windows.Forms.Label amount;
         private System.Windows.Forms.Label Totalamount;
         private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label depa;
+        private System.Windows.Forms.Label dest;
+        private System.Windows.Forms.Label datentime;
+        private System.Windows.Forms.Label dot;
     }
 }
