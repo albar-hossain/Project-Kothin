@@ -37,12 +37,14 @@
             this.textBoxPostcode = new System.Windows.Forms.TextBox();
             this.newpass = new System.Windows.Forms.TextBox();
             this.textBoxConpass = new System.Windows.Forms.TextBox();
-            this.radioButEmail = new System.Windows.Forms.RadioButton();
-            this.radioButAddress = new System.Windows.Forms.RadioButton();
-            this.radioButtpost = new System.Windows.Forms.RadioButton();
             this.radiobuttPass = new System.Windows.Forms.RadioButton();
             this.conPass = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.updatebutton = new System.Windows.Forms.Button();
+            this.labelEmail = new System.Windows.Forms.Label();
+            this.labelAddress = new System.Windows.Forms.Label();
+            this.labelPostCode = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.viewUpdate = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labelRegFullName
@@ -65,7 +67,7 @@
             this.labelRegPhone.BackColor = System.Drawing.Color.Transparent;
             this.labelRegPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelRegPhone.ForeColor = System.Drawing.Color.Black;
-            this.labelRegPhone.Location = new System.Drawing.Point(156, 69);
+            this.labelRegPhone.Location = new System.Drawing.Point(155, 69);
             this.labelRegPhone.Name = "labelRegPhone";
             this.labelRegPhone.Size = new System.Drawing.Size(89, 29);
             this.labelRegPhone.TabIndex = 6;
@@ -101,32 +103,39 @@
             // 
             // textBoxEmail
             // 
+            this.textBoxEmail.BackColor = System.Drawing.SystemColors.ControlLight;
             this.textBoxEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxEmail.Location = new System.Drawing.Point(307, 152);
             this.textBoxEmail.Name = "textBoxEmail";
+            this.textBoxEmail.ReadOnly = true;
             this.textBoxEmail.Size = new System.Drawing.Size(293, 35);
             this.textBoxEmail.TabIndex = 12;
             this.textBoxEmail.TextChanged += new System.EventHandler(this.textBoxEmail_TextChanged);
             // 
             // textBoxAddress
             // 
+            this.textBoxAddress.BackColor = System.Drawing.SystemColors.ControlLight;
             this.textBoxAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxAddress.Location = new System.Drawing.Point(307, 206);
             this.textBoxAddress.Multiline = true;
             this.textBoxAddress.Name = "textBoxAddress";
+            this.textBoxAddress.ReadOnly = true;
             this.textBoxAddress.Size = new System.Drawing.Size(293, 95);
             this.textBoxAddress.TabIndex = 14;
             // 
             // textBoxPostcode
             // 
+            this.textBoxPostcode.BackColor = System.Drawing.SystemColors.ControlLight;
             this.textBoxPostcode.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxPostcode.Location = new System.Drawing.Point(307, 314);
             this.textBoxPostcode.Name = "textBoxPostcode";
+            this.textBoxPostcode.ReadOnly = true;
             this.textBoxPostcode.Size = new System.Drawing.Size(293, 35);
             this.textBoxPostcode.TabIndex = 15;
             // 
             // newpass
             // 
+            this.newpass.BackColor = System.Drawing.SystemColors.ControlLight;
             this.newpass.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.newpass.Location = new System.Drawing.Point(307, 412);
             this.newpass.Name = "newpass";
@@ -135,53 +144,18 @@
             // 
             // textBoxConpass
             // 
+            this.textBoxConpass.BackColor = System.Drawing.SystemColors.ControlLight;
             this.textBoxConpass.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxConpass.Location = new System.Drawing.Point(307, 453);
             this.textBoxConpass.Name = "textBoxConpass";
             this.textBoxConpass.Size = new System.Drawing.Size(293, 35);
             this.textBoxConpass.TabIndex = 19;
             // 
-            // radioButEmail
-            // 
-            this.radioButEmail.AutoSize = true;
-            this.radioButEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButEmail.Location = new System.Drawing.Point(112, 152);
-            this.radioButEmail.Name = "radioButEmail";
-            this.radioButEmail.Size = new System.Drawing.Size(98, 33);
-            this.radioButEmail.TabIndex = 9;
-            this.radioButEmail.TabStop = true;
-            this.radioButEmail.Text = "Email:";
-            this.radioButEmail.UseVisualStyleBackColor = true;
-            // 
-            // radioButAddress
-            // 
-            this.radioButAddress.AutoSize = true;
-            this.radioButAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButAddress.Location = new System.Drawing.Point(112, 206);
-            this.radioButAddress.Name = "radioButAddress";
-            this.radioButAddress.Size = new System.Drawing.Size(126, 33);
-            this.radioButAddress.TabIndex = 10;
-            this.radioButAddress.TabStop = true;
-            this.radioButAddress.Text = "Address:";
-            this.radioButAddress.UseVisualStyleBackColor = true;
-            // 
-            // radioButtpost
-            // 
-            this.radioButtpost.AutoSize = true;
-            this.radioButtpost.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtpost.Location = new System.Drawing.Point(112, 316);
-            this.radioButtpost.Name = "radioButtpost";
-            this.radioButtpost.Size = new System.Drawing.Size(164, 33);
-            this.radioButtpost.TabIndex = 11;
-            this.radioButtpost.TabStop = true;
-            this.radioButtpost.Text = "Postal code:";
-            this.radioButtpost.UseVisualStyleBackColor = true;
-            // 
             // radiobuttPass
             // 
             this.radiobuttPass.AutoSize = true;
             this.radiobuttPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radiobuttPass.Location = new System.Drawing.Point(102, 412);
+            this.radiobuttPass.Location = new System.Drawing.Point(99, 414);
             this.radiobuttPass.Name = "radiobuttPass";
             this.radiobuttPass.Size = new System.Drawing.Size(174, 33);
             this.radiobuttPass.TabIndex = 16;
@@ -202,21 +176,77 @@
             this.conPass.TabIndex = 18;
             this.conPass.Text = "Confirm Password:";
             // 
-            // button1
+            // updatebutton
             // 
-            this.button1.Location = new System.Drawing.Point(607, 560);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 20;
-            this.button1.Text = "Update";
-            this.button1.UseVisualStyleBackColor = true;
+            this.updatebutton.Location = new System.Drawing.Point(626, 592);
+            this.updatebutton.Name = "updatebutton";
+            this.updatebutton.Size = new System.Drawing.Size(116, 48);
+            this.updatebutton.TabIndex = 20;
+            this.updatebutton.Text = "Update";
+            this.updatebutton.UseVisualStyleBackColor = true;
+            this.updatebutton.Visible = false;
+            this.updatebutton.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // labelEmail
+            // 
+            this.labelEmail.AutoSize = true;
+            this.labelEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelEmail.Location = new System.Drawing.Point(164, 152);
+            this.labelEmail.Name = "labelEmail";
+            this.labelEmail.Size = new System.Drawing.Size(80, 29);
+            this.labelEmail.TabIndex = 21;
+            this.labelEmail.Text = "Email:";
+            // 
+            // labelAddress
+            // 
+            this.labelAddress.AutoSize = true;
+            this.labelAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAddress.Location = new System.Drawing.Point(156, 209);
+            this.labelAddress.Name = "labelAddress";
+            this.labelAddress.Size = new System.Drawing.Size(108, 29);
+            this.labelAddress.TabIndex = 22;
+            this.labelAddress.Text = "Address:";
+            // 
+            // labelPostCode
+            // 
+            this.labelPostCode.AutoSize = true;
+            this.labelPostCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPostCode.Location = new System.Drawing.Point(155, 317);
+            this.labelPostCode.Name = "labelPostCode";
+            this.labelPostCode.Size = new System.Drawing.Size(146, 29);
+            this.labelPostCode.TabIndex = 23;
+            this.labelPostCode.Text = "Postal code:";
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(1012, 617);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(122, 23);
+            this.button2.TabIndex = 24;
+            this.button2.Text = "Delete account";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // viewUpdate
+            // 
+            this.viewUpdate.Location = new System.Drawing.Point(352, 531);
+            this.viewUpdate.Name = "viewUpdate";
+            this.viewUpdate.Size = new System.Drawing.Size(161, 52);
+            this.viewUpdate.TabIndex = 25;
+            this.viewUpdate.Text = "Click to Update any details ";
+            this.viewUpdate.UseVisualStyleBackColor = true;
+            this.viewUpdate.Click += new System.EventHandler(this.viewUpdate_Click);
             // 
             // UserInfoPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1199, 691);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.viewUpdate);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.labelPostCode);
+            this.Controls.Add(this.labelAddress);
+            this.Controls.Add(this.labelEmail);
+            this.Controls.Add(this.updatebutton);
             this.Controls.Add(this.textBoxConpass);
             this.Controls.Add(this.conPass);
             this.Controls.Add(this.newpass);
@@ -224,9 +254,6 @@
             this.Controls.Add(this.textBoxPostcode);
             this.Controls.Add(this.textBoxAddress);
             this.Controls.Add(this.textBoxEmail);
-            this.Controls.Add(this.radioButtpost);
-            this.Controls.Add(this.radioButAddress);
-            this.Controls.Add(this.radioButEmail);
             this.Controls.Add(this.pnumv);
             this.Controls.Add(this.fname);
             this.Controls.Add(this.labelRegPhone);
@@ -250,11 +277,13 @@
         private System.Windows.Forms.TextBox textBoxPostcode;
         private System.Windows.Forms.TextBox newpass;
         private System.Windows.Forms.TextBox textBoxConpass;
-        private System.Windows.Forms.RadioButton radioButEmail;
-        private System.Windows.Forms.RadioButton radioButAddress;
-        private System.Windows.Forms.RadioButton radioButtpost;
         private System.Windows.Forms.RadioButton radiobuttPass;
         private System.Windows.Forms.Label conPass;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button updatebutton;
+        private System.Windows.Forms.Label labelEmail;
+        private System.Windows.Forms.Label labelAddress;
+        private System.Windows.Forms.Label labelPostCode;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button viewUpdate;
     }
 }
