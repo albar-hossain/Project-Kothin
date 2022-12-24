@@ -76,6 +76,31 @@
     <Compile Include="Car.Designer.cs">
       <DependentUpon>Car.cs</DependentUpon>
     </Compile>
+    <Compile Include="PorjotonDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PorjotonDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PorjotonDataSet21.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PorjotonDataSet21.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PorjotonDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PorjotonDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PorjotonDataSet31.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PorjotonDataSet31.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PorjotonDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PorjotonDataSet4.xsd</DependentUpon>
+    </Compile>
     <Compile Include="RentalBus.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -182,6 +207,61 @@
       <DependentUpon>UserInfoPanel.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="PorjotonDataSet11.xsc">
+      <DependentUpon>PorjotonDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="PorjotonDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PorjotonDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PorjotonDataSet11.xss">
+      <DependentUpon>PorjotonDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="PorjotonDataSet21.xsc">
+      <DependentUpon>PorjotonDataSet21.xsd</DependentUpon>
+    </None>
+    <None Include="PorjotonDataSet21.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PorjotonDataSet21.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PorjotonDataSet21.xss">
+      <DependentUpon>PorjotonDataSet21.xsd</DependentUpon>
+    </None>
+    <None Include="PorjotonDataSet3.xsc">
+      <DependentUpon>PorjotonDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="PorjotonDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PorjotonDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PorjotonDataSet3.xss">
+      <DependentUpon>PorjotonDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="PorjotonDataSet31.xsc">
+      <DependentUpon>PorjotonDataSet31.xsd</DependentUpon>
+    </None>
+    <None Include="PorjotonDataSet31.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PorjotonDataSet31.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PorjotonDataSet31.xss">
+      <DependentUpon>PorjotonDataSet31.xsd</DependentUpon>
+    </None>
+    <None Include="PorjotonDataSet4.xsc">
+      <DependentUpon>PorjotonDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="PorjotonDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PorjotonDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PorjotonDataSet4.xss">
+      <DependentUpon>PorjotonDataSet4.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

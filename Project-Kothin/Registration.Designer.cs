@@ -397,7 +397,7 @@
             this.labelWrongZip.BackColor = System.Drawing.Color.Transparent;
             this.labelWrongZip.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelWrongZip.ForeColor = System.Drawing.Color.Red;
-            this.labelWrongZip.Location = new System.Drawing.Point(492, 385);
+            this.labelWrongZip.Location = new System.Drawing.Point(492, 390);
             this.labelWrongZip.Name = "labelWrongZip";
             this.labelWrongZip.Size = new System.Drawing.Size(25, 20);
             this.labelWrongZip.TabIndex = 30;
