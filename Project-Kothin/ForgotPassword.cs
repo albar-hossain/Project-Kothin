@@ -201,5 +201,10 @@ namespace Project_Kothin
             pictureBoxShowPass.Visible = true;
             pictureBoxHidePass.Visible = false;
         }
+
+        private void textBoxResetNewPassword_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

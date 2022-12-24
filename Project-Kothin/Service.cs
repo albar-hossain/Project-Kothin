@@ -13,6 +13,7 @@ namespace Project_Kothin
 {
     public partial class Service : Form
     {
+        public string v1;
         private const int CB_SETCUEBANNER = 0x1703;
 
         [System.Runtime.InteropServices.DllImport("user32.dll", CharSet = System.Runtime.InteropServices.CharSet.Auto)]
@@ -29,14 +30,16 @@ namespace Project_Kothin
 
             InitializeComponent();
             SendMessage(this.Ticketbox.Handle, CB_SETCUEBANNER, 0, "Please select an item...");
-             linkLabel1.Text=username;
+            v1= username;
+            linkLabel1.Text=username;
             SqlConnection conn = null;
             try
             {
-                conn = new SqlConnection(@"Data Source=DESKTOP-5NMO71P\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True ");
+                conn = new SqlConnection(@"Data Source=DESKTOP-9DIP61O\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//azwad
+                //conn = new SqlConnection(@"Data Source=DESKTOP-5NMO71P\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True ");
                 conn.Open();
 
-                string query = $"select FullName from UserInfo where Phone={linkLabel1.Text}";
+                string query = $"select FullName from UserInfo where Phone={v1}";
                 SqlCommand cmd = new SqlCommand(query, conn);
                 DataSet ds = new DataSet();
                 SqlDataAdapter adp = new SqlDataAdapter(cmd);
@@ -144,7 +147,7 @@ namespace Project_Kothin
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            UserInfoPanel u1 = new UserInfoPanel();
+            UserInfoPanel u1 = new UserInfoPanel(v1);
             u1.Show();
             
         }

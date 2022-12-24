@@ -39,6 +39,7 @@ namespace Project_Kothin
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.SEARCHBUS = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.BackButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // SEARCHTRAIN
@@ -68,6 +69,7 @@ namespace Project_Kothin
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 5;
             this.dateTimePicker1.Value = new System.DateTime(2022, 12, 9, 0, 0, 0, 0);
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // label2
             // 
@@ -141,6 +143,16 @@ namespace Project_Kothin
             this.label3.TabIndex = 10;
             this.label3.Text = "label1";
             // 
+            // BackButton
+            // 
+            this.BackButton.Location = new System.Drawing.Point(1043, 579);
+            this.BackButton.Name = "BackButton";
+            this.BackButton.Size = new System.Drawing.Size(107, 35);
+            this.BackButton.TabIndex = 12;
+            this.BackButton.Text = "Back";
+            this.BackButton.UseVisualStyleBackColor = true;
+            this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
+            // 
             // Ticket
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -148,6 +160,7 @@ namespace Project_Kothin
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1199, 691);
+            this.Controls.Add(this.BackButton);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.SEARCHBUS);
             this.Controls.Add(this.label4);
@@ -177,5 +190,6 @@ namespace Project_Kothin
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button SEARCHBUS;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button BackButton;
     }
 }

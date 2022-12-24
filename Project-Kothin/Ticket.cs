@@ -19,20 +19,26 @@ namespace Project_Kothin
         public Ticket()
         {
             InitializeComponent();
+            
         }
         public Ticket(string id)
         {
             InitializeComponent();
+            dateTimePicker1.MinDate = DateTime.Now;
+            
+
             SendMessage(this.comboBox1.Handle, CB_SETCUEBANNER, 0, "Please select Depurture location...");
             SendMessage(this.comboBox2.Handle, CB_SETCUEBANNER, 0, "Please select Destination...");
 
             label3.Text = id;
             if (label3.Text == "Train")
             {
+                dateTimePicker1.MaxDate = DateTime.Now.AddDays(5);
                 SEARCHTRAIN.Visible = true;
             }
             else if (label3.Text == "Bus")
             {
+                dateTimePicker1.MaxDate = DateTime.Now.AddDays(30);
                 SEARCHBUS.Visible = true;
             }
 
@@ -103,6 +109,16 @@ namespace Project_Kothin
         private void label5_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BackButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
