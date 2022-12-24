@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,7 @@ namespace Project_Kothin
 {
     public partial class Ticket : Form
     {
+        public string phone;
         private const int CB_SETCUEBANNER = 0x1703;
 
         [System.Runtime.InteropServices.DllImport("user32.dll", CharSet = System.Runtime.InteropServices.CharSet.Auto)]
@@ -21,7 +23,7 @@ namespace Project_Kothin
             InitializeComponent();
             
         }
-        public Ticket(string id)
+        public Ticket(string id,string username)
         {
             InitializeComponent();
             dateTimePicker1.MinDate = DateTime.Now;
@@ -40,6 +42,31 @@ namespace Project_Kothin
             {
                 dateTimePicker1.MaxDate = DateTime.Now.AddDays(30);
                 SEARCHBUS.Visible = true;
+            }
+           // ticketlabel.Text = username;
+            phone = username;
+            SqlConnection conn = null;
+            try
+            {
+                conn = new SqlConnection(@"Data Source=DESKTOP-5NMO71P\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True ");
+                conn.Open();
+
+                string query =$"select FullName from UserInfo where Phone = {phone}";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                DataSet ds = new DataSet();
+                SqlDataAdapter adp = new SqlDataAdapter(cmd);
+                adp.Fill(ds);
+                DataTable dt = ds.Tables[0];
+                string val = dt.Rows[0]["FullName"].ToString();
+                ticketlabel.Text = val;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
             }
 
         }
@@ -69,7 +96,7 @@ namespace Project_Kothin
         {
             if (comboBox1.SelectedIndex != comboBox2.SelectedIndex && comboBox1.SelectedIndex != -1 && comboBox2.SelectedIndex != -1)
             {
-                Selectseats s1 = new Selectseats();
+                Selectseats s1 = new Selectseats(phone);
                 s1.Show();
             }
 
@@ -94,7 +121,7 @@ namespace Project_Kothin
         {
             if (comboBox1.SelectedIndex != comboBox2.SelectedIndex && comboBox1.SelectedIndex != -1 && comboBox2.SelectedIndex != -1)
             { 
-                Busseats b1 = new Busseats();
+                Busseats b1 = new Busseats(phone);
                 b1.Show();
             }
 
