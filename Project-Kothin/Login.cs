@@ -87,7 +87,8 @@ namespace Project_Kothin
                 try
                 {
                     //conn = new SqlConnection(@"Data Source=SKRILLEXOMG\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");
-                    conn = new SqlConnection(@"Data Source=DESKTOP-9DIP61O\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");
+                    //conn = new SqlConnection(@"Data Source=DESKTOP-9DIP61O\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");
+                    conn = new SqlConnection(@"Data Source=DESKTOP-5NMO71P\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");
                     conn.Open();
 
                     string query = $"select Password from UserInfo where Phone = {Phone}";
@@ -100,7 +101,7 @@ namespace Project_Kothin
 
                     if (val == textBoxPassword.Text)
                     {
-                        Service p1 = new Service();
+                        Service p1 = new Service(textBoxPhone.Text);
                         p1.Show();
                         tryCount = 0;
                         textBoxPassword.Clear();

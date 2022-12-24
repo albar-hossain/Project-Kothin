@@ -51,7 +51,7 @@
             this.labelService.AutoSize = true;
             this.labelService.BackColor = System.Drawing.Color.Transparent;
             this.labelService.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelService.Location = new System.Drawing.Point(543, 219);
+            this.labelService.Location = new System.Drawing.Point(543, 259);
             this.labelService.Name = "labelService";
             this.labelService.Size = new System.Drawing.Size(96, 24);
             this.labelService.TabIndex = 2;

@@ -116,6 +116,7 @@ namespace Project_Kothin
 
                     SqlCommand cmd = new SqlCommand(query, conn);
                     cmd.ExecuteNonQuery();
+    
                 }
                 catch (Exception ex)
                 {
