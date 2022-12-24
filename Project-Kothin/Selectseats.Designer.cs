@@ -65,6 +65,7 @@ namespace Project_Kothin
             this.dest = new System.Windows.Forms.Label();
             this.datentime = new System.Windows.Forms.Label();
             this.dot = new System.Windows.Forms.Label();
+            this.pdf = new System.Windows.Forms.Button();
             this.Seats.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -444,12 +445,23 @@ namespace Project_Kothin
             this.dot.TabIndex = 48;
             this.dot.Text = "0";
             // 
+            // pdf
+            // 
+            this.pdf.Location = new System.Drawing.Point(990, 468);
+            this.pdf.Name = "pdf";
+            this.pdf.Size = new System.Drawing.Size(142, 23);
+            this.pdf.TabIndex = 49;
+            this.pdf.Text = "Download Invoice";
+            this.pdf.UseVisualStyleBackColor = true;
+            this.pdf.Click += new System.EventHandler(this.pdf_Click);
+            // 
             // Selectseats
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1199, 691);
+            this.Controls.Add(this.pdf);
             this.Controls.Add(this.dot);
             this.Controls.Add(this.datentime);
             this.Controls.Add(this.dest);
@@ -522,5 +534,6 @@ namespace Project_Kothin
         private System.Windows.Forms.Label dest;
         private System.Windows.Forms.Label datentime;
         private System.Windows.Forms.Label dot;
+        private System.Windows.Forms.Button pdf;
     }
 }
