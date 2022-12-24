@@ -13,6 +13,7 @@ namespace Project_Kothin
         private string oldAddress;
         private string oldPostCode;
         private String Phone;
+        private string passCheck;
 
         public UserInfoPanel()
         {
@@ -81,7 +82,7 @@ namespace Project_Kothin
                 oldEmail = val3;
                 oldAddress = val4;
                 oldPostCode = val5;
-                
+
                 //pnumv.Text = Phone;
             }
             catch (Exception ex)
@@ -123,18 +124,20 @@ namespace Project_Kothin
 
         private void button1_Click(object sender, EventArgs e)
         {
+
+            //string query = $"select Email,Adress,PostCode from UserInfo Where phone ='{Phone}' ";
             if (
 
                 (textBoxPostcode.Text != "" && textBoxPostcode.Text != oldPostCode) ||
                 (textBoxEmail.Text != "" && textBoxEmail.Text != oldEmail) ||
                 (textBoxAddress.Text != "" && textBoxAddress.Text != oldAddress)
-                //||(newpass.Text!=""&& newpass.Text!=oldPass && newpass.Text==conPass.Text)
+                
                 )
             {
                 SqlConnection conn = null;
                 try
                 {
-                    conn = new SqlConnection(@"Data Source=DESKTOP-9DIP61O\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");
+                    conn = new SqlConnection(@"Data Source=DESKTOP-9DIP61O\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//azwad
 
                     conn.Open();
 
@@ -145,7 +148,7 @@ namespace Project_Kothin
                     string updatePhone = pnumv.Text;
                     //MessageBox.Show(Phone);
 
-                    string query = $"update UserInfo set Email = '{updateEmail}', Address = '{updateAddress}', PostCode = '{updatePostcode}', where Phone = '{Phone}';";
+                    string query = $"update UserInfo set Email = '{updateEmail}', Address = '{updateAddress}', PostCode = '{updatePostcode}' where Phone = '{Phone}';";
 
                     SqlCommand cmd = new SqlCommand(query, conn);
                     SqlDataAdapter adp = new SqlDataAdapter(cmd);
@@ -162,6 +165,19 @@ namespace Project_Kothin
                     conn.Close();
                 }
                 MessageBox.Show("Information Updated.");
+                updatebutton.Visible= false;
+                textBoxEmail.ReadOnly = true;
+                textBoxAddress.ReadOnly=true;
+                textBoxPostcode.ReadOnly = true;
+                viewUpdate.Visible = true;
+                textBoxEmail.ForeColor = Color.Black;
+                textBoxEmail.BackColor = Color.MistyRose;
+
+                textBoxAddress.ForeColor = Color.Black;
+                textBoxAddress.BackColor = Color.MistyRose;
+
+                textBoxPostcode.ForeColor = Color.Black;
+                textBoxPostcode.BackColor = Color.MistyRose;
             }
             else
             {
@@ -172,13 +188,13 @@ namespace Project_Kothin
         private void viewUpdate_Click(object sender, EventArgs e)
         {
             viewUpdate.Visible = false;
-            textBoxEmail.ForeColor = Color.White;
+            textBoxEmail.ForeColor = Color.Black;
             textBoxEmail.BackColor = Color.DimGray;
 
-            textBoxAddress.ForeColor = Color.White;
+            textBoxAddress.ForeColor = Color.Black;
             textBoxAddress.BackColor = Color.DimGray;
 
-            textBoxPostcode.ForeColor = Color.White;
+            textBoxPostcode.ForeColor = Color.Black;
             textBoxPostcode.BackColor = Color.DimGray;
 
             textBoxEmail.ReadOnly = false;
@@ -247,6 +263,12 @@ namespace Project_Kothin
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+           
+
+            textBoxConpass.Clear();
+            button3.Visible= true;
+            updatebutton.Visible = false;
+
             newpass.ForeColor = Color.White;
 
             newpass.BackColor = Color.DimGray;
@@ -258,7 +280,6 @@ namespace Project_Kothin
             textBoxConpass.BackColor = Color.DimGray;
             viewUpdate.Visible = false;
 
-            updatebutton.Visible = true;
             button1.Visible = false;
         }
 
@@ -293,6 +314,86 @@ namespace Project_Kothin
             {
                 labelConPassRight.Visible = false;
                 labelConPassWrong.Visible = true;
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            SqlConnection conn = null;
+            try
+            {
+                conn = new SqlConnection(@"Data Source=DESKTOP-9DIP61O\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//azwad
+
+                conn.Open();
+
+                string query = $"select Password from UserInfo Where phone ='{Phone}' ";
+
+
+                SqlCommand cmd = new SqlCommand(query, conn);
+                DataSet ds = new DataSet();
+                SqlDataAdapter adp = new SqlDataAdapter(cmd);
+                adp.Fill(ds);
+                DataTable dt = ds.Tables[0];
+                string valueP = dt.Rows[0]["Password"].ToString();
+
+                passCheck = valueP;
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+
+
+            if ((newpass.Text != "") &&  (newpass.Text == textBoxConpass.Text) && (passCheck != newpass.Text))
+
+            {
+                //SqlConnection conn = null;
+                try
+                {
+                    conn = new SqlConnection(@"Data Source=DESKTOP-9DIP61O\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//azwad
+
+                    conn.Open();
+
+                    string updatedpass = newpass.Text;
+
+
+
+                    string query = $"update UserInfo set Password = '{updatedpass}'where Phone = '{Phone}';";
+
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    SqlDataAdapter adp = new SqlDataAdapter(cmd);
+                    DataSet ds = new DataSet();
+
+                    adp.Fill(ds);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    conn.Close();
+                }
+                MessageBox.Show("Password Updated");
+                button3.Visible= false;
+                newpass.Visible= false;
+                textBoxConpass.Visible= false;
+                viewUpdate.Visible= true;
+                label1.Visible= false;
+                conPass.Visible= false;
+                button1.Visible = true;
+
+            }
+            else
+            {
+                MessageBox.Show("Password Invalid");
             }
         }
     }
