@@ -34,6 +34,23 @@ namespace Project_Kothin
 
         private void Admin_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'porjotonDataSet.TicketInfo' table. You can move, or remove it, as needed.
+            this.ticketInfoTableAdapter1.Fill(this.porjotonDataSet.TicketInfo);
+            // TODO: This line of code loads data into the 'porjotonDataSet3.TicketInfo' table. You can move, or remove it, as needed.
+            this.ticketInfoTableAdapter.Fill(this.porjotonDataSet3.TicketInfo);
+
+        }
+
+        private void fillByToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.userInfoTableAdapter.FillBy(this.porjotonDataSet2.UserInfo);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
 
         }
     }
