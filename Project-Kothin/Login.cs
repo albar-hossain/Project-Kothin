@@ -90,17 +90,19 @@ namespace Project_Kothin
                     conn = new SqlConnection(@"Data Source=DESKTOP-9DIP61O\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");
                     conn.Open();
 
-                    string query = $"select Password from UserInfo where Phone = {Phone}";
+                    string query = $"select Password, FullName, Phone from UserInfo where Phone = {Phone}";
                     SqlCommand cmd = new SqlCommand(query, conn);
                     DataSet ds = new DataSet();
                     SqlDataAdapter adp = new SqlDataAdapter(cmd);
                     adp.Fill(ds);
                     DataTable dt = ds.Tables[0];
                     string val = dt.Rows[0]["Password"].ToString();
+                    string fname = dt.Rows[0]["FullName"].ToString();
+                    string phn = dt.Rows[0]["Phone"].ToString();
 
                     if (val == textBoxPassword.Text)
                     {
-                        Service p1 = new Service();
+                        Service p1 = new Service(fname,phn);
                         p1.Show();
                         tryCount = 0;
                         textBoxPassword.Clear();
