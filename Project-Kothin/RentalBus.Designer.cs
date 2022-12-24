@@ -347,7 +347,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(19F, 37F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(3797, 1967);
+            this.ClientSize = new System.Drawing.Size(1179, 627);
             this.Controls.Add(this.DurationRec);
             this.Controls.Add(this.DepRec);
             this.Controls.Add(this.ClassRec);
@@ -376,8 +376,11 @@
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
+            this.MinimumSize = new System.Drawing.Size(1215, 730);
             this.Name = "RentalBus";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bus";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.RentalBus_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

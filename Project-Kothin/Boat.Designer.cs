@@ -371,11 +371,13 @@
             this.Controls.Add(this.Destination);
             this.Controls.Add(this.boatchoice);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
             this.Name = "Boat";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Boat";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Boat1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -381,6 +381,7 @@
             this.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
             this.Name = "Car";
             this.Text = "Car";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Car_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
