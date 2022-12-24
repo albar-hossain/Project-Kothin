@@ -14,6 +14,7 @@ namespace Project_Kothin
     public partial class Service : Form
     {
         public string phone;
+        public string fullName;
         private const int CB_SETCUEBANNER = 0x1703;
 
         [System.Runtime.InteropServices.DllImport("user32.dll", CharSet = System.Runtime.InteropServices.CharSet.Auto)]
@@ -25,19 +26,20 @@ namespace Project_Kothin
 
             SendMessage(this.Ticketbox.Handle, CB_SETCUEBANNER, 0, "Please select an item...");
         }
-        public Service(string username)
+        public Service(string username, string fullname)
         {   
 
             InitializeComponent();
             SendMessage(this.Ticketbox.Handle, CB_SETCUEBANNER, 0, "Please select an item...");
              linkLabel1.Text=username;
             phone = username;
-            
+            fullName = fullname;
             SqlConnection conn = null;
             try
             {
-                conn = new SqlConnection(@"Data Source=DESKTOP-5NMO71P\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True ");
+                //conn = new SqlConnection(@"Data Source=DESKTOP-5NMO71P\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True ");
                 //conn = new SqlConnection(@"Data Source=DESKTOP-9DIP61O\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//azwad
+                conn = new SqlConnection(@"Data Source=DESKTOP-BMD47A3\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True"); //risan
                 conn.Open();
 
                 string query =$"select FullName from UserInfo where Phone={linkLabel1.Text}";
@@ -127,17 +129,17 @@ namespace Project_Kothin
             }
             if (rentalBox.Text == "Car")
             {
-                Car it = new Car();
+                Car it = new Car(fullName, phone);
                 it.Show();
             }
             else if (rentalBox.Text == "Boat")
             {
-                Boat it = new Boat();
+                Boat it = new Boat(fullName, phone);
                 it.Show();
             }
             else if (rentalBox.Text == "Bus")
             {
-                RentalBus it = new RentalBus();
+                RentalBus it = new RentalBus(fullName, phone);
                 it.Show();
             }
         }

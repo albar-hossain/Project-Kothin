@@ -110,7 +110,8 @@ namespace Project_Kothin
                 SqlConnection conn = null;
                 try
                 {
-                    conn = new SqlConnection(@"Data Source=SKRILLEXOMG\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");
+                    //conn = new SqlConnection(@"Data Source=SKRILLEXOMG\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");
+                    conn = new SqlConnection(@"Data Source=DESKTOP-BMD47A3\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");
                     conn.Open();
                     string query = $"insert into UserInfo (FullName, Phone, Email, Address, PostCode, Password, RecoveryCode) VALUES ('{FullName}','{Phone}','{Email}','{Address}','{PostCode}','{Password}','{RecoveryCode}')";
 
