@@ -11,12 +11,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using IronPdf;
 
 namespace Project_Kothin
 {
     public partial class Selectseats : Form
     {
         public string phone;
+        private static double invoice = 0001d;
         private bool flag1 = true;
         private bool flag2 = true;
         private bool flag3 = true;
@@ -795,6 +797,13 @@ namespace Project_Kothin
         {
         }
 
-       
+        private void pdf_Click(object sender, EventArgs e)
+        {
+            var Renderer = new ChromePdfRenderer(); // Instantiates Chrome Renderer
+            var pdf = Renderer.RenderHtmlAsPdf($" <div bgcolor=\"#f6f6f6\" style=\"color: #333; height: 100%; width: 100%;\" height=\"100%\" width=\"100%\"> <table bgcolor=\"#f6f6f6\" cellspacing=\"0\" style=\"border-collapse: collapse; padding: 40px; width: 100%;\" width=\"100%\"> <tbody> <tr> <td width=\"5px\" style=\"padding: 0;\"></td><td style=\"clear: both; display: block; margin: 0 auto; max-width: 600px; padding: 10px 0;\"> <table width=\"100%\" cellspacing=\"0\" style=\"border-collapse: collapse;\"> <tbody> <tr> <td style=\"padding: 0;\"> <a href=\"#\" style=\"color: #348eda;\" target=\"_blank\"> <img src=\"porjotonLogo.png\" alt=\"Porjoton\" style=\"height: 150px; max-width: 100%; width: 170px;\" height=\"90\" width=\"170\"/> </a> </td><td style=\"color: #999; font-size: 12px; padding: 0; text-align: right;\" align=\"right\"> Porjoton Invoice Service<br/> Invoice #{invoice}<br/> {dot.Text}</td></tr></tbody> </table> </td><td width=\"5px\" style=\"padding: 0;\"></td></tr><tr> <td width=\"5px\" style=\"padding: 0;\"></td><td bgcolor=\"#FFFFFF\" style=\"border: 1px solid #000; clear: both; display: block; margin: 0 auto; max-width: 600px; padding: 0;\"> <table width=\"100%\" style=\"background: #f9f9f9; border-bottom: 1px solid #eee; border-collapse: collapse; color: #999;\"> <tbody> <tr> <td width=\"50%\" style=\"padding: 20px;\"><strong style=\"color: #333; font-size: 24px;\">BDT {amount.Text}</strong> Paid</td><td align=\"right\" width=\"50%\" style=\"padding: 20px;\">{linkLabel1.Text}<br>{dot.Text}<br> <span class=\"il\">{nom.Text}</span></td></tr></tbody> </table> </td><td style=\"padding: 0;\"></td><td width=\"5px\" style=\"padding: 0;\"></td></tr><tr> <td width=\"5px\" style=\"padding: 0;\"></td><td style=\"border: 1px solid #000; border-top: 0; clear: both; display: block; margin: 0 auto; max-width: 600px; padding: 0;\"> <table cellspacing=\"0\" style=\"border-collapse: collapse; border-left: 1px solid #000; margin: 0 auto; max-width: 600px;\"> <tbody> <tr> <td valign=\"top\" style=\"padding: 20px;\"> <h3 style=\" border-bottom: 1px solid #000; color: #000; font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif; font-size: 18px; font-weight: bold; line-height: 1.2; margin: 0; margin-bottom: 15px; padding-bottom: 5px; \"> Summary </h3> <table cellspacing=\"0\" style=\"border-collapse: collapse; margin-bottom: 40px;\"> <tbody> <tr> <td style=\"padding: 5px 0;\">Vehicle: </td><td align=\"right\" style=\"padding: 5px 0;\">BDT {label4.Text}</td></tr><tr> <td style=\"padding: 5px 0;\">Class: </td><td align=\"right\" style=\"padding: 5px 0;\">BDT {closs.Text}</td></tr><tr> <td style=\"padding: 5px 0;\">Amount: </td><td align=\"right\" style=\"padding: 5px 0;\">BDT {amount.Text}</td></tr><tr> <td style=\"border-bottom: 2px solid #000; border-top: 2px solid #000; font-weight: bold; padding: 5px 0;\"> Paid</td><td align=\"right\" style=\"border-bottom: 2px solid #000; border-top: 2px solid #000; font-weight: bold; padding: 5px 0;\"> BDT {amount.Text}</td></tr></tbody> </table> </td></tr></tbody> </table> </td><td width=\"5px\" style=\"padding: 0;\"></td></tr><tr style=\"color: #666; font-size: 12px;\"> <td width=\"5px\" style=\"padding: 10px 0;\"></td><td style=\"clear: both; display: block; margin: 0 auto; max-width: 600px; padding: 10px 0;\"> <table width=\"100%\" cellspacing=\"0\" style=\"border-collapse: collapse;\"> <tbody> <tr> <td width=\"40%\" valign=\"top\" style=\"padding: 10px 0;\"> <h4 style=\"margin: 0;\">Questions?</h4> <p style=\"color: #666; font-size: 12px; font-weight: normal; margin-bottom: 10px;\"> Please visit our <a href=\"https://github.com/albar-hossain/Project-Kothin\" style=\"color: #666;\" target=\"_blank\"> Support Center </a> with any questions. </p></td><td width=\"10%\" style=\"padding: 10px 0;\">&nbsp;</td><td width=\"40%\" valign=\"top\" align=\"right\" style=\"padding: 10px 0;\"> <h4 style=\"margin: 0;\"><span class=\"il\">Porjoton Ticket & Rental Services</span></h4> <p style=\"color: #666; font-size: 12px; font-weight: normal; margin-bottom: 10px;\"> <a href=\"https://goo.gl/maps/nMbT6TePKn5ENMXe8\">408/1, Kuratoli, 1229</a> </p></td></tr></tbody> </table> </td><td width=\"5px\" style=\"padding: 10px 0;\"></td></tr></tbody> </table> </div>" +
+                " <style>body{margin-top: 100px;}</style>");
+            pdf.SaveAs($"D:/{invoice}Invoice.pdf"); // Saves our PdfDocument object as a PDF
+            invoice++;
+        }
     }
 }
