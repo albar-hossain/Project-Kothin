@@ -15,7 +15,6 @@ namespace Project_Kothin
         {
             InitializeComponent();
         }
-        
 
         private void Registration_Load(object sender, EventArgs e)
         {
@@ -86,10 +85,10 @@ namespace Project_Kothin
                 SqlConnection conn = null;
                 try
                 {
-                    //conn = new SqlConnection(@"Data Source=SKRILLEXOMG\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");
-                   //conn = new SqlConnection(@"Data Source=DESKTOP-9DIP61O\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//azwad
-                    conn = new SqlConnection(@"Data Source=DESKTOP-5NMO71P\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True"); //arif
-                    //conn = new SqlConnection(@"Data Source=DESKTOP-BMD47A3\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True"); //risan
+                    conn = new SqlConnection(@"Data Source=SKRILLEXOMG\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True"); //Albar
+                                                                                                                                       //conn = new SqlConnection(@"Data Source=DESKTOP-9DIP61O\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//Azwad
+                                                                                                                                       //conn = new SqlConnection(@"Data Source=DESKTOP-5NMO71P\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True"); //Arif
+                                                                                                                                       //conn = new SqlConnection(@"Data Source=DESKTOP-BMD47A3\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True"); //risan
 
                     conn.Open();
 
@@ -106,7 +105,7 @@ namespace Project_Kothin
 
                     if (val == textBoxPassword.Text)
                     {
-                        Service p1 = new Service(phn,fname);
+                        Service p1 = new Service(phn, fname);
                         Ticket t1 = new Ticket("", textBoxPhone.Text);
                         p1.Show();
                         tryCount = 0;
@@ -118,7 +117,7 @@ namespace Project_Kothin
                         MessageBox.Show("Invalid Password.");
                         tryCount++;
                     }
-                    //Add logic to make user reset password after 3 tries / ban user
+
                     if (tryCount > 2)
                     {
                         MessageBox.Show("Please Reset Your Password!");
@@ -134,16 +133,9 @@ namespace Project_Kothin
                 {
                     conn.Close();
                 }
-
-
-
-                //else
-                //{
-                //    Service p1 = new Service();
-                //    p1.Show();
-                //}
             }
         }
+
         private void textBoxPhone_TextChanged(object sender, EventArgs e)
         {
         }

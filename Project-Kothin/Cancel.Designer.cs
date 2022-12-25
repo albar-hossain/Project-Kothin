@@ -68,6 +68,23 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.bus = new System.Windows.Forms.Label();
+            this.buttonCancelBus = new System.Windows.Forms.Button();
+            this.buttonCancleBoat = new System.Windows.Forms.Button();
+            this.buttonCancleCar = new System.Windows.Forms.Button();
+            this.DurationRec = new System.Windows.Forms.Label();
+            this.DepRec = new System.Windows.Forms.Label();
+            this.ClassRec = new System.Windows.Forms.Label();
+            this.TypeRec = new System.Windows.Forms.Label();
+            this.DesRec = new System.Windows.Forms.Label();
+            this.phoneRec = new System.Windows.Forms.Label();
+            this.labelRentalDepartureDate = new System.Windows.Forms.Label();
+            this.labelRentalDuration = new System.Windows.Forms.Label();
+            this.labelRentalClass = new System.Windows.Forms.Label();
+            this.labelRentalType = new System.Windows.Forms.Label();
+            this.labelRentalDestination = new System.Windows.Forms.Label();
+            this.labelRentalPhone = new System.Windows.Forms.Label();
+            this.DecBalance = new System.Windows.Forms.Label();
+            this.labelRentalBalance = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // linkLabelRegClose
@@ -88,7 +105,7 @@
             // 
             // buttonCancelTicket
             // 
-            this.buttonCancelTicket.Location = new System.Drawing.Point(454, 70);
+            this.buttonCancelTicket.Location = new System.Drawing.Point(165, 54);
             this.buttonCancelTicket.Name = "buttonCancelTicket";
             this.buttonCancelTicket.Size = new System.Drawing.Size(115, 43);
             this.buttonCancelTicket.TabIndex = 36;
@@ -98,12 +115,13 @@
             // 
             // buttonCancelRental
             // 
-            this.buttonCancelRental.Location = new System.Drawing.Point(857, 70);
+            this.buttonCancelRental.Location = new System.Drawing.Point(848, 70);
             this.buttonCancelRental.Name = "buttonCancelRental";
             this.buttonCancelRental.Size = new System.Drawing.Size(106, 43);
             this.buttonCancelRental.TabIndex = 37;
             this.buttonCancelRental.Text = "Cancel Rental";
             this.buttonCancelRental.UseVisualStyleBackColor = true;
+            this.buttonCancelRental.Click += new System.EventHandler(this.buttonCancelRental_Click);
             // 
             // dot
             // 
@@ -278,7 +296,7 @@
             // 
             // buttonCancelconRent
             // 
-            this.buttonCancelconRent.Location = new System.Drawing.Point(834, 431);
+            this.buttonCancelconRent.Location = new System.Drawing.Point(845, 481);
             this.buttonCancelconRent.Name = "buttonCancelconRent";
             this.buttonCancelconRent.Size = new System.Drawing.Size(118, 37);
             this.buttonCancelconRent.TabIndex = 66;
@@ -478,11 +496,208 @@
             this.bus.Text = "Bus Name:";
             this.bus.Visible = false;
             // 
+            // buttonCancelBus
+            // 
+            this.buttonCancelBus.Location = new System.Drawing.Point(672, 156);
+            this.buttonCancelBus.Name = "buttonCancelBus";
+            this.buttonCancelBus.Size = new System.Drawing.Size(115, 43);
+            this.buttonCancelBus.TabIndex = 86;
+            this.buttonCancelBus.Text = "Cancel Bus";
+            this.buttonCancelBus.UseVisualStyleBackColor = true;
+            this.buttonCancelBus.Visible = false;
+            // 
+            // buttonCancleBoat
+            // 
+            this.buttonCancleBoat.Location = new System.Drawing.Point(848, 156);
+            this.buttonCancleBoat.Name = "buttonCancleBoat";
+            this.buttonCancleBoat.Size = new System.Drawing.Size(115, 43);
+            this.buttonCancleBoat.TabIndex = 87;
+            this.buttonCancleBoat.Text = "Cancel Boat";
+            this.buttonCancleBoat.UseVisualStyleBackColor = true;
+            this.buttonCancleBoat.Visible = false;
+            // 
+            // buttonCancleCar
+            // 
+            this.buttonCancleCar.Location = new System.Drawing.Point(1018, 156);
+            this.buttonCancleCar.Name = "buttonCancleCar";
+            this.buttonCancleCar.Size = new System.Drawing.Size(115, 43);
+            this.buttonCancleCar.TabIndex = 88;
+            this.buttonCancleCar.Text = "Cancel Car";
+            this.buttonCancleCar.UseVisualStyleBackColor = true;
+            this.buttonCancleCar.Visible = false;
+            // 
+            // DurationRec
+            // 
+            this.DurationRec.AutoSize = true;
+            this.DurationRec.BackColor = System.Drawing.Color.Transparent;
+            this.DurationRec.Location = new System.Drawing.Point(904, 350);
+            this.DurationRec.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.DurationRec.Name = "DurationRec";
+            this.DurationRec.Size = new System.Drawing.Size(13, 13);
+            this.DurationRec.TabIndex = 102;
+            this.DurationRec.Text = "0";
+            // 
+            // DepRec
+            // 
+            this.DepRec.AutoSize = true;
+            this.DepRec.BackColor = System.Drawing.Color.Transparent;
+            this.DepRec.Location = new System.Drawing.Point(906, 327);
+            this.DepRec.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.DepRec.Name = "DepRec";
+            this.DepRec.Size = new System.Drawing.Size(13, 13);
+            this.DepRec.TabIndex = 101;
+            this.DepRec.Text = "0";
+            // 
+            // ClassRec
+            // 
+            this.ClassRec.AutoSize = true;
+            this.ClassRec.BackColor = System.Drawing.Color.Transparent;
+            this.ClassRec.Location = new System.Drawing.Point(900, 298);
+            this.ClassRec.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.ClassRec.Name = "ClassRec";
+            this.ClassRec.Size = new System.Drawing.Size(13, 13);
+            this.ClassRec.TabIndex = 100;
+            this.ClassRec.Text = "0";
+            // 
+            // TypeRec
+            // 
+            this.TypeRec.AutoSize = true;
+            this.TypeRec.BackColor = System.Drawing.Color.Transparent;
+            this.TypeRec.Location = new System.Drawing.Point(900, 276);
+            this.TypeRec.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.TypeRec.Name = "TypeRec";
+            this.TypeRec.Size = new System.Drawing.Size(13, 13);
+            this.TypeRec.TabIndex = 99;
+            this.TypeRec.Text = "0";
+            // 
+            // DesRec
+            // 
+            this.DesRec.AutoSize = true;
+            this.DesRec.BackColor = System.Drawing.Color.Transparent;
+            this.DesRec.Location = new System.Drawing.Point(900, 256);
+            this.DesRec.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.DesRec.Name = "DesRec";
+            this.DesRec.Size = new System.Drawing.Size(13, 13);
+            this.DesRec.TabIndex = 98;
+            this.DesRec.Text = "0";
+            // 
+            // phoneRec
+            // 
+            this.phoneRec.AutoSize = true;
+            this.phoneRec.BackColor = System.Drawing.Color.Transparent;
+            this.phoneRec.Location = new System.Drawing.Point(900, 236);
+            this.phoneRec.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.phoneRec.Name = "phoneRec";
+            this.phoneRec.Size = new System.Drawing.Size(13, 13);
+            this.phoneRec.TabIndex = 97;
+            this.phoneRec.Text = "0";
+            // 
+            // labelRentalDepartureDate
+            // 
+            this.labelRentalDepartureDate.AutoSize = true;
+            this.labelRentalDepartureDate.BackColor = System.Drawing.Color.Transparent;
+            this.labelRentalDepartureDate.Location = new System.Drawing.Point(819, 327);
+            this.labelRentalDepartureDate.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.labelRentalDepartureDate.Name = "labelRentalDepartureDate";
+            this.labelRentalDepartureDate.Size = new System.Drawing.Size(85, 13);
+            this.labelRentalDepartureDate.TabIndex = 96;
+            this.labelRentalDepartureDate.Text = "Departing Date: ";
+            // 
+            // labelRentalDuration
+            // 
+            this.labelRentalDuration.AutoSize = true;
+            this.labelRentalDuration.BackColor = System.Drawing.Color.Transparent;
+            this.labelRentalDuration.Location = new System.Drawing.Point(845, 350);
+            this.labelRentalDuration.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.labelRentalDuration.Name = "labelRentalDuration";
+            this.labelRentalDuration.Size = new System.Drawing.Size(53, 13);
+            this.labelRentalDuration.TabIndex = 95;
+            this.labelRentalDuration.Text = "Duration: ";
+            // 
+            // labelRentalClass
+            // 
+            this.labelRentalClass.AutoSize = true;
+            this.labelRentalClass.BackColor = System.Drawing.Color.Transparent;
+            this.labelRentalClass.Location = new System.Drawing.Point(866, 298);
+            this.labelRentalClass.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.labelRentalClass.Name = "labelRentalClass";
+            this.labelRentalClass.Size = new System.Drawing.Size(38, 13);
+            this.labelRentalClass.TabIndex = 94;
+            this.labelRentalClass.Text = "Class: ";
+            // 
+            // labelRentalType
+            // 
+            this.labelRentalType.AutoSize = true;
+            this.labelRentalType.BackColor = System.Drawing.Color.Transparent;
+            this.labelRentalType.Location = new System.Drawing.Point(869, 276);
+            this.labelRentalType.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.labelRentalType.Name = "labelRentalType";
+            this.labelRentalType.Size = new System.Drawing.Size(37, 13);
+            this.labelRentalType.TabIndex = 93;
+            this.labelRentalType.Text = "Type: ";
+            // 
+            // labelRentalDestination
+            // 
+            this.labelRentalDestination.AutoSize = true;
+            this.labelRentalDestination.BackColor = System.Drawing.Color.Transparent;
+            this.labelRentalDestination.Location = new System.Drawing.Point(841, 256);
+            this.labelRentalDestination.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.labelRentalDestination.Name = "labelRentalDestination";
+            this.labelRentalDestination.Size = new System.Drawing.Size(66, 13);
+            this.labelRentalDestination.TabIndex = 92;
+            this.labelRentalDestination.Text = "Destination: ";
+            // 
+            // labelRentalPhone
+            // 
+            this.labelRentalPhone.AutoSize = true;
+            this.labelRentalPhone.BackColor = System.Drawing.Color.Transparent;
+            this.labelRentalPhone.Location = new System.Drawing.Point(854, 236);
+            this.labelRentalPhone.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.labelRentalPhone.Name = "labelRentalPhone";
+            this.labelRentalPhone.Size = new System.Drawing.Size(44, 13);
+            this.labelRentalPhone.TabIndex = 91;
+            this.labelRentalPhone.Text = "Phone: ";
+            // 
+            // DecBalance
+            // 
+            this.DecBalance.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DecBalance.Location = new System.Drawing.Point(904, 383);
+            this.DecBalance.Name = "DecBalance";
+            this.DecBalance.Size = new System.Drawing.Size(13, 13);
+            this.DecBalance.TabIndex = 90;
+            this.DecBalance.Text = "0";
+            // 
+            // labelRentalBalance
+            // 
+            this.labelRentalBalance.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRentalBalance.Location = new System.Drawing.Point(841, 374);
+            this.labelRentalBalance.Name = "labelRentalBalance";
+            this.labelRentalBalance.Size = new System.Drawing.Size(58, 20);
+            this.labelRentalBalance.TabIndex = 89;
+            this.labelRentalBalance.Text = "Balance:";
+            // 
             // Cancel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1215, 730);
+            this.Controls.Add(this.DurationRec);
+            this.Controls.Add(this.DepRec);
+            this.Controls.Add(this.ClassRec);
+            this.Controls.Add(this.TypeRec);
+            this.Controls.Add(this.DesRec);
+            this.Controls.Add(this.phoneRec);
+            this.Controls.Add(this.labelRentalDepartureDate);
+            this.Controls.Add(this.labelRentalDuration);
+            this.Controls.Add(this.labelRentalClass);
+            this.Controls.Add(this.labelRentalType);
+            this.Controls.Add(this.labelRentalDestination);
+            this.Controls.Add(this.labelRentalPhone);
+            this.Controls.Add(this.DecBalance);
+            this.Controls.Add(this.labelRentalBalance);
+            this.Controls.Add(this.buttonCancleCar);
+            this.Controls.Add(this.buttonCancleBoat);
+            this.Controls.Add(this.buttonCancelBus);
             this.Controls.Add(this.type);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dateandtime);
@@ -574,5 +789,22 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label bus;
+        private System.Windows.Forms.Button buttonCancelBus;
+        private System.Windows.Forms.Button buttonCancleBoat;
+        private System.Windows.Forms.Button buttonCancleCar;
+        private System.Windows.Forms.Label DurationRec;
+        private System.Windows.Forms.Label DepRec;
+        private System.Windows.Forms.Label ClassRec;
+        private System.Windows.Forms.Label TypeRec;
+        private System.Windows.Forms.Label DesRec;
+        private System.Windows.Forms.Label phoneRec;
+        private System.Windows.Forms.Label labelRentalDepartureDate;
+        private System.Windows.Forms.Label labelRentalDuration;
+        private System.Windows.Forms.Label labelRentalClass;
+        private System.Windows.Forms.Label labelRentalType;
+        private System.Windows.Forms.Label labelRentalDestination;
+        private System.Windows.Forms.Label labelRentalPhone;
+        private System.Windows.Forms.Label DecBalance;
+        private System.Windows.Forms.Label labelRentalBalance;
     }
 }

@@ -26,23 +26,24 @@ namespace Project_Kothin
 
             SendMessage(this.Ticketbox.Handle, CB_SETCUEBANNER, 0, "Please select an item...");
         }
-        public Service(string username, string fullname)
-        {   
 
+        public Service(string username, string fullname)
+        {
             InitializeComponent();
             SendMessage(this.Ticketbox.Handle, CB_SETCUEBANNER, 0, "Please select an item...");
-             linkLabel1.Text=username;
+            linkLabel1.Text = username;
             phone = username;
             fullName = fullname;
             SqlConnection conn = null;
             try
             {
-                conn = new SqlConnection(@"Data Source=DESKTOP-5NMO71P\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True ");//arif
-                //conn = new SqlConnection(@"Data Source=DESKTOP-9DIP61O\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//azwad
-                 //conn = new SqlConnection(@"Data Source=DESKTOP-BMD47A3\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True"); //risan
+                conn = new SqlConnection(@"Data Source=SKRILLEXOMG\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True"); //Albar
+                                                                                                                                   //conn = new SqlConnection(@"Data Source=DESKTOP-9DIP61O\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//Azwad
+                                                                                                                                   //conn = new SqlConnection(@"Data Source=DESKTOP-5NMO71P\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True"); //Arif
+                                                                                                                                   //conn = new SqlConnection(@"Data Source=DESKTOP-BMD47A3\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True"); //risan
                 conn.Open();
 
-                string query =$"select FullName from UserInfo where Phone={linkLabel1.Text}";
+                string query = $"select FullName from UserInfo where Phone={linkLabel1.Text}";
                 SqlCommand cmd = new SqlCommand(query, conn);
                 DataSet ds = new DataSet();
                 SqlDataAdapter adp = new SqlDataAdapter(cmd);
@@ -60,7 +61,7 @@ namespace Project_Kothin
                 conn.Close();
             }
         }
-        
+
         private void button1_Click(object sender, EventArgs e)
         {
         }
@@ -92,12 +93,12 @@ namespace Project_Kothin
             }
             if (Ticketbox.Text == "Train")
             {
-                Ticket it = new Ticket(Ticketbox.Text,phone);
+                Ticket it = new Ticket(Ticketbox.Text, phone);
                 it.Show();
             }
             else if (Ticketbox.Text == "Bus")
             {
-                Ticket it = new Ticket(Ticketbox.Text,phone);
+                Ticket it = new Ticket(Ticketbox.Text, phone);
                 it.Show();
             }
         }
@@ -118,7 +119,6 @@ namespace Project_Kothin
 
         private void buttonRental_Click(object sender, EventArgs e)
         {
-            
         }
 
         private void rentalSubmit_Click(object sender, EventArgs e)
@@ -152,7 +152,6 @@ namespace Project_Kothin
         {
             UserInfoPanel u1 = new UserInfoPanel(phone);
             u1.Show();
-            
         }
 
         private void linkLabelLoginBack_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -167,7 +166,6 @@ namespace Project_Kothin
 
         private void pictureBoxTicket_Click(object sender, EventArgs e)
         {
-
             labelService.Text = "Ticket Booking Services";
 
             labelTicket.Visible = true;
@@ -191,12 +189,10 @@ namespace Project_Kothin
 
         private void labelRental_Click(object sender, EventArgs e)
         {
-
         }
 
         private void label1_Click_1(object sender, EventArgs e)
         {
-
         }
     }
 }

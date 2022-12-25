@@ -17,10 +17,11 @@ namespace Project_Kothin
     public partial class Boat : Form
     {
         private static double invoice = 0001d;
-        string fullname = "";
-        string phonenum = "";
-        string vehicle = "Boat";
+        private string fullname = "";
+        private string phonenum = "";
+        private string vehicle = "Boat";
         private double balance = 0;
+
         public Boat()
         {
             InitializeComponent();
@@ -35,15 +36,14 @@ namespace Project_Kothin
 
         private void Type_Click(object sender, EventArgs e)
         {
-
         }
 
         private void boatchoice_Click(object sender, EventArgs e)
         {
-            if(Destination.SelectedItem!=null && 
-                dateTimePicker1.Text != null && 
-                boatType.SelectedItem != null && 
-                classChoose.SelectedItem != null && 
+            if (Destination.SelectedItem != null &&
+                dateTimePicker1.Text != null &&
+                boatType.SelectedItem != null &&
+                classChoose.SelectedItem != null &&
                 durationChoose.SelectedItem != null)
             {
                 string destination = Destination.Text;
@@ -64,11 +64,11 @@ namespace Project_Kothin
                 //Class A
                 //Class B
                 //BOAT TYPE
-                if (boatType.Text=="Speed Boat")
+                if (boatType.Text == "Speed Boat")
                 {
                     typemultiplier = 2;
                 }
-                else if(boatType.Text=="Trawler Boat")
+                else if (boatType.Text == "Trawler Boat")
                 {
                     typemultiplier = 1;
                 }
@@ -101,9 +101,8 @@ namespace Project_Kothin
                     durationmultiplier = 3;
                 }
 
-
                 //balance
-                if (Destination.Text== "Dhaka to Chandpur to Dhaka")
+                if (Destination.Text == "Dhaka to Chandpur to Dhaka")
                 {
                     balance = 10000 * typemultiplier * classmultiplier * durationmultiplier;
                 }
@@ -127,15 +126,15 @@ namespace Project_Kothin
                 SqlConnection conn = null;
                 try
                 {
-                    conn = new SqlConnection(@"Data Source=DESKTOP-5NMO71P\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//arif
-                    //conn = new SqlConnection(@"Data Source=DESKTOP-BMD47A3\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");
+                    conn = new SqlConnection(@"Data Source=SKRILLEXOMG\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True"); //Albar
+                                                                                                                                       //conn = new SqlConnection(@"Data Source=DESKTOP-9DIP61O\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//Azwad
+                                                                                                                                       //conn = new SqlConnection(@"Data Source=DESKTOP-5NMO71P\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True"); //Arif
+                                                                                                                                       //conn = new SqlConnection(@"Data Source=DESKTOP-BMD47A3\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True"); //risan
                     conn.Open();
-
 
                     string query = $"insert into Rental (Fullname,Phone, Vehicle ,Destination, Type, Duration, DepartmentDate, Class, Balance) VALUES ('{fullname}','{phonenum}','{vehicle}','{destination}','{type}','{duration}','{date}','{chosenClass}',{balance});";
                     SqlCommand cmd = new SqlCommand(query, conn);
                     cmd.ExecuteNonQuery();
-
                 }
                 catch (Exception ex)
                 {
@@ -146,28 +145,23 @@ namespace Project_Kothin
                     MessageBox.Show("Request Done!");
                     conn.Close();
                 }
-
             }
             else
             {
                 MessageBox.Show("Please check all the options above!");
             }
-            
         }
 
         private void Date_Click(object sender, EventArgs e)
         {
-
         }
 
         private void Boat1_Load(object sender, EventArgs e)
         {
-
         }
 
         private void label2_Click(object sender, EventArgs e)
         {
-
         }
 
         private void linkLabelLoginClose_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

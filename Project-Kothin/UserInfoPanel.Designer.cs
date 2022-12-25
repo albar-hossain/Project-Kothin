@@ -45,10 +45,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.viewUpdate = new System.Windows.Forms.Button();
             this.linkLabelRegClose = new System.Windows.Forms.LinkLabel();
-            this.labelWrongZip = new System.Windows.Forms.Label();
-            this.labelRightZip = new System.Windows.Forms.Label();
-            this.labelWrongEmail = new System.Windows.Forms.Label();
-            this.labelRightEmail = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.labelConPassWrong = new System.Windows.Forms.Label();
@@ -56,7 +52,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.passBacklabel = new System.Windows.Forms.Label();
             this.InfoUpdateBack = new System.Windows.Forms.Label();
-            this.linkLabelCancel = new System.Windows.Forms.LinkLabel();
+            this.buttonCancleTicketRental = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labelRegFullName
@@ -66,7 +62,7 @@
             this.labelRegFullName.BackColor = System.Drawing.Color.Transparent;
             this.labelRegFullName.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelRegFullName.ForeColor = System.Drawing.Color.Black;
-            this.labelRegFullName.Location = new System.Drawing.Point(32, 46);
+            this.labelRegFullName.Location = new System.Drawing.Point(57, 46);
             this.labelRegFullName.Name = "labelRegFullName";
             this.labelRegFullName.Size = new System.Drawing.Size(130, 29);
             this.labelRegFullName.TabIndex = 5;
@@ -79,7 +75,7 @@
             this.labelRegPhone.BackColor = System.Drawing.Color.Transparent;
             this.labelRegPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelRegPhone.ForeColor = System.Drawing.Color.Black;
-            this.labelRegPhone.Location = new System.Drawing.Point(32, 87);
+            this.labelRegPhone.Location = new System.Drawing.Point(57, 87);
             this.labelRegPhone.Name = "labelRegPhone";
             this.labelRegPhone.Size = new System.Drawing.Size(89, 29);
             this.labelRegPhone.TabIndex = 6;
@@ -92,7 +88,7 @@
             this.fname.BackColor = System.Drawing.Color.Transparent;
             this.fname.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fname.ForeColor = System.Drawing.Color.LightSkyBlue;
-            this.fname.Location = new System.Drawing.Point(179, 46);
+            this.fname.Location = new System.Drawing.Point(204, 46);
             this.fname.Name = "fname";
             this.fname.Size = new System.Drawing.Size(79, 29);
             this.fname.TabIndex = 7;
@@ -106,7 +102,7 @@
             this.pnumv.BackColor = System.Drawing.Color.Transparent;
             this.pnumv.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnumv.ForeColor = System.Drawing.Color.LightSkyBlue;
-            this.pnumv.Location = new System.Drawing.Point(179, 87);
+            this.pnumv.Location = new System.Drawing.Point(204, 87);
             this.pnumv.Name = "pnumv";
             this.pnumv.Size = new System.Drawing.Size(73, 29);
             this.pnumv.TabIndex = 8;
@@ -139,7 +135,7 @@
             // 
             this.textBoxPostcode.BackColor = System.Drawing.Color.MistyRose;
             this.textBoxPostcode.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxPostcode.Location = new System.Drawing.Point(175, 319);
+            this.textBoxPostcode.Location = new System.Drawing.Point(175, 316);
             this.textBoxPostcode.Name = "textBoxPostcode";
             this.textBoxPostcode.ReadOnly = true;
             this.textBoxPostcode.Size = new System.Drawing.Size(344, 35);
@@ -177,7 +173,7 @@
             this.conPass.BackColor = System.Drawing.Color.Transparent;
             this.conPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.conPass.ForeColor = System.Drawing.Color.Black;
-            this.conPass.Location = new System.Drawing.Point(944, 386);
+            this.conPass.Location = new System.Drawing.Point(643, 214);
             this.conPass.Name = "conPass";
             this.conPass.Size = new System.Drawing.Size(216, 29);
             this.conPass.TabIndex = 18;
@@ -264,65 +260,6 @@
             this.linkLabelRegClose.Text = "❌";
             this.linkLabelRegClose.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelRegClose_LinkClicked);
             // 
-            // labelWrongZip
-            // 
-            this.labelWrongZip.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelWrongZip.AutoSize = true;
-            this.labelWrongZip.BackColor = System.Drawing.Color.Transparent;
-            this.labelWrongZip.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelWrongZip.ForeColor = System.Drawing.Color.Red;
-            this.labelWrongZip.Location = new System.Drawing.Point(1164, 180);
-            this.labelWrongZip.Name = "labelWrongZip";
-            this.labelWrongZip.Size = new System.Drawing.Size(25, 20);
-            this.labelWrongZip.TabIndex = 35;
-            this.labelWrongZip.Text = "❌";
-            this.labelWrongZip.Visible = false;
-            this.labelWrongZip.Click += new System.EventHandler(this.labelWrongZip_Click);
-            // 
-            // labelRightZip
-            // 
-            this.labelRightZip.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelRightZip.AutoSize = true;
-            this.labelRightZip.BackColor = System.Drawing.Color.Transparent;
-            this.labelRightZip.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelRightZip.ForeColor = System.Drawing.Color.Lime;
-            this.labelRightZip.Location = new System.Drawing.Point(1162, 180);
-            this.labelRightZip.Name = "labelRightZip";
-            this.labelRightZip.Size = new System.Drawing.Size(25, 20);
-            this.labelRightZip.TabIndex = 36;
-            this.labelRightZip.Text = "✔";
-            this.labelRightZip.Visible = false;
-            this.labelRightZip.Click += new System.EventHandler(this.labelRightZip_Click);
-            // 
-            // labelWrongEmail
-            // 
-            this.labelWrongEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelWrongEmail.AutoSize = true;
-            this.labelWrongEmail.BackColor = System.Drawing.Color.Transparent;
-            this.labelWrongEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelWrongEmail.ForeColor = System.Drawing.Color.Red;
-            this.labelWrongEmail.Location = new System.Drawing.Point(1164, 221);
-            this.labelWrongEmail.Name = "labelWrongEmail";
-            this.labelWrongEmail.Size = new System.Drawing.Size(25, 20);
-            this.labelWrongEmail.TabIndex = 37;
-            this.labelWrongEmail.Text = "❌";
-            this.labelWrongEmail.Visible = false;
-            // 
-            // labelRightEmail
-            // 
-            this.labelRightEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelRightEmail.AutoSize = true;
-            this.labelRightEmail.BackColor = System.Drawing.Color.Transparent;
-            this.labelRightEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelRightEmail.ForeColor = System.Drawing.Color.Lime;
-            this.labelRightEmail.Location = new System.Drawing.Point(1162, 221);
-            this.labelRightEmail.Name = "labelRightEmail";
-            this.labelRightEmail.Size = new System.Drawing.Size(25, 20);
-            this.labelRightEmail.TabIndex = 38;
-            this.labelRightEmail.Text = "✔";
-            this.labelRightEmail.Visible = false;
-            this.labelRightEmail.Click += new System.EventHandler(this.labelRightEmail_Click);
-            // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -330,7 +267,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(1031, 342);
+            this.label1.Location = new System.Drawing.Point(733, 173);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(126, 29);
             this.label1.TabIndex = 39;
@@ -354,7 +291,7 @@
             this.labelConPassWrong.BackColor = System.Drawing.Color.Transparent;
             this.labelConPassWrong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelConPassWrong.ForeColor = System.Drawing.Color.Red;
-            this.labelConPassWrong.Location = new System.Drawing.Point(1465, 393);
+            this.labelConPassWrong.Location = new System.Drawing.Point(1490, 393);
             this.labelConPassWrong.Name = "labelConPassWrong";
             this.labelConPassWrong.Size = new System.Drawing.Size(25, 20);
             this.labelConPassWrong.TabIndex = 42;
@@ -369,7 +306,7 @@
             this.labelConPassRight.BackColor = System.Drawing.Color.Transparent;
             this.labelConPassRight.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelConPassRight.ForeColor = System.Drawing.Color.Lime;
-            this.labelConPassRight.Location = new System.Drawing.Point(1465, 395);
+            this.labelConPassRight.Location = new System.Drawing.Point(1490, 395);
             this.labelConPassRight.Name = "labelConPassRight";
             this.labelConPassRight.Size = new System.Drawing.Size(25, 20);
             this.labelConPassRight.TabIndex = 43;
@@ -411,16 +348,17 @@
             this.InfoUpdateBack.Visible = false;
             this.InfoUpdateBack.Click += new System.EventHandler(this.InfoUpdateBack_Click);
             // 
-            // linkLabelCancel
+            // buttonCancleTicketRental
             // 
-            this.linkLabelCancel.AutoSize = true;
-            this.linkLabelCancel.Location = new System.Drawing.Point(26, 627);
-            this.linkLabelCancel.Name = "linkLabelCancel";
-            this.linkLabelCancel.Size = new System.Drawing.Size(125, 13);
-            this.linkLabelCancel.TabIndex = 49;
-            this.linkLabelCancel.TabStop = true;
-            this.linkLabelCancel.Text = "Cancel Ticket or Rental?";
-            this.linkLabelCancel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelCancel_LinkClicked);
+            this.buttonCancleTicketRental.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCancleTicketRental.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.buttonCancleTicketRental.Location = new System.Drawing.Point(37, 632);
+            this.buttonCancleTicketRental.Name = "buttonCancleTicketRental";
+            this.buttonCancleTicketRental.Size = new System.Drawing.Size(192, 47);
+            this.buttonCancleTicketRental.TabIndex = 50;
+            this.buttonCancleTicketRental.Text = "Cancel Ticket or Rental?";
+            this.buttonCancleTicketRental.UseVisualStyleBackColor = true;
+            this.buttonCancleTicketRental.Click += new System.EventHandler(this.buttonCancleTicketRental_Click);
             // 
             // UserInfoPanel
             // 
@@ -428,7 +366,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Project_Kothin.Properties.Resources.user;
             this.ClientSize = new System.Drawing.Size(1215, 730);
-            this.Controls.Add(this.linkLabelCancel);
+            this.Controls.Add(this.buttonCancleTicketRental);
             this.Controls.Add(this.InfoUpdateBack);
             this.Controls.Add(this.passBacklabel);
             this.Controls.Add(this.button3);
@@ -436,7 +374,6 @@
             this.Controls.Add(this.labelConPassWrong);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.labelWrongZip);
             this.Controls.Add(this.linkLabelRegClose);
             this.Controls.Add(this.viewUpdate);
             this.Controls.Add(this.button2);
@@ -454,9 +391,6 @@
             this.Controls.Add(this.fname);
             this.Controls.Add(this.labelRegPhone);
             this.Controls.Add(this.labelRegFullName);
-            this.Controls.Add(this.labelRightEmail);
-            this.Controls.Add(this.labelWrongEmail);
-            this.Controls.Add(this.labelRightZip);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "UserInfoPanel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -486,10 +420,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button viewUpdate;
         private System.Windows.Forms.LinkLabel linkLabelRegClose;
-        private System.Windows.Forms.Label labelWrongZip;
-        private System.Windows.Forms.Label labelRightZip;
-        private System.Windows.Forms.Label labelWrongEmail;
-        private System.Windows.Forms.Label labelRightEmail;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label labelConPassWrong;
@@ -497,6 +427,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label passBacklabel;
         private System.Windows.Forms.Label InfoUpdateBack;
-        private System.Windows.Forms.LinkLabel linkLabelCancel;
+        private System.Windows.Forms.Button buttonCancleTicketRental;
     }
 }

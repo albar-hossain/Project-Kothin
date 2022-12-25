@@ -15,21 +15,24 @@ namespace Project_Kothin
 {
     public partial class RentalBus : Form
     {
-        string fullname = "";
-        string phonenum = "";
-        string vehicle = "Bus";
+        private string fullname = "";
+        private string phonenum = "";
+        private string vehicle = "Bus";
         private double balance = 0;
         private static double invoice = 0001d;
+
         public RentalBus(string fname, string phn)
         {
             InitializeComponent();
             fullname = fname;
             phonenum = phn;
         }
+
         public RentalBus()
         {
             InitializeComponent();
         }
+
         private void boatchoice_Click(object sender, EventArgs e)
         {
             if (Destination.SelectedItem != null &&
@@ -101,7 +104,6 @@ namespace Project_Kothin
                     durationmultiplier = 3;
                 }
 
-
                 //balance
                 if (Destination.Text == "Within Dhaka")
                 {
@@ -139,20 +141,20 @@ namespace Project_Kothin
                 DepRec.Text = date;
                 DurationRec.Text = duration;
                 //MessageBox.Show("Boat has been booked!");
-                // query part 
+                // query part
 
                 SqlConnection conn = null;
                 try
                 {
-                    //conn = new SqlConnection(@"Data Source=DESKTOP-BMD47A3\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//risan
-                    conn = new SqlConnection(@"Data Source=DESKTOP-5NMO71P\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//arif
+                    conn = new SqlConnection(@"Data Source=SKRILLEXOMG\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True"); //Albar
+                                                                                                                                       //conn = new SqlConnection(@"Data Source=DESKTOP-9DIP61O\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//Azwad
+                                                                                                                                       //conn = new SqlConnection(@"Data Source=DESKTOP-5NMO71P\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True"); //Arif
+                                                                                                                                       //conn = new SqlConnection(@"Data Source=DESKTOP-BMD47A3\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True"); //risan
                     conn.Open();
 
-                    
                     string query = $"insert into Rental (Fullname,Phone, Vehicle ,Destination, Type, Duration, DepartmentDate, Class, Balance) VALUES ('{fullname}','{phonenum}','{vehicle}','{destination}','{type}','{duration}','{date}','{chosenClass}',{balance});";
                     SqlCommand cmd = new SqlCommand(query, conn);
                     cmd.ExecuteNonQuery();
-
                 }
                 catch (Exception ex)
                 {
@@ -163,28 +165,23 @@ namespace Project_Kothin
                     MessageBox.Show("Request Done!");
                     conn.Close();
                 }
-
             }
             else
             {
                 MessageBox.Show("Please check all the options above!");
             }
-
         }
 
         private void RentalBus_Load(object sender, EventArgs e)
         {
-
         }
 
         private void label8_Click(object sender, EventArgs e)
         {
-
         }
 
         private void label9_Click(object sender, EventArgs e)
         {
-
         }
 
         private void linkLabelLoginClose_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

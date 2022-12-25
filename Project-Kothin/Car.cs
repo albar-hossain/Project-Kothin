@@ -13,14 +13,14 @@ using IronPdf;
 
 namespace Project_Kothin
 {
-
     public partial class Car : Form
     {
-        string fullname = "";
-        string phonenum = "";
-        string vehicle = "Car";
+        private string fullname = "";
+        private string phonenum = "";
+        private string vehicle = "Car";
         private double balance = 0;
         private static double invoice = 0001d;
+
         public Car()
         {
             InitializeComponent();
@@ -46,7 +46,6 @@ namespace Project_Kothin
                 string type = carType.Text;
                 string chosenClass = classChoose.Text;
                 string duration = durationChoose.Text;
-
 
                 double typemultiplier = 0.0;
                 int classmultiplier = 0;
@@ -105,7 +104,6 @@ namespace Project_Kothin
                     durationmultiplier = 3;
                 }
 
-
                 //balance
                 if (Destination.Text == "Within Dhaka")
                 {
@@ -147,16 +145,15 @@ namespace Project_Kothin
                 SqlConnection conn = null;
                 try
                 {
-                    //conn = new SqlConnection(@"Data Source=DESKTOP-9DIP61O\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//azwad
-                    conn = new SqlConnection(@"Data Source=DESKTOP-5NMO71P\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//arif
-                    //conn = new SqlConnection(@"Data Source=DESKTOP-BMD47A3\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");
+                    conn = new SqlConnection(@"Data Source=SKRILLEXOMG\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True"); //Albar
+                                                                                                                                       //conn = new SqlConnection(@"Data Source=DESKTOP-9DIP61O\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//Azwad
+                                                                                                                                       //conn = new SqlConnection(@"Data Source=DESKTOP-5NMO71P\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True"); //Arif
+                                                                                                                                       //conn = new SqlConnection(@"Data Source=DESKTOP-BMD47A3\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True"); //risan
                     conn.Open();
-
 
                     string query = $"insert into Rental (Fullname,Phone, Vehicle ,Destination, Type, Duration, DepartmentDate, Class, Balance) VALUES ('{fullname}','{phonenum}','{vehicle}','{destination}','{type}','{duration}','{date}','{chosenClass}',{balance});";
                     SqlCommand cmd = new SqlCommand(query, conn);
                     cmd.ExecuteNonQuery();
-
                 }
                 catch (Exception ex)
                 {
@@ -176,32 +173,26 @@ namespace Project_Kothin
 
         private void Destination_SelectedIndexChanged(object sender, EventArgs e)
         {
-
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
-
         }
 
         private void boatType_SelectedIndexChanged(object sender, EventArgs e)
         {
-
         }
 
         private void classChoose_SelectedIndexChanged(object sender, EventArgs e)
         {
-
         }
 
         private void durationChoose_SelectedIndexChanged(object sender, EventArgs e)
         {
-
         }
 
         private void Car_Load(object sender, EventArgs e)
         {
-
         }
 
         private void linkLabelLoginClose_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

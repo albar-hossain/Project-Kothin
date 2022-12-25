@@ -33,8 +33,10 @@ namespace Project_Kothin
             SqlConnection conn = null;
             try
             {
-              //  conn = new SqlConnection(@"Data Source=DESKTOP-9DIP61O\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//azwad
-                  conn = new SqlConnection(@"Data Source=DESKTOP-5NMO71P\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True ");//arif
+                conn = new SqlConnection(@"Data Source=SKRILLEXOMG\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True"); //Albar
+                                                                                                                                   //conn = new SqlConnection(@"Data Source=DESKTOP-9DIP61O\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//Azwad
+                                                                                                                                   //conn = new SqlConnection(@"Data Source=DESKTOP-5NMO71P\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True"); //Arif
+                                                                                                                                   //conn = new SqlConnection(@"Data Source=DESKTOP-BMD47A3\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True"); //risan
                 conn.Open();
 
                 string query = $"select FullName from UserInfo where Phone={Phone}";
@@ -60,8 +62,10 @@ namespace Project_Kothin
             //SqlConnection conn = null;
             try
             {
-                //conn = new SqlConnection(@"Data Source=DESKTOP-9DIP61O\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//azwad
-                 conn = new SqlConnection(@"Data Source=DESKTOP-5NMO71P\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True ");//arif
+                conn = new SqlConnection(@"Data Source=SKRILLEXOMG\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True"); //Albar
+                                                                                                                                   //conn = new SqlConnection(@"Data Source=DESKTOP-9DIP61O\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//Azwad
+                                                                                                                                   //conn = new SqlConnection(@"Data Source=DESKTOP-5NMO71P\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True"); //Arif
+                                                                                                                                   //conn = new SqlConnection(@"Data Source=DESKTOP-BMD47A3\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True"); //risan
                 conn.Open();
 
                 string query = $"select Email,Address,PostCode,Password from UserInfo where Phone={Phone}";
@@ -112,17 +116,17 @@ namespace Project_Kothin
 
         private void textBoxEmail_TextChanged(object sender, EventArgs e)
         {
-            string email = textBoxEmail.Text;
-            if (email.Contains("@") && email.Contains("."))
-            {
-                labelRightEmail.Visible = true;
-                labelWrongEmail.Visible = false;
-            }
-            else
-            {
-                labelRightEmail.Visible = false;
-                labelWrongEmail.Visible = true;
-            }
+            //string email = textBoxEmail.Text;
+            //if (email.Contains("@") && email.Contains("."))
+            //{
+            //    labelRightEmail.Visible = true;
+            //    labelWrongEmail.Visible = false;
+            //}
+            //else
+            //{
+            //    labelRightEmail.Visible = false;
+            //    labelWrongEmail.Visible = true;
+            //}
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -130,8 +134,10 @@ namespace Project_Kothin
             SqlConnection conn = null;
             try
             {
-                //conn = new SqlConnection(@"Data Source=DESKTOP-9DIP61O\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//azwad
-                 conn = new SqlConnection(@"Data Source=DESKTOP-5NMO71P\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True ");//arif
+                conn = new SqlConnection(@"Data Source=SKRILLEXOMG\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True"); //Albar
+                                                                                                                                   //conn = new SqlConnection(@"Data Source=DESKTOP-9DIP61O\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//Azwad
+                                                                                                                                   //conn = new SqlConnection(@"Data Source=DESKTOP-5NMO71P\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True"); //Arif
+                                                                                                                                   //conn = new SqlConnection(@"Data Source=DESKTOP-BMD47A3\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True"); //risan
                 conn.Open();
 
                 string query = $"select Email,Address,PostCode from UserInfo where Phone={Phone}";
@@ -170,8 +176,10 @@ namespace Project_Kothin
                 // SqlConnection conn = null;
                 try
                 {
-                    //conn = new SqlConnection(@"Data Source=DESKTOP-9DIP61O\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//azwad
-                    conn = new SqlConnection(@"Data Source=DESKTOP-5NMO71P\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True ");//arif
+                    conn = new SqlConnection(@"Data Source=SKRILLEXOMG\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True"); //Albar
+                                                                                                                                       //conn = new SqlConnection(@"Data Source=DESKTOP-9DIP61O\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//Azwad
+                                                                                                                                       //conn = new SqlConnection(@"Data Source=DESKTOP-5NMO71P\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True"); //Arif
+                                                                                                                                       //conn = new SqlConnection(@"Data Source=DESKTOP-BMD47A3\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True"); //risan
                     conn.Open();
 
                     string updatedpass = newpass.Text;
@@ -245,17 +253,17 @@ namespace Project_Kothin
 
         private void textBoxPostcode_TextChanged(object sender, EventArgs e)
         {
-            string postCode = textBoxPostcode.Text;
-            if (postCode.Length == 4)
-            {
-                labelRightZip.Visible = true;
-                labelWrongZip.Visible = false;
-            }
-            else
-            {
-                labelRightZip.Visible = false;
-                labelWrongZip.Visible = true;
-            }
+            //string postCode = textBoxPostcode.Text;
+            //if (postCode.Length == 4)
+            //{
+            //    labelRightZip.Visible = true;
+            //    labelWrongZip.Visible = false;
+            //}
+            //else
+            //{
+            //    labelRightZip.Visible = false;
+            //    labelWrongZip.Visible = true;
+            //}
         }
 
         private void labelWrongZip_Click(object sender, EventArgs e)
@@ -271,8 +279,10 @@ namespace Project_Kothin
             SqlConnection conn = null;
             try
             {
-                //conn = new SqlConnection(@"Data Source=DESKTOP-9DIP61O\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//azwad
-                conn = new SqlConnection(@"Data Source=DESKTOP-5NMO71P\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True ");//arif
+                conn = new SqlConnection(@"Data Source=SKRILLEXOMG\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True"); //Albar
+                                                                                                                                   //conn = new SqlConnection(@"Data Source=DESKTOP-9DIP61O\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//Azwad
+                                                                                                                                   //conn = new SqlConnection(@"Data Source=DESKTOP-5NMO71P\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True"); //Arif
+                                                                                                                                   //conn = new SqlConnection(@"Data Source=DESKTOP-BMD47A3\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True"); //risan
                 conn.Open();
 
                 string query = $"Delete From UserInfo Where Phone ={Phone}";
@@ -355,8 +365,10 @@ namespace Project_Kothin
             SqlConnection conn = null;
             try
             {
-               // conn = new SqlConnection(@"Data Source=DESKTOP-9DIP61O\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//azwad
-                conn = new SqlConnection(@"Data Source=DESKTOP-5NMO71P\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True ");//arif
+                conn = new SqlConnection(@"Data Source=SKRILLEXOMG\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True"); //Albar
+                                                                                                                                   //conn = new SqlConnection(@"Data Source=DESKTOP-9DIP61O\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//Azwad
+                                                                                                                                   //conn = new SqlConnection(@"Data Source=DESKTOP-5NMO71P\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True"); //Arif
+                                                                                                                                   //conn = new SqlConnection(@"Data Source=DESKTOP-BMD47A3\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True"); //risan
                 conn.Open();
 
                 string query = $"select Password from UserInfo Where phone ='{Phone}' ";
@@ -385,8 +397,10 @@ namespace Project_Kothin
                 //SqlConnection conn = null;
                 try
                 {
-                   // conn = new SqlConnection(@"Data Source=DESKTOP-9DIP61O\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//azwad
-                    conn = new SqlConnection(@"Data Source=DESKTOP-5NMO71P\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True ");//arif
+                    conn = new SqlConnection(@"Data Source=SKRILLEXOMG\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True"); //Albar
+                                                                                                                                       //conn = new SqlConnection(@"Data Source=DESKTOP-9DIP61O\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//Azwad
+                                                                                                                                       //conn = new SqlConnection(@"Data Source=DESKTOP-5NMO71P\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True"); //Arif
+                                                                                                                                       //conn = new SqlConnection(@"Data Source=DESKTOP-BMD47A3\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True"); //risan
                     conn.Open();
 
                     string updatedpass = newpass.Text;
@@ -454,7 +468,13 @@ namespace Project_Kothin
 
         private void linkLabelCancel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Cancel c1 = new Cancel (Phone);
+            Cancel c1 = new Cancel(Phone);
+            c1.Show();
+        }
+
+        private void buttonCancleTicketRental_Click(object sender, EventArgs e)
+        {
+            Cancel c1 = new Cancel(Phone);
             c1.Show();
         }
     }

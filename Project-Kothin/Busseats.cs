@@ -34,7 +34,8 @@ namespace Project_Kothin
         {
             InitializeComponent();
         }
-        public Busseats(string username,string departure,string destination,string time)
+
+        public Busseats(string username, string departure, string destination, string time)
         {
             InitializeComponent();
             phone = username;
@@ -42,9 +43,10 @@ namespace Project_Kothin
             SqlConnection conn = null;
             try
             {
-              // conn = new SqlConnection(@"Data Source=DESKTOP-9DIP61O\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//azwad
-                //conn = new SqlConnection(@"Data Source=DESKTOP-5NMO71P\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True ");
-                conn = new SqlConnection(@"Data Source=DESKTOP-BMD47A3\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//risan
+                conn = new SqlConnection(@"Data Source=SKRILLEXOMG\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True"); //Albar
+                                                                                                                                   //conn = new SqlConnection(@"Data Source=DESKTOP-9DIP61O\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//Azwad
+                                                                                                                                   //conn = new SqlConnection(@"Data Source=DESKTOP-5NMO71P\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True"); //Arif
+                                                                                                                                   //conn = new SqlConnection(@"Data Source=DESKTOP-BMD47A3\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True"); //risan
 
                 conn.Open();
 
@@ -638,14 +640,15 @@ namespace Project_Kothin
             SqlConnection conn = null;
             try
             {
-                //conn = new SqlConnection(@"Data Source=SKRILLEXOMG\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");
-               conn = new SqlConnection(@"Data Source=DESKTOP-5NMO71P\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//arif
+                conn = new SqlConnection(@"Data Source=SKRILLEXOMG\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True"); //Albar
+                                                                                                                                   //conn = new SqlConnection(@"Data Source=DESKTOP-9DIP61O\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//Azwad
+                                                                                                                                   //conn = new SqlConnection(@"Data Source=DESKTOP-5NMO71P\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True"); //Arif
+                                                                                                                                   //conn = new SqlConnection(@"Data Source=DESKTOP-BMD47A3\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True"); //risan
                 conn.Open();
                 string query = $"insert into TicketInfo (FullName, PhoneNumber, Vehicle, VehicleName, Class, Departure, Destination, Date, Amount) VALUES ('{name}','{number}','{Type}','{Bname}','{Bclass}','{Department}','{destination}','{date}','{balance}')";
 
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.ExecuteNonQuery();
-
             }
             catch (Exception ex)
             {
@@ -660,12 +663,10 @@ namespace Project_Kothin
 
         private void closs_Click(object sender, EventArgs e)
         {
-
         }
 
         private void total_Click(object sender, EventArgs e)
         {
-
         }
 
         private void pdf_Click(object sender, EventArgs e)
