@@ -11,7 +11,8 @@ using System.Windows.Forms;
 namespace Project_Kothin
 {
     public partial class Admin : Form
-    {
+    {   
+
         public Admin()
         {
             InitializeComponent();
@@ -39,6 +40,11 @@ namespace Project_Kothin
             // TODO: This line of code loads data into the 'porjotonDataSet3.TicketInfo' table. You can move, or remove it, as needed.
           //  this.ticketInfoTableAdapter.Fill(this.porjotonDataSet3.TicketInfo);
 
+        }
+
+        private void linkLabelLoginClose_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Close();
         }
 
         //private void fillByToolStripButton_Click(object sender, EventArgs e)
