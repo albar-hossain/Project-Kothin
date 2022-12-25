@@ -39,6 +39,8 @@
             this.userInfoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.userInfoTableAdapter = new Project_Kothin.PorjotonDataSet1TableAdapters.UserInfoTableAdapter();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ShowAll = new System.Windows.Forms.Button();
+            this.linkLabelLoginClose = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.porjotonDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.porjotonDataSet1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userInfoBindingSource)).BeginInit();
@@ -125,12 +127,40 @@
             this.dataGridView1.Size = new System.Drawing.Size(799, 307);
             this.dataGridView1.TabIndex = 6;
             // 
+            // ShowAll
+            // 
+            this.ShowAll.Location = new System.Drawing.Point(553, 418);
+            this.ShowAll.Name = "ShowAll";
+            this.ShowAll.Size = new System.Drawing.Size(75, 23);
+            this.ShowAll.TabIndex = 7;
+            this.ShowAll.Text = "Show All";
+            this.ShowAll.UseVisualStyleBackColor = true;
+            this.ShowAll.Click += new System.EventHandler(this.ShowAll_Click);
+            // 
+            // linkLabelLoginClose
+            // 
+            this.linkLabelLoginClose.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.linkLabelLoginClose.AutoSize = true;
+            this.linkLabelLoginClose.BackColor = System.Drawing.Color.Transparent;
+            this.linkLabelLoginClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabelLoginClose.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.linkLabelLoginClose.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(42)))), ((int)(((byte)(65)))));
+            this.linkLabelLoginClose.Location = new System.Drawing.Point(1154, 9);
+            this.linkLabelLoginClose.Name = "linkLabelLoginClose";
+            this.linkLabelLoginClose.Size = new System.Drawing.Size(49, 33);
+            this.linkLabelLoginClose.TabIndex = 30;
+            this.linkLabelLoginClose.TabStop = true;
+            this.linkLabelLoginClose.Text = "❌";
+            this.linkLabelLoginClose.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelLoginClose_LinkClicked_1);
+            // 
             // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Project_Kothin.Properties.Resources.admin;
             this.ClientSize = new System.Drawing.Size(1215, 730);
+            this.Controls.Add(this.linkLabelLoginClose);
+            this.Controls.Add(this.ShowAll);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -162,5 +192,7 @@
         private System.Windows.Forms.BindingSource userInfoBindingSource;
         private PorjotonDataSet1TableAdapters.UserInfoTableAdapter userInfoTableAdapter;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button ShowAll;
+        private System.Windows.Forms.LinkLabel linkLabelLoginClose;
     }
 }
