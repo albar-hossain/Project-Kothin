@@ -56,6 +56,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.passBacklabel = new System.Windows.Forms.Label();
             this.InfoUpdateBack = new System.Windows.Forms.Label();
+            this.linkLabelCancel = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // labelRegFullName
@@ -410,12 +411,24 @@
             this.InfoUpdateBack.Visible = false;
             this.InfoUpdateBack.Click += new System.EventHandler(this.InfoUpdateBack_Click);
             // 
+            // linkLabelCancel
+            // 
+            this.linkLabelCancel.AutoSize = true;
+            this.linkLabelCancel.Location = new System.Drawing.Point(26, 627);
+            this.linkLabelCancel.Name = "linkLabelCancel";
+            this.linkLabelCancel.Size = new System.Drawing.Size(125, 13);
+            this.linkLabelCancel.TabIndex = 49;
+            this.linkLabelCancel.TabStop = true;
+            this.linkLabelCancel.Text = "Cancel Ticket or Rental?";
+            this.linkLabelCancel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelCancel_LinkClicked);
+            // 
             // UserInfoPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Project_Kothin.Properties.Resources.user;
             this.ClientSize = new System.Drawing.Size(1215, 730);
+            this.Controls.Add(this.linkLabelCancel);
             this.Controls.Add(this.InfoUpdateBack);
             this.Controls.Add(this.passBacklabel);
             this.Controls.Add(this.button3);
@@ -484,5 +497,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label passBacklabel;
         private System.Windows.Forms.Label InfoUpdateBack;
+        private System.Windows.Forms.LinkLabel linkLabelCancel;
     }
 }

@@ -335,6 +335,7 @@ namespace Project_Kothin
             this.name.Size = new System.Drawing.Size(81, 13);
             this.name.TabIndex = 21;
             this.name.Text = "Phone Number:";
+            this.name.Click += new System.EventHandler(this.name_Click);
             // 
             // nom
             // 

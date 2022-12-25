@@ -451,5 +451,11 @@ namespace Project_Kothin
             textBoxPostcode.ForeColor = Color.Black;
             textBoxPostcode.BackColor = Color.MistyRose;
         }
+
+        private void linkLabelCancel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Cancel c1 = new Cancel (Phone);
+            c1.Show();
+        }
     }
 }

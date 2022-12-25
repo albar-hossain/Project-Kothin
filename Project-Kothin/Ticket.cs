@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Project_Kothin
@@ -18,16 +12,16 @@ namespace Project_Kothin
 
         [System.Runtime.InteropServices.DllImport("user32.dll", CharSet = System.Runtime.InteropServices.CharSet.Auto)]
         private static extern int SendMessage(IntPtr hWnd, int msg, int wParam, [System.Runtime.InteropServices.MarshalAs(System.Runtime.InteropServices.UnmanagedType.LPWStr)] string lParam);
+
         public Ticket()
         {
             InitializeComponent();
-            
         }
-        public Ticket(string id,string username)
+
+        public Ticket(string id, string username)
         {
             InitializeComponent();
             dateTimePicker1.MinDate = DateTime.Now;
-            
 
             SendMessage(this.departurebox.Handle, CB_SETCUEBANNER, 0, "Please select Depurture location...");
             SendMessage(this.destinationbox.Handle, CB_SETCUEBANNER, 0, "Please select Destination...");
@@ -43,7 +37,7 @@ namespace Project_Kothin
                 dateTimePicker1.MaxDate = DateTime.Now.AddDays(30);
                 SEARCHBUS.Visible = true;
             }
-           // ticketlabel.Text = username;
+            // ticketlabel.Text = username;
             phone = username;
             SqlConnection conn = null;
             try
@@ -53,7 +47,7 @@ namespace Project_Kothin
                 //conn = new SqlConnection(@"Data Source=DESKTOP-BMD47A3\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//risan
                 conn.Open();
 
-                string query =$"select FullName from UserInfo where Phone = {phone}";
+                string query = $"select FullName from UserInfo where Phone = {phone}";
                 SqlCommand cmd = new SqlCommand(query, conn);
                 DataSet ds = new DataSet();
                 SqlDataAdapter adp = new SqlDataAdapter(cmd);
@@ -70,28 +64,22 @@ namespace Project_Kothin
             {
                 conn.Close();
             }
-
         }
 
-        
         private void label1_Click(object sender, EventArgs e)
         {
-
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
         }
 
         private void label2_Click(object sender, EventArgs e)
         {
-
         }
 
         private void SEARCHTRAIN_Click(object sender, EventArgs e)
@@ -99,25 +87,22 @@ namespace Project_Kothin
             if (departurebox.SelectedIndex != destinationbox.SelectedIndex && departurebox.SelectedIndex != -1 && destinationbox.SelectedIndex != -1)
             {
                 string date = dateTimePicker1.Value.ToString("dd-MM-yyyy");
-                Selectseats s1 = new Selectseats(phone,departurebox.Text,destinationbox.Text,date);
+                Selectseats s1 = new Selectseats(phone, departurebox.Text, destinationbox.Text, date);
                 s1.Show();
             }
 
-            if (destinationbox.Text == "" && departurebox.Text == "" || departurebox.Text == destinationbox.Text||departurebox.Text==""||destinationbox.Text=="")
+            if (destinationbox.Text == "" && departurebox.Text == "" || departurebox.Text == destinationbox.Text || departurebox.Text == "" || destinationbox.Text == "")
             {
                 MessageBox.Show("Invalid");
             }
-
-
         }
+
         private void Train_Load(object sender, EventArgs e)
         {
-            
         }
 
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
-
         }
 
         private void SEARCHBUS_Click(object sender, EventArgs e)
@@ -126,26 +111,22 @@ namespace Project_Kothin
             {
                 //string date=DateTime.Value.ToString("dd MMM, yyyy hh:mm tt");
                 string date = dateTimePicker1.Value.ToString("dd-MM-yyyy");
-                Busseats b1 = new Busseats(phone,departurebox.Text,destinationbox.Text,date);
+                Busseats b1 = new Busseats(phone, departurebox.Text, destinationbox.Text, date);
                 b1.Show();
             }
 
-            if (destinationbox.Text == ""&& departurebox.Text =="" || departurebox.Text == destinationbox.Text||departurebox.Text==""||destinationbox.Text=="")
+            if (destinationbox.Text == "" && departurebox.Text == "" || departurebox.Text == destinationbox.Text || departurebox.Text == "" || destinationbox.Text == "")
             {
                 MessageBox.Show("Invalid");
             }
-            
         }
-       
 
         private void label5_Click(object sender, EventArgs e)
         {
-
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
-
         }
 
         private void BackButton_Click(object sender, EventArgs e)

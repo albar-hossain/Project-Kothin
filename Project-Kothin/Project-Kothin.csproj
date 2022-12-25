@@ -70,6 +70,12 @@
     <Compile Include="Busseats.Designer.cs">
       <DependentUpon>Busseats.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cancel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cancel.Designer.cs">
+      <DependentUpon>Cancel.cs</DependentUpon>
+    </Compile>
     <Compile Include="ForgotPassword.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,6 +179,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Busseats.resx">
       <DependentUpon>Busseats.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cancel.resx">
+      <DependentUpon>Cancel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Car.resx">
       <DependentUpon>Car.cs</DependentUpon>
