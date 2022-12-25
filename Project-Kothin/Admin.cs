@@ -50,8 +50,8 @@ namespace Project_Kothin
             SqlConnection conn = null;
             try
             {
-                //conn = new SqlConnection(@"Data Source=DESKTOP-9DIP61O\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//azwad
-                conn = new SqlConnection(@"Data Source=DESKTOP-5NMO71P\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//arif
+                conn = new SqlConnection(@"Data Source=DESKTOP-9DIP61O\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//azwad
+               // conn = new SqlConnection(@"Data Source=DESKTOP-5NMO71P\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//arif
                 conn.Open();
 
                 string query2 = $"select FullName,Phone,Email,Address,PostCode,Password,RecoveryCode from UserInfo where FullName ='{textBox1.Text}'";
@@ -77,14 +77,15 @@ namespace Project_Kothin
 
         private void button2_Click(object sender, EventArgs e)
         {
+            string del = textBox1.Text;
             SqlConnection conn = null;
             try
             {
-                //conn = new SqlConnection(@"Data Source=DESKTOP-9DIP61O\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//azwad
-                conn = new SqlConnection(@"Data Source=DESKTOP-5NMO71P\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True ");//arif
+                conn = new SqlConnection(@"Data Source=DESKTOP-9DIP61O\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//azwad
+               // conn = new SqlConnection(@"Data Source=DESKTOP-5NMO71P\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True ");//arif
                 conn.Open();
 
-                string query = $"Delete From UserInfo Where FullName ={textBox1.Text}";
+                string query = $"Delete From UserInfo Where FullName ='{del}'";
 
                 SqlCommand cmd = new SqlCommand(query, conn);
                 DataSet ds = new DataSet();
@@ -99,6 +100,66 @@ namespace Project_Kothin
             {
                 conn.Close();
             }
+            MessageBox.Show("Account Deletation Successful");
+            //SqlConnection conn = null;
+            try
+            {
+                conn = new SqlConnection(@"Data Source=DESKTOP-9DIP61O\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//azwad
+                   // conn = new SqlConnection(@"Data Source=DESKTOP-5NMO71P\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//arif
+                conn.Open();
+
+                string query2 = $"select FullName,Phone,Email,Address,PostCode,Password,RecoveryCode from UserInfo ";
+                SqlCommand cmd2 = new SqlCommand(query2, conn);
+                DataSet ds = new DataSet();
+                SqlDataAdapter adp = new SqlDataAdapter(cmd2);
+                adp.Fill(ds);
+                DataTable dt = ds.Tables[0];
+                //string val = dt.Rows[0]["X"].ToString();
+                dataGridView1.DataSource = dt;
+                dataGridView1.Refresh();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        private void ShowAll_Click(object sender, EventArgs e)
+        {
+            SqlConnection conn = null;
+            try
+            {
+                conn = new SqlConnection(@"Data Source=DESKTOP-9DIP61O\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//azwad
+               // conn = new SqlConnection(@"Data Source=DESKTOP-5NMO71P\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//arif
+                conn.Open();
+
+                string query2 = $"select FullName,Phone,Email,Address,PostCode,Password,RecoveryCode from UserInfo ";
+                SqlCommand cmd2 = new SqlCommand(query2, conn);
+                DataSet ds = new DataSet();
+                SqlDataAdapter adp = new SqlDataAdapter(cmd2);
+                adp.Fill(ds);
+                DataTable dt = ds.Tables[0];
+                //string val = dt.Rows[0]["X"].ToString();
+                dataGridView1.DataSource = dt;
+                dataGridView1.Refresh();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        private void linkLabelLoginClose_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Close();
         }
 
         //private void fillByToolStripButton_Click(object sender, EventArgs e)
