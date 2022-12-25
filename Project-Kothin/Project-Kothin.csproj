@@ -280,6 +280,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\main_screen_without_logo.png" />
+    <None Include="Resources\main screen.png" />
     <None Include="Resources\rental_er_sobi %282%29.png" />
     <None Include="Resources\rental_er_sobi %281%29.png" />
     <None Include="Resources\rental_er_sobi.png" />
