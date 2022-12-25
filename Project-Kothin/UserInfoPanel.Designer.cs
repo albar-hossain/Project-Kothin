@@ -54,8 +54,8 @@
             this.labelConPassWrong = new System.Windows.Forms.Label();
             this.labelConPassRight = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
+            this.passBacklabel = new System.Windows.Forms.Label();
+            this.InfoUpdateBack = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // labelRegFullName
@@ -386,34 +386,37 @@
             this.button3.Visible = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button4
+            // passBacklabel
             // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(175, 372);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(86, 52);
-            this.button4.TabIndex = 45;
-            this.button4.Text = "⬅";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button4.UseVisualStyleBackColor = true;
+            this.passBacklabel.AutoSize = true;
+            this.passBacklabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passBacklabel.Location = new System.Drawing.Point(874, 257);
+            this.passBacklabel.Name = "passBacklabel";
+            this.passBacklabel.Size = new System.Drawing.Size(41, 37);
+            this.passBacklabel.TabIndex = 47;
+            this.passBacklabel.Text = "⬅";
+            this.passBacklabel.Visible = false;
+            this.passBacklabel.Click += new System.EventHandler(this.label2_Click_1);
             // 
-            // label2
+            // InfoUpdateBack
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(874, 257);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(41, 37);
-            this.label2.TabIndex = 47;
-            this.label2.Text = "⬅";
+            this.InfoUpdateBack.AutoSize = true;
+            this.InfoUpdateBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.InfoUpdateBack.Location = new System.Drawing.Point(177, 372);
+            this.InfoUpdateBack.Name = "InfoUpdateBack";
+            this.InfoUpdateBack.Size = new System.Drawing.Size(41, 37);
+            this.InfoUpdateBack.TabIndex = 48;
+            this.InfoUpdateBack.Text = "⬅";
+            this.InfoUpdateBack.Visible = false;
+            this.InfoUpdateBack.Click += new System.EventHandler(this.InfoUpdateBack_Click);
             // 
             // UserInfoPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1215, 730);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.InfoUpdateBack);
+            this.Controls.Add(this.passBacklabel);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.labelConPassRight);
             this.Controls.Add(this.labelConPassWrong);
@@ -477,7 +480,7 @@
         private System.Windows.Forms.Label labelConPassWrong;
         private System.Windows.Forms.Label labelConPassRight;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label passBacklabel;
+        private System.Windows.Forms.Label InfoUpdateBack;
     }
 }
