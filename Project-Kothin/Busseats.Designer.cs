@@ -65,6 +65,7 @@ namespace Project_Kothin
             this.dateandtime = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.type = new System.Windows.Forms.Label();
+            this.pdf = new System.Windows.Forms.Button();
             this.Seats.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -447,12 +448,23 @@ namespace Project_Kothin
             this.type.TabIndex = 34;
             this.type.Text = "0";
             // 
+            // pdf
+            // 
+            this.pdf.Location = new System.Drawing.Point(922, 464);
+            this.pdf.Name = "pdf";
+            this.pdf.Size = new System.Drawing.Size(142, 23);
+            this.pdf.TabIndex = 50;
+            this.pdf.Text = "Download Invoice";
+            this.pdf.UseVisualStyleBackColor = true;
+            this.pdf.Click += new System.EventHandler(this.pdf_Click);
+            // 
             // Busseats
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1199, 691);
+            this.Controls.Add(this.pdf);
             this.Controls.Add(this.type);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dateandtime);
@@ -480,6 +492,7 @@ namespace Project_Kothin
             this.Controls.Add(this.Seats);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Busseats";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bus";
             this.Load += new System.EventHandler(this.Busseats_Load);
             this.Seats.ResumeLayout(false);
@@ -525,5 +538,6 @@ namespace Project_Kothin
         private System.Windows.Forms.Label dateandtime;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label type;
+        private System.Windows.Forms.Button pdf;
     }
 }

@@ -38,7 +38,9 @@
     <Reference Include="IronPdf, Version=2022.12.0.11113, Culture=neutral, PublicKeyToken=94e1c31412563c75, processorArchitecture=MSIL">
       <HintPath>..\packages\IronPdf.Slim.2022.12.11113\lib\net40\IronPdf.dll</HintPath>
     </Reference>
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing.Common, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
@@ -67,6 +69,12 @@
     </Compile>
     <Compile Include="Busseats.Designer.cs">
       <DependentUpon>Busseats.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cancel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cancel.Designer.cs">
+      <DependentUpon>Cancel.cs</DependentUpon>
     </Compile>
     <Compile Include="ForgotPassword.cs">
       <SubType>Form</SubType>
@@ -104,6 +112,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>PorjotonDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PorjotonDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PorjotonDataSet5.xsd</DependentUpon>
     </Compile>
     <Compile Include="RentalBus.cs">
       <SubType>Form</SubType>
@@ -166,6 +179,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Busseats.resx">
       <DependentUpon>Busseats.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cancel.resx">
+      <DependentUpon>Cancel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Car.resx">
       <DependentUpon>Car.cs</DependentUpon>
@@ -266,6 +282,17 @@
     <None Include="PorjotonDataSet4.xss">
       <DependentUpon>PorjotonDataSet4.xsd</DependentUpon>
     </None>
+    <None Include="PorjotonDataSet5.xsc">
+      <DependentUpon>PorjotonDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="PorjotonDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PorjotonDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PorjotonDataSet5.xss">
+      <DependentUpon>PorjotonDataSet5.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -280,8 +307,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\main_screen_without_logo.png" />
-    <None Include="Resources\main screen.png" />
+    <None Include="Resources\user.png" />
     <None Include="Resources\rental_er_sobi %282%29.png" />
     <None Include="Resources\rental_er_sobi %281%29.png" />
     <None Include="Resources\rental_er_sobi.png" />
@@ -289,6 +315,7 @@
     <None Include="Resources\eyes.png" />
     <None Include="Resources\eyes %281%29.png" />
     <None Include="Resources\eyes_flipped.png" />
+    <None Include="Resources\admin.png" />
     <Content Include="Resources\KothinBGM.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

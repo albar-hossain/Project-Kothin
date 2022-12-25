@@ -55,6 +55,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.linkLabelLoginClose = new System.Windows.Forms.LinkLabel();
+            this.pdf = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -187,20 +189,20 @@
             // Cost
             // 
             this.Cost.AutoSize = true;
-            this.Cost.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cost.Location = new System.Drawing.Point(959, 435);
+            this.Cost.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cost.Location = new System.Drawing.Point(1033, 426);
             this.Cost.Name = "Cost";
-            this.Cost.Size = new System.Drawing.Size(79, 20);
+            this.Cost.Size = new System.Drawing.Size(49, 13);
             this.Cost.TabIndex = 14;
             this.Cost.Text = "Balance:";
             // 
             // amount
             // 
             this.amount.AutoSize = true;
-            this.amount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.amount.Location = new System.Drawing.Point(1044, 435);
+            this.amount.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.amount.Location = new System.Drawing.Point(1088, 426);
             this.amount.Name = "amount";
-            this.amount.Size = new System.Drawing.Size(19, 20);
+            this.amount.Size = new System.Drawing.Size(13, 13);
             this.amount.TabIndex = 15;
             this.amount.Text = "0";
             this.amount.Click += new System.EventHandler(this.label2_Click);
@@ -209,7 +211,7 @@
             // 
             this.DurationRec.AutoSize = true;
             this.DurationRec.BackColor = System.Drawing.Color.Transparent;
-            this.DurationRec.Location = new System.Drawing.Point(1027, 406);
+            this.DurationRec.Location = new System.Drawing.Point(1088, 406);
             this.DurationRec.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.DurationRec.Name = "DurationRec";
             this.DurationRec.Size = new System.Drawing.Size(13, 13);
@@ -220,7 +222,7 @@
             // 
             this.DepRec.AutoSize = true;
             this.DepRec.BackColor = System.Drawing.Color.Transparent;
-            this.DepRec.Location = new System.Drawing.Point(1027, 386);
+            this.DepRec.Location = new System.Drawing.Point(1088, 386);
             this.DepRec.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.DepRec.Name = "DepRec";
             this.DepRec.Size = new System.Drawing.Size(13, 13);
@@ -275,7 +277,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Location = new System.Drawing.Point(952, 386);
+            this.label7.Location = new System.Drawing.Point(1013, 386);
             this.label7.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(85, 13);
@@ -286,7 +288,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Location = new System.Drawing.Point(981, 406);
+            this.label6.Location = new System.Drawing.Point(1042, 406);
             this.label6.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(53, 13);
@@ -337,12 +339,40 @@
             this.label2.TabIndex = 72;
             this.label2.Text = "Phone: ";
             // 
+            // linkLabelLoginClose
+            // 
+            this.linkLabelLoginClose.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.linkLabelLoginClose.AutoSize = true;
+            this.linkLabelLoginClose.BackColor = System.Drawing.Color.Transparent;
+            this.linkLabelLoginClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabelLoginClose.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.linkLabelLoginClose.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(42)))), ((int)(((byte)(65)))));
+            this.linkLabelLoginClose.Location = new System.Drawing.Point(1132, 34);
+            this.linkLabelLoginClose.Name = "linkLabelLoginClose";
+            this.linkLabelLoginClose.Size = new System.Drawing.Size(49, 33);
+            this.linkLabelLoginClose.TabIndex = 84;
+            this.linkLabelLoginClose.TabStop = true;
+            this.linkLabelLoginClose.Text = "❌";
+            this.linkLabelLoginClose.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelLoginClose_LinkClicked);
+            // 
+            // pdf
+            // 
+            this.pdf.Location = new System.Drawing.Point(901, 502);
+            this.pdf.Name = "pdf";
+            this.pdf.Size = new System.Drawing.Size(142, 23);
+            this.pdf.TabIndex = 85;
+            this.pdf.Text = "Download Invoice";
+            this.pdf.UseVisualStyleBackColor = true;
+            this.pdf.Click += new System.EventHandler(this.pdf_Click);
+            // 
             // Boat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1215, 730);
+            this.Controls.Add(this.pdf);
+            this.Controls.Add(this.linkLabelLoginClose);
             this.Controls.Add(this.DurationRec);
             this.Controls.Add(this.DepRec);
             this.Controls.Add(this.ClassRec);
@@ -374,6 +404,7 @@
             this.Name = "Boat";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Boat";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Boat1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -408,5 +439,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.LinkLabel linkLabelLoginClose;
+        private System.Windows.Forms.Button pdf;
     }
 }

@@ -55,25 +55,27 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.linkLabelLoginClose = new System.Windows.Forms.LinkLabel();
+            this.pdf = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // amount
             // 
             this.amount.AutoSize = true;
-            this.amount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.amount.Location = new System.Drawing.Point(1048, 427);
+            this.amount.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.amount.Location = new System.Drawing.Point(1043, 405);
             this.amount.Name = "amount";
-            this.amount.Size = new System.Drawing.Size(19, 20);
+            this.amount.Size = new System.Drawing.Size(13, 13);
             this.amount.TabIndex = 29;
             this.amount.Text = "0";
             // 
             // Cost
             // 
             this.Cost.AutoSize = true;
-            this.Cost.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cost.Location = new System.Drawing.Point(963, 427);
+            this.Cost.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cost.Location = new System.Drawing.Point(988, 405);
             this.Cost.Name = "Cost";
-            this.Cost.Size = new System.Drawing.Size(79, 20);
+            this.Cost.Size = new System.Drawing.Size(49, 13);
             this.Cost.TabIndex = 28;
             this.Cost.Text = "Balance:";
             // 
@@ -177,7 +179,7 @@
             // 
             this.Destination.FormattingEnabled = true;
             this.Destination.Items.AddRange(new object[] {
-            "Withing Dhaka",
+            "Within Dhaka",
             "Savar",
             "Tongi",
             "Gazipur",
@@ -343,12 +345,40 @@
             this.label2.TabIndex = 58;
             this.label2.Text = "Phone: ";
             // 
+            // linkLabelLoginClose
+            // 
+            this.linkLabelLoginClose.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.linkLabelLoginClose.AutoSize = true;
+            this.linkLabelLoginClose.BackColor = System.Drawing.Color.Transparent;
+            this.linkLabelLoginClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabelLoginClose.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.linkLabelLoginClose.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(42)))), ((int)(((byte)(65)))));
+            this.linkLabelLoginClose.Location = new System.Drawing.Point(1101, 26);
+            this.linkLabelLoginClose.Name = "linkLabelLoginClose";
+            this.linkLabelLoginClose.Size = new System.Drawing.Size(49, 33);
+            this.linkLabelLoginClose.TabIndex = 70;
+            this.linkLabelLoginClose.TabStop = true;
+            this.linkLabelLoginClose.Text = "❌";
+            this.linkLabelLoginClose.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelLoginClose_LinkClicked);
+            // 
+            // pdf
+            // 
+            this.pdf.Location = new System.Drawing.Point(895, 494);
+            this.pdf.Name = "pdf";
+            this.pdf.Size = new System.Drawing.Size(142, 23);
+            this.pdf.TabIndex = 71;
+            this.pdf.Text = "Download Invoice";
+            this.pdf.UseVisualStyleBackColor = true;
+            this.pdf.Click += new System.EventHandler(this.pdf_Click);
+            // 
             // Car
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1199, 691);
+            this.ClientSize = new System.Drawing.Size(1215, 730);
+            this.Controls.Add(this.pdf);
+            this.Controls.Add(this.linkLabelLoginClose);
             this.Controls.Add(this.DurationRec);
             this.Controls.Add(this.DepRec);
             this.Controls.Add(this.ClassRec);
@@ -375,9 +405,11 @@
             this.Controls.Add(this.Destination);
             this.Controls.Add(this.boatchoice);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Car";
             this.Text = "Car";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Car_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -412,5 +444,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.LinkLabel linkLabelLoginClose;
+        private System.Windows.Forms.Button pdf;
     }
 }

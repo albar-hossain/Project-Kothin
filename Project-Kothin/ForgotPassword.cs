@@ -85,6 +85,8 @@ namespace Project_Kothin
                 {
                     conn = new SqlConnection(@"Data Source=DESKTOP-9DIP61O\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//azwad
                     //conn = new SqlConnection(@"Data Source=SKRILLEXOMG\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");
+                    //conn = new SqlConnection(@"Data Source=DESKTOP-BMD47A3\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//risan
+
                     conn.Open();
 
                     string query = $"select RecoveryCode, Password from UserInfo where Phone = {Phone}";
