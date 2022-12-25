@@ -46,11 +46,12 @@ namespace Project_Kothin
         private void CancelTrain_Click(object sender, EventArgs e)
         {   
             CancelTrain.Visible = false;
+            CancelBus.Visible = false;
             SqlConnection conn = null;
             try
             {
-                conn = new SqlConnection(@"Data Source=DESKTOP-9DIP61O\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//azwad
-                  // conn = new SqlConnection(@"Data Source=DESKTOP-5NMO71P\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True ");//arif
+                //conn = new SqlConnection(@"Data Source=DESKTOP-9DIP61O\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//azwad
+                  conn = new SqlConnection(@"Data Source=DESKTOP-5NMO71P\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True ");//arif
                 conn.Open();
 
                 string query = $"select PhoneNumber, Vehicle,VehicleName,Class,Departure,Destination,Date,Amount from TicketInfo where PhoneNumber = '{Phone}' and Vehicle= 'TRAIN'";
@@ -99,16 +100,18 @@ namespace Project_Kothin
             dest.Visible= true;
             dot.Visible= true;
             amount.Visible= true;
+            
 
         }
 
         private void buttonContrain_Click(object sender, EventArgs e)
         {
+            
             SqlConnection conn = null;
             try
             {
-                conn = new SqlConnection(@"Data Source=DESKTOP-9DIP61O\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//azwad
-                 // conn = new SqlConnection(@"Data Source=DESKTOP-5NMO71P\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True ");//arif
+                //conn = new SqlConnection(@"Data Source=DESKTOP-9DIP61O\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//azwad
+                 conn = new SqlConnection(@"Data Source=DESKTOP-5NMO71P\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True ");//arif
                 conn.Open();
 
                 string query = $"Delete From TicketInfo Where PhoneNumber ='{Phone}' and Vehicle= 'TRAIN'";
@@ -147,19 +150,23 @@ namespace Project_Kothin
             amount.Visible = false;
             CancelTrain.Visible = true;
             buttonCancelTicket.Visible = true;
+            CancelTrain.Visible = false;
 
         }
 
         private void CancelBus_Click(object sender, EventArgs e)
         {
             CancelTrain.Visible = false;
+            CancelBus.Visible = false;
+            buttonContrain.Visible = false;
             buttonConbus.Visible= true;
+            buttonCancelTicket.Visible = false;
 
             SqlConnection conn = null;
             try
             {
-                conn = new SqlConnection(@"Data Source=DESKTOP-9DIP61O\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//azwad
-                 // conn = new SqlConnection(@"Data Source=DESKTOP-5NMO71P\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True ");//arif
+               // conn = new SqlConnection(@"Data Source=DESKTOP-9DIP61O\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//azwad
+                  conn = new SqlConnection(@"Data Source=DESKTOP-5NMO71P\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True ");//arif
                 conn.Open();
 
                 string query = $"select PhoneNumber, Vehicle,VehicleName,Class,Departure,Destination,Date,Amount from TicketInfo where PhoneNumber = '{Phone}' and Vehicle= 'BUS'";
@@ -190,25 +197,74 @@ namespace Project_Kothin
             {
                 conn.Close();
             }
-            buttonContrain.Visible = true;
-            name.Visible = true;
-            VehicleType.Visible = true;
-            trainName.Visible = true;
-            class_label.Visible = true;
-            Departure.Visible = true;
-            Destination.Visible = true;
-            datentime.Visible = true;
-            Totalamount.Visible = true;
+            //buttonContrain.Visible = true;
+            label6.Visible = true;
+            label2.Visible = true;
+            bus.Visible = true;
+            label7.Visible = true;
+            departurelabel.Visible = true;
+            destinationlabel.Visible = true;
+            label1.Visible = true;
+            total.Visible = true;
 
-            nom.Visible = true;
-            label4.Visible = true;
-            tronName.Visible = true;
-            closs.Visible = true;
-            depa.Visible = true;
-            dest.Visible = true;
-            dot.Visible = true;
-            amount.Visible = true;
+            label5.Visible = true;
+            type.Visible = true;
+            bos.Visible = true;
+            label3.Visible = true;
+            dep.Visible = true;
+            des.Visible = true;
+            dateandtime.Visible = true;
+            label8.Visible = true;
+            //buttonCancelTicket.Visible = true;
 
+        }
+
+        private void buttonConbus_Click(object sender, EventArgs e)
+        {
+            SqlConnection conn = null;
+            try
+            {
+                //conn = new SqlConnection(@"Data Source=DESKTOP-9DIP61O\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//azwad
+                conn = new SqlConnection(@"Data Source=DESKTOP-5NMO71P\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True ");//arif
+                conn.Open();
+
+                string query = $"Delete From TicketInfo Where PhoneNumber ='{Phone}' and Vehicle= 'BUS'";
+
+                SqlCommand cmd = new SqlCommand(query, conn);
+                DataSet ds = new DataSet();
+                SqlDataAdapter adp = new SqlDataAdapter(cmd);
+                adp.Fill(ds);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            MessageBox.Show("Ticket Cancelation Successful");
+            buttonConbus.Visible = false;
+            label6.Visible = false;
+            label2.Visible = false;
+            bus.Visible = false;
+            label7.Visible = false;
+            departurelabel.Visible = false;
+            destinationlabel.Visible = false;
+            label1.Visible = false;
+            total.Visible = false;
+
+            label5.Visible = false;
+            type.Visible = false;
+            bos.Visible = false;
+            label3.Visible = false;
+            dep.Visible = false;
+            des.Visible = false;
+            dateandtime.Visible = false;
+            label8.Visible = false;
+            CancelBus.Visible = false;
+            buttonContrain.Visible = false;
+            buttonCancelTicket.Visible = true;
         }
     }
 }

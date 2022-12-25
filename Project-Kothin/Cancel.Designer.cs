@@ -287,7 +287,7 @@
             // 
             // CancelBus
             // 
-            this.CancelBus.Location = new System.Drawing.Point(50, 129);
+            this.CancelBus.Location = new System.Drawing.Point(63, 124);
             this.CancelBus.Name = "CancelBus";
             this.CancelBus.Size = new System.Drawing.Size(115, 43);
             this.CancelBus.TabIndex = 67;
@@ -298,7 +298,7 @@
             // 
             // CancelTrain
             // 
-            this.CancelTrain.Location = new System.Drawing.Point(277, 129);
+            this.CancelTrain.Location = new System.Drawing.Point(277, 124);
             this.CancelTrain.Name = "CancelTrain";
             this.CancelTrain.Size = new System.Drawing.Size(115, 43);
             this.CancelTrain.TabIndex = 68;
@@ -309,13 +309,14 @@
             // 
             // buttonConbus
             // 
-            this.buttonConbus.Location = new System.Drawing.Point(63, 440);
+            this.buttonConbus.Location = new System.Drawing.Point(63, 394);
             this.buttonConbus.Name = "buttonConbus";
             this.buttonConbus.Size = new System.Drawing.Size(146, 37);
             this.buttonConbus.TabIndex = 69;
             this.buttonConbus.Text = "Confirm Cancel Bus Ticket?";
             this.buttonConbus.UseVisualStyleBackColor = true;
             this.buttonConbus.Visible = false;
+            this.buttonConbus.Click += new System.EventHandler(this.buttonConbus_Click);
             // 
             // type
             // 
@@ -325,6 +326,7 @@
             this.type.Size = new System.Drawing.Size(13, 13);
             this.type.TabIndex = 85;
             this.type.Text = "0";
+            this.type.Visible = false;
             // 
             // label2
             // 
@@ -334,6 +336,7 @@
             this.label2.Size = new System.Drawing.Size(72, 13);
             this.label2.TabIndex = 84;
             this.label2.Text = "Vehicle Type:";
+            this.label2.Visible = false;
             // 
             // dateandtime
             // 
@@ -343,6 +346,7 @@
             this.dateandtime.Size = new System.Drawing.Size(69, 13);
             this.dateandtime.TabIndex = 83;
             this.dateandtime.Text = "Total amoun:";
+            this.dateandtime.Visible = false;
             // 
             // label1
             // 
@@ -352,6 +356,7 @@
             this.label1.Size = new System.Drawing.Size(33, 13);
             this.label1.TabIndex = 82;
             this.label1.Text = "Date:";
+            this.label1.Visible = false;
             // 
             // des
             // 
@@ -361,6 +366,7 @@
             this.des.Size = new System.Drawing.Size(57, 13);
             this.des.TabIndex = 81;
             this.des.Text = "Departure:";
+            this.des.Visible = false;
             // 
             // dep
             // 
@@ -370,6 +376,7 @@
             this.dep.Size = new System.Drawing.Size(57, 13);
             this.dep.TabIndex = 80;
             this.dep.Text = "Departure:";
+            this.dep.Visible = false;
             // 
             // destinationlabel
             // 
@@ -379,6 +386,7 @@
             this.destinationlabel.Size = new System.Drawing.Size(63, 13);
             this.destinationlabel.TabIndex = 79;
             this.destinationlabel.Text = "Destination:";
+            this.destinationlabel.Visible = false;
             // 
             // departurelabel
             // 
@@ -388,6 +396,7 @@
             this.departurelabel.Size = new System.Drawing.Size(57, 13);
             this.departurelabel.TabIndex = 78;
             this.departurelabel.Text = "Departure:";
+            this.departurelabel.Visible = false;
             // 
             // label3
             // 
@@ -397,6 +406,7 @@
             this.label3.Size = new System.Drawing.Size(13, 13);
             this.label3.TabIndex = 77;
             this.label3.Text = "0";
+            this.label3.Visible = false;
             // 
             // bos
             // 
@@ -406,6 +416,7 @@
             this.bos.Size = new System.Drawing.Size(13, 13);
             this.bos.TabIndex = 76;
             this.bos.Text = "0";
+            this.bos.Visible = false;
             // 
             // label5
             // 
@@ -415,6 +426,7 @@
             this.label5.Size = new System.Drawing.Size(13, 13);
             this.label5.TabIndex = 75;
             this.label5.Text = "0";
+            this.label5.Visible = false;
             // 
             // label6
             // 
@@ -424,6 +436,7 @@
             this.label6.Size = new System.Drawing.Size(81, 13);
             this.label6.TabIndex = 74;
             this.label6.Text = "Phone Number:";
+            this.label6.Visible = false;
             // 
             // total
             // 
@@ -433,6 +446,7 @@
             this.total.Size = new System.Drawing.Size(72, 13);
             this.total.TabIndex = 73;
             this.total.Text = "Total amount:";
+            this.total.Visible = false;
             // 
             // label7
             // 
@@ -442,6 +456,7 @@
             this.label7.Size = new System.Drawing.Size(35, 13);
             this.label7.TabIndex = 72;
             this.label7.Text = "Class:";
+            this.label7.Visible = false;
             // 
             // label8
             // 
@@ -451,6 +466,7 @@
             this.label8.Size = new System.Drawing.Size(13, 13);
             this.label8.TabIndex = 71;
             this.label8.Text = "0";
+            this.label8.Visible = false;
             // 
             // bus
             // 
@@ -460,6 +476,7 @@
             this.bus.Size = new System.Drawing.Size(59, 13);
             this.bus.TabIndex = 70;
             this.bus.Text = "Bus Name:";
+            this.bus.Visible = false;
             // 
             // Cancel
             // 

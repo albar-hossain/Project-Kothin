@@ -43,7 +43,6 @@
             this.linkLabelLoginClose = new System.Windows.Forms.LinkLabel();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.porjotonDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.porjotonDataSet1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userInfoBindingSource)).BeginInit();
@@ -132,11 +131,11 @@
             // 
             // ShowAll
             // 
-            this.ShowAll.Location = new System.Drawing.Point(342, 380);
+            this.ShowAll.Location = new System.Drawing.Point(538, 450);
             this.ShowAll.Name = "ShowAll";
             this.ShowAll.Size = new System.Drawing.Size(88, 40);
             this.ShowAll.TabIndex = 7;
-            this.ShowAll.Text = "Show All";
+            this.ShowAll.Text = "User Info";
             this.ShowAll.UseVisualStyleBackColor = true;
             this.ShowAll.Click += new System.EventHandler(this.ShowAll_Click);
             // 
@@ -158,30 +157,23 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(848, 405);
+            this.button3.Location = new System.Drawing.Point(726, 450);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(88, 40);
             this.button3.TabIndex = 31;
-            this.button3.Text = "Show All";
+            this.button3.Text = "Rental Info";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(703, 380);
+            this.button4.Location = new System.Drawing.Point(632, 450);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(88, 40);
             this.button4.TabIndex = 32;
-            this.button4.Text = "Show All";
+            this.button4.Text = "Ticket Info";
             this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(931, 345);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(88, 40);
-            this.button5.TabIndex = 33;
-            this.button5.Text = "Show All";
-            this.button5.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // Admin
             // 
@@ -189,7 +181,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Project_Kothin.Properties.Resources.admin;
             this.ClientSize = new System.Drawing.Size(1215, 730);
-            this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.linkLabelLoginClose);
@@ -229,6 +220,5 @@
         private System.Windows.Forms.LinkLabel linkLabelLoginClose;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
     }
 }

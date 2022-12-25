@@ -336,7 +336,6 @@ namespace Project_Kothin
             this.name.Size = new System.Drawing.Size(81, 13);
             this.name.TabIndex = 21;
             this.name.Text = "Phone Number:";
-            this.name.Click += new System.EventHandler(this.name_Click);
             // 
             // nom
             // 
@@ -493,6 +492,7 @@ namespace Project_Kothin
             this.Controls.Add(this.Seats);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Busseats";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bus";
             this.Load += new System.EventHandler(this.Busseats_Load);
             this.Seats.ResumeLayout(false);
