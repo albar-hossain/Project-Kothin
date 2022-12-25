@@ -744,7 +744,6 @@
             this.linkLabelLoginBack.TabIndex = 103;
             this.linkLabelLoginBack.TabStop = true;
             this.linkLabelLoginBack.Text = "🡰";
-            this.linkLabelLoginBack.Visible = false;
             this.linkLabelLoginBack.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelLoginBack_LinkClicked);
             // 
             // Cancel
@@ -813,6 +812,7 @@
             this.Controls.Add(this.linkLabelRegClose);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Cancel";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cancel";
             this.Load += new System.EventHandler(this.Cancel_Load);
             this.ResumeLayout(false);

@@ -390,7 +390,6 @@
             this.linkLabelLoginBack.TabIndex = 87;
             this.linkLabelLoginBack.TabStop = true;
             this.linkLabelLoginBack.Text = "🡰";
-            this.linkLabelLoginBack.Visible = false;
             this.linkLabelLoginBack.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelLoginBack_LinkClicked);
             // 
             // RentalBus

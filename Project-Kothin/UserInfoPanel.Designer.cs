@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserInfoPanel));
             this.labelRegFullName = new System.Windows.Forms.Label();
             this.labelRegPhone = new System.Windows.Forms.Label();
             this.fname = new System.Windows.Forms.Label();
@@ -396,6 +397,7 @@
             this.Controls.Add(this.labelRegPhone);
             this.Controls.Add(this.labelRegFullName);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "UserInfoPanel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UserInfoPanel";

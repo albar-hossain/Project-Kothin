@@ -523,7 +523,6 @@ namespace Project_Kothin
             this.linkLabelLoginBack.TabIndex = 88;
             this.linkLabelLoginBack.TabStop = true;
             this.linkLabelLoginBack.Text = "🡰";
-            this.linkLabelLoginBack.Visible = false;
             this.linkLabelLoginBack.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelLoginBack_LinkClicked);
             // 
             // Selectseats
@@ -563,6 +562,7 @@ namespace Project_Kothin
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Selectseats";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Select";
             this.Load += new System.EventHandler(this.Selectseats_Load);
             this.Seats.ResumeLayout(false);

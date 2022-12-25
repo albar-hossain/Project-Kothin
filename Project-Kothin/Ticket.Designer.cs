@@ -40,6 +40,8 @@ namespace Project_Kothin
             this.SEARCHBUS = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.ticketlabel = new System.Windows.Forms.LinkLabel();
+            this.linkLabelLoginBack = new System.Windows.Forms.LinkLabel();
+            this.linkLabelRegClose = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // SEARCHTRAIN
@@ -161,6 +163,38 @@ namespace Project_Kothin
             this.ticketlabel.TabStop = true;
             this.ticketlabel.Text = "Welcome,";
             // 
+            // linkLabelLoginBack
+            // 
+            this.linkLabelLoginBack.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(92)))), ((int)(((byte)(66)))));
+            this.linkLabelLoginBack.AutoSize = true;
+            this.linkLabelLoginBack.BackColor = System.Drawing.Color.Transparent;
+            this.linkLabelLoginBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabelLoginBack.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.linkLabelLoginBack.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(127)))), ((int)(((byte)(99)))));
+            this.linkLabelLoginBack.Location = new System.Drawing.Point(12, 9);
+            this.linkLabelLoginBack.Name = "linkLabelLoginBack";
+            this.linkLabelLoginBack.Size = new System.Drawing.Size(43, 37);
+            this.linkLabelLoginBack.TabIndex = 104;
+            this.linkLabelLoginBack.TabStop = true;
+            this.linkLabelLoginBack.Text = "🡰";
+            this.linkLabelLoginBack.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelLoginBack_LinkClicked);
+            // 
+            // linkLabelRegClose
+            // 
+            this.linkLabelRegClose.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.linkLabelRegClose.AutoSize = true;
+            this.linkLabelRegClose.BackColor = System.Drawing.Color.Transparent;
+            this.linkLabelRegClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabelRegClose.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.linkLabelRegClose.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(42)))), ((int)(((byte)(65)))));
+            this.linkLabelRegClose.Location = new System.Drawing.Point(1156, 9);
+            this.linkLabelRegClose.Name = "linkLabelRegClose";
+            this.linkLabelRegClose.Size = new System.Drawing.Size(47, 31);
+            this.linkLabelRegClose.TabIndex = 105;
+            this.linkLabelRegClose.TabStop = true;
+            this.linkLabelRegClose.Text = "❌";
+            this.linkLabelRegClose.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelRegClose_LinkClicked);
+            // 
             // Ticket
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -168,6 +202,8 @@ namespace Project_Kothin
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1215, 730);
+            this.Controls.Add(this.linkLabelRegClose);
+            this.Controls.Add(this.linkLabelLoginBack);
             this.Controls.Add(this.ticketlabel);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.SEARCHBUS);
@@ -181,6 +217,7 @@ namespace Project_Kothin
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Ticket";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Train";
             this.Load += new System.EventHandler(this.Train_Load);
             this.ResumeLayout(false);
@@ -200,5 +237,7 @@ namespace Project_Kothin
         private System.Windows.Forms.Button SEARCHBUS;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.LinkLabel ticketlabel;
+        private System.Windows.Forms.LinkLabel linkLabelLoginBack;
+        private System.Windows.Forms.LinkLabel linkLabelRegClose;
     }
 }

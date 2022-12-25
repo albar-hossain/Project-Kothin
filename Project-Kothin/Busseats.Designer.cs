@@ -227,6 +227,7 @@ namespace Project_Kothin
             // Class
             // 
             this.Class.AutoSize = true;
+            this.Class.BackColor = System.Drawing.Color.Transparent;
             this.Class.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Class.Location = new System.Drawing.Point(215, 235);
             this.Class.Name = "Class";
@@ -237,6 +238,7 @@ namespace Project_Kothin
             // amount
             // 
             this.amount.AutoSize = true;
+            this.amount.BackColor = System.Drawing.Color.Transparent;
             this.amount.Location = new System.Drawing.Point(995, 427);
             this.amount.Name = "amount";
             this.amount.Size = new System.Drawing.Size(13, 13);
@@ -247,6 +249,7 @@ namespace Project_Kothin
             // bus
             // 
             this.bus.AutoSize = true;
+            this.bus.BackColor = System.Drawing.Color.Transparent;
             this.bus.Location = new System.Drawing.Point(893, 301);
             this.bus.Name = "bus";
             this.bus.Size = new System.Drawing.Size(59, 13);
@@ -267,6 +270,7 @@ namespace Project_Kothin
             // Selection
             // 
             this.Selection.AutoSize = true;
+            this.Selection.BackColor = System.Drawing.Color.Transparent;
             this.Selection.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Selection.Location = new System.Drawing.Point(215, 301);
             this.Selection.Name = "Selection";
@@ -314,6 +318,7 @@ namespace Project_Kothin
             // class_label
             // 
             this.class_label.AutoSize = true;
+            this.class_label.BackColor = System.Drawing.Color.Transparent;
             this.class_label.Location = new System.Drawing.Point(893, 328);
             this.class_label.Name = "class_label";
             this.class_label.Size = new System.Drawing.Size(35, 13);
@@ -323,6 +328,7 @@ namespace Project_Kothin
             // total
             // 
             this.total.AutoSize = true;
+            this.total.BackColor = System.Drawing.Color.Transparent;
             this.total.Location = new System.Drawing.Point(893, 427);
             this.total.Name = "total";
             this.total.Size = new System.Drawing.Size(72, 13);
@@ -333,6 +339,7 @@ namespace Project_Kothin
             // name
             // 
             this.name.AutoSize = true;
+            this.name.BackColor = System.Drawing.Color.Transparent;
             this.name.Location = new System.Drawing.Point(893, 242);
             this.name.Name = "name";
             this.name.Size = new System.Drawing.Size(81, 13);
@@ -342,6 +349,7 @@ namespace Project_Kothin
             // nom
             // 
             this.nom.AutoSize = true;
+            this.nom.BackColor = System.Drawing.Color.Transparent;
             this.nom.Location = new System.Drawing.Point(995, 242);
             this.nom.Name = "nom";
             this.nom.Size = new System.Drawing.Size(13, 13);
@@ -351,6 +359,7 @@ namespace Project_Kothin
             // bos
             // 
             this.bos.AutoSize = true;
+            this.bos.BackColor = System.Drawing.Color.Transparent;
             this.bos.Location = new System.Drawing.Point(995, 301);
             this.bos.Name = "bos";
             this.bos.Size = new System.Drawing.Size(13, 13);
@@ -360,6 +369,7 @@ namespace Project_Kothin
             // closs
             // 
             this.closs.AutoSize = true;
+            this.closs.BackColor = System.Drawing.Color.Transparent;
             this.closs.Location = new System.Drawing.Point(995, 331);
             this.closs.Name = "closs";
             this.closs.Size = new System.Drawing.Size(13, 13);
@@ -370,6 +380,7 @@ namespace Project_Kothin
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
+            this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel1.Location = new System.Drawing.Point(891, 69);
             this.linkLabel1.Name = "linkLabel1";
@@ -381,6 +392,7 @@ namespace Project_Kothin
             // departurelabel
             // 
             this.departurelabel.AutoSize = true;
+            this.departurelabel.BackColor = System.Drawing.Color.Transparent;
             this.departurelabel.Location = new System.Drawing.Point(893, 355);
             this.departurelabel.Name = "departurelabel";
             this.departurelabel.Size = new System.Drawing.Size(57, 13);
@@ -390,6 +402,7 @@ namespace Project_Kothin
             // destinationlabel
             // 
             this.destinationlabel.AutoSize = true;
+            this.destinationlabel.BackColor = System.Drawing.Color.Transparent;
             this.destinationlabel.Location = new System.Drawing.Point(893, 381);
             this.destinationlabel.Name = "destinationlabel";
             this.destinationlabel.Size = new System.Drawing.Size(63, 13);
@@ -399,6 +412,7 @@ namespace Project_Kothin
             // dep
             // 
             this.dep.AutoSize = true;
+            this.dep.BackColor = System.Drawing.Color.Transparent;
             this.dep.Location = new System.Drawing.Point(995, 355);
             this.dep.Name = "dep";
             this.dep.Size = new System.Drawing.Size(57, 13);
@@ -408,6 +422,7 @@ namespace Project_Kothin
             // des
             // 
             this.des.AutoSize = true;
+            this.des.BackColor = System.Drawing.Color.Transparent;
             this.des.Location = new System.Drawing.Point(995, 381);
             this.des.Name = "des";
             this.des.Size = new System.Drawing.Size(57, 13);
@@ -417,6 +432,7 @@ namespace Project_Kothin
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Location = new System.Drawing.Point(893, 404);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(33, 13);
@@ -426,6 +442,7 @@ namespace Project_Kothin
             // dateandtime
             // 
             this.dateandtime.AutoSize = true;
+            this.dateandtime.BackColor = System.Drawing.Color.Transparent;
             this.dateandtime.Location = new System.Drawing.Point(995, 404);
             this.dateandtime.Name = "dateandtime";
             this.dateandtime.Size = new System.Drawing.Size(69, 13);
@@ -435,6 +452,7 @@ namespace Project_Kothin
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Location = new System.Drawing.Point(893, 275);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(72, 13);
@@ -444,6 +462,7 @@ namespace Project_Kothin
             // type
             // 
             this.type.AutoSize = true;
+            this.type.BackColor = System.Drawing.Color.Transparent;
             this.type.Location = new System.Drawing.Point(995, 275);
             this.type.Name = "type";
             this.type.Size = new System.Drawing.Size(13, 13);
@@ -490,7 +509,6 @@ namespace Project_Kothin
             this.linkLabelLoginBack.TabIndex = 86;
             this.linkLabelLoginBack.TabStop = true;
             this.linkLabelLoginBack.Text = "🡰";
-            this.linkLabelLoginBack.Visible = false;
             this.linkLabelLoginBack.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelLoginBack_LinkClicked);
             // 
             // Busseats
@@ -498,7 +516,7 @@ namespace Project_Kothin
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1199, 691);
+            this.ClientSize = new System.Drawing.Size(1215, 730);
             this.Controls.Add(this.linkLabelLoginBack);
             this.Controls.Add(this.linkLabelLoginClose);
             this.Controls.Add(this.pdf);
