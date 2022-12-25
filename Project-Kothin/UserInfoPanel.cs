@@ -14,6 +14,9 @@ namespace Project_Kothin
         private string oldPostCode;
         private String Phone;
         private string passCheck;
+        private string E2;
+        private string A2;
+        private string Pc2;
 
         public UserInfoPanel()
         {
@@ -30,9 +33,8 @@ namespace Project_Kothin
             SqlConnection conn = null;
             try
             {
-                //conn = new SqlConnection(@"Data Source=DESKTOP-9DIP61O\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//azwad
-                conn = new SqlConnection(@"Data Source=DESKTOP-BMD47A3\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//risan
-                                                                                                                                      // conn = new SqlConnection(@"Data Source=DESKTOP-5NMO71P\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True ");//arif
+                conn = new SqlConnection(@"Data Source=DESKTOP-9DIP61O\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//azwad
+                 // conn = new SqlConnection(@"Data Source=DESKTOP-5NMO71P\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True ");//arif
                 conn.Open();
 
                 string query = $"select FullName from UserInfo where Phone={Phone}";
@@ -58,9 +60,8 @@ namespace Project_Kothin
             //SqlConnection conn = null;
             try
             {
-                //conn = new SqlConnection(@"Data Source=DESKTOP-9DIP61O\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//azwad
-                conn = new SqlConnection(@"Data Source=DESKTOP-BMD47A3\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//risan
-                                                                                                                                      // conn = new SqlConnection(@"Data Source=DESKTOP-5NMO71P\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True ");//arif
+                conn = new SqlConnection(@"Data Source=DESKTOP-9DIP61O\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//azwad
+                // conn = new SqlConnection(@"Data Source=DESKTOP-5NMO71P\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True ");//arif
                 conn.Open();
 
                 string query = $"select Email,Address,PostCode,Password from UserInfo where Phone={Phone}";
@@ -126,21 +127,50 @@ namespace Project_Kothin
 
         private void button1_Click(object sender, EventArgs e)
         {
+            SqlConnection conn = null;
+            try
+            {
+                conn = new SqlConnection(@"Data Source=DESKTOP-9DIP61O\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//azwad
+                // conn = new SqlConnection(@"Data Source=DESKTOP-5NMO71P\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True ");//arif
+                conn.Open();
 
-            //string query = $"select Email,Adress,PostCode from UserInfo Where phone ='{Phone}' ";
+                string query = $"select Email,Address,PostCode from UserInfo where Phone={Phone}";
+
+                SqlCommand cmd = new SqlCommand(query, conn);
+                DataSet ds = new DataSet();
+                SqlDataAdapter adp = new SqlDataAdapter(cmd);
+                adp.Fill(ds);
+                DataTable dt = ds.Tables[0];
+                string valE = dt.Rows[0]["Email"].ToString();
+                string valA = dt.Rows[0]["Address"].ToString();
+                string valPC = dt.Rows[0]["PostCode"].ToString();
+
+                E2 = valE;
+                A2 = valA;
+                Pc2 = valPC;
+
+                //oldEmail = val3;
+                //oldAddress = val4;
+                //oldPostCode = val5;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
             if (
-
-                (textBoxPostcode.Text != "" && textBoxPostcode.Text != oldPostCode) ||
-                (textBoxEmail.Text != "" && textBoxEmail.Text != oldEmail) ||
-                (textBoxAddress.Text != "" && textBoxAddress.Text != oldAddress)
-                
+                (textBoxPostcode.Text != "" && Pc2 != textBoxPostcode.Text) ||
+                (textBoxEmail.Text != "" && E2 != textBoxEmail.Text) ||
+                (textBoxAddress.Text != "" && A2 != textBoxAddress.Text)
                 )
             {
-                SqlConnection conn = null;
+                // SqlConnection conn = null;
                 try
                 {
-                    //conn = new SqlConnection(@"Data Source=DESKTOP-9DIP61O\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//azwad
-                    conn = new SqlConnection(@"Data Source=DESKTOP-BMD47A3\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//risan
+                    conn = new SqlConnection(@"Data Source=DESKTOP-9DIP61O\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//azwad
 
                     conn.Open();
 
@@ -168,9 +198,9 @@ namespace Project_Kothin
                     conn.Close();
                 }
                 MessageBox.Show("Information Updated.");
-                updatebutton.Visible= false;
+                updatebutton.Visible = false;
                 textBoxEmail.ReadOnly = true;
-                textBoxAddress.ReadOnly=true;
+                textBoxAddress.ReadOnly = true;
                 textBoxPostcode.ReadOnly = true;
                 viewUpdate.Visible = true;
                 textBoxEmail.ForeColor = Color.Black;
@@ -190,6 +220,7 @@ namespace Project_Kothin
 
         private void viewUpdate_Click(object sender, EventArgs e)
         {
+            InfoUpdateBack.Visible = true;
             viewUpdate.Visible = false;
             textBoxEmail.ForeColor = Color.Black;
             textBoxEmail.BackColor = Color.DimGray;
@@ -240,9 +271,8 @@ namespace Project_Kothin
             SqlConnection conn = null;
             try
             {
-                //conn = new SqlConnection(@"Data Source=DESKTOP-9DIP61O\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//azwad
-                conn = new SqlConnection(@"Data Source=DESKTOP-BMD47A3\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//risan
-                                                                                                                                      // conn = new SqlConnection(@"Data Source=DESKTOP-5NMO71P\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True ");//arif
+                conn = new SqlConnection(@"Data Source=DESKTOP-9DIP61O\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//azwad
+               // conn = new SqlConnection(@"Data Source=DESKTOP-5NMO71P\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True ");//arif
                 conn.Open();
 
                 string query = $"Delete From UserInfo Where Phone ={Phone}";
@@ -267,10 +297,9 @@ namespace Project_Kothin
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-           
-
             textBoxConpass.Clear();
-            button3.Visible= true;
+            passBacklabel.Visible = true;
+            button3.Visible = true;
             updatebutton.Visible = false;
 
             newpass.ForeColor = Color.White;
@@ -326,13 +355,11 @@ namespace Project_Kothin
             SqlConnection conn = null;
             try
             {
-                //conn = new SqlConnection(@"Data Source=DESKTOP-9DIP61O\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//azwad
-                conn = new SqlConnection(@"Data Source=DESKTOP-BMD47A3\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//risan
+                conn = new SqlConnection(@"Data Source=DESKTOP-9DIP61O\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//azwad
 
                 conn.Open();
 
                 string query = $"select Password from UserInfo Where phone ='{Phone}' ";
-
 
                 SqlCommand cmd = new SqlCommand(query, conn);
                 DataSet ds = new DataSet();
@@ -342,8 +369,6 @@ namespace Project_Kothin
                 string valueP = dt.Rows[0]["Password"].ToString();
 
                 passCheck = valueP;
-
-
             }
             catch (Exception ex)
             {
@@ -354,22 +379,17 @@ namespace Project_Kothin
                 conn.Close();
             }
 
-
-
-            if ((newpass.Text != "") &&  (newpass.Text == textBoxConpass.Text) && (passCheck != newpass.Text))
+            if ((newpass.Text != "") && (newpass.Text == textBoxConpass.Text) && (passCheck != newpass.Text))
 
             {
                 //SqlConnection conn = null;
                 try
                 {
-                    //conn = new SqlConnection(@"Data Source=DESKTOP-9DIP61O\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//azwad
-                    conn = new SqlConnection(@"Data Source=DESKTOP-BMD47A3\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//risan
+                    conn = new SqlConnection(@"Data Source=DESKTOP-9DIP61O\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//azwad
 
                     conn.Open();
 
                     string updatedpass = newpass.Text;
-
-
 
                     string query = $"update UserInfo set Password = '{updatedpass}'where Phone = '{Phone}';";
 
@@ -388,19 +408,48 @@ namespace Project_Kothin
                     conn.Close();
                 }
                 MessageBox.Show("Password Updated");
-                button3.Visible= false;
-                newpass.Visible= false;
-                textBoxConpass.Visible= false;
-                viewUpdate.Visible= true;
-                label1.Visible= false;
-                conPass.Visible= false;
+                button3.Visible = false;
+                newpass.Visible = false;
+                textBoxConpass.Visible = false;
+                viewUpdate.Visible = true;
+                label1.Visible = false;
+                conPass.Visible = false;
                 button1.Visible = true;
-
             }
             else
             {
                 MessageBox.Show("Password Invalid");
             }
+        }
+
+        private void label2_Click_1(object sender, EventArgs e)
+        {
+            button3.Visible = false;
+            newpass.Visible = false;
+            textBoxConpass.Visible = false;
+            viewUpdate.Visible = true;
+            label1.Visible = false;
+            conPass.Visible = false;
+            button1.Visible = true;
+            passBacklabel.Visible = false;
+        }
+
+        private void InfoUpdateBack_Click(object sender, EventArgs e)
+        {
+            InfoUpdateBack.Visible = false;
+            updatebutton.Visible = false;
+            textBoxEmail.ReadOnly = true;
+            textBoxAddress.ReadOnly = true;
+            textBoxPostcode.ReadOnly = true;
+            viewUpdate.Visible = true;
+            textBoxEmail.ForeColor = Color.Black;
+            textBoxEmail.BackColor = Color.MistyRose;
+
+            textBoxAddress.ForeColor = Color.Black;
+            textBoxAddress.BackColor = Color.MistyRose;
+
+            textBoxPostcode.ForeColor = Color.Black;
+            textBoxPostcode.BackColor = Color.MistyRose;
         }
     }
 }
