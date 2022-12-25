@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -35,16 +36,69 @@ namespace Project_Kothin
 
         private void Admin_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'porjotonDataSet.TicketInfo' table. You can move, or remove it, as needed.
-           // this.ticketInfoTableAdapter1.Fill(this.porjotonDataSet.TicketInfo);
-            // TODO: This line of code loads data into the 'porjotonDataSet3.TicketInfo' table. You can move, or remove it, as needed.
-          //  this.ticketInfoTableAdapter.Fill(this.porjotonDataSet3.TicketInfo);
+
 
         }
 
         private void linkLabelLoginClose_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            SqlConnection conn = null;
+            try
+            {
+                //conn = new SqlConnection(@"Data Source=DESKTOP-9DIP61O\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//azwad
+                conn = new SqlConnection(@"Data Source=DESKTOP-5NMO71P\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//arif
+                conn.Open();
+
+                string query2 = $"select FullName,Phone,Email,Address,PostCode,Password,RecoveryCode from UserInfo where FullName ='{textBox1.Text}'";
+                SqlCommand cmd2 = new SqlCommand(query2, conn);
+                DataSet ds = new DataSet();
+                SqlDataAdapter adp = new SqlDataAdapter(cmd2);
+                adp.Fill(ds);
+                DataTable dt = ds.Tables[0];
+                //string val = dt.Rows[0]["X"].ToString();
+                dataGridView1.DataSource = dt;
+                dataGridView1.Refresh();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            SqlConnection conn = null;
+            try
+            {
+                //conn = new SqlConnection(@"Data Source=DESKTOP-9DIP61O\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//azwad
+                conn = new SqlConnection(@"Data Source=DESKTOP-5NMO71P\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True ");//arif
+                conn.Open();
+
+                string query = $"Delete From UserInfo Where FullName ={textBox1.Text}";
+
+                SqlCommand cmd = new SqlCommand(query, conn);
+                DataSet ds = new DataSet();
+                SqlDataAdapter adp = new SqlDataAdapter(cmd);
+                adp.Fill(ds);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
         }
 
         //private void fillByToolStripButton_Click(object sender, EventArgs e)
