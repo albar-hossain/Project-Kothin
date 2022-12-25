@@ -55,24 +55,27 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.linkLabelLoginClose = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(553, 220);
+            this.label1.Location = new System.Drawing.Point(1751, 626);
+            this.label1.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(99, 42);
+            this.label1.Size = new System.Drawing.Size(286, 126);
             this.label1.TabIndex = 0;
             this.label1.Text = "Boat";
             // 
             // boatchoice
             // 
             this.boatchoice.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.boatchoice.Location = new System.Drawing.Point(560, 428);
+            this.boatchoice.Location = new System.Drawing.Point(1773, 1218);
+            this.boatchoice.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
             this.boatchoice.Name = "boatchoice";
-            this.boatchoice.Size = new System.Drawing.Size(75, 23);
+            this.boatchoice.Size = new System.Drawing.Size(238, 65);
             this.boatchoice.TabIndex = 1;
             this.boatchoice.Text = "Submit";
             this.boatchoice.UseVisualStyleBackColor = true;
@@ -85,18 +88,20 @@
             "Dhaka to Chandpur to Dhaka",
             "Dhaka to Bhola to Dhaka",
             "Dhaka to Potuakhali to Dhaka"});
-            this.Destination.Location = new System.Drawing.Point(225, 299);
+            this.Destination.Location = new System.Drawing.Point(712, 851);
+            this.Destination.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
             this.Destination.Name = "Destination";
-            this.Destination.Size = new System.Drawing.Size(121, 21);
+            this.Destination.Size = new System.Drawing.Size(374, 45);
             this.Destination.TabIndex = 2;
             // 
             // DestinationLabel
             // 
             this.DestinationLabel.AutoSize = true;
             this.DestinationLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DestinationLabel.Location = new System.Drawing.Point(102, 299);
+            this.DestinationLabel.Location = new System.Drawing.Point(323, 851);
+            this.DestinationLabel.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.DestinationLabel.Name = "DestinationLabel";
-            this.DestinationLabel.Size = new System.Drawing.Size(107, 24);
+            this.DestinationLabel.Size = new System.Drawing.Size(332, 65);
             this.DestinationLabel.TabIndex = 3;
             this.DestinationLabel.Text = "Destination:";
             // 
@@ -104,27 +109,30 @@
             // 
             this.Date.AutoSize = true;
             this.Date.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Date.Location = new System.Drawing.Point(70, 346);
+            this.Date.Location = new System.Drawing.Point(222, 985);
+            this.Date.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.Date.Name = "Date";
-            this.Date.Size = new System.Drawing.Size(139, 24);
+            this.Date.Size = new System.Drawing.Size(429, 65);
             this.Date.TabIndex = 5;
             this.Date.Text = "Departing Date:";
             this.Date.Click += new System.EventHandler(this.Date_Click);
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(225, 350);
+            this.dateTimePicker1.Location = new System.Drawing.Point(712, 996);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(625, 44);
             this.dateTimePicker1.TabIndex = 7;
             // 
             // Type
             // 
             this.Type.AutoSize = true;
             this.Type.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Type.Location = new System.Drawing.Point(486, 294);
+            this.Type.Location = new System.Drawing.Point(1539, 837);
+            this.Type.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.Type.Name = "Type";
-            this.Type.Size = new System.Drawing.Size(58, 24);
+            this.Type.Size = new System.Drawing.Size(172, 65);
             this.Type.TabIndex = 8;
             this.Type.Text = "Type:";
             this.Type.Click += new System.EventHandler(this.Type_Click);
@@ -133,9 +141,10 @@
             // 
             this.Class.AutoSize = true;
             this.Class.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Class.Location = new System.Drawing.Point(484, 348);
+            this.Class.Location = new System.Drawing.Point(1533, 990);
+            this.Class.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.Class.Name = "Class";
-            this.Class.Size = new System.Drawing.Size(60, 24);
+            this.Class.Size = new System.Drawing.Size(188, 65);
             this.Class.TabIndex = 9;
             this.Class.Text = "Class:";
             // 
@@ -146,9 +155,10 @@
             "Speed Boat",
             "Cruise Ship",
             "Trawler Boat"});
-            this.boatType.Location = new System.Drawing.Point(560, 299);
+            this.boatType.Location = new System.Drawing.Point(1773, 851);
+            this.boatType.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
             this.boatType.Name = "boatType";
-            this.boatType.Size = new System.Drawing.Size(121, 21);
+            this.boatType.Size = new System.Drawing.Size(374, 45);
             this.boatType.TabIndex = 10;
             // 
             // classChoose
@@ -157,9 +167,10 @@
             this.classChoose.Items.AddRange(new object[] {
             "Class A",
             "Class B"});
-            this.classChoose.Location = new System.Drawing.Point(560, 353);
+            this.classChoose.Location = new System.Drawing.Point(1773, 1005);
+            this.classChoose.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
             this.classChoose.Name = "classChoose";
-            this.classChoose.Size = new System.Drawing.Size(121, 21);
+            this.classChoose.Size = new System.Drawing.Size(374, 45);
             this.classChoose.TabIndex = 11;
             // 
             // durationChoose
@@ -169,18 +180,20 @@
             "1 Day",
             "2 Days",
             "3 Days"});
-            this.durationChoose.Location = new System.Drawing.Point(888, 302);
+            this.durationChoose.Location = new System.Drawing.Point(2812, 860);
+            this.durationChoose.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
             this.durationChoose.Name = "durationChoose";
-            this.durationChoose.Size = new System.Drawing.Size(121, 21);
+            this.durationChoose.Size = new System.Drawing.Size(374, 45);
             this.durationChoose.TabIndex = 12;
             // 
             // Duration
             // 
             this.Duration.AutoSize = true;
             this.Duration.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Duration.Location = new System.Drawing.Point(787, 297);
+            this.Duration.Location = new System.Drawing.Point(2492, 845);
+            this.Duration.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.Duration.Name = "Duration";
-            this.Duration.Size = new System.Drawing.Size(85, 24);
+            this.Duration.Size = new System.Drawing.Size(261, 65);
             this.Duration.TabIndex = 13;
             this.Duration.Text = "Duration:";
             // 
@@ -188,9 +201,10 @@
             // 
             this.Cost.AutoSize = true;
             this.Cost.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cost.Location = new System.Drawing.Point(959, 435);
+            this.Cost.Location = new System.Drawing.Point(3231, 1238);
+            this.Cost.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.Cost.Name = "Cost";
-            this.Cost.Size = new System.Drawing.Size(79, 20);
+            this.Cost.Size = new System.Drawing.Size(219, 55);
             this.Cost.TabIndex = 14;
             this.Cost.Text = "Balance:";
             // 
@@ -198,9 +212,10 @@
             // 
             this.amount.AutoSize = true;
             this.amount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.amount.Location = new System.Drawing.Point(1044, 435);
+            this.amount.Location = new System.Drawing.Point(3500, 1238);
+            this.amount.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.amount.Name = "amount";
-            this.amount.Size = new System.Drawing.Size(19, 20);
+            this.amount.Size = new System.Drawing.Size(52, 55);
             this.amount.TabIndex = 15;
             this.amount.Text = "0";
             this.amount.Click += new System.EventHandler(this.label2_Click);
@@ -209,10 +224,9 @@
             // 
             this.DurationRec.AutoSize = true;
             this.DurationRec.BackColor = System.Drawing.Color.Transparent;
-            this.DurationRec.Location = new System.Drawing.Point(1027, 406);
-            this.DurationRec.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.DurationRec.Location = new System.Drawing.Point(3446, 1156);
             this.DurationRec.Name = "DurationRec";
-            this.DurationRec.Size = new System.Drawing.Size(13, 13);
+            this.DurationRec.Size = new System.Drawing.Size(35, 37);
             this.DurationRec.TabIndex = 83;
             this.DurationRec.Text = "0";
             // 
@@ -220,10 +234,9 @@
             // 
             this.DepRec.AutoSize = true;
             this.DepRec.BackColor = System.Drawing.Color.Transparent;
-            this.DepRec.Location = new System.Drawing.Point(1027, 386);
-            this.DepRec.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.DepRec.Location = new System.Drawing.Point(3446, 1099);
             this.DepRec.Name = "DepRec";
-            this.DepRec.Size = new System.Drawing.Size(13, 13);
+            this.DepRec.Size = new System.Drawing.Size(35, 37);
             this.DepRec.TabIndex = 82;
             this.DepRec.Text = "0";
             // 
@@ -231,10 +244,9 @@
             // 
             this.ClassRec.AutoSize = true;
             this.ClassRec.BackColor = System.Drawing.Color.Transparent;
-            this.ClassRec.Location = new System.Drawing.Point(861, 448);
-            this.ClassRec.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.ClassRec.Location = new System.Drawing.Point(2726, 1275);
             this.ClassRec.Name = "ClassRec";
-            this.ClassRec.Size = new System.Drawing.Size(13, 13);
+            this.ClassRec.Size = new System.Drawing.Size(35, 37);
             this.ClassRec.TabIndex = 81;
             this.ClassRec.Text = "0";
             // 
@@ -242,10 +254,9 @@
             // 
             this.TypeRec.AutoSize = true;
             this.TypeRec.BackColor = System.Drawing.Color.Transparent;
-            this.TypeRec.Location = new System.Drawing.Point(861, 426);
-            this.TypeRec.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.TypeRec.Location = new System.Drawing.Point(2726, 1212);
             this.TypeRec.Name = "TypeRec";
-            this.TypeRec.Size = new System.Drawing.Size(13, 13);
+            this.TypeRec.Size = new System.Drawing.Size(35, 37);
             this.TypeRec.TabIndex = 80;
             this.TypeRec.Text = "0";
             // 
@@ -253,10 +264,9 @@
             // 
             this.DesRec.AutoSize = true;
             this.DesRec.BackColor = System.Drawing.Color.Transparent;
-            this.DesRec.Location = new System.Drawing.Point(861, 406);
-            this.DesRec.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.DesRec.Location = new System.Drawing.Point(2726, 1156);
             this.DesRec.Name = "DesRec";
-            this.DesRec.Size = new System.Drawing.Size(13, 13);
+            this.DesRec.Size = new System.Drawing.Size(35, 37);
             this.DesRec.TabIndex = 79;
             this.DesRec.Text = "0";
             // 
@@ -264,10 +274,9 @@
             // 
             this.phoneRec.AutoSize = true;
             this.phoneRec.BackColor = System.Drawing.Color.Transparent;
-            this.phoneRec.Location = new System.Drawing.Point(861, 386);
-            this.phoneRec.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.phoneRec.Location = new System.Drawing.Point(2726, 1099);
             this.phoneRec.Name = "phoneRec";
-            this.phoneRec.Size = new System.Drawing.Size(13, 13);
+            this.phoneRec.Size = new System.Drawing.Size(35, 37);
             this.phoneRec.TabIndex = 78;
             this.phoneRec.Text = "0";
             // 
@@ -275,10 +284,9 @@
             // 
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Location = new System.Drawing.Point(952, 386);
-            this.label7.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label7.Location = new System.Drawing.Point(3209, 1099);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(85, 13);
+            this.label7.Size = new System.Drawing.Size(250, 37);
             this.label7.TabIndex = 77;
             this.label7.Text = "Departing Date: ";
             // 
@@ -286,10 +294,9 @@
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Location = new System.Drawing.Point(981, 406);
-            this.label6.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label6.Location = new System.Drawing.Point(3300, 1156);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(53, 13);
+            this.label6.Size = new System.Drawing.Size(157, 37);
             this.label6.TabIndex = 76;
             this.label6.Text = "Duration: ";
             // 
@@ -297,10 +304,9 @@
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Location = new System.Drawing.Point(828, 448);
-            this.label5.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label5.Location = new System.Drawing.Point(2622, 1275);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(38, 13);
+            this.label5.Size = new System.Drawing.Size(115, 37);
             this.label5.TabIndex = 75;
             this.label5.Text = "Class: ";
             // 
@@ -308,10 +314,9 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Location = new System.Drawing.Point(831, 426);
-            this.label4.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label4.Location = new System.Drawing.Point(2632, 1212);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(37, 13);
+            this.label4.Size = new System.Drawing.Size(105, 37);
             this.label4.TabIndex = 74;
             this.label4.Text = "Type: ";
             // 
@@ -319,10 +324,9 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(802, 406);
-            this.label3.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label3.Location = new System.Drawing.Point(2540, 1156);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(66, 13);
+            this.label3.Size = new System.Drawing.Size(195, 37);
             this.label3.TabIndex = 73;
             this.label3.Text = "Destination: ";
             // 
@@ -330,19 +334,36 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(824, 386);
-            this.label2.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label2.Location = new System.Drawing.Point(2609, 1099);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 13);
+            this.label2.Size = new System.Drawing.Size(127, 37);
             this.label2.TabIndex = 72;
             this.label2.Text = "Phone: ";
             // 
+            // linkLabelLoginClose
+            // 
+            this.linkLabelLoginClose.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.linkLabelLoginClose.AutoSize = true;
+            this.linkLabelLoginClose.BackColor = System.Drawing.Color.Transparent;
+            this.linkLabelLoginClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabelLoginClose.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.linkLabelLoginClose.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(42)))), ((int)(((byte)(65)))));
+            this.linkLabelLoginClose.Location = new System.Drawing.Point(3586, 98);
+            this.linkLabelLoginClose.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.linkLabelLoginClose.Name = "linkLabelLoginClose";
+            this.linkLabelLoginClose.Size = new System.Drawing.Size(142, 98);
+            this.linkLabelLoginClose.TabIndex = 84;
+            this.linkLabelLoginClose.TabStop = true;
+            this.linkLabelLoginClose.Text = "❌";
+            this.linkLabelLoginClose.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelLoginClose_LinkClicked);
+            // 
             // Boat
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(19F, 37F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1215, 730);
+            this.Controls.Add(this.linkLabelLoginClose);
             this.Controls.Add(this.DurationRec);
             this.Controls.Add(this.DepRec);
             this.Controls.Add(this.ClassRec);
@@ -371,9 +392,11 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
             this.Name = "Boat";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Boat";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Boat1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -408,5 +431,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.LinkLabel linkLabelLoginClose;
     }
 }

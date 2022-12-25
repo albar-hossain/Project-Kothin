@@ -105,7 +105,7 @@ namespace Project_Kothin
 
 
                 //balance
-                if (Destination.Text == "Withing Dhaka")
+                if (Destination.Text == "Within Dhaka")
                 {
                     balance = 1000 * typemultiplier * classmultiplier * durationmultiplier;
                 }
@@ -145,8 +145,8 @@ namespace Project_Kothin
                 SqlConnection conn = null;
                 try
                 {
-                    conn = new SqlConnection(@"Data Source=DESKTOP-9DIP61O\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//azwad
-                    //conn = new SqlConnection(@"Data Source=DESKTOP-BMD47A3\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");
+                    //conn = new SqlConnection(@"Data Source=DESKTOP-9DIP61O\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//azwad
+                    conn = new SqlConnection(@"Data Source=DESKTOP-BMD47A3\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");
                     conn.Open();
 
 
@@ -161,7 +161,7 @@ namespace Project_Kothin
                 }
                 finally
                 {
-                    MessageBox.Show("Registration complete!");
+                    MessageBox.Show("Request Done!");
                     conn.Close();
                 }
             }
@@ -199,6 +199,11 @@ namespace Project_Kothin
         private void Car_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void linkLabelLoginClose_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

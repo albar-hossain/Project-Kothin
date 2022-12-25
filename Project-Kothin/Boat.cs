@@ -140,7 +140,7 @@ namespace Project_Kothin
                 }
                 finally
                 {
-                    MessageBox.Show("Registration complete!");
+                    MessageBox.Show("Request Done!");
                     conn.Close();
                 }
 
@@ -165,6 +165,11 @@ namespace Project_Kothin
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void linkLabelLoginClose_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Close();
         }
     }
 }
