@@ -85,6 +85,7 @@
             this.labelRentalPhone = new System.Windows.Forms.Label();
             this.DecBalance = new System.Windows.Forms.Label();
             this.labelRentalBalance = new System.Windows.Forms.Label();
+            this.linkLabelLoginBack = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // linkLabelRegClose
@@ -105,7 +106,7 @@
             // 
             // buttonCancelTicket
             // 
-            this.buttonCancelTicket.Location = new System.Drawing.Point(165, 54);
+            this.buttonCancelTicket.Location = new System.Drawing.Point(235, 136);
             this.buttonCancelTicket.Name = "buttonCancelTicket";
             this.buttonCancelTicket.Size = new System.Drawing.Size(115, 43);
             this.buttonCancelTicket.TabIndex = 36;
@@ -115,7 +116,7 @@
             // 
             // buttonCancelRental
             // 
-            this.buttonCancelRental.Location = new System.Drawing.Point(848, 70);
+            this.buttonCancelRental.Location = new System.Drawing.Point(872, 136);
             this.buttonCancelRental.Name = "buttonCancelRental";
             this.buttonCancelRental.Size = new System.Drawing.Size(106, 43);
             this.buttonCancelRental.TabIndex = 37;
@@ -126,7 +127,8 @@
             // dot
             // 
             this.dot.AutoSize = true;
-            this.dot.Location = new System.Drawing.Point(399, 370);
+            this.dot.BackColor = System.Drawing.Color.Transparent;
+            this.dot.Location = new System.Drawing.Point(480, 462);
             this.dot.Name = "dot";
             this.dot.Size = new System.Drawing.Size(13, 13);
             this.dot.TabIndex = 64;
@@ -136,7 +138,8 @@
             // datentime
             // 
             this.datentime.AutoSize = true;
-            this.datentime.Location = new System.Drawing.Point(277, 370);
+            this.datentime.BackColor = System.Drawing.Color.Transparent;
+            this.datentime.Location = new System.Drawing.Point(358, 462);
             this.datentime.Name = "datentime";
             this.datentime.Size = new System.Drawing.Size(33, 13);
             this.datentime.TabIndex = 63;
@@ -146,7 +149,8 @@
             // dest
             // 
             this.dest.AutoSize = true;
-            this.dest.Location = new System.Drawing.Point(399, 340);
+            this.dest.BackColor = System.Drawing.Color.Transparent;
+            this.dest.Location = new System.Drawing.Point(480, 432);
             this.dest.Name = "dest";
             this.dest.Size = new System.Drawing.Size(13, 13);
             this.dest.TabIndex = 62;
@@ -156,7 +160,8 @@
             // depa
             // 
             this.depa.AutoSize = true;
-            this.depa.Location = new System.Drawing.Point(399, 311);
+            this.depa.BackColor = System.Drawing.Color.Transparent;
+            this.depa.Location = new System.Drawing.Point(480, 403);
             this.depa.Name = "depa";
             this.depa.Size = new System.Drawing.Size(13, 13);
             this.depa.TabIndex = 61;
@@ -166,7 +171,8 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(399, 219);
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Location = new System.Drawing.Point(480, 311);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(13, 13);
             this.label4.TabIndex = 60;
@@ -176,7 +182,8 @@
             // Destination
             // 
             this.Destination.AutoSize = true;
-            this.Destination.Location = new System.Drawing.Point(277, 340);
+            this.Destination.BackColor = System.Drawing.Color.Transparent;
+            this.Destination.Location = new System.Drawing.Point(358, 432);
             this.Destination.Name = "Destination";
             this.Destination.Size = new System.Drawing.Size(63, 13);
             this.Destination.TabIndex = 59;
@@ -186,7 +193,8 @@
             // Departure
             // 
             this.Departure.AutoSize = true;
-            this.Departure.Location = new System.Drawing.Point(277, 311);
+            this.Departure.BackColor = System.Drawing.Color.Transparent;
+            this.Departure.Location = new System.Drawing.Point(358, 403);
             this.Departure.Name = "Departure";
             this.Departure.Size = new System.Drawing.Size(57, 13);
             this.Departure.TabIndex = 58;
@@ -196,7 +204,8 @@
             // VehicleType
             // 
             this.VehicleType.AutoSize = true;
-            this.VehicleType.Location = new System.Drawing.Point(277, 219);
+            this.VehicleType.BackColor = System.Drawing.Color.Transparent;
+            this.VehicleType.Location = new System.Drawing.Point(358, 311);
             this.VehicleType.Name = "VehicleType";
             this.VehicleType.Size = new System.Drawing.Size(72, 13);
             this.VehicleType.TabIndex = 57;
@@ -206,7 +215,8 @@
             // closs
             // 
             this.closs.AutoSize = true;
-            this.closs.Location = new System.Drawing.Point(399, 282);
+            this.closs.BackColor = System.Drawing.Color.Transparent;
+            this.closs.Location = new System.Drawing.Point(480, 374);
             this.closs.Name = "closs";
             this.closs.Size = new System.Drawing.Size(13, 13);
             this.closs.TabIndex = 56;
@@ -216,7 +226,8 @@
             // tronName
             // 
             this.tronName.AutoSize = true;
-            this.tronName.Location = new System.Drawing.Point(399, 248);
+            this.tronName.BackColor = System.Drawing.Color.Transparent;
+            this.tronName.Location = new System.Drawing.Point(480, 340);
             this.tronName.Name = "tronName";
             this.tronName.Size = new System.Drawing.Size(13, 13);
             this.tronName.TabIndex = 55;
@@ -226,7 +237,8 @@
             // nom
             // 
             this.nom.AutoSize = true;
-            this.nom.Location = new System.Drawing.Point(399, 186);
+            this.nom.BackColor = System.Drawing.Color.Transparent;
+            this.nom.Location = new System.Drawing.Point(480, 278);
             this.nom.Name = "nom";
             this.nom.Size = new System.Drawing.Size(13, 13);
             this.nom.TabIndex = 54;
@@ -236,7 +248,8 @@
             // name
             // 
             this.name.AutoSize = true;
-            this.name.Location = new System.Drawing.Point(274, 186);
+            this.name.BackColor = System.Drawing.Color.Transparent;
+            this.name.Location = new System.Drawing.Point(355, 278);
             this.name.Name = "name";
             this.name.Size = new System.Drawing.Size(81, 13);
             this.name.TabIndex = 53;
@@ -246,7 +259,8 @@
             // class_label
             // 
             this.class_label.AutoSize = true;
-            this.class_label.Location = new System.Drawing.Point(277, 282);
+            this.class_label.BackColor = System.Drawing.Color.Transparent;
+            this.class_label.Location = new System.Drawing.Point(358, 374);
             this.class_label.Name = "class_label";
             this.class_label.Size = new System.Drawing.Size(35, 13);
             this.class_label.TabIndex = 52;
@@ -256,7 +270,8 @@
             // trainName
             // 
             this.trainName.AutoSize = true;
-            this.trainName.Location = new System.Drawing.Point(274, 248);
+            this.trainName.BackColor = System.Drawing.Color.Transparent;
+            this.trainName.Location = new System.Drawing.Point(355, 340);
             this.trainName.Name = "trainName";
             this.trainName.Size = new System.Drawing.Size(65, 13);
             this.trainName.TabIndex = 51;
@@ -266,7 +281,8 @@
             // amount
             // 
             this.amount.AutoSize = true;
-            this.amount.Location = new System.Drawing.Point(399, 400);
+            this.amount.BackColor = System.Drawing.Color.Transparent;
+            this.amount.Location = new System.Drawing.Point(480, 492);
             this.amount.Name = "amount";
             this.amount.Size = new System.Drawing.Size(13, 13);
             this.amount.TabIndex = 50;
@@ -276,7 +292,8 @@
             // Totalamount
             // 
             this.Totalamount.AutoSize = true;
-            this.Totalamount.Location = new System.Drawing.Point(277, 400);
+            this.Totalamount.BackColor = System.Drawing.Color.Transparent;
+            this.Totalamount.Location = new System.Drawing.Point(358, 492);
             this.Totalamount.Name = "Totalamount";
             this.Totalamount.Size = new System.Drawing.Size(72, 13);
             this.Totalamount.TabIndex = 49;
@@ -285,27 +302,29 @@
             // 
             // buttonContrain
             // 
-            this.buttonContrain.Location = new System.Drawing.Point(277, 440);
+            this.buttonContrain.Location = new System.Drawing.Point(358, 532);
             this.buttonContrain.Name = "buttonContrain";
             this.buttonContrain.Size = new System.Drawing.Size(146, 37);
             this.buttonContrain.TabIndex = 65;
-            this.buttonContrain.Text = "Confirm Cancel Train Ticket?";
+            this.buttonContrain.Text = "Confirm Cancel ?";
             this.buttonContrain.UseVisualStyleBackColor = true;
             this.buttonContrain.Visible = false;
             this.buttonContrain.Click += new System.EventHandler(this.buttonContrain_Click);
             // 
             // buttonCancelconRent
             // 
-            this.buttonCancelconRent.Location = new System.Drawing.Point(845, 481);
+            this.buttonCancelconRent.Location = new System.Drawing.Point(869, 522);
             this.buttonCancelconRent.Name = "buttonCancelconRent";
             this.buttonCancelconRent.Size = new System.Drawing.Size(118, 37);
             this.buttonCancelconRent.TabIndex = 66;
             this.buttonCancelconRent.Text = "Confirm Cancel?";
             this.buttonCancelconRent.UseVisualStyleBackColor = true;
+            this.buttonCancelconRent.Visible = false;
+            this.buttonCancelconRent.Click += new System.EventHandler(this.buttonCancelconRent_Click);
             // 
             // CancelBus
             // 
-            this.CancelBus.Location = new System.Drawing.Point(63, 124);
+            this.CancelBus.Location = new System.Drawing.Point(103, 216);
             this.CancelBus.Name = "CancelBus";
             this.CancelBus.Size = new System.Drawing.Size(115, 43);
             this.CancelBus.TabIndex = 67;
@@ -316,7 +335,7 @@
             // 
             // CancelTrain
             // 
-            this.CancelTrain.Location = new System.Drawing.Point(277, 124);
+            this.CancelTrain.Location = new System.Drawing.Point(361, 216);
             this.CancelTrain.Name = "CancelTrain";
             this.CancelTrain.Size = new System.Drawing.Size(115, 43);
             this.CancelTrain.TabIndex = 68;
@@ -327,11 +346,11 @@
             // 
             // buttonConbus
             // 
-            this.buttonConbus.Location = new System.Drawing.Point(63, 394);
+            this.buttonConbus.Location = new System.Drawing.Point(103, 532);
             this.buttonConbus.Name = "buttonConbus";
             this.buttonConbus.Size = new System.Drawing.Size(146, 37);
             this.buttonConbus.TabIndex = 69;
-            this.buttonConbus.Text = "Confirm Cancel Bus Ticket?";
+            this.buttonConbus.Text = "Confirm Cancel?";
             this.buttonConbus.UseVisualStyleBackColor = true;
             this.buttonConbus.Visible = false;
             this.buttonConbus.Click += new System.EventHandler(this.buttonConbus_Click);
@@ -339,7 +358,8 @@
             // type
             // 
             this.type.AutoSize = true;
-            this.type.Location = new System.Drawing.Point(162, 219);
+            this.type.BackColor = System.Drawing.Color.Transparent;
+            this.type.Location = new System.Drawing.Point(202, 311);
             this.type.Name = "type";
             this.type.Size = new System.Drawing.Size(13, 13);
             this.type.TabIndex = 85;
@@ -349,7 +369,8 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(60, 219);
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Location = new System.Drawing.Point(100, 311);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(72, 13);
             this.label2.TabIndex = 84;
@@ -359,7 +380,8 @@
             // dateandtime
             // 
             this.dateandtime.AutoSize = true;
-            this.dateandtime.Location = new System.Drawing.Point(162, 348);
+            this.dateandtime.BackColor = System.Drawing.Color.Transparent;
+            this.dateandtime.Location = new System.Drawing.Point(202, 440);
             this.dateandtime.Name = "dateandtime";
             this.dateandtime.Size = new System.Drawing.Size(69, 13);
             this.dateandtime.TabIndex = 83;
@@ -369,7 +391,8 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(60, 348);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Location = new System.Drawing.Point(100, 440);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(33, 13);
             this.label1.TabIndex = 82;
@@ -379,7 +402,8 @@
             // des
             // 
             this.des.AutoSize = true;
-            this.des.Location = new System.Drawing.Point(162, 325);
+            this.des.BackColor = System.Drawing.Color.Transparent;
+            this.des.Location = new System.Drawing.Point(202, 417);
             this.des.Name = "des";
             this.des.Size = new System.Drawing.Size(57, 13);
             this.des.TabIndex = 81;
@@ -389,7 +413,8 @@
             // dep
             // 
             this.dep.AutoSize = true;
-            this.dep.Location = new System.Drawing.Point(162, 299);
+            this.dep.BackColor = System.Drawing.Color.Transparent;
+            this.dep.Location = new System.Drawing.Point(202, 391);
             this.dep.Name = "dep";
             this.dep.Size = new System.Drawing.Size(57, 13);
             this.dep.TabIndex = 80;
@@ -399,7 +424,8 @@
             // destinationlabel
             // 
             this.destinationlabel.AutoSize = true;
-            this.destinationlabel.Location = new System.Drawing.Point(60, 325);
+            this.destinationlabel.BackColor = System.Drawing.Color.Transparent;
+            this.destinationlabel.Location = new System.Drawing.Point(100, 417);
             this.destinationlabel.Name = "destinationlabel";
             this.destinationlabel.Size = new System.Drawing.Size(63, 13);
             this.destinationlabel.TabIndex = 79;
@@ -409,7 +435,8 @@
             // departurelabel
             // 
             this.departurelabel.AutoSize = true;
-            this.departurelabel.Location = new System.Drawing.Point(60, 299);
+            this.departurelabel.BackColor = System.Drawing.Color.Transparent;
+            this.departurelabel.Location = new System.Drawing.Point(100, 391);
             this.departurelabel.Name = "departurelabel";
             this.departurelabel.Size = new System.Drawing.Size(57, 13);
             this.departurelabel.TabIndex = 78;
@@ -419,7 +446,8 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(162, 275);
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Location = new System.Drawing.Point(202, 367);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(13, 13);
             this.label3.TabIndex = 77;
@@ -429,7 +457,8 @@
             // bos
             // 
             this.bos.AutoSize = true;
-            this.bos.Location = new System.Drawing.Point(162, 245);
+            this.bos.BackColor = System.Drawing.Color.Transparent;
+            this.bos.Location = new System.Drawing.Point(202, 337);
             this.bos.Name = "bos";
             this.bos.Size = new System.Drawing.Size(13, 13);
             this.bos.TabIndex = 76;
@@ -439,7 +468,8 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(162, 186);
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Location = new System.Drawing.Point(202, 278);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(13, 13);
             this.label5.TabIndex = 75;
@@ -449,7 +479,8 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(60, 186);
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Location = new System.Drawing.Point(100, 278);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(81, 13);
             this.label6.TabIndex = 74;
@@ -459,7 +490,8 @@
             // total
             // 
             this.total.AutoSize = true;
-            this.total.Location = new System.Drawing.Point(60, 371);
+            this.total.BackColor = System.Drawing.Color.Transparent;
+            this.total.Location = new System.Drawing.Point(100, 463);
             this.total.Name = "total";
             this.total.Size = new System.Drawing.Size(72, 13);
             this.total.TabIndex = 73;
@@ -469,7 +501,8 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(60, 272);
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Location = new System.Drawing.Point(100, 364);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(35, 13);
             this.label7.TabIndex = 72;
@@ -479,7 +512,8 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(162, 371);
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Location = new System.Drawing.Point(202, 463);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(13, 13);
             this.label8.TabIndex = 71;
@@ -489,7 +523,8 @@
             // bus
             // 
             this.bus.AutoSize = true;
-            this.bus.Location = new System.Drawing.Point(60, 245);
+            this.bus.BackColor = System.Drawing.Color.Transparent;
+            this.bus.Location = new System.Drawing.Point(100, 337);
             this.bus.Name = "bus";
             this.bus.Size = new System.Drawing.Size(59, 13);
             this.bus.TabIndex = 70;
@@ -498,189 +533,227 @@
             // 
             // buttonCancelBus
             // 
-            this.buttonCancelBus.Location = new System.Drawing.Point(672, 156);
+            this.buttonCancelBus.Location = new System.Drawing.Point(696, 222);
             this.buttonCancelBus.Name = "buttonCancelBus";
             this.buttonCancelBus.Size = new System.Drawing.Size(115, 43);
             this.buttonCancelBus.TabIndex = 86;
             this.buttonCancelBus.Text = "Cancel Bus";
             this.buttonCancelBus.UseVisualStyleBackColor = true;
             this.buttonCancelBus.Visible = false;
+            this.buttonCancelBus.Click += new System.EventHandler(this.buttonCancelBus_Click);
             // 
             // buttonCancleBoat
             // 
-            this.buttonCancleBoat.Location = new System.Drawing.Point(848, 156);
+            this.buttonCancleBoat.Location = new System.Drawing.Point(872, 222);
             this.buttonCancleBoat.Name = "buttonCancleBoat";
             this.buttonCancleBoat.Size = new System.Drawing.Size(115, 43);
             this.buttonCancleBoat.TabIndex = 87;
             this.buttonCancleBoat.Text = "Cancel Boat";
             this.buttonCancleBoat.UseVisualStyleBackColor = true;
             this.buttonCancleBoat.Visible = false;
+            this.buttonCancleBoat.Click += new System.EventHandler(this.buttonCancleBoat_Click);
             // 
             // buttonCancleCar
             // 
-            this.buttonCancleCar.Location = new System.Drawing.Point(1018, 156);
+            this.buttonCancleCar.Location = new System.Drawing.Point(1042, 222);
             this.buttonCancleCar.Name = "buttonCancleCar";
             this.buttonCancleCar.Size = new System.Drawing.Size(115, 43);
             this.buttonCancleCar.TabIndex = 88;
             this.buttonCancleCar.Text = "Cancel Car";
             this.buttonCancleCar.UseVisualStyleBackColor = true;
             this.buttonCancleCar.Visible = false;
+            this.buttonCancleCar.Click += new System.EventHandler(this.buttonCancleCar_Click);
             // 
             // DurationRec
             // 
             this.DurationRec.AutoSize = true;
             this.DurationRec.BackColor = System.Drawing.Color.Transparent;
-            this.DurationRec.Location = new System.Drawing.Point(904, 350);
+            this.DurationRec.Location = new System.Drawing.Point(927, 416);
             this.DurationRec.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.DurationRec.Name = "DurationRec";
             this.DurationRec.Size = new System.Drawing.Size(13, 13);
             this.DurationRec.TabIndex = 102;
             this.DurationRec.Text = "0";
+            this.DurationRec.Visible = false;
             // 
             // DepRec
             // 
             this.DepRec.AutoSize = true;
             this.DepRec.BackColor = System.Drawing.Color.Transparent;
-            this.DepRec.Location = new System.Drawing.Point(906, 327);
+            this.DepRec.Location = new System.Drawing.Point(927, 390);
             this.DepRec.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.DepRec.Name = "DepRec";
             this.DepRec.Size = new System.Drawing.Size(13, 13);
             this.DepRec.TabIndex = 101;
             this.DepRec.Text = "0";
+            this.DepRec.Visible = false;
             // 
             // ClassRec
             // 
             this.ClassRec.AutoSize = true;
             this.ClassRec.BackColor = System.Drawing.Color.Transparent;
-            this.ClassRec.Location = new System.Drawing.Point(900, 298);
+            this.ClassRec.Location = new System.Drawing.Point(927, 364);
             this.ClassRec.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.ClassRec.Name = "ClassRec";
             this.ClassRec.Size = new System.Drawing.Size(13, 13);
             this.ClassRec.TabIndex = 100;
             this.ClassRec.Text = "0";
+            this.ClassRec.Visible = false;
             // 
             // TypeRec
             // 
             this.TypeRec.AutoSize = true;
             this.TypeRec.BackColor = System.Drawing.Color.Transparent;
-            this.TypeRec.Location = new System.Drawing.Point(900, 276);
+            this.TypeRec.Location = new System.Drawing.Point(927, 342);
             this.TypeRec.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.TypeRec.Name = "TypeRec";
             this.TypeRec.Size = new System.Drawing.Size(13, 13);
             this.TypeRec.TabIndex = 99;
             this.TypeRec.Text = "0";
+            this.TypeRec.Visible = false;
             // 
             // DesRec
             // 
             this.DesRec.AutoSize = true;
             this.DesRec.BackColor = System.Drawing.Color.Transparent;
-            this.DesRec.Location = new System.Drawing.Point(900, 256);
+            this.DesRec.Location = new System.Drawing.Point(927, 322);
             this.DesRec.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.DesRec.Name = "DesRec";
             this.DesRec.Size = new System.Drawing.Size(13, 13);
             this.DesRec.TabIndex = 98;
             this.DesRec.Text = "0";
+            this.DesRec.Visible = false;
             // 
             // phoneRec
             // 
             this.phoneRec.AutoSize = true;
             this.phoneRec.BackColor = System.Drawing.Color.Transparent;
-            this.phoneRec.Location = new System.Drawing.Point(900, 236);
+            this.phoneRec.Location = new System.Drawing.Point(927, 302);
             this.phoneRec.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.phoneRec.Name = "phoneRec";
             this.phoneRec.Size = new System.Drawing.Size(13, 13);
             this.phoneRec.TabIndex = 97;
             this.phoneRec.Text = "0";
+            this.phoneRec.Visible = false;
             // 
             // labelRentalDepartureDate
             // 
             this.labelRentalDepartureDate.AutoSize = true;
             this.labelRentalDepartureDate.BackColor = System.Drawing.Color.Transparent;
-            this.labelRentalDepartureDate.Location = new System.Drawing.Point(819, 327);
+            this.labelRentalDepartureDate.Location = new System.Drawing.Point(828, 390);
             this.labelRentalDepartureDate.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.labelRentalDepartureDate.Name = "labelRentalDepartureDate";
             this.labelRentalDepartureDate.Size = new System.Drawing.Size(85, 13);
             this.labelRentalDepartureDate.TabIndex = 96;
             this.labelRentalDepartureDate.Text = "Departing Date: ";
+            this.labelRentalDepartureDate.Visible = false;
             // 
             // labelRentalDuration
             // 
             this.labelRentalDuration.AutoSize = true;
             this.labelRentalDuration.BackColor = System.Drawing.Color.Transparent;
-            this.labelRentalDuration.Location = new System.Drawing.Point(845, 350);
+            this.labelRentalDuration.Location = new System.Drawing.Point(860, 416);
             this.labelRentalDuration.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.labelRentalDuration.Name = "labelRentalDuration";
             this.labelRentalDuration.Size = new System.Drawing.Size(53, 13);
             this.labelRentalDuration.TabIndex = 95;
             this.labelRentalDuration.Text = "Duration: ";
+            this.labelRentalDuration.Visible = false;
             // 
             // labelRentalClass
             // 
             this.labelRentalClass.AutoSize = true;
             this.labelRentalClass.BackColor = System.Drawing.Color.Transparent;
-            this.labelRentalClass.Location = new System.Drawing.Point(866, 298);
+            this.labelRentalClass.Location = new System.Drawing.Point(875, 364);
             this.labelRentalClass.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.labelRentalClass.Name = "labelRentalClass";
             this.labelRentalClass.Size = new System.Drawing.Size(38, 13);
             this.labelRentalClass.TabIndex = 94;
             this.labelRentalClass.Text = "Class: ";
+            this.labelRentalClass.Visible = false;
             // 
             // labelRentalType
             // 
             this.labelRentalType.AutoSize = true;
             this.labelRentalType.BackColor = System.Drawing.Color.Transparent;
-            this.labelRentalType.Location = new System.Drawing.Point(869, 276);
+            this.labelRentalType.Location = new System.Drawing.Point(876, 342);
             this.labelRentalType.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.labelRentalType.Name = "labelRentalType";
             this.labelRentalType.Size = new System.Drawing.Size(37, 13);
             this.labelRentalType.TabIndex = 93;
             this.labelRentalType.Text = "Type: ";
+            this.labelRentalType.Visible = false;
             // 
             // labelRentalDestination
             // 
             this.labelRentalDestination.AutoSize = true;
             this.labelRentalDestination.BackColor = System.Drawing.Color.Transparent;
-            this.labelRentalDestination.Location = new System.Drawing.Point(841, 256);
+            this.labelRentalDestination.Location = new System.Drawing.Point(847, 322);
             this.labelRentalDestination.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.labelRentalDestination.Name = "labelRentalDestination";
             this.labelRentalDestination.Size = new System.Drawing.Size(66, 13);
             this.labelRentalDestination.TabIndex = 92;
             this.labelRentalDestination.Text = "Destination: ";
+            this.labelRentalDestination.Visible = false;
             // 
             // labelRentalPhone
             // 
             this.labelRentalPhone.AutoSize = true;
             this.labelRentalPhone.BackColor = System.Drawing.Color.Transparent;
-            this.labelRentalPhone.Location = new System.Drawing.Point(854, 236);
+            this.labelRentalPhone.Location = new System.Drawing.Point(869, 302);
             this.labelRentalPhone.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.labelRentalPhone.Name = "labelRentalPhone";
             this.labelRentalPhone.Size = new System.Drawing.Size(44, 13);
             this.labelRentalPhone.TabIndex = 91;
             this.labelRentalPhone.Text = "Phone: ";
+            this.labelRentalPhone.Visible = false;
             // 
             // DecBalance
             // 
+            this.DecBalance.BackColor = System.Drawing.Color.Transparent;
             this.DecBalance.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DecBalance.Location = new System.Drawing.Point(904, 383);
+            this.DecBalance.Location = new System.Drawing.Point(927, 440);
             this.DecBalance.Name = "DecBalance";
             this.DecBalance.Size = new System.Drawing.Size(13, 13);
             this.DecBalance.TabIndex = 90;
             this.DecBalance.Text = "0";
+            this.DecBalance.Visible = false;
             // 
             // labelRentalBalance
             // 
+            this.labelRentalBalance.BackColor = System.Drawing.Color.Transparent;
             this.labelRentalBalance.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelRentalBalance.Location = new System.Drawing.Point(841, 374);
+            this.labelRentalBalance.Location = new System.Drawing.Point(860, 442);
             this.labelRentalBalance.Name = "labelRentalBalance";
             this.labelRentalBalance.Size = new System.Drawing.Size(58, 20);
             this.labelRentalBalance.TabIndex = 89;
             this.labelRentalBalance.Text = "Balance:";
+            this.labelRentalBalance.Visible = false;
+            // 
+            // linkLabelLoginBack
+            // 
+            this.linkLabelLoginBack.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(92)))), ((int)(((byte)(66)))));
+            this.linkLabelLoginBack.AutoSize = true;
+            this.linkLabelLoginBack.BackColor = System.Drawing.Color.Transparent;
+            this.linkLabelLoginBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabelLoginBack.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.linkLabelLoginBack.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(127)))), ((int)(((byte)(99)))));
+            this.linkLabelLoginBack.Location = new System.Drawing.Point(12, 9);
+            this.linkLabelLoginBack.Name = "linkLabelLoginBack";
+            this.linkLabelLoginBack.Size = new System.Drawing.Size(43, 37);
+            this.linkLabelLoginBack.TabIndex = 103;
+            this.linkLabelLoginBack.TabStop = true;
+            this.linkLabelLoginBack.Text = "🡰";
+            this.linkLabelLoginBack.Visible = false;
+            this.linkLabelLoginBack.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelLoginBack_LinkClicked);
             // 
             // Cancel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::Project_Kothin.Properties.Resources.cancel;
             this.ClientSize = new System.Drawing.Size(1215, 730);
+            this.Controls.Add(this.linkLabelLoginBack);
             this.Controls.Add(this.DurationRec);
             this.Controls.Add(this.DepRec);
             this.Controls.Add(this.ClassRec);
@@ -806,5 +879,6 @@
         private System.Windows.Forms.Label labelRentalPhone;
         private System.Windows.Forms.Label DecBalance;
         private System.Windows.Forms.Label labelRentalBalance;
+        private System.Windows.Forms.LinkLabel linkLabelLoginBack;
     }
 }

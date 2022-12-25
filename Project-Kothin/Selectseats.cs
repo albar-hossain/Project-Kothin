@@ -806,5 +806,84 @@ namespace Project_Kothin
             pdf.SaveAs($"D:/{invoice}Train.pdf"); // Saves our PdfDocument object as a PDF
             invoice++;
         }
+
+        private void name_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+        }
+
+        private void trainName_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void class_label_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void datentime_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void Totalamount_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void amount_Click_1(object sender, EventArgs e)
+        {
+        }
+
+        private void dot_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+        }
+
+        private void dest_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void nom_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void tronName_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void closs_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void depa_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void linkLabelLoginClose_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.GetCurrentProcess().Kill();
+            Application.Exit();
+        }
+
+        private void linkLabelLoginBack_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

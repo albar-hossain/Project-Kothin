@@ -138,7 +138,7 @@ namespace Project_Kothin
                                                                                                                                    //conn = new SqlConnection(@"Data Source=DESKTOP-BMD47A3\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True"); //risan
                 conn.Open();
 
-                string query2 = $"select FullName,Phone,Email,Address,PostCode,Password,RecoveryCode from UserInfo ";
+                string query2 = $"select FullName,Phone,Email,Address,PostCode,Password from UserInfo ";
                 SqlCommand cmd2 = new SqlCommand(query2, conn);
                 DataSet ds = new DataSet();
                 SqlDataAdapter adp = new SqlDataAdapter(cmd2);

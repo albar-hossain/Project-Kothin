@@ -62,7 +62,7 @@
             this.labelRegFullName.BackColor = System.Drawing.Color.Transparent;
             this.labelRegFullName.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelRegFullName.ForeColor = System.Drawing.Color.Black;
-            this.labelRegFullName.Location = new System.Drawing.Point(57, 46);
+            this.labelRegFullName.Location = new System.Drawing.Point(50, 78);
             this.labelRegFullName.Name = "labelRegFullName";
             this.labelRegFullName.Size = new System.Drawing.Size(130, 29);
             this.labelRegFullName.TabIndex = 5;
@@ -75,7 +75,7 @@
             this.labelRegPhone.BackColor = System.Drawing.Color.Transparent;
             this.labelRegPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelRegPhone.ForeColor = System.Drawing.Color.Black;
-            this.labelRegPhone.Location = new System.Drawing.Point(57, 87);
+            this.labelRegPhone.Location = new System.Drawing.Point(91, 118);
             this.labelRegPhone.Name = "labelRegPhone";
             this.labelRegPhone.Size = new System.Drawing.Size(89, 29);
             this.labelRegPhone.TabIndex = 6;
@@ -87,8 +87,8 @@
             this.fname.AutoSize = true;
             this.fname.BackColor = System.Drawing.Color.Transparent;
             this.fname.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fname.ForeColor = System.Drawing.Color.LightSkyBlue;
-            this.fname.Location = new System.Drawing.Point(204, 46);
+            this.fname.ForeColor = System.Drawing.Color.Black;
+            this.fname.Location = new System.Drawing.Point(186, 78);
             this.fname.Name = "fname";
             this.fname.Size = new System.Drawing.Size(79, 29);
             this.fname.TabIndex = 7;
@@ -101,8 +101,8 @@
             this.pnumv.AutoSize = true;
             this.pnumv.BackColor = System.Drawing.Color.Transparent;
             this.pnumv.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pnumv.ForeColor = System.Drawing.Color.LightSkyBlue;
-            this.pnumv.Location = new System.Drawing.Point(204, 87);
+            this.pnumv.ForeColor = System.Drawing.Color.Black;
+            this.pnumv.Location = new System.Drawing.Point(186, 118);
             this.pnumv.Name = "pnumv";
             this.pnumv.Size = new System.Drawing.Size(73, 29);
             this.pnumv.TabIndex = 8;
@@ -113,7 +113,7 @@
             // 
             this.textBoxEmail.BackColor = System.Drawing.Color.MistyRose;
             this.textBoxEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxEmail.Location = new System.Drawing.Point(175, 157);
+            this.textBoxEmail.Location = new System.Drawing.Point(185, 157);
             this.textBoxEmail.Name = "textBoxEmail";
             this.textBoxEmail.ReadOnly = true;
             this.textBoxEmail.Size = new System.Drawing.Size(344, 35);
@@ -124,7 +124,7 @@
             // 
             this.textBoxAddress.BackColor = System.Drawing.Color.MistyRose;
             this.textBoxAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxAddress.Location = new System.Drawing.Point(175, 211);
+            this.textBoxAddress.Location = new System.Drawing.Point(185, 214);
             this.textBoxAddress.Multiline = true;
             this.textBoxAddress.Name = "textBoxAddress";
             this.textBoxAddress.ReadOnly = true;
@@ -135,7 +135,7 @@
             // 
             this.textBoxPostcode.BackColor = System.Drawing.Color.MistyRose;
             this.textBoxPostcode.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxPostcode.Location = new System.Drawing.Point(175, 316);
+            this.textBoxPostcode.Location = new System.Drawing.Point(185, 323);
             this.textBoxPostcode.Name = "textBoxPostcode";
             this.textBoxPostcode.ReadOnly = true;
             this.textBoxPostcode.Size = new System.Drawing.Size(344, 35);
@@ -146,7 +146,7 @@
             // 
             this.newpass.BackColor = System.Drawing.Color.MistyRose;
             this.newpass.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.newpass.Location = new System.Drawing.Point(865, 170);
+            this.newpass.Location = new System.Drawing.Point(894, 205);
             this.newpass.Name = "newpass";
             this.newpass.PasswordChar = '*';
             this.newpass.Size = new System.Drawing.Size(293, 35);
@@ -158,7 +158,7 @@
             // 
             this.textBoxConpass.BackColor = System.Drawing.Color.MistyRose;
             this.textBoxConpass.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxConpass.Location = new System.Drawing.Point(865, 211);
+            this.textBoxConpass.Location = new System.Drawing.Point(894, 274);
             this.textBoxConpass.Name = "textBoxConpass";
             this.textBoxConpass.PasswordChar = '*';
             this.textBoxConpass.Size = new System.Drawing.Size(293, 35);
@@ -173,7 +173,7 @@
             this.conPass.BackColor = System.Drawing.Color.Transparent;
             this.conPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.conPass.ForeColor = System.Drawing.Color.Black;
-            this.conPass.Location = new System.Drawing.Point(643, 214);
+            this.conPass.Location = new System.Drawing.Point(672, 277);
             this.conPass.Name = "conPass";
             this.conPass.Size = new System.Drawing.Size(216, 29);
             this.conPass.TabIndex = 18;
@@ -182,9 +182,10 @@
             // 
             // updatebutton
             // 
-            this.updatebutton.Location = new System.Drawing.Point(626, 592);
+            this.updatebutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updatebutton.Location = new System.Drawing.Point(556, 632);
             this.updatebutton.Name = "updatebutton";
-            this.updatebutton.Size = new System.Drawing.Size(116, 48);
+            this.updatebutton.Size = new System.Drawing.Size(157, 47);
             this.updatebutton.TabIndex = 20;
             this.updatebutton.Text = "Update";
             this.updatebutton.UseVisualStyleBackColor = true;
@@ -194,8 +195,9 @@
             // labelEmail
             // 
             this.labelEmail.AutoSize = true;
+            this.labelEmail.BackColor = System.Drawing.Color.Transparent;
             this.labelEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelEmail.Location = new System.Drawing.Point(32, 157);
+            this.labelEmail.Location = new System.Drawing.Point(99, 157);
             this.labelEmail.Name = "labelEmail";
             this.labelEmail.Size = new System.Drawing.Size(80, 29);
             this.labelEmail.TabIndex = 21;
@@ -204,8 +206,9 @@
             // labelAddress
             // 
             this.labelAddress.AutoSize = true;
+            this.labelAddress.BackColor = System.Drawing.Color.Transparent;
             this.labelAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAddress.Location = new System.Drawing.Point(24, 214);
+            this.labelAddress.Location = new System.Drawing.Point(71, 211);
             this.labelAddress.Name = "labelAddress";
             this.labelAddress.Size = new System.Drawing.Size(108, 29);
             this.labelAddress.TabIndex = 22;
@@ -214,8 +217,9 @@
             // labelPostCode
             // 
             this.labelPostCode.AutoSize = true;
+            this.labelPostCode.BackColor = System.Drawing.Color.Transparent;
             this.labelPostCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPostCode.Location = new System.Drawing.Point(23, 322);
+            this.labelPostCode.Location = new System.Drawing.Point(34, 329);
             this.labelPostCode.Name = "labelPostCode";
             this.labelPostCode.Size = new System.Drawing.Size(146, 29);
             this.labelPostCode.TabIndex = 23;
@@ -226,7 +230,7 @@
             this.button2.BackColor = System.Drawing.Color.DarkRed;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.Snow;
-            this.button2.Location = new System.Drawing.Point(1019, 640);
+            this.button2.Location = new System.Drawing.Point(1019, 634);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(168, 39);
             this.button2.TabIndex = 24;
@@ -236,11 +240,11 @@
             // 
             // viewUpdate
             // 
-            this.viewUpdate.Location = new System.Drawing.Point(358, 372);
+            this.viewUpdate.Location = new System.Drawing.Point(368, 390);
             this.viewUpdate.Name = "viewUpdate";
-            this.viewUpdate.Size = new System.Drawing.Size(161, 52);
+            this.viewUpdate.Size = new System.Drawing.Size(161, 37);
             this.viewUpdate.TabIndex = 25;
-            this.viewUpdate.Text = "Click to Update any details ";
+            this.viewUpdate.Text = "Click to Update details ";
             this.viewUpdate.UseVisualStyleBackColor = true;
             this.viewUpdate.Click += new System.EventHandler(this.viewUpdate_Click);
             // 
@@ -267,7 +271,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(733, 173);
+            this.label1.Location = new System.Drawing.Point(762, 211);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(126, 29);
             this.label1.TabIndex = 39;
@@ -276,9 +280,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(931, 136);
+            this.button1.Location = new System.Drawing.Point(951, 144);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(173, 28);
+            this.button1.Size = new System.Drawing.Size(198, 31);
             this.button1.TabIndex = 40;
             this.button1.Text = "Click to change password";
             this.button1.UseVisualStyleBackColor = true;
@@ -315,9 +319,9 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(1008, 257);
+            this.button3.Location = new System.Drawing.Point(1057, 348);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(130, 49);
+            this.button3.Size = new System.Drawing.Size(130, 36);
             this.button3.TabIndex = 44;
             this.button3.Text = "Update password";
             this.button3.UseVisualStyleBackColor = true;
@@ -328,7 +332,7 @@
             // 
             this.passBacklabel.AutoSize = true;
             this.passBacklabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passBacklabel.Location = new System.Drawing.Point(874, 257);
+            this.passBacklabel.Location = new System.Drawing.Point(887, 348);
             this.passBacklabel.Name = "passBacklabel";
             this.passBacklabel.Size = new System.Drawing.Size(41, 37);
             this.passBacklabel.TabIndex = 47;
@@ -340,7 +344,7 @@
             // 
             this.InfoUpdateBack.AutoSize = true;
             this.InfoUpdateBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InfoUpdateBack.Location = new System.Drawing.Point(177, 372);
+            this.InfoUpdateBack.Location = new System.Drawing.Point(184, 384);
             this.InfoUpdateBack.Name = "InfoUpdateBack";
             this.InfoUpdateBack.Size = new System.Drawing.Size(41, 37);
             this.InfoUpdateBack.TabIndex = 48;

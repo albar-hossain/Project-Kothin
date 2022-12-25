@@ -112,7 +112,7 @@
             this.labelRegEmail.BackColor = System.Drawing.Color.Transparent;
             this.labelRegEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelRegEmail.ForeColor = System.Drawing.Color.Black;
-            this.labelRegEmail.Location = new System.Drawing.Point(651, 266);
+            this.labelRegEmail.Location = new System.Drawing.Point(692, 264);
             this.labelRegEmail.Name = "labelRegEmail";
             this.labelRegEmail.Size = new System.Drawing.Size(88, 29);
             this.labelRegEmail.TabIndex = 6;
@@ -126,7 +126,7 @@
             this.labelRegPassword.BackColor = System.Drawing.Color.Transparent;
             this.labelRegPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelRegPassword.ForeColor = System.Drawing.Color.Black;
-            this.labelRegPassword.Location = new System.Drawing.Point(608, 320);
+            this.labelRegPassword.Location = new System.Drawing.Point(649, 318);
             this.labelRegPassword.Name = "labelRegPassword";
             this.labelRegPassword.Size = new System.Drawing.Size(126, 29);
             this.labelRegPassword.TabIndex = 7;
@@ -168,7 +168,7 @@
             this.labelRegPassConfirm.BackColor = System.Drawing.Color.Transparent;
             this.labelRegPassConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelRegPassConfirm.ForeColor = System.Drawing.Color.Black;
-            this.labelRegPassConfirm.Location = new System.Drawing.Point(523, 380);
+            this.labelRegPassConfirm.Location = new System.Drawing.Point(564, 378);
             this.labelRegPassConfirm.Name = "labelRegPassConfirm";
             this.labelRegPassConfirm.Size = new System.Drawing.Size(216, 29);
             this.labelRegPassConfirm.TabIndex = 10;
@@ -235,7 +235,7 @@
             this.textBoxRegPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxRegPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxRegPassword.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.textBoxRegPassword.Location = new System.Drawing.Point(758, 320);
+            this.textBoxRegPassword.Location = new System.Drawing.Point(799, 318);
             this.textBoxRegPassword.Name = "textBoxRegPassword";
             this.textBoxRegPassword.PasswordChar = '*';
             this.textBoxRegPassword.Size = new System.Drawing.Size(264, 29);
@@ -249,7 +249,7 @@
             this.textBoxRegEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxRegEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxRegEmail.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.textBoxRegEmail.Location = new System.Drawing.Point(758, 266);
+            this.textBoxRegEmail.Location = new System.Drawing.Point(799, 264);
             this.textBoxRegEmail.Name = "textBoxRegEmail";
             this.textBoxRegEmail.Size = new System.Drawing.Size(264, 29);
             this.textBoxRegEmail.TabIndex = 5;
@@ -262,7 +262,7 @@
             this.textBoxRegPassConfirm.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxRegPassConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxRegPassConfirm.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.textBoxRegPassConfirm.Location = new System.Drawing.Point(758, 380);
+            this.textBoxRegPassConfirm.Location = new System.Drawing.Point(799, 378);
             this.textBoxRegPassConfirm.Name = "textBoxRegPassConfirm";
             this.textBoxRegPassConfirm.PasswordChar = '*';
             this.textBoxRegPassConfirm.Size = new System.Drawing.Size(264, 29);
@@ -310,7 +310,7 @@
             this.labelWrongEmail.BackColor = System.Drawing.Color.Transparent;
             this.labelWrongEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelWrongEmail.ForeColor = System.Drawing.Color.Red;
-            this.labelWrongEmail.Location = new System.Drawing.Point(1028, 271);
+            this.labelWrongEmail.Location = new System.Drawing.Point(1069, 271);
             this.labelWrongEmail.Name = "labelWrongEmail";
             this.labelWrongEmail.Size = new System.Drawing.Size(25, 20);
             this.labelWrongEmail.TabIndex = 24;
@@ -325,7 +325,7 @@
             this.labelRightEmail.BackColor = System.Drawing.Color.Transparent;
             this.labelRightEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelRightEmail.ForeColor = System.Drawing.Color.Lime;
-            this.labelRightEmail.Location = new System.Drawing.Point(1028, 271);
+            this.labelRightEmail.Location = new System.Drawing.Point(1069, 271);
             this.labelRightEmail.Name = "labelRightEmail";
             this.labelRightEmail.Size = new System.Drawing.Size(25, 20);
             this.labelRightEmail.TabIndex = 25;
@@ -340,7 +340,7 @@
             this.labelRightPass.BackColor = System.Drawing.Color.Transparent;
             this.labelRightPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelRightPass.ForeColor = System.Drawing.Color.Lime;
-            this.labelRightPass.Location = new System.Drawing.Point(1028, 386);
+            this.labelRightPass.Location = new System.Drawing.Point(1069, 386);
             this.labelRightPass.Name = "labelRightPass";
             this.labelRightPass.Size = new System.Drawing.Size(25, 20);
             this.labelRightPass.TabIndex = 27;
@@ -354,7 +354,7 @@
             this.labelWrongPass.BackColor = System.Drawing.Color.Transparent;
             this.labelWrongPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelWrongPass.ForeColor = System.Drawing.Color.Red;
-            this.labelWrongPass.Location = new System.Drawing.Point(1028, 385);
+            this.labelWrongPass.Location = new System.Drawing.Point(1069, 385);
             this.labelWrongPass.Name = "labelWrongPass";
             this.labelWrongPass.Size = new System.Drawing.Size(25, 20);
             this.labelWrongPass.TabIndex = 26;
@@ -454,7 +454,7 @@
             // 
             this.pictureBoxShowPass.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxShowPass.Image = global::Project_Kothin.Properties.Resources.eyes_flipped;
-            this.pictureBoxShowPass.Location = new System.Drawing.Point(1028, 320);
+            this.pictureBoxShowPass.Location = new System.Drawing.Point(1069, 320);
             this.pictureBoxShowPass.Name = "pictureBoxShowPass";
             this.pictureBoxShowPass.Size = new System.Drawing.Size(24, 24);
             this.pictureBoxShowPass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -467,7 +467,7 @@
             // 
             this.pictureBoxHidePass.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxHidePass.Image = global::Project_Kothin.Properties.Resources.eyes;
-            this.pictureBoxHidePass.Location = new System.Drawing.Point(1028, 320);
+            this.pictureBoxHidePass.Location = new System.Drawing.Point(1069, 320);
             this.pictureBoxHidePass.Name = "pictureBoxHidePass";
             this.pictureBoxHidePass.Size = new System.Drawing.Size(24, 24);
             this.pictureBoxHidePass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;

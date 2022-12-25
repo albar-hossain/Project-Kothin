@@ -66,6 +66,8 @@ namespace Project_Kothin
             this.datentime = new System.Windows.Forms.Label();
             this.dot = new System.Windows.Forms.Label();
             this.pdf = new System.Windows.Forms.Button();
+            this.linkLabelLoginClose = new System.Windows.Forms.LinkLabel();
+            this.linkLabelLoginBack = new System.Windows.Forms.LinkLabel();
             this.Seats.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -79,23 +81,24 @@ namespace Project_Kothin
             "CHITTRA"});
             this.Express.Location = new System.Drawing.Point(212, 354);
             this.Express.Name = "Express";
-            this.Express.Size = new System.Drawing.Size(143, 21);
+            this.Express.Size = new System.Drawing.Size(163, 21);
             this.Express.TabIndex = 0;
             // 
             // Selection
             // 
             this.Selection.AutoSize = true;
-            this.Selection.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Selection.BackColor = System.Drawing.Color.Transparent;
+            this.Selection.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Selection.Location = new System.Drawing.Point(208, 327);
             this.Selection.Name = "Selection";
-            this.Selection.Size = new System.Drawing.Size(265, 24);
+            this.Selection.Size = new System.Drawing.Size(228, 20);
             this.Selection.TabIndex = 1;
             this.Selection.Text = "Select Your Preferred Train";
             this.Selection.Click += new System.EventHandler(this.label1_Click);
             // 
             // SEARCH
             // 
-            this.SEARCH.Location = new System.Drawing.Point(212, 381);
+            this.SEARCH.Location = new System.Drawing.Point(212, 390);
             this.SEARCH.Name = "SEARCH";
             this.SEARCH.Size = new System.Drawing.Size(88, 23);
             this.SEARCH.TabIndex = 2;
@@ -276,12 +279,13 @@ namespace Project_Kothin
             "Shovon"});
             this.classSelection.Location = new System.Drawing.Point(212, 276);
             this.classSelection.Name = "classSelection";
-            this.classSelection.Size = new System.Drawing.Size(121, 21);
+            this.classSelection.Size = new System.Drawing.Size(163, 21);
             this.classSelection.TabIndex = 10;
             // 
             // Class
             // 
             this.Class.AutoSize = true;
+            this.Class.BackColor = System.Drawing.Color.Transparent;
             this.Class.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Class.Location = new System.Drawing.Point(209, 250);
             this.Class.Name = "Class";
@@ -293,157 +297,191 @@ namespace Project_Kothin
             // closs
             // 
             this.closs.AutoSize = true;
+            this.closs.BackColor = System.Drawing.Color.Transparent;
             this.closs.Location = new System.Drawing.Point(1109, 312);
             this.closs.Name = "closs";
             this.closs.Size = new System.Drawing.Size(13, 13);
             this.closs.TabIndex = 39;
             this.closs.Text = "0";
+            this.closs.Click += new System.EventHandler(this.closs_Click);
             // 
             // tronName
             // 
             this.tronName.AutoSize = true;
+            this.tronName.BackColor = System.Drawing.Color.Transparent;
             this.tronName.Location = new System.Drawing.Point(1109, 278);
             this.tronName.Name = "tronName";
             this.tronName.Size = new System.Drawing.Size(13, 13);
             this.tronName.TabIndex = 38;
             this.tronName.Text = "0";
+            this.tronName.Click += new System.EventHandler(this.tronName_Click);
             // 
             // nom
             // 
             this.nom.AutoSize = true;
+            this.nom.BackColor = System.Drawing.Color.Transparent;
             this.nom.Location = new System.Drawing.Point(1109, 216);
             this.nom.Name = "nom";
             this.nom.Size = new System.Drawing.Size(13, 13);
             this.nom.TabIndex = 37;
             this.nom.Text = "0";
+            this.nom.Click += new System.EventHandler(this.nom_Click);
             // 
             // name
             // 
             this.name.AutoSize = true;
+            this.name.BackColor = System.Drawing.Color.Transparent;
             this.name.Location = new System.Drawing.Point(984, 216);
             this.name.Name = "name";
             this.name.Size = new System.Drawing.Size(81, 13);
             this.name.TabIndex = 36;
             this.name.Text = "Phone Number:";
+            this.name.Click += new System.EventHandler(this.name_Click);
             // 
             // class_label
             // 
             this.class_label.AutoSize = true;
+            this.class_label.BackColor = System.Drawing.Color.Transparent;
             this.class_label.Location = new System.Drawing.Point(987, 312);
             this.class_label.Name = "class_label";
             this.class_label.Size = new System.Drawing.Size(35, 13);
             this.class_label.TabIndex = 35;
             this.class_label.Text = "Class:";
+            this.class_label.Click += new System.EventHandler(this.class_label_Click);
             // 
             // trainName
             // 
             this.trainName.AutoSize = true;
+            this.trainName.BackColor = System.Drawing.Color.Transparent;
             this.trainName.Location = new System.Drawing.Point(984, 278);
             this.trainName.Name = "trainName";
             this.trainName.Size = new System.Drawing.Size(65, 13);
             this.trainName.TabIndex = 34;
             this.trainName.Text = "Train Name:";
+            this.trainName.Click += new System.EventHandler(this.trainName_Click);
             // 
             // amount
             // 
             this.amount.AutoSize = true;
+            this.amount.BackColor = System.Drawing.Color.Transparent;
             this.amount.Location = new System.Drawing.Point(1109, 430);
             this.amount.Name = "amount";
             this.amount.Size = new System.Drawing.Size(13, 13);
             this.amount.TabIndex = 33;
             this.amount.Text = "0";
+            this.amount.Click += new System.EventHandler(this.amount_Click_1);
             // 
             // Totalamount
             // 
             this.Totalamount.AutoSize = true;
+            this.Totalamount.BackColor = System.Drawing.Color.Transparent;
             this.Totalamount.Location = new System.Drawing.Point(987, 430);
             this.Totalamount.Name = "Totalamount";
             this.Totalamount.Size = new System.Drawing.Size(72, 13);
             this.Totalamount.TabIndex = 32;
             this.Totalamount.Text = "Total amount:";
+            this.Totalamount.Click += new System.EventHandler(this.Totalamount_Click);
             // 
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
+            this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.Location = new System.Drawing.Point(1002, 64);
+            this.linkLabel1.Location = new System.Drawing.Point(982, 85);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(121, 29);
             this.linkLabel1.TabIndex = 40;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Welcome,";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Location = new System.Drawing.Point(987, 249);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(72, 13);
             this.label1.TabIndex = 41;
             this.label1.Text = "Vehicle Type:";
+            this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Location = new System.Drawing.Point(987, 341);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 13);
             this.label2.TabIndex = 42;
             this.label2.Text = "Departure:";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Location = new System.Drawing.Point(987, 370);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(63, 13);
             this.label3.TabIndex = 43;
             this.label3.Text = "Destination:";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Location = new System.Drawing.Point(1109, 249);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(13, 13);
             this.label4.TabIndex = 44;
             this.label4.Text = "0";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // depa
             // 
             this.depa.AutoSize = true;
+            this.depa.BackColor = System.Drawing.Color.Transparent;
             this.depa.Location = new System.Drawing.Point(1109, 341);
             this.depa.Name = "depa";
             this.depa.Size = new System.Drawing.Size(13, 13);
             this.depa.TabIndex = 45;
             this.depa.Text = "0";
+            this.depa.Click += new System.EventHandler(this.depa_Click);
             // 
             // dest
             // 
             this.dest.AutoSize = true;
+            this.dest.BackColor = System.Drawing.Color.Transparent;
             this.dest.Location = new System.Drawing.Point(1109, 370);
             this.dest.Name = "dest";
             this.dest.Size = new System.Drawing.Size(13, 13);
             this.dest.TabIndex = 46;
             this.dest.Text = "0";
+            this.dest.Click += new System.EventHandler(this.dest_Click);
             // 
             // datentime
             // 
             this.datentime.AutoSize = true;
+            this.datentime.BackColor = System.Drawing.Color.Transparent;
             this.datentime.Location = new System.Drawing.Point(987, 400);
             this.datentime.Name = "datentime";
             this.datentime.Size = new System.Drawing.Size(33, 13);
             this.datentime.TabIndex = 47;
             this.datentime.Text = "Date:";
+            this.datentime.Click += new System.EventHandler(this.datentime_Click);
             // 
             // dot
             // 
             this.dot.AutoSize = true;
+            this.dot.BackColor = System.Drawing.Color.Transparent;
             this.dot.Location = new System.Drawing.Point(1109, 400);
             this.dot.Name = "dot";
             this.dot.Size = new System.Drawing.Size(13, 13);
             this.dot.TabIndex = 48;
             this.dot.Text = "0";
+            this.dot.Click += new System.EventHandler(this.dot_Click);
             // 
             // pdf
             // 
@@ -455,12 +493,47 @@ namespace Project_Kothin
             this.pdf.UseVisualStyleBackColor = true;
             this.pdf.Click += new System.EventHandler(this.pdf_Click);
             // 
+            // linkLabelLoginClose
+            // 
+            this.linkLabelLoginClose.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.linkLabelLoginClose.AutoSize = true;
+            this.linkLabelLoginClose.BackColor = System.Drawing.Color.Transparent;
+            this.linkLabelLoginClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabelLoginClose.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.linkLabelLoginClose.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(42)))), ((int)(((byte)(65)))));
+            this.linkLabelLoginClose.Location = new System.Drawing.Point(1154, 9);
+            this.linkLabelLoginClose.Name = "linkLabelLoginClose";
+            this.linkLabelLoginClose.Size = new System.Drawing.Size(49, 33);
+            this.linkLabelLoginClose.TabIndex = 57;
+            this.linkLabelLoginClose.TabStop = true;
+            this.linkLabelLoginClose.Text = "❌";
+            this.linkLabelLoginClose.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelLoginClose_LinkClicked);
+            // 
+            // linkLabelLoginBack
+            // 
+            this.linkLabelLoginBack.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(92)))), ((int)(((byte)(66)))));
+            this.linkLabelLoginBack.AutoSize = true;
+            this.linkLabelLoginBack.BackColor = System.Drawing.Color.Transparent;
+            this.linkLabelLoginBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabelLoginBack.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.linkLabelLoginBack.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(127)))), ((int)(((byte)(99)))));
+            this.linkLabelLoginBack.Location = new System.Drawing.Point(12, 9);
+            this.linkLabelLoginBack.Name = "linkLabelLoginBack";
+            this.linkLabelLoginBack.Size = new System.Drawing.Size(43, 37);
+            this.linkLabelLoginBack.TabIndex = 88;
+            this.linkLabelLoginBack.TabStop = true;
+            this.linkLabelLoginBack.Text = "🡰";
+            this.linkLabelLoginBack.Visible = false;
+            this.linkLabelLoginBack.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelLoginBack_LinkClicked);
+            // 
             // Selectseats
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1199, 691);
+            this.ClientSize = new System.Drawing.Size(1215, 730);
+            this.Controls.Add(this.linkLabelLoginBack);
+            this.Controls.Add(this.linkLabelLoginClose);
             this.Controls.Add(this.pdf);
             this.Controls.Add(this.dot);
             this.Controls.Add(this.datentime);
@@ -487,6 +560,7 @@ namespace Project_Kothin
             this.Controls.Add(this.SEARCH);
             this.Controls.Add(this.Selection);
             this.Controls.Add(this.Express);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Selectseats";
             this.Text = "Select";
@@ -535,5 +609,7 @@ namespace Project_Kothin
         private System.Windows.Forms.Label datentime;
         private System.Windows.Forms.Label dot;
         private System.Windows.Forms.Button pdf;
+        private System.Windows.Forms.LinkLabel linkLabelLoginClose;
+        private System.Windows.Forms.LinkLabel linkLabelLoginBack;
     }
 }

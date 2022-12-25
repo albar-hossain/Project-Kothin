@@ -104,9 +104,9 @@
             // labelRecoveryCode
             // 
             this.labelRecoveryCode.AutoSize = true;
-            this.labelRecoveryCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRecoveryCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelRecoveryCode.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(150)))), ((int)(((byte)(105)))));
-            this.labelRecoveryCode.Location = new System.Drawing.Point(177, 128);
+            this.labelRecoveryCode.Location = new System.Drawing.Point(173, 127);
             this.labelRecoveryCode.Name = "labelRecoveryCode";
             this.labelRecoveryCode.Size = new System.Drawing.Size(258, 20);
             this.labelRecoveryCode.TabIndex = 33;

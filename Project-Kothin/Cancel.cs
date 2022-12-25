@@ -34,7 +34,8 @@ namespace Project_Kothin
 
         private void linkLabelRegClose_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            this.Close();
+            System.Diagnostics.Process.GetCurrentProcess().Kill();
+            Application.Exit();
         }
 
         private void buttonCancelTicket_Click(object sender, EventArgs e)
@@ -275,6 +276,328 @@ namespace Project_Kothin
             buttonCancelBus.Visible = true;
             buttonCancleBoat.Visible = true;
             buttonCancleCar.Visible = true;
+        }
+
+        private void buttonCancelBus_Click(object sender, EventArgs e)
+        {
+            buttonCancelBus.Visible = true;
+            buttonCancleCar.Visible = false;
+            buttonCancleBoat.Visible = false;
+            phoneRec.Visible = true;
+            DesRec.Visible = true;
+            TypeRec.Visible = true;
+            ClassRec.Visible = true;
+            DepRec.Visible = true;
+            DurationRec.Visible = true;
+            DecBalance.Visible = true;
+            labelRentalPhone.Visible = true;
+            labelRentalDestination.Visible = true;
+            labelRentalType.Visible = true;
+            labelRentalClass.Visible = true;
+            labelRentalDepartureDate.Visible = true;
+            labelRentalDuration.Visible = true;
+            labelRentalBalance.Visible = true;
+            buttonCancelconRent.Visible = true;
+
+            SqlConnection conn = null;
+            try
+            {
+                conn = new SqlConnection(@"Data Source=SKRILLEXOMG\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True"); //Albar
+                                                                                                                                   //conn = new SqlConnection(@"Data Source=DESKTOP-9DIP61O\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//Azwad
+                                                                                                                                   //conn = new SqlConnection(@"Data Source=DESKTOP-5NMO71P\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True"); //Arif
+                                                                                                                                   //conn = new SqlConnection(@"Data Source=DESKTOP-BMD47A3\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True"); //risan
+                conn.Open();
+
+                string query = $"select Phone, Destination, Type, Class, DepartmentDate, Duration, Balance from Rental where Phone = '{Phone}' and Vehicle= 'BUS'";
+                //select PhoneNumber, Vehicle, VehicleName, Class, Departure, Destination, Date Amount from TicketInfo where PhoneNumber = '01728935121'and vehicle = 'BUS';
+                //MessageBox.Show(Phone);
+
+                SqlCommand cmd = new SqlCommand(query, conn);
+                DataSet ds = new DataSet();
+                SqlDataAdapter adp = new SqlDataAdapter(cmd);
+                adp.Fill(ds);
+
+                DataTable dt = ds.Tables[0];
+                phoneRec.Text = dt.Rows[0]["Phone"].ToString();
+                DesRec.Text = dt.Rows[0]["Destination"].ToString();
+                TypeRec.Text = dt.Rows[0]["Type"].ToString();
+                ClassRec.Text = dt.Rows[0]["Class"].ToString();
+                DepRec.Text = dt.Rows[0]["DepartmentDate"].ToString();
+                DurationRec.Text = dt.Rows[0]["Duration"].ToString();
+                //dateandtime.Text = dt.Rows[0]["Date"].ToString();
+                DecBalance.Text = dt.Rows[0]["Balance"].ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        private void buttonCancleBoat_Click(object sender, EventArgs e)
+        {
+            buttonCancelBus.Visible = false;
+            buttonCancleCar.Visible = false;
+            buttonCancleBoat.Visible = true;
+            phoneRec.Visible = true;
+            DesRec.Visible = true;
+            TypeRec.Visible = true;
+            ClassRec.Visible = true;
+            DepRec.Visible = true;
+            DurationRec.Visible = true;
+            DecBalance.Visible = true;
+            labelRentalPhone.Visible = true;
+            labelRentalDestination.Visible = true;
+            labelRentalType.Visible = true;
+            labelRentalClass.Visible = true;
+            labelRentalDepartureDate.Visible = true;
+            labelRentalDuration.Visible = true;
+            labelRentalBalance.Visible = true;
+            buttonCancelconRent.Visible = true;
+
+            SqlConnection conn = null;
+            try
+            {
+                conn = new SqlConnection(@"Data Source=SKRILLEXOMG\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True"); //Albar
+                                                                                                                                   //conn = new SqlConnection(@"Data Source=DESKTOP-9DIP61O\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//Azwad
+                                                                                                                                   //conn = new SqlConnection(@"Data Source=DESKTOP-5NMO71P\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True"); //Arif
+                                                                                                                                   //conn = new SqlConnection(@"Data Source=DESKTOP-BMD47A3\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True"); //risan
+                conn.Open();
+
+                string query = $"select Phone, Destination, Type, Class, DepartmentDate, Duration, Balance from Rental where Phone = '{Phone}' and Vehicle= 'Boat'";
+                //select PhoneNumber, Vehicle, VehicleName, Class, Departure, Destination, Date Amount from TicketInfo where PhoneNumber = '01728935121'and vehicle = 'BUS';
+                //MessageBox.Show(Phone);
+
+                SqlCommand cmd = new SqlCommand(query, conn);
+                DataSet ds = new DataSet();
+                SqlDataAdapter adp = new SqlDataAdapter(cmd);
+                adp.Fill(ds);
+
+                DataTable dt = ds.Tables[0];
+                phoneRec.Text = dt.Rows[0]["Phone"].ToString();
+                DesRec.Text = dt.Rows[0]["Destination"].ToString();
+                TypeRec.Text = dt.Rows[0]["Type"].ToString();
+                ClassRec.Text = dt.Rows[0]["Class"].ToString();
+                DepRec.Text = dt.Rows[0]["DepartmentDate"].ToString();
+                DurationRec.Text = dt.Rows[0]["Duration"].ToString();
+                //dateandtime.Text = dt.Rows[0]["Date"].ToString();
+                DecBalance.Text = dt.Rows[0]["Balance"].ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        private void buttonCancleCar_Click(object sender, EventArgs e)
+        {
+            buttonCancelBus.Visible = false;
+            buttonCancleCar.Visible = true;
+            buttonCancleBoat.Visible = false;
+            phoneRec.Visible = true;
+            DesRec.Visible = true;
+            TypeRec.Visible = true;
+            ClassRec.Visible = true;
+            DepRec.Visible = true;
+            DurationRec.Visible = true;
+            DecBalance.Visible = true;
+            labelRentalPhone.Visible = true;
+            labelRentalDestination.Visible = true;
+            labelRentalType.Visible = true;
+            labelRentalClass.Visible = true;
+            labelRentalDepartureDate.Visible = true;
+            labelRentalDuration.Visible = true;
+            labelRentalBalance.Visible = true;
+            buttonCancelconRent.Visible = true;
+
+            SqlConnection conn = null;
+            try
+            {
+                conn = new SqlConnection(@"Data Source=SKRILLEXOMG\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True"); //Albar
+                                                                                                                                   //conn = new SqlConnection(@"Data Source=DESKTOP-9DIP61O\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//Azwad
+                                                                                                                                   //conn = new SqlConnection(@"Data Source=DESKTOP-5NMO71P\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True"); //Arif
+                                                                                                                                   //conn = new SqlConnection(@"Data Source=DESKTOP-BMD47A3\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True"); //risan
+                conn.Open();
+
+                string query = $"select Phone, Destination, Type, Class, DepartmentDate, Duration, Balance from Rental where Phone = '{Phone}' and Vehicle= 'Car'";
+                //select PhoneNumber, Vehicle, VehicleName, Class, Departure, Destination, Date Amount from TicketInfo where PhoneNumber = '01728935121'and vehicle = 'BUS';
+                //MessageBox.Show(Phone);
+
+                SqlCommand cmd = new SqlCommand(query, conn);
+                DataSet ds = new DataSet();
+                SqlDataAdapter adp = new SqlDataAdapter(cmd);
+                adp.Fill(ds);
+
+                DataTable dt = ds.Tables[0];
+                phoneRec.Text = dt.Rows[0]["Phone"].ToString();
+                DesRec.Text = dt.Rows[0]["Destination"].ToString();
+                TypeRec.Text = dt.Rows[0]["Type"].ToString();
+                ClassRec.Text = dt.Rows[0]["Class"].ToString();
+                DepRec.Text = dt.Rows[0]["DepartmentDate"].ToString();
+                DurationRec.Text = dt.Rows[0]["Duration"].ToString();
+                //dateandtime.Text = dt.Rows[0]["Date"].ToString();
+                DecBalance.Text = dt.Rows[0]["Balance"].ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        private void buttonCancelconRent_Click(object sender, EventArgs e)
+        {
+            if (buttonCancelBus.Visible)
+            {
+                SqlConnection conn = null;
+                try
+                {
+                    conn = new SqlConnection(@"Data Source=SKRILLEXOMG\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True"); //Albar
+                                                                                                                                       //conn = new SqlConnection(@"Data Source=DESKTOP-9DIP61O\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//Azwad
+                                                                                                                                       //conn = new SqlConnection(@"Data Source=DESKTOP-5NMO71P\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True"); //Arif
+                                                                                                                                       //conn = new SqlConnection(@"Data Source=DESKTOP-BMD47A3\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True"); //risan
+                    conn.Open();
+
+                    string query = $"Delete From Rental Where Phone ='{Phone}' and Vehicle= 'Bus'";
+
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    DataSet ds = new DataSet();
+                    SqlDataAdapter adp = new SqlDataAdapter(cmd);
+                    adp.Fill(ds);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    conn.Close();
+                }
+                MessageBox.Show("Rental Cancelation Successful");
+                buttonCancelBus.Visible = true;
+                buttonCancleCar.Visible = true;
+                buttonCancleBoat.Visible = true;
+                phoneRec.Visible = false;
+                DesRec.Visible = false;
+                TypeRec.Visible = false;
+                ClassRec.Visible = false;
+                DepRec.Visible = false;
+                DurationRec.Visible = false;
+                DecBalance.Visible = false;
+                labelRentalPhone.Visible = false;
+                labelRentalDestination.Visible = false;
+                labelRentalType.Visible = false;
+                labelRentalClass.Visible = false;
+                labelRentalDepartureDate.Visible = false;
+                labelRentalDuration.Visible = false;
+                labelRentalBalance.Visible = false;
+            }
+            else if (buttonCancleBoat.Visible)
+            {
+                SqlConnection conn = null;
+                try
+                {
+                    conn = new SqlConnection(@"Data Source=SKRILLEXOMG\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True"); //Albar
+                                                                                                                                       //conn = new SqlConnection(@"Data Source=DESKTOP-9DIP61O\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//Azwad
+                                                                                                                                       //conn = new SqlConnection(@"Data Source=DESKTOP-5NMO71P\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True"); //Arif
+                                                                                                                                       //conn = new SqlConnection(@"Data Source=DESKTOP-BMD47A3\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True"); //risan
+                    conn.Open();
+
+                    string query = $"Delete From Rental Where Phone ='{Phone}' and Vehicle= 'Boat'";
+
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    DataSet ds = new DataSet();
+                    SqlDataAdapter adp = new SqlDataAdapter(cmd);
+                    adp.Fill(ds);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    conn.Close();
+                }
+                MessageBox.Show("Rental Cancelation Successful");
+                buttonCancelBus.Visible = true;
+                buttonCancleCar.Visible = true;
+                buttonCancleBoat.Visible = true;
+                phoneRec.Visible = false;
+                DesRec.Visible = false;
+                TypeRec.Visible = false;
+                ClassRec.Visible = false;
+                DepRec.Visible = false;
+                DurationRec.Visible = false;
+                DecBalance.Visible = false;
+                labelRentalPhone.Visible = false;
+                labelRentalDestination.Visible = false;
+                labelRentalType.Visible = false;
+                labelRentalClass.Visible = false;
+                labelRentalDepartureDate.Visible = false;
+                labelRentalDuration.Visible = false;
+                labelRentalBalance.Visible = false;
+            }
+            else if (buttonCancleCar.Visible)
+            {
+                SqlConnection conn = null;
+                try
+                {
+                    conn = new SqlConnection(@"Data Source=SKRILLEXOMG\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True"); //Albar
+                                                                                                                                       //conn = new SqlConnection(@"Data Source=DESKTOP-9DIP61O\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//Azwad
+                                                                                                                                       //conn = new SqlConnection(@"Data Source=DESKTOP-5NMO71P\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True"); //Arif
+                                                                                                                                       //conn = new SqlConnection(@"Data Source=DESKTOP-BMD47A3\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True"); //risan
+                    conn.Open();
+
+                    string query = $"Delete From Rental Where Phone ='{Phone}' and Vehicle= 'Car'";
+
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    DataSet ds = new DataSet();
+                    SqlDataAdapter adp = new SqlDataAdapter(cmd);
+                    adp.Fill(ds);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    conn.Close();
+                }
+                MessageBox.Show("Rental Cancelation Successful");
+                buttonCancelBus.Visible = true;
+                buttonCancleCar.Visible = true;
+                buttonCancleBoat.Visible = true;
+                phoneRec.Visible = false;
+                DesRec.Visible = false;
+                TypeRec.Visible = false;
+                ClassRec.Visible = false;
+                DepRec.Visible = false;
+                DurationRec.Visible = false;
+                DecBalance.Visible = false;
+                labelRentalPhone.Visible = false;
+                labelRentalDestination.Visible = false;
+                labelRentalType.Visible = false;
+                labelRentalClass.Visible = false;
+                labelRentalDepartureDate.Visible = false;
+                labelRentalDuration.Visible = false;
+                labelRentalBalance.Visible = false;
+            }
+            buttonCancelconRent.Visible = false;
+        }
+
+        private void linkLabelLoginBack_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
         }
     }
 }

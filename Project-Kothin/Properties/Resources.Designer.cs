@@ -73,6 +73,16 @@ namespace Project_Kothin.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cancel {
+            get {
+                object obj = ResourceManager.GetObject("cancel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap eyes {
             get {
                 object obj = ResourceManager.GetObject("eyes", resourceCulture);
@@ -116,26 +126,6 @@ namespace Project_Kothin.Properties {
         internal static System.Drawing.Bitmap KothinPassResetBG {
             get {
                 object obj = ResourceManager.GetObject("KothinPassResetBG", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap main_screen {
-            get {
-                object obj = ResourceManager.GetObject("main screen", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap main_screen_without_logo {
-            get {
-                object obj = ResourceManager.GetObject("main_screen_without_logo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

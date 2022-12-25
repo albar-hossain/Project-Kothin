@@ -66,6 +66,8 @@ namespace Project_Kothin
             this.label2 = new System.Windows.Forms.Label();
             this.type = new System.Windows.Forms.Label();
             this.pdf = new System.Windows.Forms.Button();
+            this.linkLabelLoginClose = new System.Windows.Forms.LinkLabel();
+            this.linkLabelLoginBack = new System.Windows.Forms.LinkLabel();
             this.Seats.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -369,7 +371,7 @@ namespace Project_Kothin
             // 
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.Location = new System.Drawing.Point(1022, 62);
+            this.linkLabel1.Location = new System.Drawing.Point(891, 69);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(121, 29);
             this.linkLabel1.TabIndex = 26;
@@ -458,12 +460,47 @@ namespace Project_Kothin
             this.pdf.UseVisualStyleBackColor = true;
             this.pdf.Click += new System.EventHandler(this.pdf_Click);
             // 
+            // linkLabelLoginClose
+            // 
+            this.linkLabelLoginClose.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.linkLabelLoginClose.AutoSize = true;
+            this.linkLabelLoginClose.BackColor = System.Drawing.Color.Transparent;
+            this.linkLabelLoginClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabelLoginClose.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.linkLabelLoginClose.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(42)))), ((int)(((byte)(65)))));
+            this.linkLabelLoginClose.Location = new System.Drawing.Point(1138, 9);
+            this.linkLabelLoginClose.Name = "linkLabelLoginClose";
+            this.linkLabelLoginClose.Size = new System.Drawing.Size(49, 33);
+            this.linkLabelLoginClose.TabIndex = 85;
+            this.linkLabelLoginClose.TabStop = true;
+            this.linkLabelLoginClose.Text = "❌";
+            this.linkLabelLoginClose.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelLoginClose_LinkClicked);
+            // 
+            // linkLabelLoginBack
+            // 
+            this.linkLabelLoginBack.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(92)))), ((int)(((byte)(66)))));
+            this.linkLabelLoginBack.AutoSize = true;
+            this.linkLabelLoginBack.BackColor = System.Drawing.Color.Transparent;
+            this.linkLabelLoginBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabelLoginBack.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.linkLabelLoginBack.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(127)))), ((int)(((byte)(99)))));
+            this.linkLabelLoginBack.Location = new System.Drawing.Point(12, 9);
+            this.linkLabelLoginBack.Name = "linkLabelLoginBack";
+            this.linkLabelLoginBack.Size = new System.Drawing.Size(43, 37);
+            this.linkLabelLoginBack.TabIndex = 86;
+            this.linkLabelLoginBack.TabStop = true;
+            this.linkLabelLoginBack.Text = "🡰";
+            this.linkLabelLoginBack.Visible = false;
+            this.linkLabelLoginBack.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelLoginBack_LinkClicked);
+            // 
             // Busseats
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1199, 691);
+            this.Controls.Add(this.linkLabelLoginBack);
+            this.Controls.Add(this.linkLabelLoginClose);
             this.Controls.Add(this.pdf);
             this.Controls.Add(this.type);
             this.Controls.Add(this.label2);
@@ -490,6 +527,7 @@ namespace Project_Kothin
             this.Controls.Add(this.Class);
             this.Controls.Add(this.Class_name);
             this.Controls.Add(this.Seats);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Busseats";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -539,5 +577,7 @@ namespace Project_Kothin
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label type;
         private System.Windows.Forms.Button pdf;
+        private System.Windows.Forms.LinkLabel linkLabelLoginClose;
+        private System.Windows.Forms.LinkLabel linkLabelLoginBack;
     }
 }

@@ -197,7 +197,8 @@ namespace Project_Kothin
 
         private void linkLabelLoginClose_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            this.Close();
+            System.Diagnostics.Process.GetCurrentProcess().Kill();
+            Application.Exit();
         }
 
         private void pdf_Click(object sender, EventArgs e)
@@ -207,6 +208,11 @@ namespace Project_Kothin
                 " <style>body{margin-top: 100px;}</style>");
             pdf.SaveAs($"D:/{invoice}Car.pdf"); // Saves our PdfDocument object as a PDF
             invoice++;
+        }
+
+        private void linkLabelLoginBack_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
         }
     }
 }

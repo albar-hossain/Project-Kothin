@@ -677,5 +677,16 @@ namespace Project_Kothin
             pdf.SaveAs($"D:/{invoice}Bus.pdf"); // Saves our PdfDocument object as a PDF
             invoice++;
         }
+
+        private void linkLabelLoginClose_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.GetCurrentProcess().Kill();
+            Application.Exit();
+        }
+
+        private void linkLabelLoginBack_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+        }
     }
 }
