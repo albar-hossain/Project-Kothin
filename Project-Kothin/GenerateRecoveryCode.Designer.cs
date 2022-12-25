@@ -33,6 +33,7 @@
             this.labelResetRecoveryCode = new System.Windows.Forms.Label();
             this.textBoxResetRecoveryCode = new System.Windows.Forms.TextBox();
             this.buttonRecoveryCopyClipboard = new System.Windows.Forms.Button();
+            this.labelRecoveryCode = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // linkLabelRecoveryClose
@@ -100,12 +101,24 @@
             this.buttonRecoveryCopyClipboard.UseVisualStyleBackColor = false;
             this.buttonRecoveryCopyClipboard.Click += new System.EventHandler(this.buttonRecoveryCopyClipboard_Click);
             // 
+            // labelRecoveryCode
+            // 
+            this.labelRecoveryCode.AutoSize = true;
+            this.labelRecoveryCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRecoveryCode.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(150)))), ((int)(((byte)(105)))));
+            this.labelRecoveryCode.Location = new System.Drawing.Point(173, 127);
+            this.labelRecoveryCode.Name = "labelRecoveryCode";
+            this.labelRecoveryCode.Size = new System.Drawing.Size(258, 20);
+            this.labelRecoveryCode.TabIndex = 33;
+            this.labelRecoveryCode.Text = "Note: Save this code for future use.";
+            // 
             // GenerateRecoveryCode
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(600, 170);
+            this.Controls.Add(this.labelRecoveryCode);
             this.Controls.Add(this.buttonRecoveryCopyClipboard);
             this.Controls.Add(this.labelResetRecoveryCode);
             this.Controls.Add(this.textBoxResetRecoveryCode);
@@ -117,6 +130,7 @@
             this.Name = "GenerateRecoveryCode";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GenerateRecoveryCode";
+            this.Load += new System.EventHandler(this.GenerateRecoveryCode_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -128,5 +142,6 @@
         private System.Windows.Forms.Label labelResetRecoveryCode;
         private System.Windows.Forms.TextBox textBoxResetRecoveryCode;
         private System.Windows.Forms.Button buttonRecoveryCopyClipboard;
+        private System.Windows.Forms.Label labelRecoveryCode;
     }
 }

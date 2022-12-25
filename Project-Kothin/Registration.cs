@@ -1,10 +1,14 @@
 ﻿using System;
+using System.Data.SqlClient;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace Project_Kothin
 {
     public partial class Registration : Form
     {
+        //private bool flag = true;
+
         public Registration()
         {
             InitializeComponent();
@@ -93,11 +97,42 @@ namespace Project_Kothin
                 textBoxRegPhone.Text != "" &&
                 textBoxRegAddress.Text != "")
             {
-                MessageBox.Show("Registration complete!");
+                string FullName = textBoxRegFullName.Text;
+                string Phone = textBoxRegPhone.Text;
+                string PostCode = textRegPostCode.Text;
+                string Address = textBoxRegAddress.Text;
+                string Email = textBoxRegEmail.Text;
+                string Password = textBoxRegPassword.Text;
+                //Recovery Code Generate
                 string recoveryCode = Convert.ToBase64String(Guid.NewGuid().ToByteArray()).Substring(0, 5);
+                string RecoveryCode = recoveryCode;
+
+                SqlConnection conn = null;
+                try
+                {
+                    conn = new SqlConnection(@"Data Source=SKRILLEXOMG\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True"); //Albar
+                                                                                                                                       //conn = new SqlConnection(@"Data Source=DESKTOP-9DIP61O\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True");//Azwad
+                                                                                                                                       //conn = new SqlConnection(@"Data Source=DESKTOP-5NMO71P\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True"); //Arif
+                                                                                                                                       //conn = new SqlConnection(@"Data Source=DESKTOP-BMD47A3\SQLEXPRESS;Initial Catalog=Porjoton;Integrated Security=True"); //risan
+                    conn.Open();
+                    string query = $"insert into UserInfo (FullName, Phone, Email, Address, PostCode, Password, RecoveryCode) VALUES ('{FullName}','{Phone}','{Email}','{Address}','{PostCode}','{Password}','{RecoveryCode}')";
+
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    conn.Close();
+                }
+
+                MessageBox.Show("Registration complete!");
                 GenerateRecoveryCode userReg = new GenerateRecoveryCode(recoveryCode);
                 userReg.Show();
-                MessageBox.Show("Please note down the recovery code.");
+                //MessageBox.Show("Please note down the recovery code.");
                 this.Close();
             }
             else
@@ -133,6 +168,57 @@ namespace Project_Kothin
         private void linkLabelRegClose_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Close();
+        }
+
+        //showPass
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            textBoxRegPassword.PasswordChar = '*';
+            pictureBoxShowPass.Visible = false;
+            pictureBoxHidePass.Visible = true;
+        }
+
+        private void pictureBoxHidePass_Click(object sender, EventArgs e)
+        {
+            textBoxRegPassword.PasswordChar = '\0';
+            pictureBoxShowPass.Visible = true;
+            pictureBoxHidePass.Visible = false;
+        }
+
+        private void labelRegFullName_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void textBoxRegFullName_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void labelRegPostCode_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void labelRegAddress_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void textBoxRegAddress_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void labelRegEmail_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void labelRegPassword_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void textBoxRegPassword_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void labelRegPassConfirm_Click(object sender, EventArgs e)
+        {
         }
     }
 }
