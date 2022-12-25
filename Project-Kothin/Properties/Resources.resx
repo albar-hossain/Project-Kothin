@@ -130,19 +130,25 @@
   <data name="eyes" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\eyes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="KothinBGM" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\KothinBGM.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="rental_er_sobi (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\rental_er_sobi (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ticket_er_chobi" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ticket_er_chobi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="KothinBGM" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\KothinBGM.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="rental_er_sobi (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rental_er_sobi (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="admin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\admin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="rental_er_sobi" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\rental_er_sobi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="rental_er_sobi (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\rental_er_sobi (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="user" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
