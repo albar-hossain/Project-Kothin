@@ -6,7 +6,7 @@ Kothin is a C# management application made with windows forms to manage ticket b
 
 [@ArifAbsar](https://github.com/ArifAbsar)
 
-[@Demizzz](https://github.com/Demizzz)
+[@Azwad-Islam](https://github.com/Azwad-Islam)
 
 [@RafidRisun](https://github.com/RafidRisun)
 
